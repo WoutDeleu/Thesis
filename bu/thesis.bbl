@@ -1,0 +1,22 @@
+\begin{thebibliography}{}
+
+\bibitem[Aad et~al., 2012]{aad2012}
+Aad, G., Abajyan, T., Abbott, B., Abdallah, J., Khalek, S.~A., Abdelalim, A.,
+  Abdinov, O., Aben, R., Abi, B., Abolins, M., et~al. (2012).
+\newblock Observation of a new particle in the search for the standard model
+  higgs boson with the atlas detector at the lhc.
+\newblock {\em Physics Letters B}, 716(1):1--29.
+
+\bibitem[Cottrell et~al., 2009]{cottrell2009}
+Cottrell, J.~A., Hughes, T.~J., and Bazilevs, Y. (2009).
+\newblock {\em Isogeometric analysis: toward integration of CAD and FEA}.
+\newblock John Wiley \& Sons.
+
+\bibitem[Hughes et~al., 2005]{hughes2005}
+Hughes, T.~J., Cottrell, J.~A., and Bazilevs, Y. (2005).
+\newblock Isogeometric analysis: Cad, finite elements, nurbs, exact geometry
+  and mesh refinement.
+\newblock {\em Computer methods in applied mechanics and engineering},
+  194(39):4135--4195.
+
+\end{thebibliography}
