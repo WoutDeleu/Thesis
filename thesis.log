@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2023.2.11)  22 FEB 2023 16:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2023.2.11)  27 FEB 2023 17:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -507,7 +507,7 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
 
 pdfTeX warning: pdflatex (file ./private/cover_fiiw_gent.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<private/cover_fiiw_gent.pdf, id=87, 597.55246pt x 845.07718pt>
+<private/cover_fiiw_gent.pdf, id=91, 597.55246pt x 845.07718pt>
 File: private/cover_fiiw_gent.pdf Graphic file (type pdf)
 <use private/cover_fiiw_gent.pdf>
 Package pdftex.def Info: private/cover_fiiw_gent.pdf  used on input line 94.
@@ -567,19 +567,9 @@ LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
 LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
 (Font)              scaled to size 12.9599pt on input line 3.
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <10.95> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 13.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 14.
 LaTeX Font Info:    Font shape `OT1/phv/m/sl' will be
-(Font)              scaled to size 9.85492pt on input line 13.
-
-Underfull \hbox (badness 10000) in paragraph at lines 4--20
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4--20
-
- []
-
+(Font)              scaled to size 9.85492pt on input line 14.
 ) [4
 
 ] (./abstract.tex
@@ -622,9 +612,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 \tf@lot=\write6
 \openout6 = `thesis.lot'.
 
- (./afkortingen.tex [9
-
-]) [10
+ (./afkortingen.tex) [9
 
 ] (./hfdst1.tex
 Hoofdstuk 1.
@@ -632,53 +620,56 @@ LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
 (Font)              scaled to size 18.66588pt on input line 7.
 LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
 (Font)              scaled to size 18.66588pt on input line 7.
-
-Underfull \hbox (badness 10000) in paragraph at lines 10--18
-
- []
-
-<fig/VoorbeeldActiviteit_Cropped.png, id=178, 895.84688pt x 817.55438pt>
+<fig/VoorbeeldActiviteit_Cropped.png, id=180, 895.84688pt x 817.55438pt>
 File: fig/VoorbeeldActiviteit_Cropped.png Graphic file (type png)
 <use fig/VoorbeeldActiviteit_Cropped.png>
-Package pdftex.def Info: fig/VoorbeeldActiviteit_Cropped.png  used on input line 37.
+Package pdftex.def Info: fig/VoorbeeldActiviteit_Cropped.png  used on input line 38.
 (pdftex.def)             Requested size: 213.39568pt x 194.74503pt.
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 38.
+(Font)              scaled to size 8.99994pt on input line 39.
 LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
-(Font)              scaled to size 8.99994pt on input line 38.
+(Font)              scaled to size 8.99994pt on input line 39.
 [1
 
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 59--70
-
- []
-
-) (./hfdst2.tex [2 <./fig/VoorbeeldActiviteit_Cropped.png (PNG copy)>]
+] [2 <./fig/VoorbeeldActiviteit_Cropped.png (PNG copy)>]) (./hfdst2.tex [3]
 Hoofdstuk 2.
-) (./hfdst3.tex [3
-
-]
-Hoofdstuk 3.
-<fig//image.jpg, id=202, 722.7pt x 556.479pt>
-File: fig//image.jpg Graphic file (type jpg)
-<use fig//image.jpg>
-Package pdftex.def Info: fig//image.jpg  used on input line 35.
-(pdftex.def)             Requested size: 320.0935pt x 246.47333pt.
+LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
+(Font)              scaled to size 8.09995pt on input line 20.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 20.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 20.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 20.
+LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
+(Font)              scaled to size 6.29996pt on input line 20.
+LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
+(Font)              scaled to size 10.79993pt on input line 30.
 [4
 
-]) (./hfdst4.tex [5 <./fig//image.jpg>]
+] [5]
+<fig/VoorbeeldActiviteit_Personal.png, id=227, 717.43031pt x 970.3753pt>
+File: fig/VoorbeeldActiviteit_Personal.png Graphic file (type png)
+<use fig/VoorbeeldActiviteit_Personal.png>
+Package pdftex.def Info: fig/VoorbeeldActiviteit_Personal.png  used on input line 101.
+(pdftex.def)             Requested size: 341.43437pt x 461.82147pt.
+) (./hfdst3.tex [6] [7 <./fig/VoorbeeldActiviteit_Personal.png (PNG copy)>]
+Hoofdstuk 3.
+) (./hfdst4.tex [8
+
+]
 Hoofdstuk 4.
-[6
+[9
 
 ]) (./hfdst5.tex
 Hoofdstuk 5.
-[7
+[10
 
 
-]
+] [11]
 
-Package natbib Warning: Citation `aad2012' on page 8 undefined on input line 43.
+Package natbib Warning: Citation `aad2012' on page 12 undefined on input line 43.
 
 
 Overfull \hbox (21.2316pt too wide) in paragraph at lines 43--44
@@ -686,41 +677,46 @@ Overfull \hbox (21.2316pt too wide) in paragraph at lines 43--44
  []
 
 
-Package natbib Warning: Citation `hughes2005' on page 8 undefined on input line 45.
+Package natbib Warning: Citation `hughes2005' on page 12 undefined on input line 45.
 
 
-Package natbib Warning: Citation `cottrell2009' on page 8 undefined on input line 45.
+Package natbib Warning: Citation `cottrell2009' on page 12 undefined on input line 45.
 
-) (./thesis.bbl [8
+) (./thesis.bbl [12
 
 ]
-Underfull \hbox (badness 4543) in paragraph at lines 4--7
-[]\OT1/phv/m/n/10.95 Strava-privacybeleid.  []$\OT1/pcr/m/n/10.95 https : / / www . strava . com / legal / privacy$[]\OT1/phv/m/n/10.95 .  (Ac-ces-sed on
- []
-
-
-Underfull \hbox (badness 5504) in paragraph at lines 9--16
+Underfull \hbox (badness 5504) in paragraph at lines 4--11
 []\OT1/phv/m/n/10.95 Bowden, A. (2018).  Cy-clist who had five bi-kes sto-len says thie-ves are loo-
  []
 
 
-Underfull \hbox (badness 2368) in paragraph at lines 9--16
+Underfull \hbox (badness 2368) in paragraph at lines 4--11
 \OT1/phv/m/n/10.95 king for quick ti-mes on strava to try and find high-end bi-kes { warns other users
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 9--16
+Underfull \hbox (badness 10000) in paragraph at lines 4--11
 \OT1/phv/m/n/10.95 to check their pri-vacy set-tings | road.cc.  []$\OT1/pcr/m/n/10.95 https : / / road . cc / content / news /
  []
 
 
-Overfull \hbox (62.49805pt too wide) in paragraph at lines 9--16
+Overfull \hbox (62.49805pt too wide) in paragraph at lines 4--11
 \OT1/pcr/m/n/10.95 248798-[]cyclist-[]who-[]had-[]five-[]bikes-[]stolen-[]says-[]thieves-[]are-[]looking-[]quick-[]times-[]strava$[]\OT1/phv/m/n/10.95 .
  []
 
-) (./bijlage1.tex [9
 
-]
+Underfull \hbox (badness 10000) in paragraph at lines 51--56
+[]\OT1/phv/m/n/10.95 Strava, I. (2022).  Mo-ving time, speed, and pace cal-cu-la-ti-ons {
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 51--56
+\OT1/phv/m/n/10.95 strava sup-port.  []$\OT1/pcr/m/n/10.95 https : / / support . strava . com / hc / en-[]us / articles /
+ []
+
+[13
+
+]) (./bijlage1.tex [14]
 B\ij lage A.
 
 Underfull \hbox (badness 10000) in paragraph at lines 6--10
@@ -730,7 +726,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--10
 )
 
 pdfTeX warning: pdflatex (file ./private/back_fiiw_gent.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<private/back_fiiw_gent.pdf, id=250, 597.55246pt x 845.07718pt>
+<private/back_fiiw_gent.pdf, id=287, 597.55246pt x 845.07718pt>
 File: private/back_fiiw_gent.pdf Graphic file (type pdf)
 <use private/back_fiiw_gent.pdf>
 Package pdftex.def Info: private/back_fiiw_gent.pdf  used on input line 113.
@@ -748,7 +744,7 @@ pdfTeX warning: pdflatex (file ./private/back_fiiw_gent.pdf): PDF inclusion: fou
 
 
 pdfTeX warning: pdflatex (file ./private/back_fiiw_gent.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<private/back_fiiw_gent.pdf, id=253, page=1, 597.55246pt x 845.07718pt>
+<private/back_fiiw_gent.pdf, id=290, page=1, 597.55246pt x 845.07718pt>
 File: private/back_fiiw_gent.pdf Graphic file (type pdf)
 <use private/back_fiiw_gent.pdf, page 1>
 Package pdftex.def Info: private/back_fiiw_gent.pdf , page1 used on input line 113.
@@ -757,7 +753,7 @@ File: private/back_fiiw_gent.pdf Graphic file (type pdf)
 <use private/back_fiiw_gent.pdf, page 1>
 Package pdftex.def Info: private/back_fiiw_gent.pdf , page1 used on input line 113.
 (pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
-[10
+[15
 
 ]
 File: private/back_fiiw_gent.pdf Graphic file (type pdf)
@@ -772,27 +768,31 @@ File: private/back_fiiw_gent.pdf Graphic file (type pdf)
 <use private/back_fiiw_gent.pdf, page 1>
 Package pdftex.def Info: private/back_fiiw_gent.pdf , page1 used on input line 113.
 (pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
- [11 <./private/back_fiiw_gent.pdf>]
+ [16 <./private/back_fiiw_gent.pdf>]
 
 Package natbib Warning: There were undefined citations.
 
+
+Package caption Warning: Unused \captionsetup[table] on input line 394.
+See the caption package documentation for explanation.
+
 (./thesis.aux)
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 4A51D61781B5E3303ACBFDAAE63AE6EF;2432.
+(rerunfilecheck)             Checksum: 3FCFAC5DF9CFE004B79026C1DAAE8DAB;2608.
  ) 
 Here is how much of TeX's memory you used:
- 15512 strings out of 478238
- 251904 string characters out of 5850456
- 662127 words of memory out of 5000000
- 33415 multiletter control sequences out of 15000+600000
- 509230 words of font info for 89 fonts, out of 8000000 for 9000
+ 15559 strings out of 478238
+ 252778 string characters out of 5850456
+ 664304 words of memory out of 5000000
+ 33450 multiletter control sequences out of 15000+600000
+ 523258 words of font info for 116 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,17n,77p,661b,508s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/share/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (21 pages, 2429524 bytes).
+ 72i,17n,77p,661b,485s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/share/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on thesis.pdf (25 pages, 1331214 bytes).
 PDF statistics:
- 322 PDF objects out of 1000 (max. 8388607)
- 270 compressed objects within 3 object streams
- 56 named destinations out of 1000 (max. 500000)
- 204 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 365 PDF objects out of 1000 (max. 8388607)
+ 306 compressed objects within 4 object streams
+ 65 named destinations out of 1000 (max. 500000)
+ 212 words of extra memory for PDF output out of 10000 (max. 10000000)
 

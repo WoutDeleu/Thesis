@@ -1,10 +1,5 @@
 \begin{thebibliography}{}
 
-\bibitem[Str, ]{Stravapr81:online}
-Strava-privacybeleid.
-\newblock \url{https://www.strava.com/legal/privacy}.
-\newblock (Accessed on 02/20/2023).
-
 \bibitem[Bowden, 2018]{Cyclistw89:online}
 Bowden, A. (2018).
 \newblock Cyclist who had five bikes stolen says thieves are looking for quick
@@ -39,6 +34,26 @@ Howard, P. and Parks, M. (2012).
   consequence.
 \newblock {\em Journal of Communication}, 62.
 
+\bibitem[Strava, 2021a]{Stravapr81:online}
+Strava, I. (2021a).
+\newblock Strava-privacybeleid.
+\newblock \url{https://www.strava.com/legal/privacy}.
+\newblock (Accessed on 02/20/2023).
+
+\bibitem[Strava, 2021b]{Stravas24:online}
+Strava, I. (2021b).
+\newblock Strava’s year in sport 2021 charts trajectory of ongoing sports
+  boom.
+\newblock \url{https://blog.strava.com/nl/press/yis2021/}.
+\newblock (Accessed on 02/26/2023).
+
+\bibitem[Strava, 2022]{MovingTi80:online}
+Strava, I. (2022).
+\newblock Moving time, speed, and pace calculations – strava support.
+\newblock
+  \url{https://support.strava.com/hc/en-us/articles/115001188684-Moving-Time-Speed-and-Pace-Calculations}.
+\newblock (Accessed on 02/26/2023).
+
 \bibitem[Vanmeldert, 2022]{Sportapp72:online}
 Vanmeldert, D. (2022).
 \newblock Sportapp strava laat fietsdieven of stalkers nog altijd meekijken |
@@ -54,5 +69,10 @@ Verdonck, T. (2022).
   Ingenieurswetenschappen, Leuven.
 \newblock Book Title: Inferentie-aanvallen met hoogteprofielen tegen (endpoint)
   privacy zones in fitness tracking sociale netwerken.
+
+\bibitem[Wajih Ul~Hassan, 2018]{sec18has3:online}
+Wajih Ul~Hassan, Saad~Hussain, A.~B. (2018).
+\newblock Analysis of privacy protections in fitness tracking social networks
+  -or- you can run, but can you hide?
 
 \end{thebibliography}
