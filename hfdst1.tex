@@ -41,32 +41,34 @@ militaire basissen ontdekt worden door het bestuderen van de heatmap.
 
 Deze platformen implementeren elk manieren om de privacy van de users te
 verbeteren. Hiervoor zijn verschillende manieren mogelijk. De simpelste is
-misschien wel de mogelijkheid om activiteiten te verbergen voor anderen. Zo
-kunnen enkel de mensen die de gebruiker expliciet toelaat activiteiten
-bekijken. Een complexere alternatief is het gebruik van \textit{endpoint privacy
-    zones} (EPZ). Hierbij wordt de weergegeven route voor de persoon die meekijkt
-gedeeltelijk verborgen. Er wordt als het ware een deel van de route afgekapt,
-en het eind- en startpunt worden verschoven. Het begin -en eind-deel van de
-route wordt dus onzichtbaar enkel voor de andere gebruikers. Het valt op dat
-deze profielen erg bewust zijn van de mogelijke gevaren van hun platformen.
-Echter is er een afweging te maken bij de implementatie tussen de bruikbaarheid
-van het platform, en de privacy van de eindgebruiker. Hoe meer info wordt
-vrijgegeven, hoe groter de kans om mogelijk schadelijke private info wordt
-meegegeven. Aan de andere kant, bij het weglaten van informatie gaat de
-gebruiksvriendelijkheid en de aanwezigheid van nuttige info van het platform
-serieus achteruit gaat.
+misschien wel de mogelijkheid om activiteiten te verbergen voor een selectie
+van personen (bv.\ enkel weergeven voor je volgers). Zo kunnen enkel de mensen
+die de gebruiker expliciet toelaat activiteiten bekijken. Een complexere
+alternatief is het gebruik van \textit{endpoint privacy zones} (EPZ). Hierbij
+wordt de weergegeven route voor de persoon die meekijkt gedeeltelijk verborgen.
+Er wordt als het ware een deel van de route afgekapt, en het eind- en startpunt
+worden verschoven. Het begin- en eind-deel van de route wordt dus onzichtbaar
+voor de andere gebruikers. Het valt op dat de ontwikkelaars van de platformen
+erg bewust zijn van de mogelijke gevaren. Echter is er een afweging te maken
+bij de implementatie tussen de bruikbaarheid van het platform, en de privacy
+van de eindgebruiker. Hoe meer info wordt vrijgegeven, hoe groter de kans om
+mogelijk schadelijke private info wordt meegegeven. Aan de andere kant, bij het
+weglaten van informatie gaat de gebruiksvriendelijkheid en de aanwezigheid van
+nuttige info van het platform serieus achteruit gaat.
 
 \section{Doelstelling}
 Het doel van deze scriptie is om private locaties (verborgen start- en
 eindlocaties) van een activiteiten te achterhalen, ondanks het gebruik van de
-EPZ als privacy beveiligingsmechanisme. In het verleden werden enkele manieren
-beschreven om a.d.h.v.\ andere metadata zoals hoogtedata en afstanden de EPZ te
-omzeilen (\textit{\citeauthor{Dhondt_Pochat_Voulimeneas_Joosen_Volckaert_2022},
-    \citeauthor{Verdonck_2022}}). Hier wordt meer in detail gegaan op het gebruik
-van snelheidsdata. Als basis voor deze aanval wordt de inferentie aanval op de
-EPZ van~\citeauthor{Dhondt_Pochat_Voulimeneas_Joosen_Volckaert_2022} genomen.
-Er wordt dan onderzocht of deze aanval nog succesvol kan worden uitgevoerd bij
-het weglaten van gegevens, en dus door het gebruik van andere gegevens,
+EPZ~\ref{EPZ} als privacy beveiligingsmechanisme. In het verleden werden enkele
+manieren beschreven om a.d.h.v.\ andere metadata zoals hoogtedata en afstanden
+de EPZ te omzeilen
+(\textit{\citeauthor{Dhondt_Pochat_Voulimeneas_Joosen_Volckaert_2022},
+    \citeauthor{Verdonck_2022}}). Gedurende deze thesis wordt meer in detail gegaan
+op het gebruik van snelheidsdata. Als basis voor deze aanval wordt de
+inferentie aanval op de EPZ
+van~\citeauthor{Dhondt_Pochat_Voulimeneas_Joosen_Volckaert_2022} genomen. Er
+wordt dan onderzocht of deze aanval nog succesvol kan worden uitgevoerd bij het
+weglaten van bepaalde gegevens, en dus door het gebruik van andere gegevens,
 voornamelijk snelheid.
 
 Om deze doelstelling te bekomen zal eerst een analyse op de afwijkingen van
@@ -77,9 +79,9 @@ analyse gebeuren over de alle users. Er zal ook een studie gebeuren van de
 effectiviteit van deze aanval op basis van de nieuw bekomen afstanden.
 
 De doelstellingen zijn in eerste instantie vooral vanuit het oogpunt van een
-aanvaller, een user met slechte bedoelingen. Echter zal als laatste ook
+aanvaller, een user met slechte bedoelingen. Echter zal naar het einde toe ook
 gereflecteerd worden over de gevallen waarin de aanval effectief blijft,
-bijvoorbeeld onder welke afrondingen. Bijgevolg volgt hieruit enkele mogelijke
-countermeasures, die dus zullen aangeven welke manieren fitnesstrackers
-zichzelf zouden kunnen toepassen om zichzelf te wapenen tegen de aanval die
-hier beschreven werd.
+bijvoorbeeld onder welke afrondingen. Bijgevolg kunnen hieruit enkele mogelijke
+countermeasures worden afgeleid, die dus zullen aangeven welke manieren
+fitnesstrackers zichzelf zouden kunnen toepassen om zichzelf te wapenen tegen
+de aanval die hier beschreven werd.

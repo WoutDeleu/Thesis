@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2023.2.11)  27 FEB 2023 17:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2023.2.11)  27 FEB 2023 20:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -334,9 +334,13 @@ LaTeX Warning: Command \underbar  has changed.
 LaTeX Warning: Command \underline  has changed.
                Check if current package is valid.
 
+) (/usr/share/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2022/01/07 v1.5 Sub-captions (AR)
+\c@subfigure=\count296
+\c@subtable=\count297
 ) (/usr/share/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count296
+\c@float@type=\count298
 \float@exts=\toks25
 \float@box=\box55
 \@float@everytoks=\toks26
@@ -355,15 +359,15 @@ Package: parallel 2003/04/13, setting two texts parallel (me)
 \ParallelBoxVar=\box59
 \ParallelLTok=\box60
 \ParallelRTok=\box61
-\ParallelBoolVar=\count297
-\ParallelBoolMid=\count298
-\ParallelWhichBox=\count299
-\ParallelMainMode=\count300
-\ParallelFNMode=\count301
-\ParallelLFNCounter=\count302
-\ParallelRFNCounter=\count303
-\ParallelMaxFN=\count304
-\ParallelFNNumMode=\count305
+\ParallelBoolVar=\count299
+\ParallelBoolMid=\count300
+\ParallelWhichBox=\count301
+\ParallelMainMode=\count302
+\ParallelFNMode=\count303
+\ParallelLFNCounter=\count304
+\ParallelRFNCounter=\count305
+\ParallelMaxFN=\count306
+\ParallelFNNumMode=\count307
 ) (/usr/share/texmf-dist/tex/latex/textpos/textpos.sty
 Package: textpos 2020/09/26 v1.10
 
@@ -397,32 +401,32 @@ Package fancyhdr Warning: \fancyhead's `E' option without twoside option is usel
 
 )
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
-(Font)              scaled to size 9.85492pt on input line 92.
+(Font)              scaled to size 9.85492pt on input line 93.
  (./thesis.aux)
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for OMS/pzccm/m/n on input line 92.
-LaTeX Font Info:    Trying to load font information for OMS+pzccm on input line 92.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for OMS/pzccm/m/n on input line 93.
+LaTeX Font Info:    Trying to load font information for OMS+pzccm on input line 93.
  (/usr/share/texmf-dist/tex/latex/psnfss/omspzccm.fd
 File: omspzccm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/pzccm.
 )
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -460,16 +464,16 @@ LaTeX Font Info:    ... okay on input line 92.
 
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count306
+\scratchcounter=\count308
 \scratchdimen=\dimen184
 \scratchbox=\box63
-\nofMPsegments=\count307
-\nofMParguments=\count308
+\nofMPsegments=\count309
+\nofMParguments=\count310
 \everyMPshowfont=\toks28
-\MPscratchCnt=\count309
+\MPscratchCnt=\count311
 \MPscratchDim=\dimen185
-\MPnumerator=\count310
-\makeMPintoPDFobject=\count311
+\MPnumerator=\count312
+\makeMPintoPDFobject=\count313
 \everyMPtoPDFconversion=\toks29
 ) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -477,8 +481,8 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-\c@lstlisting=\count312
-Package hyperref Info: Link coloring OFF on input line 92.
+\c@lstlisting=\count314
+Package hyperref Info: Link coloring OFF on input line 93.
  (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (/usr/share/texmf-dist/tex/latex/refcount/refcount.sty
@@ -486,11 +490,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (/usr/share/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count313
+\c@section@level=\count315
 )
-LaTeX Info: Redefining \ref on input line 92.
-LaTeX Info: Redefining \pageref on input line 92.
-LaTeX Info: Redefining \nameref on input line 92.
+LaTeX Info: Redefining \ref on input line 93.
+LaTeX Info: Redefining \pageref on input line 93.
+LaTeX Info: Redefining \nameref on input line 93.
  (./thesis.out) (./thesis.out)
 \@outlinefile=\write3
 \openout3 = `thesis.out'.
@@ -510,39 +514,39 @@ pdfTeX warning: pdflatex (file ./private/cover_fiiw_gent.pdf): PDF inclusion: fo
 <private/cover_fiiw_gent.pdf, id=91, 597.55246pt x 845.07718pt>
 File: private/cover_fiiw_gent.pdf Graphic file (type pdf)
 <use private/cover_fiiw_gent.pdf>
-Package pdftex.def Info: private/cover_fiiw_gent.pdf  used on input line 94.
+Package pdftex.def Info: private/cover_fiiw_gent.pdf  used on input line 95.
 (pdftex.def)             Requested size: 597.50787pt x 845.07512pt.
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
-(Font)              scaled to size 35.99976pt on input line 94.
+(Font)              scaled to size 35.99976pt on input line 95.
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
-(Font)              scaled to size 15.55188pt on input line 94.
+(Font)              scaled to size 15.55188pt on input line 95.
 
-Underfull \hbox (badness 10000) in paragraph at lines 94--94
+Underfull \hbox (badness 10000) in paragraph at lines 95--95
 
  []
 
 LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
-(Font)              scaled to size 15.55188pt on input line 94.
+(Font)              scaled to size 15.55188pt on input line 95.
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
-(Font)              scaled to size 10.79993pt on input line 94.
+(Font)              scaled to size 10.79993pt on input line 95.
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./private/cover_fiiw_gent.pdf>]
-LaTeX Font Info:    Trying to load font information for TS1+phv on input line 94.
+LaTeX Font Info:    Trying to load font information for TS1+phv on input line 95.
  (/usr/share/texmf-dist/tex/latex/psnfss/ts1phv.fd
 File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 94--94
+Underfull \hbox (badness 10000) in paragraph at lines 95--95
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 94--94
+Underfull \hbox (badness 10000) in paragraph at lines 95--95
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 94--94
+Underfull \hbox (badness 10000) in paragraph at lines 95--95
 
  []
 
@@ -550,14 +554,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 94--94
 
 ]
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
-(Font)              scaled to size 22.39185pt on input line 94.
+(Font)              scaled to size 22.39185pt on input line 95.
 LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
-(Font)              scaled to size 22.39185pt on input line 94.
+(Font)              scaled to size 22.39185pt on input line 95.
  (./voorwoord.tex)
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
-(Font)              scaled to size 7.19995pt on input line 94.
+(Font)              scaled to size 7.19995pt on input line 95.
 LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
-(Font)              scaled to size 7.19995pt on input line 94.
+(Font)              scaled to size 7.19995pt on input line 95.
  [3
 
 
@@ -620,7 +624,7 @@ LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
 (Font)              scaled to size 18.66588pt on input line 7.
 LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
 (Font)              scaled to size 18.66588pt on input line 7.
-<fig/VoorbeeldActiviteit_Cropped.png, id=180, 895.84688pt x 817.55438pt>
+<fig/VoorbeeldActiviteit_Cropped.png, id=182, 895.84688pt x 817.55438pt>
 File: fig/VoorbeeldActiviteit_Cropped.png Graphic file (type png)
 <use fig/VoorbeeldActiviteit_Cropped.png>
 Package pdftex.def Info: fig/VoorbeeldActiviteit_Cropped.png  used on input line 38.
@@ -649,27 +653,39 @@ LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
 [4
 
 ] [5]
-<fig/VoorbeeldActiviteit_Personal.png, id=227, 717.43031pt x 970.3753pt>
+<fig/VoorbeeldActiviteit_Personal.png, id=230, 717.43031pt x 970.3753pt>
 File: fig/VoorbeeldActiviteit_Personal.png Graphic file (type png)
 <use fig/VoorbeeldActiviteit_Personal.png>
 Package pdftex.def Info: fig/VoorbeeldActiviteit_Personal.png  used on input line 101.
 (pdftex.def)             Requested size: 341.43437pt x 461.82147pt.
-) (./hfdst3.tex [6] [7 <./fig/VoorbeeldActiviteit_Personal.png (PNG copy)>]
+LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
+(Font)              scaled to size 8.09995pt on input line 160.
+<fig/EPZ_InternalView.png, id=239, 1216.545pt x 758.835pt>
+File: fig/EPZ_InternalView.png Graphic file (type png)
+<use fig/EPZ_InternalView.png>
+Package pdftex.def Info: fig/EPZ_InternalView.png  used on input line 161.
+(pdftex.def)             Requested size: 170.71718pt x 106.47932pt.
+<fig/EPZ_ExternalView.png, id=241, 719.68875pt x 447.6725pt>
+File: fig/EPZ_ExternalView.png Graphic file (type png)
+<use fig/EPZ_ExternalView.png>
+Package pdftex.def Info: fig/EPZ_ExternalView.png  used on input line 166.
+(pdftex.def)             Requested size: 170.71718pt x 106.19353pt.
+) (./hfdst3.tex [6] [7 <./fig/VoorbeeldActiviteit_Personal.png (PNG copy)>] [8 <./fig/EPZ_InternalView.png> <./fig/EPZ_ExternalView.png>]
 Hoofdstuk 3.
-) (./hfdst4.tex [8
+) (./hfdst4.tex [9
 
 ]
 Hoofdstuk 4.
-[9
+[10
 
 ]) (./hfdst5.tex
 Hoofdstuk 5.
-[10
+[11
 
 
-] [11]
+] [12]
 
-Package natbib Warning: Citation `aad2012' on page 12 undefined on input line 43.
+Package natbib Warning: Citation `aad2012' on page 13 undefined on input line 43.
 
 
 Overfull \hbox (21.2316pt too wide) in paragraph at lines 43--44
@@ -677,12 +693,12 @@ Overfull \hbox (21.2316pt too wide) in paragraph at lines 43--44
  []
 
 
-Package natbib Warning: Citation `hughes2005' on page 12 undefined on input line 45.
+Package natbib Warning: Citation `hughes2005' on page 13 undefined on input line 45.
 
 
-Package natbib Warning: Citation `cottrell2009' on page 12 undefined on input line 45.
+Package natbib Warning: Citation `cottrell2009' on page 13 undefined on input line 45.
 
-) (./thesis.bbl [12
+) (./thesis.bbl [13
 
 ]
 Underfull \hbox (badness 5504) in paragraph at lines 4--11
@@ -714,9 +730,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 51--56
 \OT1/phv/m/n/10.95 strava sup-port.  []$\OT1/pcr/m/n/10.95 https : / / support . strava . com / hc / en-[]us / articles /
  []
 
-[13
 
-]) (./bijlage1.tex [14]
+Underfull \hbox (badness 2368) in paragraph at lines 58--63
+[]\OT1/phv/m/n/10.95 Strava, I. (2023).  Ac-ti-vity pri-vacy con-trols { strava sup-port.  []$\OT1/pcr/m/n/10.95 https : / / support .
+ []
+
+[14
+
+]) (./bijlage1.tex [15]
 B\ij lage A.
 
 Underfull \hbox (badness 10000) in paragraph at lines 6--10
@@ -726,17 +747,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--10
 )
 
 pdfTeX warning: pdflatex (file ./private/back_fiiw_gent.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<private/back_fiiw_gent.pdf, id=287, 597.55246pt x 845.07718pt>
+<private/back_fiiw_gent.pdf, id=312, 597.55246pt x 845.07718pt>
 File: private/back_fiiw_gent.pdf Graphic file (type pdf)
 <use private/back_fiiw_gent.pdf>
-Package pdftex.def Info: private/back_fiiw_gent.pdf  used on input line 113.
+Package pdftex.def Info: private/back_fiiw_gent.pdf  used on input line 114.
 (pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 
 
 pdfTeX warning: pdflatex (file ./private/back_fiiw_gent.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
 File: private/back_fiiw_gent.pdf Graphic file (type pdf)
 <use private/back_fiiw_gent.pdf>
-Package pdftex.def Info: private/back_fiiw_gent.pdf  used on input line 113.
+Package pdftex.def Info: private/back_fiiw_gent.pdf  used on input line 114.
 (pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 
 
@@ -744,31 +765,31 @@ pdfTeX warning: pdflatex (file ./private/back_fiiw_gent.pdf): PDF inclusion: fou
 
 
 pdfTeX warning: pdflatex (file ./private/back_fiiw_gent.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<private/back_fiiw_gent.pdf, id=290, page=1, 597.55246pt x 845.07718pt>
+<private/back_fiiw_gent.pdf, id=315, page=1, 597.55246pt x 845.07718pt>
 File: private/back_fiiw_gent.pdf Graphic file (type pdf)
 <use private/back_fiiw_gent.pdf, page 1>
-Package pdftex.def Info: private/back_fiiw_gent.pdf , page1 used on input line 113.
+Package pdftex.def Info: private/back_fiiw_gent.pdf , page1 used on input line 114.
 (pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 File: private/back_fiiw_gent.pdf Graphic file (type pdf)
 <use private/back_fiiw_gent.pdf, page 1>
-Package pdftex.def Info: private/back_fiiw_gent.pdf , page1 used on input line 113.
+Package pdftex.def Info: private/back_fiiw_gent.pdf , page1 used on input line 114.
 (pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
-[15
+[16
 
 ]
 File: private/back_fiiw_gent.pdf Graphic file (type pdf)
 <use private/back_fiiw_gent.pdf, page 1>
-Package pdftex.def Info: private/back_fiiw_gent.pdf , page1 used on input line 113.
+Package pdftex.def Info: private/back_fiiw_gent.pdf , page1 used on input line 114.
 (pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
 File: private/back_fiiw_gent.pdf Graphic file (type pdf)
 <use private/back_fiiw_gent.pdf, page 1>
-Package pdftex.def Info: private/back_fiiw_gent.pdf , page1 used on input line 113.
+Package pdftex.def Info: private/back_fiiw_gent.pdf , page1 used on input line 114.
 (pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
 File: private/back_fiiw_gent.pdf Graphic file (type pdf)
 <use private/back_fiiw_gent.pdf, page 1>
-Package pdftex.def Info: private/back_fiiw_gent.pdf , page1 used on input line 113.
+Package pdftex.def Info: private/back_fiiw_gent.pdf , page1 used on input line 114.
 (pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
- [16 <./private/back_fiiw_gent.pdf>]
+ [17 <./private/back_fiiw_gent.pdf>]
 
 Package natbib Warning: There were undefined citations.
 
@@ -778,21 +799,21 @@ See the caption package documentation for explanation.
 
 (./thesis.aux)
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 3FCFAC5DF9CFE004B79026C1DAAE8DAB;2608.
+(rerunfilecheck)             Checksum: E4E0D419D01F63F681D24C488BFF5D2F;2601.
  ) 
 Here is how much of TeX's memory you used:
- 15559 strings out of 478238
- 252778 string characters out of 5850456
- 664304 words of memory out of 5000000
- 33450 multiletter control sequences out of 15000+600000
- 523258 words of font info for 116 fonts, out of 8000000 for 9000
+ 15696 strings out of 478238
+ 255519 string characters out of 5850456
+ 667243 words of memory out of 5000000
+ 33577 multiletter control sequences out of 15000+600000
+ 526045 words of font info for 119 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,17n,77p,661b,485s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 72i,17n,77p,661b,581s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/share/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (25 pages, 1331214 bytes).
+Output written on thesis.pdf (26 pages, 2006479 bytes).
 PDF statistics:
- 365 PDF objects out of 1000 (max. 8388607)
- 306 compressed objects within 4 object streams
- 65 named destinations out of 1000 (max. 500000)
- 212 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 391 PDF objects out of 1000 (max. 8388607)
+ 327 compressed objects within 4 object streams
+ 69 named destinations out of 1000 (max. 500000)
+ 222 words of extra memory for PDF output out of 10000 (max. 10000000)
 

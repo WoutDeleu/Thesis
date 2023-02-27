@@ -6,47 +6,46 @@ Database file #1: bibliografie.bib
 Warning--I didn't find a database entry for "aad2012"
 Warning--I didn't find a database entry for "hughes2005"
 Warning--I didn't find a database entry for "cottrell2009"
-Warning--empty journal in Dhondt_Pochat_Voulimeneas_Joosen_Volckaert_2022
 Warning--empty journal in sec18has3:online
-You've used 11 entries,
+You've used 12 entries,
             1935 wiz_defined-function locations,
-            538 strings with 6148 characters,
-and the built_in function-call counts, 3180 in all, are:
-= -- 324
-> -- 110
-< -- 10
-+ -- 37
-- -- 34
-* -- 221
-:= -- 619
-add.period$ -- 38
-call.type$ -- 11
-change.case$ -- 72
-chr.to.int$ -- 10
+            544 strings with 6340 characters,
+and the built_in function-call counts, 3406 in all, are:
+= -- 352
+> -- 117
+< -- 11
++ -- 39
+- -- 36
+* -- 233
+:= -- 667
+add.period$ -- 42
+call.type$ -- 12
+change.case$ -- 78
+chr.to.int$ -- 11
 cite$ -- 13
-duplicate$ -- 124
-empty$ -- 198
-format.name$ -- 49
-if$ -- 590
+duplicate$ -- 131
+empty$ -- 208
+format.name$ -- 52
+if$ -- 631
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 4
-newline$ -- 63
-num.names$ -- 33
-pop$ -- 41
+missing$ -- 3
+newline$ -- 69
+num.names$ -- 36
+pop$ -- 40
 preamble$ -- 1
-purify$ -- 72
+purify$ -- 78
 quote$ -- 0
-skip$ -- 108
+skip$ -- 115
 stack$ -- 0
-substring$ -- 155
+substring$ -- 167
 swap$ -- 2
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 66
-warning$ -- 2
-while$ -- 23
+type$ -- 72
+warning$ -- 1
+while$ -- 25
 width$ -- 0
-write$ -- 148
-(There were 5 warnings)
+write$ -- 162
+(There were 4 warnings)

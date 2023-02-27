@@ -15,7 +15,7 @@ Carr, C.~T. and Hayes, R.~A. (2015).
 \newblock {\em Atlantic Journal of Communication}, 23(1):46–65.
 
 \bibitem[Dhondt et~al., 2022]{Dhondt_Pochat_Voulimeneas_Joosen_Volckaert_2022}
-Dhondt, K., Pochat, V.~L., Voulimeneas, A., Joosen, W., and Volckaert, S.
+Dhondt, K., Le~Pochat, V., Voulimeneas, A., Joosen, W., and Volckaert, S.
   (2022).
 \newblock A run a day won’t keep the hacker away: Inference attacks on
   endpoint privacy zones in fitness tracking social networks.
@@ -53,6 +53,13 @@ Strava, I. (2022).
 \newblock
   \url{https://support.strava.com/hc/en-us/articles/115001188684-Moving-Time-Speed-and-Pace-Calculations}.
 \newblock (Accessed on 02/26/2023).
+
+\bibitem[Strava, 2023]{Activity24:online}
+Strava, I. (2023).
+\newblock Activity privacy controls – strava support.
+\newblock
+  \url{https://support.strava.com/hc/en-us/articles/216919377-Activity-Privacy-Controls}.
+\newblock (Accessed on 02/27/2023).
 
 \bibitem[Vanmeldert, 2022]{Sportapp72:online}
 Vanmeldert, D. (2022).
