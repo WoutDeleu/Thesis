@@ -27,7 +27,7 @@ van een mogelijke aanval gefilterd, opdat enkel activiteiten die relevante
 gps-informatie bevatten in beschouwing worden genomen. Dit gaat dan meer
 specifiek over \textit{runs, hikes, walks, and rides}.
 
-\subsection{Activiteiten}
+\subsection{Activiteiten}\label{data}
 Een Strava activiteit bevat erg veel informatie. Echter is niet alles even
 bruikbaar. Een correcte abstractie zal dus moeten gemaakt worden van de
 onnodige data. Afbeelding~\ref{fig:activityData} geeft een voorbeeld van een
@@ -50,10 +50,11 @@ bewegingstijd is de tijd waarbij de gebruiker zich effectief bewoog. M.a.w.
 worden de tijden waarbij de gebruiker stilstond uit de verstreken tijd
 gefilterd. Dit kan gaan over bijvoorbeeld een pauze, of een verkeerslicht. De
 snelheid wordt berekend aan de hand van de bewegingstijd. Dit kan simpel worden
-geverifieerd worden via een manuele berekening ter bevestiging(\ref{eq:speed}).
-Een kanttekening hierbij is dat dit enkel geldt voor activiteiten die niet
-gelabeld zijn als \textit{race}. In dit geval wordt de snelheid berekend in
-functie van de totaal verstreken tijd.\cite{MovingTi80:online}
+geverifieerd worden via een manuele berekening ter bevestiging
+(\ref{eq:speed}). Een kanttekening hierbij is dat dit enkel geldt voor
+activiteiten die niet gelabeld zijn als \textit{race}. In dit geval wordt de
+snelheid berekend in functie van de totaal verstreken
+tijd.\cite{MovingTi80:online}
 \begin{equation}\label{eq:speed}
     \frac{(39:17)\min}{7.44 km} = 5:16 \min
 \end{equation}
@@ -88,21 +89,47 @@ Deze gebruiker zal enkel zicht hebben tot de het zichtbare deel, het
 onzichtbare deel zal dus voor een andere gebruiker niet zichtbaar zijn. De
 activiteit zal voor deze persoon dus als het ware afgekapt zijn, en zal in zijn
 zichtbare versie op een andere plek starten en eindigen. In de volgende
-sectie~\ref{Algemene Privacy} \&~\ref{EPZ} wordt op de betekenis meer in detail
-ingegaan op de werking van deze methodiek.
+secties~\ref{Algemene Privacy} \&~\ref{EPZ} wordt op de betekenis meer in
+detail ingegaan op de werking van deze methodiek.
 
 Een laatste kanttekening die hierbij gemaakt moet worden is dat voor een
 gebruiker verschillende eenheden mogelijk zijn om uit te kiezen. Er is keuze
 mogelijk tussen de mijl en pond, en kilometer en kilogram. Een gebruiker kiest
 in welke eenheid hij/zij de applicatie wenst te gebruiken. Voor de gebruiker in
-kwestie zal dus alles worden weergegeven in de gekozen eenheid.
+kwestie zal dus de volledige applicatie worden weergegeven in de gekozen
+eenheden.
 \begin{figure}
     \centering
     \includegraphics[width=0.8\textwidth]{fig/VoorbeeldActiviteit_Personal.png}
     \caption{Data van een activiteit}\label{fig:activityData}
 \end{figure}
 
-\subsection{Algemene Privacy}\label{Algemene Privacy}
+\subsection{Berekening Afstanden}
+Fitnesstrackers krijgen vanuit de buitenwereld ruwe data binnen. Deze data moet
+dus vooraleer ze bruikbaar is voor de gebruiker verwerkt worden. Er werd al
+kort ingegaan in sectie~\ref{data} op de berekening die Strava gebruikt voor de
+snelheid. Echter is het ook interessant om de berekening van Strava eens onder
+de loep te nemen voor de afgelegde afstand. Strava gebruikt 2 aanpakken voor
+het berekenen van deze afstand. De eerste is de \textit{GPS-calculated
+    Distance}. Dit bestaat eruit om de afstand tussen opeenvolgende punten
+gps-punten te berekenen, en deze op te tellen. Precisie is hier afhankelijk van
+de precisie van de gps-punten, aangezien de afstand wordt berekend door de
+punten te met rechte lijnen te verbinden. Dit kan gebeuren in real time, via
+het apparaat die gebruikt wordt om de activiteit op te nemen. In dit geval zal
+dit apparaat de cumulatieve afstand berekenen in real time. Op elk punt zal de
+afstand vanaf het startpunt gekend zijn, en het is deze afstand die gedeeld zal
+worden op het platform. Het grote nadeel hierbij is het real-time aspect.
+Fouten kunnen moeilijker on the fly worden gecorrigeerd. Een tweede aanpak is
+om het pas bij het uploaden te verwerken. De gps-data wordt dan geanalyseerd,
+en de nodige berekeningen kunnen worden uitgevoerd.
+
+Het alternatief voor de GPS-calculated distance is de \textit{Ground Speed
+    Distance} methodiek. Deze afstand kan enkel worden bepaald in het geval van een
+fietsactiviteit. Deze afstand wordt berekend door het aantal omwentelingen te
+vermenigvuldigen met de omtrek van het fietswiel.~\cite{HowDista47:online}
+%  Aanvullen... - https://support.strava.com/hc/en-us/articles/216917707-Bad-GPS-Data
+
+\subsection{Algemeen Privacybeleid}\label{Algemene Privacy}
 Het delen van alle data die vervat zit in zo'n een activiteit zit met alle
 andere gebruikers op het platform, is zeker niet altijd wenselijk. Kiezen er
 dan ook voor om de gebruiker de mogelijkheid te geven om zijn privacy te
@@ -133,7 +160,7 @@ de EPZ te omzeilen.
 
 Een EPZ is een cirkelzone met een bepaalde straal rond een gps-punt. De straal
 van deze cirkel\footnote{Op Strava heeft de EPZ de vorm van een cirkel, maar op
-    andere platformen kunnen andere vormen de norm zijn, bv.\ een polygoon.} kan
+    andere platformen kunnen andere vormen de norm zijn, bv.\ polygonen.} kan
 worden gekozen door de gebruiker, en deze heeft keuze uit waarden van 0 tot
 1600m, in stappen van 200m. Wanneer een gebruiker binnen deze zone zijn
 activiteit beëindigt of begint, dan de route binnen de EPZ van die activiteit
@@ -167,3 +194,5 @@ grijs voor de onzichtbare).
     \end{subfigure}
     \caption{Voorbeeld van de werking van een EPZ}\label{fig:EPZ_Voorbeeld}
 \end{figure}
+
+% Aanvullen
