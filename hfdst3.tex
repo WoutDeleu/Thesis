@@ -16,3 +16,18 @@
 % Afstanden mogelijks berekenen op 2 manieren 
 % 1. Coordinaten 
 % 2. Cumulatieve afstanden van de punten
+
+% Werkwijze
+%     1. Bereken tijd in de EPZ
+%           Wanneer ge stil staat... in de EPZ
+%           Eerste - laatste tijd
+%           Snelheid
+%               Zelf berekenen (Maar komt overeen met degene gegeven door Strava - Strava geeft sommige weer als NULL, dus kan er niet mee werken)
+%               Strava: m/h
+%               Zelf: m/s
+%     2. Berkenen outerdistance op verschillende manieren
+%     2. Berekenen inner distance
+%           Voor complete dataset => visualize verschillen tss de berekende en de gegeven inner distance
+%           opm: Wanneer je stil staat in den EPZ => aanval niet mogelijk (Gemiddelde snelheid obv moving time <-> Mijn methode gebruikt elapsed_time)
+%           haversine => Vectorized
+%       Methodiek volledig uitschrijven + analyse van deze waarden
