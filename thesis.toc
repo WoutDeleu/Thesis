@@ -1,9 +1,7 @@
 \babel@toc {dutch}{}\relax 
 \babel@toc {dutch}{}\relax 
 \contentsline {chapter}{Voorwoord}{iii}{chapter*.1}%
-\contentsline {section}{\numberline {0.1}Situering}{iv}{section.0.1}%
-\contentsline {section}{\numberline {0.2}Doel}{iv}{section.0.2}%
-\contentsline {chapter}{Samenvatting}{iv}{section.0.2}%
+\contentsline {chapter}{Samenvatting}{iv}{chapter*.2}%
 \contentsline {chapter}{Abstract}{v}{chapter*.3}%
 \contentsline {chapter}{Inhoud}{vii}{chapter*.4}%
 \contentsline {chapter}{Figurenlijst}{viii}{chapter*.5}%

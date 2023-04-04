@@ -3,8 +3,6 @@
 %                            CHAPTER                              %
 %                                                                 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
 \chapter{Data-analyse}
 % - Beschrijven persoon die stil staat in de EPZ
 % - Beschrijven verschillen + filter
@@ -16,3 +14,36 @@
 % - ASSUMPTIES
 %     - Elapsed Time = Moving Time in de EPZ
 %         => Hoeveel van de volledige dataset is dit het gevolg
+% Results eerste run
+
+\begin{table}[H]
+    \centering
+    \caption{First run with standard gps points}
+    \label{tab:example}
+    \scalebox{0.5}{
+        \begin{tabular}{lrrrrrrrr}
+            \toprule
+            {}         & Success Rate (\%) & Correctness (m) & Accuracy & Reduction (\%) & Uncertainty Region ($m^2$) & Certainty & Spatial Certainty & Degree of Anonymity (\%) \\
+            Radius (m) &                   &                 &          &                &                            &           &                   &                          \\
+            \midrule
+            200        & 72.06             & 59.92           & 21       & 81.89          & 473.05                     & 2.22      & 1.01              & 33.43                    \\
+            \bottomrule
+        \end{tabular}
+    }
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \caption{Attack with first implementation of smoothening}
+    \label{tab:example}
+    \scalebox{0.5}{
+        \begin{tabular}{lrrrrrrrr}
+            \toprule
+            {}         & Success Rate (\%) & Correctness (m) & Accuracy & Reduction (\%) & Uncertainty Region ($m^2$) & Certainty & Spatial Certainty & Degree of Anonymity (\%) \\
+            Radius (m) &                   &                 &          &                &                            &           &                   &                          \\
+            \midrule
+            200        & 73.98             & 60.35           & 22       & 82.41          & 450.52                     & 2.21      & 1.03              & 32.92                    \\
+            \bottomrule
+        \end{tabular}
+    }
+\end{table}
