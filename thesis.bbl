@@ -11,9 +11,27 @@ Carr, C.~T. and Hayes, R.~A. (2015).
 \newblock Social media: Defining, developing, and divining.
 \newblock {\em Atlantic Journal of Communication}, 23(1):46–65.
 
+\bibitem[Croft, 2015]{Snapping96:online}
+Croft, J. (2015).
+\newblock Snapping gps tracks to roads.
+\newblock \url{https://www.jamesrcroft.com/2015/06/snapping-gps-tracks-to-roads/}.
+\newblock (Accessed on 04/07/2023).
+
 \bibitem[Dhondt et~al., 2022]{Dhondt_Pochat_Voulimeneas_Joosen_Volckaert_2022}
 Dhondt, K., Le~Pochat, V., Voulimeneas, A., Joosen, W., and Volckaert, S. (2022).
 \newblock A run a day won’t keep the hacker away: Inference attacks on endpoint privacy zones in fitness tracking social networks.
+\newblock osf.io/3m5ut.
+
+\bibitem[Early, 2020]{Smoothin16:online}
+Early, J. (2020).
+\newblock Smoothing and interpolating noisy gps data.
+\newblock \url{https://jeffreyearly.com/smoothing-and-interpolating-noisy-gps-data/}.
+\newblock (Accessed on 04/07/2023).
+
+\bibitem[Early and Sykulski, 2020]{SmoothingandInterpolatingNoisyGPSDatawithSmoothingSplines}
+Early, J.~J. and Sykulski, A.~M. (2020).
+\newblock Smoothing and interpolating noisy gps data with smoothing splines.
+\newblock {\em Journal of Atmospheric and Oceanic Technology}, 37(3):449 -- 465.
 
 \bibitem[Hern, 2018]{Fitnesst33:online}
 Hern, A. (2018).
@@ -25,6 +43,26 @@ Hern, A. (2018).
 Howard, P. and Parks, M. (2012).
 \newblock Social media and political change: Capacity, constraint, and consequence.
 \newblock {\em Journal of Communication}, 62.
+
+\bibitem[Ladetto et~al., 2001]{article}
+Ladetto, Q., Gabaglio, V., and Merminod, B. (2001).
+\newblock Combining gyroscopes, magnetic compass and gps for pedestrian navigation.
+\newblock {\em Proceedings of the International Symposium on Kinematic Systems in Geodesy, Geomatics, and Navigation}.
+
+\bibitem[Mink et~al., 2022]{10.1145/3491102.3502136}
+Mink, J., Yuile, A.~R., Pal, U., Aviv, A.~J., and Bates, A. (2022).
+\newblock Users can deduce sensitive locations protected by privacy zones on fitness tracking apps.
+\newblock In {\em Proceedings of the 2022 CHI Conference on Human Factors in Computing Systems}, CHI '22, New York, NY, USA. Association for Computing Machinery.
+
+\bibitem[of~Dallas, nd]{Smoothin86:online}
+of~Dallas, F. R.~B. (n.d.).
+\newblock Smoothing data with moving averages - dallasfed.org.
+\newblock \url{https://www.dallasfed.org/research/basics/moving#:~:text=A%20moving%20average%20smoothes%20a,the%20variable's%20timeliness%20is%20lost.}
+\newblock (Accessed on 04/13/2023).
+
+\bibitem[Seiler, 2022]{seiler2022haul}
+Seiler, K.~M. (2022).
+\newblock Haul road mapping from gps traces.
 
 \bibitem[Strava, 2021a]{Stravapr81:online}
 Strava, I. (2021a).

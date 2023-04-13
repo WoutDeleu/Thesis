@@ -4,7 +4,12 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces First run with standard gps points\relax }}{11}{table.caption.10}%
-\contentsline {table}{\numberline {4.2}{\ignorespaces Attack with first implementation of smoothening\relax }}{11}{table.caption.11}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces First run with standard gps points\relax }}{14}{table.caption.15}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Attack with first implementation of smoothening\relax }}{14}{table.caption.16}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces Attack with smoothening window 10\relax }}{14}{table.caption.17}%
+\contentsline {table}{\numberline {4.4}{\ignorespaces Attack with smoothening window 5\relax }}{14}{table.caption.18}%
+\contentsline {table}{\numberline {4.5}{\ignorespaces Attack with smoothening window 15\relax }}{14}{table.caption.19}%
+\contentsline {table}{\numberline {4.6}{\ignorespaces Attack with smoothening window 20\relax }}{14}{table.caption.20}%
+\contentsline {table}{\numberline {4.7}{\ignorespaces Attack with startingpoints\relax }}{15}{table.caption.21}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
