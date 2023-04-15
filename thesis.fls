@@ -1079,13 +1079,13 @@ INPUT hfdst5.tex
 INPUT ./hfdst5.tex
 INPUT ./hfdst5.tex
 INPUT hfdst5.tex
+INPUT ./thesis.bbl
+INPUT thesis.bbl
+INPUT ./thesis.bbl
+INPUT thesis.bbl
 INPUT /usr/share/texmf-dist/fonts/tfm/public/pslatex/pcrr7tn.tfm
 INPUT /usr/share/texmf-dist/fonts/vf/public/pslatex/pcrr7tn.vf
 INPUT /usr/share/texmf-dist/fonts/tfm/public/pslatex/pcrr8rn.tfm
-INPUT ./thesis.bbl
-INPUT thesis.bbl
-INPUT ./thesis.bbl
-INPUT thesis.bbl
 INPUT ./bijlage1.tex
 INPUT ./bijlage1.tex
 INPUT ./bijlage1.tex

@@ -17,8 +17,6 @@
 \contentsline {section}{\numberline {2.2}Endpoint Privacy Zones}{9}{section.2.2}%
 \contentsline {section}{\numberline {2.3}Gerelateerd werken}{11}{section.2.3}%
 \contentsline {chapter}{\numberline {3}Setting aanval}{13}{chapter.3}%
-\contentsline {chapter}{\numberline {4}Data-analyse}{14}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Richtlijnen voor referenties}{16}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Inleiding}{16}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Referentiestijl}{16}{section.5.2}%
-\contentsline {chapter}{\numberline {A}Uitleg over de appendices}{21}{appendix.A}%
+\contentsline {chapter}{\numberline {4}Resultaten}{14}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Conclusies}{16}{chapter.5}%
+\contentsline {chapter}{\numberline {A}Uitleg over de appendices}{19}{appendix.A}%

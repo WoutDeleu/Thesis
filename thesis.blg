@@ -3,13 +3,10 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: thesis.aux
 The style file: apalike.bst
 Database file #1: bibliografie.bib
-Warning--I didn't find a database entry for "aad2012"
-Warning--I didn't find a database entry for "hughes2005"
-Warning--I didn't find a database entry for "cottrell2009"
 Warning--empty journal in sec18has3:online
 You've used 21 entries,
             1935 wiz_defined-function locations,
-            597 strings with 8316 characters,
+            594 strings with 8287 characters,
 and the built_in function-call counts, 6117 in all, are:
 = -- 632
 > -- 218
@@ -48,4 +45,4 @@ warning$ -- 1
 while$ -- 44
 width$ -- 0
 write$ -- 284
-(There were 4 warnings)
+(There was 1 warning)

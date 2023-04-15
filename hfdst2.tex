@@ -9,32 +9,31 @@
 \section{Fitnesstrackers}
 Zoals al enkele malen werd aangehaald, ligt de focus van deze scriptie op
 mogelijke tekortkomingen/vulnerabilities betreffende privacybeleid in
-fitnesstrackers. Maar voordat een aanval op deze kwetsbaarheden kan worden
-opgezet, is het noodzakelijk om een te vat te krijgen op welke manier een
-fitnesstracker info verzamelt en weergeeft, en meer precies, hoe de mechanismen
-die de privacy voorzien voor de gebruikers in detail werken. Dit is essentiële
-informatie om een aanval te kunnen opzetten.
+fitnesstrackers. Maar voordat een aanval op basis van deze kwetsbaarheden kan
+opgezet worden, is het noodzakelijk om een te vat te krijgen op welke manier
+een fitnesstracker info verzamelt en weergeeft. En meer precies, hoe de
+mechanismen die de privacy voorzien voor de gebruikers in detail werken.
 
-De gebruikte data waarop de aanval wordt opgezet en waar op wordt
-geëxperimenteerd, is afkomstig van de populaire fitnesstracker
+De data waarmee de aanval wordt opgezet en waarmee wordt geëxperimenteerd, is
+afkomstig van de populaire fitnesstracker
 \textit{Strava\footnote{\url{https://www.strava.com/}}}. Dit is een sociaal
-netwerk, waarbij een alle soorten sporters hun activiteiten kunnen delen. Dit
-gaat over lopen, wandelen, fietsen, zwemmen, \ldots, maar ook sporten als
-fitnessen, voetballen, \ldots. De verzamelde data wordt volgens het perspectief
-van een mogelijke aanval gefilterd. Enkel data die gevoelige informatie met
-betrekking tot woonplaats zou kunnen vrijgeven wordt behouden. Dit zal er dus
-op neerkomen zodat enkel activiteiten die relevante gps-informatie bevatten in
-beschouwing worden genomen. Dit gaat dan meer specifiek over \textit{runs,
-    hikes, walks, and rides}.
+netwerk, waarbij alle soorten sporters hun activiteiten kunnen delen. Dit gaat
+over lopen, wandelen, fietsen, zwemmen, \ldots, maar ook sporten als fitnessen,
+voetballen, \ldots De verzamelde data wordt volgens het perspectief van een
+mogelijke aanval gefilterd. Enkel data die gevoelige informatie met betrekking
+tot woonplaats zou kunnen vrijgeven wordt behouden. Dit zal er dus op neerkomen
+dat enkel activiteiten die relevante gps-informatie bevatten in beschouwing
+worden genomen. Dit gaat dan meer specifiek over \textit{runs, hikes, walks,
+    and rides}.
 
 \subsection{Activiteiten}\label{data}
 Een Strava activiteit bevat erg veel informatie. Echter is niet alles even
-bruikbaar. Een correcte abstractie zal dus moeten gemaakt worden van de
-onnodige data. Figuur~\ref{fig:activityData} geeft een voorbeeld van een
-gedetailleerde activiteit weer. Een gebruiker is in staat om de activiteit een
-titel te geven, en er een korte beschrijving aan toe te voegen. Ook een foto
-kan optioneel toegevoegd worden. De exacte datum en tijd van de start van de
-activiteit wordt hierbij ook weergegeven.
+bruikbaar. Een correcte abstractie van de onnodige data is dus nodig.
+Figuur~\ref{fig:activityData} geeft een voorbeeld van een gedetailleerde
+activiteit weer. Een gebruiker is in staat om de activiteit een titel te geven,
+en er een korte beschrijving aan toe te voegen. Ook een foto kan optioneel
+toegevoegd worden. De exacte datum en tijd van de start van de activiteit wordt
+hierbij ook weergegeven.
 
 Rechts daarvan zijn de algemene basisstatistieken te zien. Deze zijn de totale
 afgelegde afstand, de totale bewegingstijd, de gemiddelde snelheid, het totale
@@ -43,53 +42,53 @@ Als extra kunnen hier enkele statistieken m.b.t.\ het gebruikte materiaal,
 zoals type fiets, loopschoenen, hartslagmeter, enzovoort worden weergegeven.
 Een belangrijk onderscheid in deze context is het verschil tussen de beweegtijd
 en de verstreken tijd. Deze twee lijken in definitie gelijk, maar dit zijn ze
-niet! Strava, en vaak fitnessplatformen in het algemeen werken met twee
+niet. Strava, en vaak fitnessplatformen in het algemeen werken met twee
 verschillende soorten tijdsberekeningen voor het bekomen van een accuratere
 gemiddelde snelheid. De verstreken tijd is simpelweg het tijdsinterval tussen
 het vertrek van de activiteit en de aankomsttijd ervan. De bewegingstijd is de
-tijd waarbij de gebruiker zich effectief bewoog. M.a.w.\ worden de tijden
-waarbij de gebruiker stilstond uit de verstreken tijd gefilterd. Dit kan gaan
-over bijvoorbeeld een pauze, of een verkeerslicht. De snelheid wordt berekend
-aan de hand van de bewegingstijd. Dit kan simpel worden geverifieerd via een
-manuele berekening volgens de formule voor het berekenen van gemiddelde
-snelheid\footnote{$ \quad v(\frac{min}{km}) = \frac{t(\min)}{d(km)}$}, met de
-data die terug te vinden is op Figuur~\ref{fig:activityData}
-($\frac{(39:17)\min}{7.44 km} = 5:16 \frac{\min}{km}$). Een kanttekening
-hierbij is dat dit enkel geldt voor activiteiten die niet gelabeld zijn als
-\textit{race}, dan wordt de snelheid berekend in functie van de totaal
-verstreken tijd~\cite{MovingTi80:online}.
+tijd waarbij de gebruiker zich effectief bewoog. Met andere woorden worden de
+tijden waarbij de gebruiker stilstond uit de verstreken tijd gefilterd. Dit kan
+gaan over bijvoorbeeld een pauze, of het wachten voor een verkeerslicht. De
+snelheid wordt berekend aan de hand van de bewegingstijd. Dit kan simpel worden
+geverifieerd via een manuele berekening volgens de formule voor het berekenen
+van gemiddelde snelheid\footnote{$ \quad v(\frac{min}{km}) =
+        \frac{t(\min)}{d(km)}$}, met de data die terug te vinden is op
+Figuur~\ref{fig:activityData} ($\frac{(39:17)\min}{7.44 km} = 5:16
+\frac{\min}{km}$). Een kanttekening hierbij is dat dit enkel geldt voor
+activiteiten die niet gelabeld zijn als \textit{race}, dan wordt de snelheid
+berekend in functie van de totaal verstreken tijd~\cite{MovingTi80:online}.
 
-Daaronder zien we de \textit{Strava-segmenten}. Een Strava-segment is een
-specifiek deel van een bepaalde route dat door gebruikers van de sport-app kan
-worden gemarkeerd, gedeeld en vergeleken met andere gebruikers. Het segment is
-een bepaalde afstand en route, bijvoorbeeld een klim of afdaling, die vaak
-wordt beschouwd als een uitdagende of iconische sectie van een bepaalde fiets-
-of hardlooproute. Gebruikers van Strava kunnen een segment maken door de begin-
-en eindpunten op een kaart aan te geven en een naam en beschrijving toe te
-voegen. Zodra het segment is gemaakt, kunnen andere gebruikers het segment
-vinden en deelnemen aan een leaderboard, waarop de snelste tijden worden
-bijgehouden en vergeleken met andere gebruikers. Segmenten worden vaak gebruikt
-om prestaties te meten en te vergelijken.
+Onder de basisstatistieken zijn de \textit{Strava-segmenten} te zien. Een
+Strava-segment is een specifiek deel van een bepaalde route dat door gebruikers
+van de sport-app kan worden gemarkeerd, gedeeld en vergeleken met andere
+gebruikers. Het segment is een bepaalde afstand en route, bijvoorbeeld een klim
+of afdaling, die vaak wordt beschouwd als een uitdagende of iconische sectie
+van een bepaalde fiets- of hardlooproute. Gebruikers van Strava kunnen een
+segment maken door de begin- en eindpunten op een kaart aan te geven en een
+naam en beschrijving toe te voegen. Zodra het segment is gemaakt, kunnen andere
+gebruikers het segment vinden en deelnemen aan een leaderboard, waarop de
+snelste tijden worden bijgehouden en vergeleken met andere gebruikers.
+Segmenten worden vaak gebruikt om prestaties te meten en te vergelijken.
 
-Daarnaast is ook de kaart duidelijk zichtbaar. Daarbij horen ook de
+Centraal op de figuur is ook de kaart duidelijk zichtbaar. Daarbij horen ook de
 tussentijden en de grafiek van snelheid. Optioneel kan hierbij ook nog een
-grafiek van de afgelegde hoogte en de hartslag worden weergegeven, indien de
-gebruiker hiervoor met het juiste materieel zijn sportactiviteit opneemt. De
-tussentijden en de grafiek van snelheid zijn qua inhoud gelijkaardig, met als
-verschil dat de grafiek erg precies kan worden bestudeerd. Op de grafiek is
-voor elk afstandspunt de ogenblikkelijke snelheid zichtbaar. Bij de
-tussentijden wordt de gemiddelde snelheid over een kilometer weergegeven. De
+visualisatie van de afgelegde hoogte en de hartslag worden weergegeven, indien
+de gebruiker hiervoor met de juiste meetinstrumenten zijn sportactiviteit
+opneemt. De tussentijden en de grafiek van snelheid zijn qua inhoud
+gelijkaardig, met als verschil dat deze erg precies kan worden bestudeerd. Op
+de grafiek is voor elk afstandspunt de ogenblikkelijke snelheid zichtbaar. Bij
+de tussentijden wordt de gemiddelde snelheid over een kilometer weergegeven. De
 kaart die de route weergeeft is zeker ook belangrijk om even te bestuderen.
 Deze bevat namelijk alle gps-geregistreerde punten, en verbindt deze ook om zo
 één aaneensluitende route te vormen. Wanneer deze echter in detail bestudeerd
 wordt, samen met de legende die aanwezig is, is te zien dat de route uit twee
 delen bestaat, een zichtbaar deel en een onzichtbaar deel. Een andere gebruiker
 zal enkel zicht hebben op de het zichtbare deel, het onzichtbare deel zal dus
-voor een andere gebruiker niet zichtbaar zijn. De activiteit zal voor deze
-persoon dus als het ware afgekapt zijn, en zal in zijn zichtbare versie op een
-andere plek starten en eindigen. In de volgende Secties~\ref{Algemene Privacy}
-\&~\ref{EPZ} wordt op de betekenis meer in detail ingegaan op de werking van
-deze methodiek.
+voor een andere gebruiker niet zichtbaar zijn. Anders geformuleerd, de
+activiteit zal voor deze persoon dus als het ware afgekapt zijn, en zal in zijn
+zichtbare versie op een andere plek starten en eindigen. In de volgende
+Secties~\ref{Algemene Privacy} \&~\ref{EPZ} wordt meer in detail ingegaan op de
+werking van deze methodiek.
 
 Een laatste kanttekening die hierbij gemaakt moet worden, is dat voor een
 gebruiker verschillende eenheden mogelijk zijn om uit te kiezen. Er is keuze
@@ -108,33 +107,33 @@ Fitnesstrackers krijgen vanuit de buitenwereld ruwe data binnen. Deze data moet
 dus verwerkt worden vooraleer ze bruikbaar is voor de gebruiker. Er werd al
 kort ingegaan in Sectie~\ref{data} op de berekening die Strava gebruikt voor de
 snelheid. Echter is het ook interessant om de berekening van Strava eens onder
-de loep te nemen voor de afgelegde afstand. Strava maakt van twee verschillende
-methodieken voor het berekenen van deze afstand. De eerste is de
+de loep te nemen voor de afgelegde afstand. Strava maakt gebruik van twee
+verschillende methodieken voor het berekenen van deze afstand. De eerste is de
 \textit{GPS-calculated Distance}. Dit bestaat eruit om de afstand tussen
 opeenvolgende gps-punten te berekenen, en deze op te tellen. Precisie is hier
 afhankelijk van de precisie van de gps-punten, aangezien de afstand wordt
 berekend door de punten met rechte lijnen te verbinden. Dit kan gebeuren in
-real time, via het apparaat die gebruikt wordt om de activiteit op te nemen. Er
-zal dan ook mogelijkheid zijn om real time info te zien. Op elk punt zal de
-afstand vanaf het startpunt gekend zijn, en het is deze afstand die gedeeld zal
-worden op het platform. Het grote nadeel hierbij is het real-time aspect.
-Fouten kunnen moeilijker on the fly worden gecorrigeerd. Een tweede aanpak is
-om het pas bij het uploaden te verwerken. De gps-data wordt dan geanalyseerd,
-en de nodige berekeningen kunnen worden uitgevoerd.
+real time, via de gsm, smartwatch of ander toestel die gebruikt wordt om de
+activiteit op te nemen. Er zal dan ook mogelijkheid zijn om real time info te
+zien. Op elk punt zal de afstand vanaf het startpunt gekend zijn, en het is
+deze afstand die gedeeld zal worden op het platform. Het grote nadeel hierbij
+is het real-time aspect. Fouten kunnen moeilijker on the fly worden
+gecorrigeerd. Een tweede aanpak is om gps-data pas bij het uploaden te
+verwerken. De gps-data wordt dan geanalyseerd, en de nodige berekeningen worden
+uitgevoerd.
 
 Het alternatief voor de GPS-calculated distance is de \textit{Ground Speed
     Distance} methodiek. Deze afstand kan enkel worden bepaald in het geval van een
 fietsactiviteit. Deze afstand wordt berekend door het aantal omwentelingen te
 vermenigvuldigen met de omtrek van het fietswiel~\cite{HowDista47:online}.
 
-De bovenstaande afstandsberekeningen zijn de 2 technieken die beschreven op de
-officiële support documentatie van Strava~\cite{HowDista47:online}. Echter
-blijkt wanneer de afstand op deze manier manueel berekent worden, afwijkende
-resultaten bekomen worden. De manuele berekeningen wijken af ten opzichte van
-de door Strava bekomen resulterende afstand. Dit is zeer waarschijnlijk te
-wijten aan de preprocessing van de data die gebeurd bij het uploaden van een
-activiteit. Alhoewel dit niet expliciet gedocumenteerd staat doen de resultaten
-dit wel sterk vermoeden. De hypothese is dat tijdens het uploaden, de afstand
+De bovenstaande afstandsberekeningen zijn de 2 technieken die officiële support
+documentatie van Strava beschrijft~\cite{HowDista47:online}. Echter blijkt
+wanneer de afstand op deze manier manueel berekent worden, afwijkende
+resultaten bekomen worden. Dit is zeer waarschijnlijk te wijten aan de
+preprocessing van de data die gebeurd bij het uploaden van een activiteit.
+Alhoewel dit niet expliciet gedocumenteerd staat doen de resultaten dit wel
+sterk vermoeden. De hypothese is dat tijdens het uploaden, de afstand
 herberekend wordt. De gps-punten zullen worden geanalyseerd, en er zullen
 technieken worden gebruikt om de resultaten hiervan te verbeteren. De twee
 meest waarschijnlijke technieken zijn \textit{Map Snapping} en
@@ -164,8 +163,8 @@ zien)\cite{Snapping96:online}.
     \caption{Voorbeeld van de werking van een EPZ}\label{fig:MapSnapping}
 \end{figure}
 
-Daarnaast bestaat de kans dat gebruik gemaakt wordt van smoothening.
-Smoothening is een proces dat ruwe GPS-punten (of datapunten in het algemeen)
+Daarnaast bestaat de kans dat er gebruik gemaakt wordt van smoothening.
+Smoothening is een proces dat ruwe gps-punten (of datapunten in het algemeen)
 op een traject probeert te optimaliseren opdat ze een vloeiend `curve' vormen.
 Dit wordt bekomen door ruis, schommelingen en onnauwkeurigheden te filteren uit
 het traject. Hiervoor bestaan verschillende implementaties. Aangezien Strava
@@ -179,10 +178,10 @@ nemen, en vervolgens op te schuiven. Het gemiddelde wordt berekend met volgende
 formule: $\overline{y_x} = \frac{y_x + y_{x+1} + \ldots + y_{n}}{x+n}$, voor
 punt x, met n als window-grootte. Zo kan voor elk punt een evenwichtige waarde
 op de nieuwe grafiek bekomen worden, en krijgt de grafiek een meer vloeiende
-vorm. Merk wel op dat de precisie van de route vermindert wordt op deze manier.
-Bij het smoothen van een traject wordt het aantal gebruikte punten namelijk
+vorm. Merk wel op dat de precisie van de route daalt wordt op deze manier. Bij
+het smoothen van een traject wordt het aantal gebruikte punten namelijk
 vermindert volgens de grote van de window. Afhankelijk van de grote, worden
-meer (resp\. minder) punten samengenomen, en zo minder/meer punten weergegeven
+meer (resp.\ minder) punten samengenomen, en zo minder/meer punten weergegeven
 op de grafiek. Een voorbeeld is terug te vinden op
 figuur~\ref{fig:SmoothingExample}
 ~\cite{Smoothin16:online}\cite{SmoothingandInterpolatingNoisyGPSDatawithSmoothingSplines}\cite{Smoothin86:online}.
@@ -194,20 +193,20 @@ figuur~\ref{fig:SmoothingExample}
 % - https://support.strava.com/hc/en-us/articles/216917707-Bad-GPS-Data
 
 \subsection{Algemeen Privacybeleid}\label{Algemene Privacy}
-Het delen van alle data die vervat zit in zo'n activiteit zit met alle andere
+Het delen van alle data die vervat zit in zo'n activitei met alle andere
 gebruikers op het platform, is zeker niet altijd wenselijk. De ontwikkelaars
-kiezen er dan ook voor om gebruikers de mogelijkheid te geven om zijn privacy
-te bewaren. In deze sectie wordt de focus gelegd op de mechanismen gebruikt
-door \textit{Strava}. Als opmerking valt te melden dat in heel wat andere
+kiezen er dan ook voor om gebruikers de mogelijkheid te geven om hun privacy te
+bewaren. In deze sectie wordt de focus gelegd op de mechanismen gebruikt door
+\textit{Strava}. Als opmerking valt te melden dat in heel wat andere
 sport-applicaties worden vergelijkbare, zo niet dezelfde methodieken gebruikt.
 Een eerste algemeen mechanisme bestaat eruit om de gebruiker de keuze te geven
 om alle activiteiten en alle gegevens over het profiel heen te laten voldoen
 aan bepaalde privacy regels. Deze regels kunnen ook per activiteit worden
 ingesteld. Onder de keuzes staan meestal drie opties, \textit{zichtbaar voor
-    iedereen}, \textit{zichtbaar voor volgers} en \textit{niemand}. Er kan ook zelf
-een keuze gemaakt worden om specifieke elementen van een activiteit niet te
-delen met de buitenwereld, zoals bijvoorbeeld de zichtbaarheid van de kaart die
-de route weergeeft.\cite{Activity24:online}
+    iedereen}, \textit{zichtbaar voor volgers} en \textit{zichtbaar voor niemand}.
+Er kan ook zelf een keuze gemaakt worden om specifieke elementen van een
+activiteit niet te delen met de buitenwereld, zoals bijvoorbeeld de
+zichtbaarheid van de kaart die de route weergeeft.\cite{Activity24:online}
 
 \section{Endpoint Privacy Zones}\label{EPZ}
 Een tweede belangrijke maatregel is het gebruik van de de \textbf{Strava
@@ -227,37 +226,34 @@ een partner waar regelmatig een tussenstop plaatsvindt. Een tweede opmerking is
 dat wanneer een gebruiker de EPZ doorkruist, maar er niet in stopt, de route
 onaangepast blijft. Op Figuur~\ref{fig:EPZ_Voorbeeld} zijn de verschillende
 perspectieven te zien, hoe het er als uploader uitziet, en hoe het eruit ziet
-voor een andere gebruiker. Het traject die de buitenstaander te zien krijgt
-zijn alle punten. Merk ook op dat de eigenaar van de activiteit zicht heeft op
-de EPZ, en wat zal verborgen worden die zich buiten de EPZ bevinden. Merk ook
-op dat eigenaar van de activiteit zicht heeft op het effect van de EPZ, m.a.w.\
-welke punten de EPZ zal verbergen. Dit onderscheid wordt gemaakt door het
-verschil in kleur (oranje voor de publiek zichtbare punten en grijs voor de
-onzichtbare).
+voor een andere gebruiker. Het traject die de buitenstaander te zien krijgt,
+zijn alle punten die zich buiten de EPZ bevinden. Merk ook op dat de eigenaar
+van de activiteit zicht heeft op de EPZ, en wat zal verborgen worden die zich
+buiten de EPZ bevinden. Dit onderscheid wordt gemaakt door het verschil in
+kleur (oranje voor de publiek zichtbare punten en grijs voor de onzichtbare).
 \begin{figure}[h]
     \centering
-    \begin{subfigure}[b]{.5\textwidth}
+    \begin{subfigure}[b]{.7\textwidth}
         \centering
         \caption{Perspectief eigenaar}
-        \includegraphics[width=0.8\textwidth]{fig/EPZ-mechanisme/Example_EPZ_InternalView.png}\label{fig:EPZ_internal}
+        \includegraphics[width=1\textwidth]{fig/EPZ-mechanisme/Example_EPZ_InternalView.png}\label{fig:EPZ_internal}
     \end{subfigure}\hfill
-    \begin{subfigure}[b]{.5\textwidth}
+    \begin{subfigure}[b]{.7\textwidth}
         \centering
         \caption{Perspectief externe gebruiker}
-        \includegraphics[width=0.8\textwidth]{fig/EPZ-mechanisme/Example_EPZ_ExternalView.png}\label{fig:EPZ_external}
+        \includegraphics[width=1\textwidth]{fig/EPZ-mechanisme/Example_EPZ_ExternalView.png}\label{fig:EPZ_external}
     \end{subfigure}
     \caption{Voorbeeld van de werking van een EPZ}\label{fig:EPZ_Voorbeeld}
 \end{figure}
 
 Het opzetten van een EPZ is dus een belangrijk onderdeel bij het blootleggen
-van mogelijke zwakheden van dit systeem. Het is dus belangrijk dat dit goed
-gesnapt wordt. Bij dit proces zal de gevoelige locatie worden genomen worden
-als beginlocatie. Hieruit zal a.d.h.v.\ de op voorhand vastgelegde EPZ-straal
-een cirkel worden opgesteld. Het centrum van deze cirkel zal hierna een
-translatie ondervinden in een willekeurige richting. Dit kan een verschuiving
-zijn met een afstand die maximaal 70\% van de straal van de EPZ bedraagt
-(Figuur~\ref{fig:translation}). Het transleren van deze cirkel wordt ook
-\textit{spatial cloaking} genoemd.
+van mogelijke zwakheden van dit systeem. Bij dit proces zal de gevoelige
+locatie worden genomen als beginlocatie. Hieruit zal a.d.h.v.\ de op voorhand
+vastgelegde EPZ-straal een cirkel worden opgesteld. Het centrum van deze cirkel
+zal hierna een translatie ondervinden in een willekeurige richting. Dit kan een
+verschuiving zijn met een afstand die maximaal 70\% van de straal van de EPZ
+bedraagt (Figuur~\ref{fig:translation}). Het transleren van deze cirkel wordt
+ook \textit{spatial cloaking} genoemd.
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.4\linewidth]{fig/EPZ-mechanisme/Translation_Center.png}
@@ -276,16 +272,19 @@ gefilterd (Figuur~\ref{fig:drop points}).
 \end{figure}
 
 \section{Gerelateerd werken}
-In het verleden is al wat onderzoek in de richting van de doeltreffendheid van
-EPZ's bij fitnesstrackers.~\citeauthor{sec18has3:online} beschreef een
-implementatie van EPZ's waarbij het centrum van de zone de gevoelige locatie
-is. M.a.w.\ het identificeren van deze zone is dus voldoende om van een
-geslaagde omzeiling van het systeem te spreken\cite{sec18has3:online}. In
-tegenstelling tot dit onderzoek, wordt ervan uitgegaan dat het centrum geen
-translatie ondervindt, en er dus geen spatial cloaking wordt toegepast. In deze
-paper wordt gefocust op de reconstructie van de cirkel op basis van 3 punten op
-de rand (Figuur~\ref{fig:Hassan_EPZ}). In deze paper wordt spatial cloaking wel
-aangehaald als mogelijke countermeasure tegen dit soort aanvallen.
+In het verleden is al wat onderzoek verricht in de richting van de
+doeltreffendheid van EPZ's bij fitnesstrackers.~\citeauthor{sec18has3:online}
+beschreef een implementatie van EPZ's waarbij het centrum van de zone de
+gevoelige locatie is. M.a.w.\ het identificeren van deze zone is dus voldoende
+om de gevoelige locatie te achterhalen\cite{sec18has3:online}. In tegenstelling
+tot dit onderzoek, wordt ervan uitgegaan dat het centrum geen translatie
+ondervindt, en er dus geen spatial cloaking wordt toegepast. In deze paper
+wordt gefocust op de reconstructie van de cirkel op basis van 3 punten op de
+rand (Figuur~\ref{fig:Hassan_EPZ}). Deze 3 randpunten worden dus bekomen door
+begin/eindpunten te nemen van activiteiten, volgens het perspectief van
+gebruiker die geen eigenaar is. Deze begin/eindpunten zullen zich altijd op de
+rand van de cirkel begeven. In deze paper wordt spatial cloaking wel aangehaald
+als mogelijke countermeasure tegen dit soort aanvallen.
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.6\textwidth]{fig/EPZ-mechanisme/Hassan.png}
@@ -303,18 +302,18 @@ verre van perfect zijn.
 \citeauthor{Dhondt_Pochat_Voulimeneas_Joosen_Volckaert_2022} voerde ook een studie naar de lekken aanwezig in het principe van EPZ's. Er
 wordt in deze paper een nadruk gelegd op de translatie van de EPZ, en hoe deze
 de privacy van een gebruiker verhoogt. Een inferentie aanval wordt er
-beschreven die gebruikmakend van de totale afstand, terug te vinden bij de
+beschreven die gebruikmaakt van de totale afstand, terug te vinden bij de
 activiteit. Aan de hand van deze totale afstand in combinatie met het
-wegennetwerk, wordt een poging gedaan om alle mogelijke routes te
+wegennetwerk, wordt een poging gedaan om alle mogelijke routes die de sporter binnenin de EPZ zou kunnen afgelegd hebben, voor elk traject te
 reconstrueren. Wanneer dit gedaan wordt voor verschillende trajecten, kan een
 locatie voorspeld worden die het meest waarschijnlijk wordt geacht om de
 gevoelige locatie te zijn.
 
 Een laatste onderzoek die zeker ook het vermelden waard is, is de thesis
-van~\citeauthor{Verdonck_2022}. Deze thesis bouwt in grote mate verder op de
-paper van \citeauthor{Dhondt_Pochat_Voulimeneas_Joosen_Volckaert_2022}, maar er
-wordt alternatieve data gebruikt. Er wordt gewerkt met hoogtedata i.p.v. totale
-afstanden, en zo wordt ook een inferentie aanval geconstrueerd.
+van~\citeauthor{Verdonck_2022} et al. Deze thesis bouwt in grote mate verder op
+de paper van \citeauthor{Dhondt_Pochat_Voulimeneas_Joosen_Volckaert_2022}, maar
+er wordt alternatieve data gebruikt. Er wordt gewerkt met hoogtedata i.p.v.\
+totale afstanden, en zo wordt ook een inferentie aanval geconstrueerd.
 % https://labs.strava.com/slide/
 % https://www.jamesrcroft.com/2015/06/snapping-gps-tracks-to-roads/
 
