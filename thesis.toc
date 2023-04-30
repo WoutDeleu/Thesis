@@ -2,11 +2,11 @@
 \babel@toc {dutch}{}\relax 
 \contentsline {chapter}{Voorwoord}{iii}{chapter*.1}%
 \contentsline {chapter}{Samenvatting}{v}{chapter*.2}%
-\contentsline {chapter}{Abstract}{vii}{chapter*.5}%
-\contentsline {chapter}{Inhoud}{ix}{chapter*.6}%
-\contentsline {chapter}{Figurenlijst}{x}{chapter*.7}%
-\contentsline {chapter}{Tabellenlijst}{xi}{chapter*.8}%
-\contentsline {chapter}{Lijst met afkortingen}{xii}{chapter*.9}%
+\contentsline {chapter}{Abstract}{vii}{chapter*.3}%
+\contentsline {chapter}{Inhoud}{ix}{chapter*.5}%
+\contentsline {chapter}{Figurenlijst}{x}{chapter*.6}%
+\contentsline {chapter}{Tabellenlijst}{xi}{chapter*.7}%
+\contentsline {chapter}{Lijst met afkortingen}{xii}{chapter*.8}%
 \contentsline {chapter}{\numberline {1}Inleiding}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Situering}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Doelstelling}{2}{section.1.2}%
