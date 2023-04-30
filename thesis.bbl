@@ -1,5 +1,10 @@
 \begin{thebibliography}{}
 
+\bibitem[Und, ]{Understa24:online}
+Understanding k-means clustering in machine learning | by education ecosystem (ledu) | towards data science.
+\newblock \url{https://towardsdatascience.com/understanding-k-means-clustering-in-machine-learning-6a6e67336aa1}.
+\newblock (Accessed on 04/25/2023).
+
 \bibitem[Bowden, 2018]{Cyclistw89:online}
 Bowden, A. (2018).
 \newblock Cyclist who had five bikes stolen says thieves are looking for quick times on strava to try and find high-end bikes – warns other users to check their privacy settings | road.cc.
@@ -21,6 +26,12 @@ Croft, J. (2015).
 Dhondt, K., Le~Pochat, V., Voulimeneas, A., Joosen, W., and Volckaert, S. (2022).
 \newblock A run a day won’t keep the hacker away: Inference attacks on endpoint privacy zones in fitness tracking social networks.
 \newblock osf.io/3m5ut.
+
+\bibitem[Driesen-Joanknecht, 2020]{Tempomin61:online}
+Driesen-Joanknecht, H. (2020).
+\newblock Tempo (min/km) vs snelheid (km/h) bij hardlopen – sport sneller massage, preventie, nijmegen.
+\newblock \url{https://sportsneller.nl/2020/11/25/tempo-min-km-vs-snelheid-km-h-bij-hardlopen/#:~:text=Waarom%20gebruiken%20hardlopers%20geen%20km,de%20snelheid%20uit%20te%20drukken.}
+\newblock (Accessed on 04/18/2023).
 
 \bibitem[Early, 2020]{Smoothin16:online}
 Early, J. (2020).

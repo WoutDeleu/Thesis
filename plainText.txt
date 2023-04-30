@@ -1,0 +1,72 @@
+In a society where social media is so vastly present, are the privacyconcerns
+around these platform more relevant than ever. When developing applications,
+privacy laws and concerns must be taken in account. But this does not mean all
+these platforms are bulletproof. In a lot of applications is it still possible
+to find loopholes in the system, with a possibility of rather unpleasant
+consequences. During this thesis, the main focus will be on the privacy policy
+of fitnesstrackers. These are platforms with the goal of storing and displaying
+data related to sport activities. These can be shared with other users, with
+the goal of sharing your achievements, and possibly motivating others to sport.
+This data may include heart rate, gps-locations, , some pieces could
+potentially more harmful than others. The focus of this thesis will be on the
+potentially harmful abilities gotten from gps locations, and everything related
+with gps and distance. The main concern about sharing this location based data,
+is potentially sharing location you would rather keep private. For example your
+home location. Sharing all the gps locations of your activities, could possibly
+leak this location.
+
+Most of these platforms are aware of this danger, and implement a series of
+countermeasures to prevent leaking this sensitive information. This comes
+however with a cost, the user experience. In the perspective of the big
+companies, a trade-off is consistently being made between privacy and user
+experience. On most platforms like Strava, Garmin, are similar basic
+privacy features implemented. These are features like hiding activities, or
+only sharing activities with your followers. But another much-used
+countermeasure is a mechanism known as an EPZ (Endpoint Privacy Zone).
+
+An EPZ is a circle or polygon drawn around a certain sensitive
+location. The main focus will be the circles, because they are the most used
+and they are the most straightforward to bypass. These circles will de drawn
+using a radius chosen by the user, and a center which is a random point in the
+area of around the sensitive location. This center can't be further than 70%
+of the radius away from this sensitive location. When this zone is generated,
+the end and beginning of the activity will be hidden which pass through this
+zone will be hidden for other users.
+
+This implementation of hiding parts of the track, is not a bulletproof system.
+When hiding the tracks, other possibly useful information is not being hidden
+or adapted. During this thesis, the goal is to retrieve sensitive location.
+This can be achieved by using the total times and distances of the activities.
+Previous research showed that it is possible to retrieve sensitive locations
+using the total distance, and the street map of the area. These attacks are
+called inference attacks. The distance traveled inside the EPZ can be
+inferred using the total distance given by the activity, and the distance
+traveled outside of the EPZ (this is the visible distance). Using the distance
+traveled inside of the EPZ, a route can be constructed and mapped to the
+streetplan. If all the possible routes are considered, multiple possible
+locations are found. If this is repeated for different activities, with
+different points where the EPZ is being entered, there will, in the best case,
+only one point remain. This would then be the sensitive location.
+
+During this thesis, a research is being held on the possibilities of such
+inference attacks using other data as a base than distance. The main focus will
+be on the speed and tempo of the activities, in combination with the
+gps-locations. This method will consist of three parts. First, the average
+speed and the total duration will be used to calculate the total distance.
+Second, the gps points will be the used to calculate the distance traveled
+outside of the EPZ. In order to do this effectively, smoothing and map
+snapping strategies need to be tested out in order to get the best results.
+These two values can in the third step being used to execute the interference
+attack. The results of this attack will be compared with the results of the
+previous implementations of this sort of attack.
+
+This attack is successful in some cases. With the correct tuning of the
+parameters of the smoothing algorithm, a succes rate of 75% can be achieved.
+This is lower than previous implementations of this attack, which is logical
+because of the type of data that is being used. Especially the gps-locations,
+which are not always as accurate. And because there are so many points needed
+and given, small deviations on every point result in a large deviation on the
+calculated distance. But the main conclusion is that this attack is possible,
+with a significant succes rate.
+
+Keywords: fitness-trackers, privacy, endpoint privacy zone, gps-locations, inference attack, speed

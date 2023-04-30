@@ -1,40 +1,78 @@
-% De (korte) samenvatting, toegankelijk voor een breed publiek, wordt in het Nederlands geschreven en bevat {\bf maximum 3500 tekens}. Deze samenvatting moet ook verplicht opgeladen worden in KU Loket.
 
 In een maatschappij waar sociale media alom aanwezig is, zijn de
-privacybezorgdheden hierrond evenzeer erg actueel. Bij het ontwikkelingen van
+privacybezorgdheden hierrond evenzeer erg actueel. Bij het ontwikkelen van
 applicaties moeten privacywetgevingen en -bezorgdheden in acht genomen worden.
 Maar dit neemt niet weg dat in heel wat applicaties nog gaten te vinden zijn in
 het privacybeleid. In deze scriptie wordt de focus gelegd op het beleid binnen
 de fitness-trackers. Dit zijn platformen met als doel gegevens (die betrekking
 hebben op sportactiviteiten) op te slaan en weer te geven voor andere
-gebruikers. Dit zijn gegevens zoals hartslag, gps-locaties, \ldots. Heel wat
-van deze platformen gaan op gelijkaardige manieren te werk om de privacy van de
-gebruiker proberen te garanderen. In de meeste gevallen gaat dit over het
-verbergen van een stuk van de activiteit, en zo de start- en/of eindpositie
-niet weer te geven op de kaart. Het achterhouden van dit routesegment gebeurd
-door het opstellen van een \textit{Endpoint Privacy Zone}. Hierbij wordt een
-cirkel opgesteld waarbinnen de afgelegde weg wordt verborgen. In het verleden
-werd reeds aangetoond dat dit zeker geen waterdicht systeem is. Een
-tekortkoming van dit systeem, is het feit dat gebruik gemaakt wordt van gegeven
-afstanden die terug te vinden zijn in metadata die het desbetreffende platform
-vrijgeeft. Hiermee wordt de \textit{Endpoint Privacy Zone} \textbf{EPZ}
-bepaalt, en zo kan uiteindelijk ook de effectieve startpositie van de
-activiteit achterhaald worden en zo deze gevoelige informatie bloot
-leggen~\cite{Dhondt_Pochat_Voulimeneas_Joosen_Volckaert_2022}.
+gebruikers. Dit zijn gegevens zoals hartslag, \ac{gps}-locaties, \ldots.
+Sommige van deze gegevens kunnen mogelijks ongewenste informatie bevatten of
+vrijgeven. De focus van deze thesis ligt op het uitbuiten van deze mogelijks
+schadelijke informatie, met de nadruk op gps-locaties en andere
+gps-gerelateerde data. Het grootste gevaar van het delen van deze locaties is
+het vrijgeven van locaties die je liever niet deelt met de buitenwereld, zoals
+bv.\ een woonplaats.
 
-Gedurende deze thesis wordt onderzoek gedaan naar manieren om deze EPZ te
-omzeilen, via metadata die terug te vinden is in de activiteiten in kwestie. De
-focus gedurende deze thesis ligt op snelheidsdata. Er wordt voornamelijk
-gezocht naar de omstandigheden waaronder deze aanval succesvol zou kunnen zijn,
-bij welke eigenschappen van de activiteit. En er wordt ook gezocht naar
-manieren om deze aanval in de best mogelijke omstandigheden uit te voeren. De
-studie focust zich voornamelijk op de berekeningen van afstanden en snelheden
-a.d.h.v.\ coördinaten. Het doel is om de EPZ te omzeilen, ervan uitgaande dat
-de desbetreffende fitnesstrackers afstandsinformatie achterhouden. Een grote
-focus ligt dus op het berekenen van afstanden via gps punten met een zo hoog
-mogelijke precisie. Een belangrijke techniek hierbij is gps-smoothing.
+Heel wat van deze platformen zijn zich bewust van de mogelijke gevaren gaan op
+gelijkaardige manieren te werk om de privacy van de gebruiker proberen te
+garanderen. Dit komt echter met een prijs, namelijk van
+gebruiksvriendelijkheid. Volgens het perspectief van developers wordt de
+trade-off tussen privacy en gebruiksvriendelijkheid constant gemaakt. Op de
+meest platformen zoals Strava, Garmin, \ldots worden gelijkaardige privacy
+features geïmplementeerd. Dit zijn features zoals het verbergen van
+activiteiten voor andere gebruikers, of enkel activiteiten weergeven voor je
+volgers. Maar een ander veelgebruikte techniek is gekend als het implementeren
+van \textit{EPZ's} (Endpoint Privacy Zone).
 
-% Aanvullen met data, resultaten van wat ik gedaan heb... zie tibo verdonck
+Een \textit{EPZ} is een cirkel of polygoon opgezet rond een gevoelig
+coördinaat. De focus zal hier gelegd worden op het gebruik van cirkels, omdat
+deze het meest gebruikt worden. Deze cirkels worden opgesteld rond de gevoelige
+locatie, met een radius gekozen door de gebruiker. Het centrum van de EPZ zal
+een willekeurig punt zijn in de buurt van de locatie in kwestie. Deze kan niet
+verder dan 70\% van de radius verwijderd zijn van de gevoelige locatie. Elk
+stuk van het afgelegde traject dat binnen deze zone ligt zal worden verborgen
+worden voor de andere gebruikers.
+
+Het verbergen van delen van de route is echter geen waterdichte implementatie.
+Want bij het verbergen van deze gps-locaties, worden bijhorende gegevens niet
+aangepast of mee verborgen. Bijvoorbeeld wordt de totale afgelegde afstand
+hieraan niet aangepast. Gedurende deze implementatie is het doel om de
+gevoelige locatie te achterhalen. Voorafgaand onderzoek toonde aan dat dit
+mogelijk is door het gebruik van de totale duur en totale afgelegde afstanden
+van de activiteiten, in combinatie met het stratenplan van het gebied. Dit
+soort aanvallen worden \textit{inference attacks} genoemd. De afstand afgelegd
+binnenin de EPZ kan worden afgeleid met behulp van de totale afstand en de
+afstand afgelegd buiten de EPZ (de zichtbare afstand). De afstand binnenin de
+EPZ kan worden gemapt op het stratennetwerk, om zo alle mogelijke routes te
+bekomen die de gebruiker kan afgelegd hebben binnenin de EPZ.\ Wanneer voor
+alle activiteiten die voor deze gebruiker ter beschikking zijn dit mechanisme
+wordt toegepast, zal in het slechtste geval slechts één punt overblijven,
+doordat geleidelijk aan punten zullen worden kunnen geschrapt omdat deze niet
+voor alle activiteiten een mogelijk eindpunt zullen zijn. Dit punt is dan de
+gevoelige locatie.
+
+In deze thesis wordt onderzoek gedaan naar mogelijke implementaties van
+dergelijke inferentie-aanvallen, met andere gegevens dan de totale afstand als
+basis. De focus zal hier liggen op snelheid en tempo van de activiteiten, in
+combinatie met gps-punten. Deze gevolgde methode bestaat uit drie delen. In de
+eerste stap zullen de gemiddelde snelheid en de totale duur worden gebruikt om
+de totale afstand te berekenen. Ten tweede zullen de GPS-punten gebruikt worden
+om de afgelegde afstand buiten de \ac{EPZ} te berekenen. Om dit effectief te
+doen, moeten smoothing- en map-matchingstrategieën uitgetest worden om de best
+mogelijke resultaten te verkrijgen. Deze twee berekende waarden kunnen in de
+derde stap worden gebruikt om de interferentie-aanval uit te voeren. De
+resultaten van deze aanval zullen worden vergeleken met de resultaten van
+eerdere implementaties van dit soort aanval.
+
+Deze methodiek kan in vele gevallen succesvol worden uitgevoerd. Met de juiste
+afstemming van de parameters van het smoothing-algoritme kan een
+succespercentage van 75\% worden bereikt. Dit is lager dan eerdere
+implementaties van deze aanval, wat logisch is vanwege het type gegevens dat
+wordt gebruikt. Voornamelijk de GPS-locaties die niet altijd even nauwkeurig
+zijn. Doordat er zoveel punten nodig zijn resulteren kleine afwijkingen op elk
+punt in een grote afwijking op de berekende afstand. Maar de belangrijkste
+conclusie is dat deze aanval mogelijk is, met een aanzienlijke kans op succes.
 
 \textbf{Keywords}: fitness-trackers, privacy, endpoint privacy zone,
-gps-locaties, inference attack, snelheid
+\ac{gps}-locaties, inference attack, snelheid

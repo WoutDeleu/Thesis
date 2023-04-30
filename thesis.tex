@@ -33,6 +33,8 @@
 \allsectionsfont{\sffamily}
 \chapterfont{\raggedleft\sffamily}
 
+\usepackage[graphicx]{realboxes}
+
 \usepackage{float}                      % De optie H voor de plaatsing van figuren op de plaats waar je ze invoegt. bvb. \begin{figure}[H]
 %\usepackage{longtable}					% tabellen die over meerdere pagina's gespreid worden
 %\usepackage[times]{quotchap}           % indien je fancy hoofdstuktitels wil
@@ -40,6 +42,8 @@
 %\usepackage{latexsym}
 %\usepackage{amsmath}
 %\usepackage{amssymb}
+
+\usepackage{acronym}
 
 % MFA: zet zoekpad voor figure
 \graphicspath{{fig/}}
@@ -69,7 +73,7 @@
 %lijst van afkortingen toevoegen?
 \listofabbrevspagetrue{}
 \listofabbrevs{afkortingen}				%.tex file met daarin de lijst van symbolen
-\setlength{\parskip}{16pt}
+
 %informatie over het eindwerk, de promotor, ...
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \opleiding{Elektronica/ICT}
@@ -85,14 +89,15 @@
 \forenameB{}
 \surnameB{}
 
-\academicyear{2022 - 2023}
+\academicyear{2022 \- 2023}
 
-\promotorA[Promotor]{Prof. dr. ir. Stijn Volckaert}
+\promotorA[Promotor]{Prof.\ dr.\ ir.\ Stijn Volckaert}
 \promotorB[Begeleiders]{Ing. Karel Dhondt, \\Ing. Alicia Andries \\Ing. Jonas Vinck}
 
 % URL's bibliography overflow prevention
 \def\UrlBreaks{\do\/\do-}
 
+\setlength{\parskip}{16pt}
 \begin{document}
 \selectlanguage{dutch}
 \preface{}

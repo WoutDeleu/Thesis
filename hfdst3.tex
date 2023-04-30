@@ -5,7 +5,49 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
 \chapter{Setting aanval}
-Gedurende dit hoofdstuk wordt de bespreking
+Gedurende dit hoofdstuk de setting alsook de werking van de aanval beschreven.
+De aanval is sterk gebaseerd op de aanvallen
+van~\citeauthor{Dhondt_Pochat_Voulimeneas_Joosen_Volckaert_2022}\cite{Dhondt_Pochat_Voulimeneas_Joosen_Volckaert_2022}
+en~\citeauthor{Verdonck_2022}\cite{Verdonck_2022}. Deze aanvallen worden
+inferentie-aanvallen genoemd, vanwege het feit dat uit metadata essentiële
+gegevens kunnen worden geïnfereerd. In het geval
+van~\citeauthor{Dhondt_Pochat_Voulimeneas_Joosen_Volckaert_2022} gaat dit over
+afgelegde afstand binnenin de \ac{EPZ}. In het geval
+van~\citeauthor{Verdonck_2022} gaat dit dan weer over geïnduceerde
+hoogteverschillen binnen de privacy zone.
+
+\section{Aanvaller}
+Deze thesis voert een onderzoek naar de mogelijkheid om een \ac{EPZ} te
+omzeilen. De studie wordt dus gevoerd vanuit het opzicht van een aanvaller.
+Vooraleer de werking van een aanval wordt beschreven, is het belangrijk om een
+zicht te hebben op het doel, en de capaciteiten van een aanvaller.
+
+Hier is een aanvaller een gebruiker van het platform, die geen eigenaar is van
+een activiteit. Hij heeft echter wel zicht op alle metadata die publiekelijk
+gedeeld is. Dit is data zoals afgelegde afstand, snelheid, tempo, \ldots
+Aangezien de aanval gaat over het omzeilen \acp{EPZ} worden activiteiten
+beschouwd die gecloaked zijn. De aanvaller heeft dus geen zicht op de reële
+start- en/of eindlocatie, zijn doel is dan ook om de ondanks de aanwezigheid
+van cloaking deze gevoelige locatie te achterhalen.
+
+Vanuit het oogpunt van de inferentie-aanval beschreven
+door~\citeauthor{Dhondt_Pochat_Voulimeneas_Joosen_Volckaert_2022} heeft de
+aanvaller toegang tot alle data die publiek beschikbaar is. Deze gebruikt dan
+voornamelijk afgelegde weg als basis.
+
+De aanvaller die in deze thesis wordt beschreven, heeft echter geen toegang tot
+deze afstandsdata. Hij heeft wel nog toegang tot de ruwe GPS-data, maar ook de
+snelheid, het tempo enzovoort. Het onderzoek bestaat er dus uit om te
+onderzoeken in hoeverre een aanval nog mogelijk is wanneer de afstandsdata
+onbruikbaar zou zijn. Een alternatieve aanpak wordt dus onderzocht om de
+inferentie-aanval alsnog succesvol te kunnen uitvoeren.
+
+\section{Inferentie aanval}\label{sec:inferentieaanval}
+De inferentie aanval
+van~\citeauthor{Dhondt_Pochat_Voulimeneas_Joosen_Volckaert_2022}, die de basis
+vormt voor de aanval in deze thesis, kan worden in opgedeeld in drie stappen.
+De eerste hiervan is het identificeren van de \ac{EPZ}. Alhoewel deze stap niet
+noodzakelijk is, vernauwt deze de zoekruimte drastisch. Als inb
 % Beschrijven : Uitgang van de aanval - Geen afstanden gegeven
 
 %  Beschrijven hoe zo'n aanval werkt - Karels methodiek uitwerken
@@ -33,3 +75,5 @@ Gedurende dit hoofdstuk wordt de bespreking
 %           opm: Wanneer je stil staat in den EPZ => aanval niet mogelijk (Gemiddelde snelheid obv moving time <-> Mijn methode gebruikt elapsed_time)
 %           haversine => Vectorized
 %       Methodiek volledig uitschrijven + analyse van deze waarden
+
+% Bepalen bij welke omstandigheden het werkt/niet werkt

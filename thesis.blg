@@ -3,46 +3,48 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: thesis.aux
 The style file: apalike.bst
 Database file #1: bibliografie.bib
+Warning--to sort, need author or key in Understa24:online
+Warning--empty year in Understa24:online
 Warning--empty journal in sec18has3:online
-You've used 21 entries,
+You've used 23 entries,
             1935 wiz_defined-function locations,
-            594 strings with 8287 characters,
-and the built_in function-call counts, 6117 in all, are:
-= -- 632
-> -- 218
-< -- 18
-+ -- 73
-- -- 68
-* -- 427
-:= -- 1184
-add.period$ -- 75
-call.type$ -- 21
-change.case$ -- 139
-chr.to.int$ -- 18
-cite$ -- 22
-duplicate$ -- 236
-empty$ -- 379
-format.name$ -- 95
-if$ -- 1144
+            605 strings with 8907 characters,
+and the built_in function-call counts, 6577 in all, are:
+= -- 684
+> -- 225
+< -- 19
++ -- 75
+- -- 70
+* -- 455
+:= -- 1267
+add.period$ -- 82
+call.type$ -- 23
+change.case$ -- 150
+chr.to.int$ -- 20
+cite$ -- 27
+duplicate$ -- 256
+empty$ -- 412
+format.name$ -- 98
+if$ -- 1233
 int.to.chr$ -- 4
 int.to.str$ -- 0
 missing$ -- 6
-newline$ -- 119
-num.names$ -- 63
-pop$ -- 76
+newline$ -- 130
+num.names$ -- 66
+pop$ -- 83
 preamble$ -- 1
-purify$ -- 139
+purify$ -- 150
 quote$ -- 0
-skip$ -- 198
+skip$ -- 213
 stack$ -- 0
-substring$ -- 302
+substring$ -- 327
 swap$ -- 5
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 126
-warning$ -- 1
-while$ -- 44
+type$ -- 138
+warning$ -- 3
+while$ -- 46
 width$ -- 0
-write$ -- 284
-(There was 1 warning)
+write$ -- 309
+(There were 3 warnings)
