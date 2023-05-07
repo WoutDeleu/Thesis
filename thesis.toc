@@ -3,10 +3,10 @@
 \contentsline {chapter}{Voorwoord}{iii}{chapter*.1}%
 \contentsline {chapter}{Samenvatting}{v}{chapter*.2}%
 \contentsline {chapter}{Abstract}{vii}{chapter*.3}%
-\contentsline {chapter}{Inhoud}{ix}{chapter*.5}%
-\contentsline {chapter}{Figurenlijst}{x}{chapter*.6}%
-\contentsline {chapter}{Tabellenlijst}{xi}{chapter*.7}%
-\contentsline {chapter}{Lijst met afkortingen}{xii}{chapter*.8}%
+\contentsline {chapter}{Inhoud}{x}{chapter*.5}%
+\contentsline {chapter}{Figurenlijst}{xi}{chapter*.6}%
+\contentsline {chapter}{Tabellenlijst}{xii}{chapter*.7}%
+\contentsline {chapter}{Lijst met afkortingen}{xiii}{chapter*.8}%
 \contentsline {chapter}{\numberline {1}Inleiding}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Situering}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Doelstelling}{2}{section.1.2}%
@@ -18,8 +18,17 @@
 \contentsline {section}{\numberline {2.2}Endpoint Privacy Zones}{10}{section.2.2}%
 \contentsline {section}{\numberline {2.3}Literatuur}{11}{section.2.3}%
 \contentsline {chapter}{\numberline {3}Setting aanval}{14}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Aanvaller}{14}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Inferentie aanval}{15}{section.3.2}%
-\contentsline {chapter}{\numberline {4}Resultaten}{16}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Conclusies}{18}{chapter.5}%
-\contentsline {chapter}{\numberline {A}Uitleg over de appendices}{22}{appendix.A}%
+\contentsline {section}{\numberline {3.1}Definitie aanvaller}{14}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Assumpties}{15}{subsection.3.1.1}%
+\contentsline {section}{\numberline {3.2}Identificeren van de EPZ}{16}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Voorspellen locatie}{18}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Roadgraph}{18}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Begin- en eindnodes}{18}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Berekeningen distance binnenin de EPZ}{20}{subsection.3.3.3}%
+\contentsline {section}{\numberline {3.4}Selecteren van de beste voorspelling}{20}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Resultaten en Evaluatie}{21}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Gps punten die te ver uit elkaar liggen}{21}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Evaluatie van de aanval}{21}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Resultaten}{21}{section.4.3}%
+\contentsline {chapter}{\numberline {5}Conclusies}{23}{chapter.5}%
+\contentsline {chapter}{\numberline {A}Uitleg over de appendices}{27}{appendix.A}%

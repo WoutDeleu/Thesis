@@ -8,10 +8,14 @@
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Voorbeeld van de werking van \textit {Map Snapping}\relax }}{9}{figure.caption.13}%
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Voorbeeld Data smoothing with moving average\relax }}{9}{figure.caption.14}%
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Voorbeeld van de werking van een \ac {EPZ}\relax }}{11}{figure.caption.15}%
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Voorbeeld translatie EPZ\relax }}{12}{figure.caption.16}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Voorbeeld translatie EPZ\relax }}{11}{figure.caption.16}%
 \contentsline {figure}{\numberline {2.7}{\ignorespaces Voorbeeld filtering van punten binnen \ac {EPZ}\relax }}{12}{figure.caption.17}%
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Mechanisme \ac {EPZ} beschreven door \citeauthor {sec18has3:online}\relax }}{13}{figure.caption.18}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Mechanisme \ac {EPZ} beschreven door \citeauthor {sec18has3:online}\relax }}{12}{figure.caption.18}%
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Voorbeeld van de mogelijke scenarios bij een total distance attack\relax }}{16}{figure.caption.19}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Voorbeeld werking k-means clustering~\cite {InDepthk59:online}\relax }}{17}{figure.caption.20}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Voorbeeld van entry gates gevonden door k-means clustering en identificatie van de \ac {EPZ}\relax }}{17}{figure.caption.22}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Voorbeeld van het genereren van een roadgraph\relax }}{19}{figure.caption.23}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

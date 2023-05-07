@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.4)  30 APR 2023 18:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.4)  7 MAY 2023 19:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -461,7 +461,11 @@ Package fancyhdr Warning: \fancyhead's `E' option without twoside option is usel
 )
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
 (Font)              scaled to size 9.85492pt on input line 101.
- (./thesis.aux)
+ (./thesis.aux
+
+LaTeX Warning: Label `tab:outerDistance' multiply defined.
+
+)
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 101.
@@ -560,7 +564,7 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
 
 pdfTeX warning: pdflatex (file ./private/cover_fiiw_gent.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<private/cover_fiiw_gent.pdf, id=96, 597.55246pt x 845.07718pt>
+<private/cover_fiiw_gent.pdf, id=132, 597.55246pt x 845.07718pt>
 File: private/cover_fiiw_gent.pdf Graphic file (type pdf)
 <use private/cover_fiiw_gent.pdf>
 Package pdftex.def Info: private/cover_fiiw_gent.pdf  used on input line 103.
@@ -623,12 +627,12 @@ LaTeX Font Info:    Font shape `OT1/phv/m/sl' will be
 
 ]
 LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
-(Font)              scaled to size 9.85492pt on input line 75.
+(Font)              scaled to size 9.85492pt on input line 73.
 ) [5] (./abstract.tex [6
 
 ]
 Package acronym Info: Label `acro:EPZ' newly defined as it shall be overridden
-although it is yet undefined on input line 59.
+although it is yet undefined on input line 57.
 ) [7] (./thesis.toc
 LaTeX Font Info:    Trying to load font information for OT1+ptmcm on input line 11.
  (/usr/share/texmf-dist/tex/latex/psnfss/ot1ptmcm.fd
@@ -650,23 +654,30 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 11.
  [8
 
-])
+] [9])
 \tf@toc=\write4
 \openout4 = `thesis.toc'.
 
- [9] (./thesis.lof)
+ [10] (./thesis.lof)
 \tf@lof=\write5
 \openout5 = `thesis.lof'.
 
- [10
+ [11
 
 ] (./thesis.lot)
 \tf@lot=\write6
 \openout6 = `thesis.lot'.
 
- (./afkortingen.tex [11
+ (./afkortingen.tex [12
 
-]) [12
+]
+
+LaTeX Warning: Hyper reference `acro:API' on page xiii undefined on input line 14.
+
+
+LaTeX Warning: Hyper reference `acro:API' on page xiii undefined on input line 14.
+
+) [13
 
 ] (./hfdst1.tex
 Hoofdstuk 1.
@@ -680,7 +691,7 @@ LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
 (Font)              scaled to size 12.9599pt on input line 9.
 Package acronym Info: Label `acro:gps' newly defined as it shall be overridden
 although it is yet undefined on input line 20.
-<fig/VoorbeeldActiviteiten/VoorbeeldActiviteit_Cropped.png, id=231, 895.84688pt x 817.55438pt>
+<fig/VoorbeeldActiviteiten/VoorbeeldActiviteit_Cropped.png, id=298, 895.84688pt x 817.55438pt>
 File: fig/VoorbeeldActiviteiten/VoorbeeldActiviteit_Cropped.png Graphic file (type png)
 <use fig/VoorbeeldActiviteiten/VoorbeeldActiviteit_Cropped.png>
 Package pdftex.def Info: fig/VoorbeeldActiviteiten/VoorbeeldActiviteit_Cropped.png  used on input line 43.
@@ -711,12 +722,12 @@ LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
 ]
 LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
 (Font)              scaled to size 8.09995pt on input line 74.
-<fig/SpeedVSPace/Pace.png, id=271, 1068.99374pt x 947.54pt>
+<fig/SpeedVSPace/Pace.png, id=338, 1068.99374pt x 947.54pt>
 File: fig/SpeedVSPace/Pace.png Graphic file (type png)
 <use fig/SpeedVSPace/Pace.png>
 Package pdftex.def Info: fig/SpeedVSPace/Pace.png  used on input line 75.
 (pdftex.def)             Requested size: 213.39568pt x 189.14317pt.
-<fig/SpeedVSPace/Speed.png, id=273, 1095.09125pt x 948.54375pt>
+<fig/SpeedVSPace/Speed.png, id=340, 1095.09125pt x 948.54375pt>
 File: fig/SpeedVSPace/Speed.png Graphic file (type png)
 <use fig/SpeedVSPace/Speed.png>
 Package pdftex.def Info: fig/SpeedVSPace/Speed.png  used on input line 80.
@@ -726,18 +737,18 @@ Package pdftex.def Info: fig/SpeedVSPace/Speed.png  used on input line 80.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [5]
-<fig/VoorbeeldActiviteiten/VoorbeeldActiviteit_Personal.png, id=285, 717.43031pt x 970.3753pt>
+<fig/VoorbeeldActiviteiten/VoorbeeldActiviteit_Personal.png, id=352, 717.43031pt x 970.3753pt>
 File: fig/VoorbeeldActiviteiten/VoorbeeldActiviteit_Personal.png Graphic file (type png)
 <use fig/VoorbeeldActiviteiten/VoorbeeldActiviteit_Personal.png>
 Package pdftex.def Info: fig/VoorbeeldActiviteiten/VoorbeeldActiviteit_Personal.png  used on input line 125.
 (pdftex.def)             Requested size: 341.43437pt x 461.82147pt.
  [6 <./fig/SpeedVSPace/Pace.png> <./fig/SpeedVSPace/Speed.png>] [7 <./fig/VoorbeeldActiviteiten/VoorbeeldActiviteit_Personal.png (PNG copy)>]
-<fig/Map Snapping/before.png, id=312, 140.02313pt x 199.74625pt>
+<fig/Map Snapping/before.png, id=378, 140.02313pt x 199.74625pt>
 File: fig/Map Snapping/before.png Graphic file (type png)
 <use fig/Map Snapping/before.png>
 Package pdftex.def Info: fig/Map Snapping/before.png  used on input line 180.
 (pdftex.def)             Requested size: 106.69783pt x 152.21408pt.
-<fig/Map Snapping/after.png, id=313, 139.01938pt x 199.74625pt>
+<fig/Map Snapping/after.png, id=379, 139.01938pt x 199.74625pt>
 File: fig/Map Snapping/after.png Graphic file (type png)
 <use fig/Map Snapping/after.png>
 Package pdftex.def Info: fig/Map Snapping/after.png  used on input line 185.
@@ -750,27 +761,27 @@ LaTeX Font Info:    Font shape `OT1/phv/m/sl' will be
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<fig/SmoothingExample.png, id=319, 499.8675pt x 270.00874pt>
+<fig/SmoothingExample.png, id=385, 499.8675pt x 270.00874pt>
 File: fig/SmoothingExample.png Graphic file (type png)
 <use fig/SmoothingExample.png>
 Package pdftex.def Info: fig/SmoothingExample.png  used on input line 217.
 (pdftex.def)             Requested size: 256.07741pt x 138.32887pt.
 [8] [9 <./fig/Map Snapping/before.png> <./fig/Map Snapping/after.png> <./fig/SmoothingExample.png>]
-<fig/EPZ-mechanisme/Example_EPZ_InternalView.png, id=348, 1216.545pt x 758.835pt>
+<fig/EPZ-mechanisme/Example_EPZ_InternalView.png, id=414, 1151.30125pt x 910.40125pt>
 File: fig/EPZ-mechanisme/Example_EPZ_InternalView.png Graphic file (type png)
 <use fig/EPZ-mechanisme/Example_EPZ_InternalView.png>
 Package pdftex.def Info: fig/EPZ-mechanisme/Example_EPZ_InternalView.png  used on input line 267.
-(pdftex.def)             Requested size: 298.75264pt x 186.3504pt.
-<fig/EPZ-mechanisme/Example_EPZ_ExternalView.png, id=349, 719.68875pt x 447.6725pt>
+(pdftex.def)             Requested size: 209.1301pt x 165.36543pt.
+<fig/EPZ-mechanisme/Example_EPZ_ExternalView.png, id=415, 689.57625pt x 569.12625pt>
 File: fig/EPZ-mechanisme/Example_EPZ_ExternalView.png Graphic file (type png)
 <use fig/EPZ-mechanisme/Example_EPZ_ExternalView.png>
 Package pdftex.def Info: fig/EPZ-mechanisme/Example_EPZ_ExternalView.png  used on input line 272.
-(pdftex.def)             Requested size: 298.75264pt x 185.8421pt.
+(pdftex.def)             Requested size: 209.1301pt x 172.5976pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<fig/EPZ-mechanisme/Translation_Center.png, id=356, 347.79938pt x 272.51813pt>
+<fig/EPZ-mechanisme/Translation_Center.png, id=422, 347.79938pt x 272.51813pt>
 File: fig/EPZ-mechanisme/Translation_Center.png Graphic file (type png)
 <use fig/EPZ-mechanisme/Translation_Center.png>
 Package pdftex.def Info: fig/EPZ-mechanisme/Translation_Center.png  used on input line 287.
@@ -778,7 +789,7 @@ Package pdftex.def Info: fig/EPZ-mechanisme/Translation_Center.png  used on inpu
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<fig/EPZ-mechanisme/DropEPZPoints.png, id=361, 1251.17438pt x 593.21625pt>
+<fig/EPZ-mechanisme/DropEPZPoints.png, id=427, 1668.2325pt x 790.955pt>
 File: fig/EPZ-mechanisme/DropEPZPoints.png Graphic file (type png)
 <use fig/EPZ-mechanisme/DropEPZPoints.png>
 Package pdftex.def Info: fig/EPZ-mechanisme/DropEPZPoints.png  used on input line 299.
@@ -787,65 +798,125 @@ Package pdftex.def Info: fig/EPZ-mechanisme/DropEPZPoints.png  used on input lin
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<fig/EPZ-mechanisme/Hassan.png, id=373, 1322.9425pt x 811.03pt>
+<fig/EPZ-mechanisme/Hassan.png, id=439, 1322.9425pt x 811.03pt>
 File: fig/EPZ-mechanisme/Hassan.png Graphic file (type png)
 <use fig/EPZ-mechanisme/Hassan.png>
 Package pdftex.def Info: fig/EPZ-mechanisme/Hassan.png  used on input line 321.
 (pdftex.def)             Requested size: 256.07741pt x 156.98074pt.
-[11 <./fig/EPZ-mechanisme/Example_EPZ_InternalView.png> <./fig/EPZ-mechanisme/Example_EPZ_ExternalView.png>]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[12 <./fig/EPZ-mechanisme/Translation_Center.png (PNG copy)> <./fig/EPZ-mechanisme/DropEPZPoints.png (PNG copy)>]) (./hfdst3.tex [13 <./fig/EPZ-mechanisme/Hassan.png>]
+[11 <./fig/EPZ-mechanisme/Example_EPZ_InternalView.png> <./fig/EPZ-mechanisme/Example_EPZ_ExternalView.png> <./fig/EPZ-mechanisme/Translation_Center.png (PNG copy)>] [12 <./fig/EPZ-mechanisme/DropEPZPoints.png> <./fig/EPZ-mechanisme/Hassan.png>]) (./hfdst3.tex [13]
 Hoofdstuk 3.
 [14
 
-]) (./hfdst4.tex [15]
-Hoofdstuk 4.
-) (./hfdst5.tex [16
+]
 
-] [17]
+LaTeX Warning: Reference `sec:berekeningen' on page 15 undefined on input line 76.
+
+<fig/TotalDistanceAttacks/start.png, id=498, 1803.73875pt x 1225.57875pt>
+File: fig/TotalDistanceAttacks/start.png Graphic file (type png)
+<use fig/TotalDistanceAttacks/start.png>
+Package pdftex.def Info: fig/TotalDistanceAttacks/start.png  used on input line 85.
+(pdftex.def)             Requested size: 213.39568pt x 144.9873pt.
+<fig/TotalDistanceAttacks/end.png, id=501, 1906.12125pt x 1294.8375pt>
+File: fig/TotalDistanceAttacks/end.png Graphic file (type png)
+<use fig/TotalDistanceAttacks/end.png>
+Package pdftex.def Info: fig/TotalDistanceAttacks/end.png  used on input line 90.
+(pdftex.def)             Requested size: 213.39568pt x 144.94177pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[15]
+<fig/kmeans/1.png, id=515, 483.8075pt x 342.27875pt>
+File: fig/kmeans/1.png Graphic file (type png)
+<use fig/kmeans/1.png>
+Package pdftex.def Info: fig/kmeans/1.png  used on input line 138.
+(pdftex.def)             Requested size: 140.84192pt x 99.63954pt.
+<fig/kmeans/2.png, id=516, 483.8075pt x 342.27875pt>
+File: fig/kmeans/2.png Graphic file (type png)
+<use fig/kmeans/2.png>
+Package pdftex.def Info: fig/kmeans/2.png  used on input line 142.
+(pdftex.def)             Requested size: 140.84192pt x 99.63954pt.
+<fig/kmeans/3.png, id=517, 483.8075pt x 342.27875pt>
+File: fig/kmeans/3.png Graphic file (type png)
+<use fig/kmeans/3.png>
+Package pdftex.def Info: fig/kmeans/3.png  used on input line 146.
+(pdftex.def)             Requested size: 140.84192pt x 99.63954pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+Package acronym Info: Label `acro:E.G.' newly defined as it shall be overridden
+although it is yet undefined on input line 159.
+<fig/EPZ-mechanisme/Entry_Gate.png, id=526, 574.145pt x 538.01pt>
+File: fig/EPZ-mechanisme/Entry_Gate.png Graphic file (type png)
+<use fig/EPZ-mechanisme/Entry_Gate.png>
+Package pdftex.def Info: fig/EPZ-mechanisme/Entry_Gate.png  used on input line 164.
+(pdftex.def)             Requested size: 213.39568pt x 199.96361pt.
+[16 <./fig/TotalDistanceAttacks/start.png> <./fig/TotalDistanceAttacks/end.png>] [17 <./fig/kmeans/1.png> <./fig/kmeans/2.png> <./fig/kmeans/3.png> <./fig/EPZ-mechanisme/Entry_Gate.png>]
+<fig/RoadGraph/RoadMap.png, id=554, 618.81187pt x 410.2828pt>
+File: fig/RoadGraph/RoadMap.png Graphic file (type png)
+<use fig/RoadGraph/RoadMap.png>
+Package pdftex.def Info: fig/RoadGraph/RoadMap.png  used on input line 216.
+(pdftex.def)             Requested size: 170.71393pt x 113.18808pt.
+<fig/RoadGraph/Graph_Over_Map.png, id=555, 1830.84pt x 1214.5375pt>
+File: fig/RoadGraph/Graph_Over_Map.png Graphic file (type png)
+<use fig/RoadGraph/Graph_Over_Map.png>
+Package pdftex.def Info: fig/RoadGraph/Graph_Over_Map.png  used on input line 221.
+(pdftex.def)             Requested size: 170.71393pt x 113.23251pt.
+<fig/RoadGraph/Graph.png, id=556, 1887.05pt x 1285.80376pt>
+File: fig/RoadGraph/Graph.png Graphic file (type png)
+<use fig/RoadGraph/Graph.png>
+Package pdftex.def Info: fig/RoadGraph/Graph.png  used on input line 226.
+(pdftex.def)             Requested size: 170.71393pt x 116.30594pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[18] [19 <./fig/RoadGraph/RoadMap.png (PNG copy)> <./fig/RoadGraph/Graph_Over_Map.png> <./fig/RoadGraph/Graph.png>]) (./hfdst4.tex [20]
+Hoofdstuk 4.
+) (./hfdst5.tex [21
+
+] [22]
 Hoofdstuk 5.
-) (./thesis.bbl [18
+) (./thesis.bbl [23
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 31--35
+Underfull \hbox (badness 10000) in paragraph at lines 26--30
 \OT1/pcr/m/n/10.95 vs -[] snelheid -[] km -[] h -[] bij -[] hardlopen / # : [] : text = Waarom % 20gebruiken % 20hardlopers %
  []
 
 
-Underfull \hbox (badness 1189) in paragraph at lines 48--52
+Underfull \hbox (badness 1189) in paragraph at lines 43--47
 \OT1/phv/m/n/10.95 ba-ses | gps | the gu-ar-dian.  []$\OT1/pcr/m/n/10.95 https : / / www\OML/ptmcm/m/it/10.95 :\OT1/pcr/m/n/10.95 theguardian\OML/ptmcm/m/it/10.95 :\OT1/pcr/m/n/10.95 com / world / 2018 / jan / 28 /
  []
 
-[19
+[24
 
 ]
-Underfull \hbox (badness 6364) in paragraph at lines 69--73
+Underfull \hbox (badness 6364) in paragraph at lines 74--78
 []\OT1/phv/m/n/10.95 of Dal-las, F. R. B. (n.d.).  Smoothing data with mo-ving aver-ages - dal-las-
  []
 
 
-Underfull \hbox (badness 5147) in paragraph at lines 91--95
+Underfull \hbox (badness 5147) in paragraph at lines 102--106
 []\OT1/phv/m/n/10.95 Strava, I. (2022).  Mo-ving time, speed, and pace cal-cu-la-ti-ons { strava sup-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 97--101
+Underfull \hbox (badness 10000) in paragraph at lines 108--112
 \OT1/pcr/m/n/10.95 hc / en -[] us / articles / 216919377 -[] Activity -[] Privacy -[] Controls$[]\OT1/phv/m/n/10.95 .  (Ac-ces-sed on
  []
 
 
-Underfull \hbox (badness 4492) in paragraph at lines 109--113
+Underfull \hbox (badness 4492) in paragraph at lines 120--124
 []\OT1/phv/m/n/10.95 Strava, I. (2023c).  How dis-tance is cal-cu-la-ted { strava sup-port.  []$\OT1/pcr/m/n/10.95 https : / /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 109--113
+Underfull \hbox (badness 10000) in paragraph at lines 120--124
 \OT1/pcr/m/n/10.95 support\OML/ptmcm/m/it/10.95 :\OT1/pcr/m/n/10.95 strava\OML/ptmcm/m/it/10.95 :\OT1/pcr/m/n/10.95 com / hc / en -[] us / articles / 216919487 -[] How -[] Distance -[] is -[] Calculated$[]\OT1/phv/m/n/10.95 .
  []
 
-[20]) (./bijlage1.tex [21]
+[25]) (./bijlage1.tex [26]
 B\ij lage A.
 
 Underfull \hbox (badness 10000) in paragraph at lines 6--10
@@ -855,7 +926,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--10
 )
 
 pdfTeX warning: pdflatex (file ./private/back_fiiw_gent.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<private/back_fiiw_gent.pdf, id=484, 597.55246pt x 845.07718pt>
+<private/back_fiiw_gent.pdf, id=650, 597.55246pt x 845.07718pt>
 File: private/back_fiiw_gent.pdf Graphic file (type pdf)
 <use private/back_fiiw_gent.pdf>
 Package pdftex.def Info: private/back_fiiw_gent.pdf  used on input line 122.
@@ -873,7 +944,7 @@ pdfTeX warning: pdflatex (file ./private/back_fiiw_gent.pdf): PDF inclusion: fou
 
 
 pdfTeX warning: pdflatex (file ./private/back_fiiw_gent.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<private/back_fiiw_gent.pdf, id=487, page=1, 597.55246pt x 845.07718pt>
+<private/back_fiiw_gent.pdf, id=653, page=1, 597.55246pt x 845.07718pt>
 File: private/back_fiiw_gent.pdf Graphic file (type pdf)
 <use private/back_fiiw_gent.pdf, page 1>
 Package pdftex.def Info: private/back_fiiw_gent.pdf , page1 used on input line 122.
@@ -882,7 +953,7 @@ File: private/back_fiiw_gent.pdf Graphic file (type pdf)
 <use private/back_fiiw_gent.pdf, page 1>
 Package pdftex.def Info: private/back_fiiw_gent.pdf , page1 used on input line 122.
 (pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
-[22
+[27
 
 ]
 File: private/back_fiiw_gent.pdf Graphic file (type pdf)
@@ -897,23 +968,29 @@ File: private/back_fiiw_gent.pdf Graphic file (type pdf)
 <use private/back_fiiw_gent.pdf, page 1>
 Package pdftex.def Info: private/back_fiiw_gent.pdf , page1 used on input line 122.
 (pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
- [23 <./private/back_fiiw_gent.pdf>] (./thesis.aux)
+ [28 <./private/back_fiiw_gent.pdf>] (./thesis.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 404466364E2887657983BCD95A157352;2715.
+(rerunfilecheck)             Checksum: 84422B22056EFB247C23595AAC15CFF6;4476.
  ) 
 Here is how much of TeX's memory you used:
- 17112 strings out of 476025
- 281762 string characters out of 5796533
- 1876388 words of memory out of 5000000
- 37101 multiletter control sequences out of 15000+600000
- 577152 words of font info for 134 fonts, out of 8000000 for 9000
+ 17239 strings out of 476025
+ 284395 string characters out of 5796533
+ 1881388 words of memory out of 5000000
+ 37185 multiletter control sequences out of 15000+600000
+ 579378 words of font info for 138 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,17n,77p,652b,670s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (35 pages, 3481137 bytes).
+ 75i,17n,77p,652b,672s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on thesis.pdf (41 pages, 7850336 bytes).
 PDF statistics:
- 564 PDF objects out of 1000 (max. 8388607)
- 474 compressed objects within 5 object streams
- 101 named destinations out of 1000 (max. 500000)
- 270 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 742 PDF objects out of 1000 (max. 8388607)
+ 620 compressed objects within 7 object streams
+ 129 named destinations out of 1000 (max. 500000)
+ 387 words of extra memory for PDF output out of 10000 (max. 10000000)
 
