@@ -10,9 +10,9 @@
 Zoals al enkele malen werd aangehaald, ligt de focus van deze scriptie op
 mogelijke tekortkomingen/vulnerabilities betreffende privacybeleid in
 fitnesstrackers. Maar voordat een aanval op basis van deze kwetsbaarheden kan
-opgezet worden, is het noodzakelijk om een te vat te krijgen op welke manier
-een fitnesstracker info verzamelt en weergeeft. En meer precies, hoe de
-mechanismen die de privacy voorzien voor de gebruikers in detail werken.
+opgezet worden, is het noodzakelijk om een vat te krijgen op welke manier een
+fitnesstracker info verzamelt en weergeeft. En meer precies, hoe de mechanismen
+die de privacy voorzien voor de gebruikers in detail werken.
 
 De data waarmee de aanval wordt opgezet en waarmee wordt geëxperimenteerd, is
 afkomstig van de populaire fitnesstracker
@@ -54,7 +54,7 @@ pauze, of het wachten voor een verkeerslicht.
 Er is een verschil bij fietsactiviteiten en wandelactiviteiten in hun weergave.
 In het geval van een fietsactiviteit wordt \textit{snelheid} weergegeven, en in
 het geval van een wandel- of loopactiviteit wordt \textit{tempo} weergegeven,
-zoals te zien is op Figuur~\ref{fig:speedvspace}. Deze worden beide berekent
+zoals te zien is op Figuur~\ref{fig:speedvspace}. Deze worden beide berekend
 aan de hand van de bewegingstijd. Een kanttekening hierbij is dat dit enkel
 geldt voor activiteiten die niet gelabeld zijn als \textit{race}, in dat geval
 wordt de snelheid berekend in functie van de totaal verstreken
@@ -151,9 +151,9 @@ Het alternatief voor de GPS-calculated distance is de \textit{Ground Speed
 fietsactiviteit. Deze afstand wordt berekend door het aantal omwentelingen te
 vermenigvuldigen met de omtrek van het fietswiel~\cite{HowDista47:online}.
 
-De bovenstaande afstandsberekeningen zijn de 2 technieken die officiële support
-documentatie van Strava beschrijft~\cite{HowDista47:online}. Echter blijkt
-wanneer de afstand op deze manier manueel berekent worden, afwijkende
+De bovenstaande afstandsberekeningen zijn de twee technieken die de officiële
+support documentatie van Strava beschrijft~\cite{HowDista47:online}. Echter
+blijkt wanneer de afstand op deze manier manueel berekent worden, afwijkende
 resultaten bekomen worden. Dit is zeer waarschijnlijk te wijten aan de
 preprocessing van de data die gebeurd bij het uploaden van een activiteit.
 Alhoewel dit niet expliciet gedocumenteerd staat doen de resultaten dit wel
@@ -205,13 +205,13 @@ window-grootte~\cite{Smoothin16:online,
     SmoothingandInterpolatingNoisyGPSDatawithSmoothingSplines, Smoothin86:online}.
 Zo kan voor elk punt een evenwichtige waarde op de nieuwe grafiek bekomen
 worden, en krijgt de grafiek een meer vloeiende vorm. Merk wel op dat de
-precisie van de route daalt wordt op deze manier. Bij het smoothen van een
-traject wordt het aantal gebruikte punten namelijk vermindert volgens de
-grootte van de window. Afhankelijk van de grootte, worden meer (resp.\ minder)
-punten samengenomen, en zo minder/meer punten weergegeven op de grafiek. Een
-voorbeeld is terug te vinden op Figuur~\ref{fig:SmoothingExample}, waarbij de
-blauwe curve de ruwe data voorstelt, dus voorafgaand op het `smoothen', en de
-rode de `gesmoothe' curve.
+precisie van de route afneemt op deze manier. Bij het smoothen van een traject
+wordt het aantal gebruikte punten namelijk vermindert volgens de grootte van de
+window. Afhankelijk van de grootte, worden meer (resp.\ minder) punten
+samengenomen, en zo minder/meer punten weergegeven op de grafiek. Een voorbeeld
+is terug te vinden op Figuur~\ref{fig:SmoothingExample}, waarbij de blauwe
+curve de ruwe data voorstelt, dus voorafgaand op het `smoothen', en de rode de
+`gesmoothe' curve.
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.6\linewidth]{fig/SmoothingExample.png}
@@ -225,7 +225,7 @@ gebruikers op het platform, is zeker niet altijd wenselijk. De ontwikkelaars
 kiezen er dan ook voor om gebruikers de mogelijkheid te geven om hun privacy te
 bewaren. In deze sectie wordt de focus gelegd op de mechanismen gebruikt door
 \textit{Strava}. Als opmerking valt te melden dat in heel wat andere
-sport-applicaties worden vergelijkbare, zo niet dezelfde methodieken gebruikt.
+sport-applicaties vergelijkbare, zo niet dezelfde methodieken worden gebruikt.
 Een eerste algemeen mechanisme bestaat eruit om de gebruiker de keuze te geven
 om alle activiteiten en alle gegevens over het profiel heen te laten voldoen
 aan bepaalde privacy regels. Deze regels kunnen ook per activiteit worden
@@ -341,18 +341,18 @@ aanwezig in het principe van
 \acp{EPZ}~\cite{Dhondt_Pochat_Voulimeneas_Joosen_Volckaert_2022}. Er wordt in
 deze paper een nadruk gelegd op de translatie van de \ac{EPZ}, en hoe deze de
 privacy van een gebruiker verhoogt. Een inferentie aanval, wordt er beschreven
-die gebruikmaakt van de totale afstand, terug te vinden bij de activiteit. Het
-principe van deze inferentie aanval wordt uitvoerig beschreven in
+die gebruikmaakt van de totale afstand die terug te vinden bij de activiteit.
+Het principe van deze inferentie aanval wordt uitvoerig beschreven in
 Sectie~\ref{sec:inferentieaanval}. In het kort werkt de aanval als volgt: aan
 de hand van de totale afgelegde afstand in combinatie met het wegennetwerk in
 die omgeving, wordt een poging gedaan om alle mogelijke routes die de sporter
 binnenin de \ac{EPZ} zou kunnen afgelegd hebben te reconstrueren. Dit gebeurt
-voor elke activiteit, die ook elk. Wanneer dit gedaan wordt voor verschillende
-trajecten, kan een locatie voorspeld worden die het meest waarschijnlijk wordt
-geacht om de gevoelige locatie te zijn.
+voor elke activiteit. Wanneer dit gedaan wordt voor verschillende trajecten,
+kan een locatie voorspeld worden die het meest waarschijnlijk wordt geacht om
+de gevoelige locatie te zijn.
 
 Deze aanpak toonde aan dat de beschreven countermeasure door Hassan et al.\
-niet feilloos was, en dat deze kan worden omzeilt met een successrate van 85\%.
+niet feilloos is, en dat deze kan worden omzeild met een successrate van 85\%.
 Aangezien activiteiten nog steeds totale afstanden van een volledige route
 vrijgeven, kan de afstand afgelegd binnenin de EPZ geïnfereerd worden. Deze
 data ligt dan ook aan de grond van de inferentie aanval volgens Dhondt et al.
@@ -368,5 +368,5 @@ via de gekende hoogteverschillen een inferentie aanval opgezet worden, die nu
 geen afstanden maar hoogteverschillen infereerd. Op deze manier
 bekomt~\citeauthor{Verdonck_2022} een succes rate van 36\%. Dit lagere
 succesratio is terug te brengen naar het feit dat hoogtedata een stuk minder
-precies is. Ook is hoogtetoename in heel wat regios niet zo significant, wat de
-succesrate niet ten goeie komt.
+precies zijn. Ook is hoogtetoename in heel wat regios niet zo significant, wat
+de succesrate niet ten goeie komt.

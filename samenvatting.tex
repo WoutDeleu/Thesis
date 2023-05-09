@@ -31,7 +31,7 @@ afgelegde traject dat binnen deze zone ligt zal worden verborgen voor de andere
 gebruikers.
 
 Het verbergen van delen van de route is echter geen waterdichte implementatie,
-ant hierbij worden bijhorende gegevens niet aangepast of mee verborgen.
+want hierbij worden bijhorende gegevens niet aangepast of mee verborgen.
 Bijvoorbeeld wordt de totale afgelegde afstand van een activiteit niet
 aangepast. Voorafgaand onderzoek toonde aan dat het mogelijk is om gevoelige
 locaties te achterhalen door het gebruik van de totale duur en totale afgelegde
@@ -47,17 +47,17 @@ intersectie gevonden worden die uiteindelijk de gevoelige locatie oplevert. Dit
 punt is dan de gevoelige locatie.
 
 Deze thesis onderzoekt mogelijke implementaties van dergelijke
-inferentie-aanvallen wanneer de afstand niet gekend is. De ligt op snelheid en
-tempo van de activiteiten, in combinatie met gps-punten. Deze gevolgde methode
-bestaat uit drie delen. In de eerste stap wordt de gemiddelde snelheid en de
-totale duur gebruikt om de totale afstand te berekenen. Ten tweede worden de
-GPS-punten gebruikt om de afgelegde afstand buiten de EPZ te berekenen. Om dit
-zo accuraat mogelijk uit te kunnen voeren, worden smoothing- en
-map-matchingstrategieën bestudeerd om de best mogelijke resultaten te
-verkrijgen. Deze twee berekende waarden kunnen in de derde stap worden gebruikt
-om de interferentieaanval uit te voeren. De resultaten van deze aanval zullen
-worden vergeleken met de resultaten van eerdere implementaties van dit soort
-aanval.
+inferentie-aanvallen wanneer de afstand niet gekend is. Als alternatieve
+gegevens worden de snelheid en het tempo van de activiteiten gebruikt, in combinatie met
+gps-punten. Deze gevolgde methode bestaat uit drie delen. In de eerste stap
+wordt de gemiddelde snelheid en de totale duur gebruikt om de totale afstand te
+berekenen. Ten tweede worden de GPS-punten gebruikt om de afgelegde afstand
+buiten de EPZ te berekenen. Om dit zo accuraat mogelijk uit te kunnen voeren,
+worden smoothing- en map-matchingstrategieën bestudeerd om de best mogelijke
+resultaten te verkrijgen. Deze twee berekende waarden kunnen in de derde stap
+worden gebruikt om de interferentieaanval uit te voeren. De resultaten van deze
+aanval zullen worden vergeleken met de resultaten van eerdere implementaties
+van dit soort aanval.
 
 Met de juiste afstemming van de parameters van het smoothing-algoritme kan een
 succespercentage tot 75\% worden bereikt. Dit is lager dan eerdere

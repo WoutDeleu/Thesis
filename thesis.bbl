@@ -86,6 +86,11 @@ Plas;, J.~V. (2016).
 Seiler, K.~M. (2022).
 \newblock Haul road mapping from gps traces.
 
+\bibitem[Sheppard and Soule, 1922]{sheppard1922practical}
+Sheppard, W. and Soule, C. (1922).
+\newblock {\em Practical Navigation}.
+\newblock World Technical Institute.
+
 \bibitem[Strava, 2021a]{Stravapr81:online}
 Strava, I. (2021a).
 \newblock Strava-privacybeleid.
@@ -137,5 +142,11 @@ Verdonck, T. (2022).
 \bibitem[Wajih Ul~Hassan, 2018]{sec18has3:online}
 Wajih Ul~Hassan, Saad~Hussain, A.~B. (2018).
 \newblock Analysis of privacy protections in fitness tracking social networks -or- you can run, but can you hide?
+
+\bibitem[Zheng, 2019]{Distance97:online}
+Zheng, J. (2019).
+\newblock Distance application in data science - jingwen zheng.
+\newblock \url{https://jingwen-z.github.io/distance-application-in-data-science/}.
+\newblock (Accessed on 05/07/2023).
 
 \end{thebibliography}

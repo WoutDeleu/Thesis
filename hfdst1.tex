@@ -8,36 +8,37 @@
 
 \section{Situering}
 Sociale media is zo goed als niet meer weg te denken uit het huidige moderne
-leven. Over de jaren heen zijn er verschillende definities gegeven. in In het
-werk van Howard en Park wordt sociale media gedefinieerd als de infrastructuur
-en tools om content te maken en te verspreiden\cite{PhilipsAndParks}. Deze
+leven. Over de jaren heen zijn er verschillende definities gegeven. In het werk
+van Howard en Park wordt sociale media gedefinieerd als de infrastructuur en
+tools om content te maken en te verspreiden\cite{PhilipsAndParks}. Deze
 definitie is erg ruim, en vertakt zich dus in heel wat facetten, waaronder
 sociale netwerken, media sharing networks, etc. Maar ook de fitnesstrackers.
 Deze opkomst van nieuwe media brengt echter ook onbedoelde maar significante
 privacy bezorgdheden met zich mee.
 
 De focus in deze dissertatie ligt op privacy binnen fitnesstrackers, meer
-specifiek platformen die \ac{gps}-locaties gebruiken, zoals Strava, Nike Run Club,
-etc. Dit zijn platformen waar personen sportactiviteiten zoals lopen, fietsen,
-wandelen,\ldots kunnen delen met elkaar. Het algemene concept is hierbij dat
-wanneer je een sportactiviteit uitvoert, je deze voor je volgers en vrienden
-beschikbaar maakt. De sportactiviteiten zullen natuurlijk bepaalde gegevens
-bevatten die zichtbaar zijn voor die andere gebruikers,
+specifiek platformen die \ac{gps}-locaties gebruiken, zoals Strava, Nike Run
+Club, etc. Dit zijn platformen waar personen sportactiviteiten zoals lopen,
+fietsen, wandelen,\ldots kunnen delen met elkaar. Het algemene concept is
+hierbij dat wanneer je een sportactiviteit uitvoert, je deze voor je volgers en
+vrienden beschikbaar maakt. De sportactiviteiten zullen natuurlijk bepaalde
+gegevens bevatten die zichtbaar zijn voor die andere gebruikers,
 Figuur~\ref{fig:activityExample} geeft bijvoorbeeld weer hoe Strava de afstand,
 bewegingstijd, en natuurlijk de \ac{gps}-locaties deelt. Vele van deze gegevens
 hebben direct of indirect een negatieve impact op de privacy van de user. Deze
 negatieve gevolgen komen dan vooral in de vorm van het onbedoeld vrijgeven van
 \textit{gevoelige locaties}. Onder het concept van een gevoelige locatie vallen
+\textit{gevoelige locaties}. Onder het concept van een gevoelige locatie vallen
 heel wat beschrijvingen. Een algemene beschrijving kan zijn, een locatie die
 geografische informatie deelt die negatieve gevolgen kan hebben, en die je dus
-liever niet deel. In het kader van dit onderzoek, zal dit dan gaan over start
-en eindlocaties van activiteiten. Dit kan gaan over woonplaatsen, wat kan
-leiden tot o.a.\ stalking. Alsook locaties waar sportmateriaal wordt
-opgeborgen. Er zijn gevallen bekend van fietsdieven die Strava gebruiken om
-fietsen te kunnen lokaliseren\cite{Sportapp72:online}\cite{Cyclistw89:online}.
-Grootschaligere voorbeelden die zeker het vermelden waard zijn, zijn de
-gevallen waarbij geheime militaire basissen ontdekt worden door het bestuderen
-van de heatmap\cite{Fitnesst33:online}.
+liever niet deelt. In het kader van dit onderzoek zal dit gaan over start en
+eindlocaties van activiteiten. Dit kan gaan over woonplaatsen, wat kan leiden
+tot o.a.\ stalking. Alsook locaties waar sportmateriaal wordt opgeborgen. Er
+zijn gevallen bekend van fietsdieven die Strava gebruiken om fietsen te kunnen
+lokaliseren\cite{Sportapp72:online}\cite{Cyclistw89:online}. Grootschaligere
+voorbeelden die zeker het vermelden waard zijn, zijn de gevallen waarbij
+geheime militaire basissen ontdekt worden door het bestuderen van de
+heatmap\cite{Fitnesst33:online}.
 \begin{figure}
     \centering
     \includegraphics[width=0.5\linewidth]{fig/VoorbeeldActiviteiten/VoorbeeldActiviteit_Cropped.png}
@@ -52,17 +53,16 @@ activiteiten bekijken. Een complexer alternatief is het gebruik van \acp{EPZ}.
 Hierbij wordt de weergegeven route voor de persoon die meekijkt gedeeltelijk
 verborgen. Er wordt als het ware een deel van de route afgekapt. De echte
 begin- en eindpunten zullen binnenin het afgekapte deel liggen. Er zullen
-nieuwe punten worden gegenereerd worden, op de rand van de cirkel, die voor de
-externe waarnemer het begin en einde zullen voorstellen. Het begin- en
-eind-deel van de route wordt dus onzichtbaar voor de andere gebruikers. Door de
-aanwezigheid van al deze pogingen tot privacyverbeteringen valt op dat de
-ontwikkelaars van de platformen erg bewust zijn van de mogelijke gevaren.
-Echter is er een afweging te maken bij de implementatie tussen de bruikbaarheid
-van het platform, en de privacy van de eindgebruiker. Hoe meer data wordt
-vrijgegeven, hoe groter de kans om mogelijk gevoelige info wordt meegegeven.
-Aan de andere kant, bij het weglaten van informatie gaat de
-gebruiksvriendelijkheid en de aanwezigheid van nuttige data van het platform
-serieus achteruit.
+nieuwe punten worden gegenereerd, op de rand van de cirkel, die voor de externe
+waarnemer het begin en einde zullen voorstellen. Het begin- en eind-deel van de
+route wordt dus onzichtbaar voor de andere gebruikers. Door de aanwezigheid van
+al deze pogingen tot privacyverbeteringen valt op dat de ontwikkelaars van de
+platformen erg bewust zijn van de mogelijke gevaren. Echter is er een afweging
+te maken bij de implementatie tussen de bruikbaarheid van het platform, en de
+privacy van de eindgebruiker. Hoe meer data wordt vrijgegeven, hoe groter de
+kans op mogelijk gevoelige info wordt meegegeven. Aan de andere kant, bij het
+weglaten van informatie gaat de gebruiksvriendelijkheid en de aanwezigheid van
+nuttige data van het platform serieus achteruit.
 
 \section{Doelstelling}
 In dit onderzoek bekijken we of er een mogelijkheid bestaat om private locaties

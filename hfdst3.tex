@@ -5,8 +5,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
 \chapter{Setting aanval}\label{sec:inferentieaanval}
-Gedurende dit hoofdstuk de setting alsook de werking van de aanval beschreven.
-De aanval is sterk gebaseerd op de aanvallen
+Gedurende dit hoofdstuk wordt de setting alsook de werking van de aanval
+beschreven. De aanval is sterk gebaseerd op de aanvallen
 van~\citeauthor{Dhondt_Pochat_Voulimeneas_Joosen_Volckaert_2022}\cite{Dhondt_Pochat_Voulimeneas_Joosen_Volckaert_2022}
 en~\citeauthor{Verdonck_2022}\cite{Verdonck_2022}. Deze aanvallen worden
 inferentie-aanvallen genoemd, vanwege het feit dat uit metadata essentiële
@@ -14,9 +14,9 @@ gegevens kunnen worden geïnfereerd. In het geval
 van~\citeauthor{Dhondt_Pochat_Voulimeneas_Joosen_Volckaert_2022} gaat dit over
 afgelegde afstand binnenin de \ac{EPZ}. In het geval
 van~\citeauthor{Verdonck_2022} gaat dit dan weer over geïnduceerde
-hoogteverschillen binnen de privacy zone. Als eerst zal kort de mogelijkheden
-van een mogelijke aanvaller beschouwd in deze thesis worden besproken. Daarna
-wordt de inferentie aanval
+hoogteverschillen binnen de privacy zone. Allereerst zal kort de mogelijkheden
+van een aanvaller in de huidige setting worden besproken. Daarna wordt de
+inferentie aanval
 van~\citeauthor{Dhondt_Pochat_Voulimeneas_Joosen_Volckaert_2022}, die de basis
 vormt voor de aanval in deze thesis, besproken volgens een opdeling in drie
 stappen.
@@ -29,11 +29,11 @@ zicht te hebben op het doel, en de capaciteiten van een aanvaller.
 
 Hier is een aanvaller een gebruiker van het platform, die geen eigenaar is van
 een activiteit. Hij heeft echter wel zicht op alle metadata die publiekelijk
-gedeeld is. Dit is data zoals afgelegde afstand, snelheid, tempo, \ldots
+gedeeld zijn. Dit is data zoals afgelegde afstand, snelheid, tempo, \ldots
 Aangezien de aanval gaat over het omzeilen \acp{EPZ} worden activiteiten
 beschouwd die gecloaked zijn. De aanvaller heeft dus geen zicht op de reële
-start- en/of eindlocatie, zijn doel is dan ook om de ondanks de aanwezigheid
-van cloaking deze gevoelige locatie te achterhalen.
+start- en/of eindlocatie, zijn doel is dan ook om ondanks de aanwezigheid van
+cloaking deze gevoelige locatie te achterhalen.
 
 Vanuit het oogpunt van de inferentie-aanval beschreven
 door~\citeauthor{Dhondt_Pochat_Voulimeneas_Joosen_Volckaert_2022} heeft de
@@ -51,8 +51,8 @@ inferentie-aanval alsnog succesvol te kunnen uitvoeren.
 Om de aanval te kunnen uitvoeren, moeten enkele assumpties worden gemaakt.
 \citeauthor{Dhondt_Pochat_Voulimeneas_Joosen_Volckaert_2022} maakte al enkele
 assumpties om de inferentie aanval succesvol uit te voeren. Voor dit onderzoek
-moeten deze dus ook gelden. De eerste bestaat eruit opdat dat de zichtbare
-begin -en eindpunten op de cirkel moeten liggen. Ten tweede moet de beschermde
+moeten deze dus ook gelden. De eerste bestaat eruit opdat de zichtbare begin
+-en eindpunten op de cirkel moeten liggen. Ten tweede moet de beschermde
 locatie op de roadgraph liggen, hij kan niet buiten het voor ons te mappen
 gebied liggen, bijvoorbeeld in een bos waar geen pad ligt. Er wordt dieper
 ingegaan op de roadgraph in Sectie~\ref{sec:roadgraph}. Als laatste, maar
@@ -65,18 +65,24 @@ onderzoek focust zich op activiteiten waar slechts één deel van het traject
 gecloaked is. Dit wil dan ook zeggen dat de gebruiker ofwel vertrekt op de
 gevoelige locatie, of er eindigt, maar niet beide. Op
 Figuur~\ref{fig:totalDistanceAttack} zijn de 2 mogelijke scenarios van een
-total distance attack terug te vinden, namelijk waarbij gestart wordt binnenin
-de zone en wanneer erbinnen geëindigd wordt. Dit wordt ook een \textit{total
-    distance attack} genoemd, omdat enkel de totale afstand en de afstand buiten de
-\ac{EPZ} nodig is. Een andere aanval is de \textit{inner distance attack},
-hierbij zullen zowel de start als het einde van een activiteit binnenin het te
-verbergen gebied liggen. De kennis van de afzonderlijke afstand die de
-gebruiker aflegt van de start tot de rand van de \ac{EPZ} en van de rand van de
-\ac{EPZ} tot de eindlocatie is dan ook een vereiste. In
-Sectie~\ref{sec:berekeningen} wordt dieper ingegaan op de reden waarom een
-\textit{inner distance attack} niet mogelijk is. In deze thesis worden dus alle
-activiteiten enkel een verhulde start- of eindlocatie behouden, de rest wordt
-gefilterd in deze context.
+total distance attack terug te vinden, namelijk waarbij zowel gestart als
+geëindigd wordt binnenin de zone. Dit wordt ook een \textit{total distance
+    attack} genoemd, omdat enkel de totale afstand en de afstand buiten de \ac{EPZ}
+nodig is. Op deze figuur zijn de rode punten gelabeld \textit{Start} en
+\textit{End} de zichtbare start- en eindpunten. Dit scenario stelt dat één van
+de reële start- of eindpunten de gevoelige locatie is, aangeduid met de zwarte
+markering. Een andere aanval is de \textit{inner distance attack}, hierbij
+zullen zowel de start als het einde van een activiteit binnenin het te
+verbergen gebied liggen, dit is te zien op Figuur~\ref{fig:innerDist}. De
+kennis van de afzonderlijke afstand die de gebruiker aflegt van de start tot de
+rand van de \ac{EPZ} en van de rand van de \ac{EPZ} tot de eindlocatie is dan
+ook een vereiste. Op de Figuur is opnieuw de zichtbare randpunten aangeduid in
+het rood. Echter zal het onzichtbare traject voor beide gevallen doorlopen en
+eindigen op de gevoelige locatie, wat in dit geval de reële start- en
+eindlocatie is. In Sectie~\ref{sec:berekeningen} wordt dieper ingegaan op de
+reden waarom een \textit{inner distance attack} niet mogelijk is. In deze
+thesis worden dus alle activiteiten enkel een verhulde start- of eindlocatie
+behouden, de rest wordt gefilterd in deze context.
 \begin{figure}[h]
     \centering
     \begin{subfigure}[b]{.5\textwidth}
@@ -89,7 +95,12 @@ gefilterd in deze context.
         \caption{Einde binnenin de \ac{EPZ}}
         \includegraphics[width=1\textwidth]{fig/TotalDistanceAttacks/end.png}
     \end{subfigure}
-    \caption{Voorbeeld van de mogelijke scenarios bij een total distance attack}\label{fig:totalDistanceAttack}
+    \caption{Voorbeeld van de mogelijke scenarios bij een total distance attack scenario}\label{fig:totalDistanceAttack}
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.5\textwidth]{fig/TotalDistanceAttacks/InnerDistanceAttack.png}
+    \caption{Voorbeeld van een inner distance attack situatie}\label{fig:innerDist}
 \end{figure}
 
 Deze thesis baseert zich ook voor een stuk op gemiddelde snelheden en tempo's.
@@ -151,14 +162,15 @@ dezelfde entry gate representeren, zullen in dezelfde cluster terecht komen.
 De besproken entry gates zijn zoals de naam al doet vermoeden de
 `toegangspoorten' tot de cirkel. Dit is waar de gebruiker de \ac{EPZ} betreedt
 en/of verlaat. Deze punten zouden dus in theorie de \ac{EPZ} perfect moeten
-definiëren. Maar door de mogelijke fouten die standaard met het meten van
-gps-punten komen\footnote{Gps-metingen bevatten standaard onnauwkeurigheden, er
-    kan bouncing of signal loss voor een bepaalde interval optreden. Ook kan
-    slechts op bepaalde tijdsintervallen de locatie worden genomen, perfect op de
-    cirkel kan dus nooit gemeten worden.}. Op Figuur~\ref{fig:entrygate} is te zien
-meerdere eindpunten van activiteiten geclusterd worden tot één \ac{E.G.} op de
-figuur, voorgesteld door een kruis. Een cirkel kan worden gedefinieerd door
-drie punten, bijgevolg moeten er dus ten minste drie \ac{E.G.} gevonden worden.
+definiëren. Maar door de fouten die standaard met het meten van gps-punten
+komen\footnote{Gps-metingen bevatten standaard onnauwkeurigheden, er kan
+    bouncing of signal loss voor een bepaalde interval optreden. Ook kan slechts op
+    bepaalde tijdsintervallen de locatie worden genomen, perfect op de cirkel kan
+    dus nooit gemeten worden.} is dit niet perfect. Op Figuur~\ref{fig:entrygate}
+is te zien dat meerdere eindpunten van activiteiten geclusterd worden tot één
+\ac{E.G.}, op de figuur voorgesteld door een kruis. Een cirkel kan worden
+gedefinieerd door drie punten, bijgevolg moeten er dus ten minste drie
+\ac{E.G.} gevonden worden.
 \begin{figure}
     \centering
     \includegraphics[width=0.5\linewidth]{fig/EPZ-mechanisme/Entry_Gate.png}
@@ -172,7 +184,7 @@ een mogelijke andere \ac{EPZ} van de user. Als controle wordt van elk eind- of
 beginpunt de Euclidische afstand berekent tot de rand van de bijhorende
 gevonden \ac{EPZ}. Indien deze kleiner is dan de grootst mogelijke radius, dan
 wordt verondersteld dat het punt bij deze zone hoort. Indien dit voor alle
-punten geldt, dan stopt de het algoritme hier. In het andere geval waarbij de
+punten geldt, dan stopt het algoritme hier. In het andere geval waarbij de
 berekende afstand groter is, worden meer clusters toegevoegd aan het algoritme
 van k-means clustering. Dit zal dus een nieuwe privacy zone aanwijzen.
 
@@ -184,10 +196,11 @@ bestaat de kans dat voorspellingen van locaties gebeuren buiten de verhullende
 zone. Ook is in dit geval een groter stuk van het stratenplan nodig om de
 locatie te achterhalen.
 
-\section{Voorspellen locatie}
+\section{Bepalen nodige gegevens voor predictie}
 Na de bepaling van de \acp{EPZ} voor de gebruiker wordt overgegaan tot het
-voorspellen van kandidaten die de gevoelige locatie zouden kunnen zijn.
-Hiervoor wordt verder ingegaan op de methodiek in de
+berekenen en achterhalen van de bijhorende gegevens die nodig zijn om de
+gevoelige locatie te voorspellen. Hiervoor wordt verder ingegaan op de
+methodiek in de
 paper~\citeauthor{Dhondt_Pochat_Voulimeneas_Joosen_Volckaert_2022}, maar er
 worden enkele gegevens op een andere manier benadert volgens de huidige
 definitie van de aanvaller.
@@ -200,7 +213,7 @@ geplaatst op de straten op een vaste afstand van elkaar, en deze kunnen dan
 worden verbonden. Indien geen \acp{EPZ} geïdentificeerd zijn, dan wordt de
 omgeving die moet worden omgezet naar een graaf een stuk ruimer genomen. De
 graafvoorstelling bestaat uit een serie van nodes, die zich allemaal op een
-gekende straat bevinden. De bogen waarmee de nodes verbonden zijn volgen het
+gekende straat bevinden. De bogen waarmee de nodes verbonden zijn, volgen het
 straatplan, opdat een node een mogelijks te volgen weg
 is~\cite{neira2022graph}. Aan de hand van de `Chaining Distance' wordt bepaald
 hoeveel afstand tussen de nodes zal zitten, en zo dus impliciet ook welke
@@ -231,14 +244,14 @@ waarde van $3.0m$.
 \subsection{Begin- en eindnodes}
 Voor elke activiteit is het volledige traject buiten de \ac{EPZ} gegeven. Dit
 omvat alle \ac{gps}-punten die niet verborgen zijn. De begin- en eindnodes van
-het traject zijn hier van belang, voor de duidelijkheid en de vlotheid van de
+het traject zijn hier van belang. Voor de duidelijkheid en de vlotheid van de
 tekst zullen we naar deze punten refereren als het zichtbare beginpunt en het
 zichtbare eindpunt. Volgens één van de voorafgaand gemaakt assumptie vertrekt
 of eindigt de sporter in de \ac{EPZ}. Dit betekent dat ofwel het reële
 eindpunt, ofwel het reële beginpunt zal overeenstemmen met de gevoelige
 locatie. In geval dat een gebruiker aankomt binnenin de \ac{EPZ}, en dus ook
-vertrekt erbuiten, dan starten de berekeningen vanaf het zichtbare eindpunt. En
-omgekeerd, indien hij vertrekt binnenin de \ac{EPZ}, dan worden de berekeningen
+vertrekt erbuiten, starten de berekeningen vanaf het zichtbare eindpunt. En
+omgekeerd, indien hij vertrekt binnenin de \ac{EPZ}, worden de berekeningen
 gestart vanaf het zichtbare beginpunt. Deze punten zullen in het vervolg
 \textit{randpunten} genoemd worden, refererend naar de rand van de \ac{EPZ}.
 Deze \textit{randpunten} zullen de basis vormen voor de volgende berekeningen.
@@ -248,7 +261,7 @@ belangrijkste zijn de cumulatieve afstand tot dit punt\footnote{De totale
     afstand afgelegd vanaf het begin van de activiteit tot en met het punt in
     kwestie.}, en de cumulatieve tijd tot dit punt\footnote{De totale afstand
     afgelegd vanaf het begin van de activiteit tot en met het punt in kwestie.}.
-Bij de aanval van Dhondt et al.\ wordt de afstand gebruikt om predicties te
+Bij de aanval van Dhondt et al.\ wordt de afstand gebruikt om predicties t
 doen, dit wil dus zeggen dat deze afstand dus aan de basis zal liggen. Maar in
 deze thesis wordt ervan uitgegaan dat afstanden verborgen worden. Onder het
 verbergen van afstanden wordt een onderscheid gemaakt tussen 2 scenarios: het
@@ -257,7 +270,7 @@ cumulatieve afstand gegeven is. Het tweede scenario gaat ervan uit dat alle
 afstandsgegevens verborgen worden. Het alternatieve type data waar dus mee zal
 moeten gewerkt worden is dus \ac{gps}-data.
 
-\subsection{Berekeningen distance binnenin de EPZ}\label{sec:Berekeningen}
+\subsection{Berekeningen distance binnenin de EPZ}\label{sec:berekeningen}
 Om voorspellingen te kunnen doen zullen volgens de inferentie aanval die hier
 besproken wordt twee belangrijke gegevens ter beschikking moeten zijn. Met name
 het straatnetwerk met de mogelijks gevolgde routes, wat werd besproken in
@@ -274,17 +287,80 @@ tussen de afgelegde afstand buiten de verhulde zone (deze noemen we de
 In deze thesis moet dit echter gebeuren met een tussenstap. In het eerste
 scenario waarbij de cumulatieve afstand gegeven is, maar de totale afstand
 niet, moet de totale afstand berekend worden. Maar door de aanwezigheid van
-snelheids- en tijdsgegevens kan dit via basisformules gebeuren. Gebruik makend
+snelheid- en tijdsgegevens kan dit via basisformules gebeuren. Gebruik makend
 van het gemiddelde tempo kan de voorgaande formule worden omgevormd tot: \[inner\ distance = total\ time \times average\ pace - outer\ distance \]
 
-% Aanvullen referentie naar waarom geen inner distance attack mogelijk
+In opzicht van het tweede scenario, waarbij alle afstandsgegevens verborgen
+zijn, ontbreekt nu ook de \textit{outer distance}. We bepalen deze dan ook via
+de \ac{gps}-coördinaten. Dit gebeurd door de som te nemen van de afstanden van
+alle opeenvolgende punten. Let wel dat we de afstand tussen twee
+\ac{gps}-punten berekenen gebruik makend van de \textit{haversine} formule.
+Equation~\ref{eq:haversine} is een uitwerking van de formule. Deze berekent de
+afstand tussen twee punten op een bolvormig oppervlak, in dit geval de aarde.
+Om de afstand tussen twee punten op het aardoppervlak te berekenen, moeten de
+breedte- en lengtegraden van elk punt worden omgezet naar radialen. Vervolgens
+worden deze waarden ingevoerd in de formule, samen met de straal van de aarde
+($r$), meestal genomen als $6.371 km$. De formule berekent dan de haversine van
+de helft van het verschil tussen de breedtegraden en de haversine van de helft
+van het verschil tussen de lengtegraden ($\lambda$), evenals de cosinus van de
+breedtegraden ($\phi$) van beide punten. Deze waarden worden vervolgens
+gebruikt om de afstand tussen de twee punten te berekenen tussen de punten P \&
+Q op Figuur~\ref{fig:haversine}~\cite{sheppard1922practical}.
+
+Merk op dat ook dit een benadering is van de werkelijke afstand. De aarde is
+niet perfect sferisch, wat de nauwkeurigheid kan beïnvloeden. Maar voor de
+doeleinden van deze thesis is dit voldoende nauwkeurig, zeker omdat de
+afstanden in deze context relatief klein zijn, waardoor over het algemeen
+slechts een minimale buiging is.
+\begin{equation}[h]\label{eq:haversine}
+    d = 2r \arcsin\left(\sqrt{\sin^2\left(\frac{\phi_2-\phi_1}{2}\right)+\cos(\phi_1)\cos(\phi_2)\sin^2\left(\frac{\lambda_2-\lambda_1}{2}\right)}\right)
+\end{equation}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{fig/haversine.png}
+    \caption{Haversine illustratie voor het berekenen van de afstand\cite{Distance97:online}}\label{fig:haversine}
+\end{figure}
+
+Uit de voorgaande paragrafen kunnen we dus besluiten dat de inner distance af
+te leiden valt uit gegeven outer distance, total time en de gemiddelde
+snelheid. Om een \textit{outer distance attack} uit te voeren is de berekening
+van de totale inner distance voldoende. Maar bij het uitvoeren van een
+\textit{inner distance attack} zijn twee aparte inner distances nodig (degene
+van start tot de \ac{EPZ} en degene van de \ac{EPZ} tot de finish). Wanneer de
+cumulatieve afstand gegeven is, zouden we een deze aanval kunnen uitvoeren
+doordat in dit geval de twee afstanden te achterhalen zijn. $d_{start} =
+    d_{eerste\ node}$ en $d_{finish} = d_{totaal} - d_{laatste\ node}$. Maar
+wanneer deze niet beschikbaar zijn, is dit niet mogelijk, in dit geval zijn
+deze afstanden niet individueel te achterhalen.
 
 % Basseren op totale verstreken tijd of niet?
 
 % Welke gps afwijkingne zijn er\
 
-\section{Selecteren van de beste voorspelling}
+\section{Voorspellen locatie}
+Alle nodige gegevens zijn nu beschikbaar om de gevoelige locatie te
+achterhalen. Hier wordt besproken hoe voor elke bruikbare activiteit een
+locatie zal worden voorspeld. Doordat voor elke activiteit één of meerdere
+locaties worden voorspeld, zullen deze moeten worden gebundeld tot één locatie,
+voor alle activiteiten.
 
+\subsection{Filteren activiteiten}
+Voorafgaand aan het voorspellen van de locatie, is het belangrijk dat enkel
+voorspellingen gebeuren met activiteiten die een nuttige voorspelling kunnen
+voortbrengen. De andere activiteiten zouden enkel de accuraatheid van de
+voorspelling naar beneden halen. Dit gaat dan over activiteiten waarbij niet de
+kortste route binnenin de \ac{EPZ} wordt gevolgd. Al deze activiteiten proberen
+we dus in de mate van het mogelijke eruit te filteren.
+
+Het geval waarbij een gebruiker niet de kortste route volgt vanaf de rand van
+de \ac{EPZ} tot de gevoelige locatie kan in zekere mate worden gefilterd door
+te stellen dat een \ldots......
+
+\subsection{Bepalen van de locatie}
+
+\subsection{Meest voorspelde locatie}
+
+\section{Afwijkingen}
 %  Beschrijven hoe zo'n aanval werkt - Karels methodiek uitwerken
 % Afstanden wijken af
 % Fouten in GPS data

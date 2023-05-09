@@ -12,10 +12,12 @@
 \contentsline {figure}{\numberline {2.7}{\ignorespaces Voorbeeld filtering van punten binnen \ac {EPZ}\relax }}{12}{figure.caption.17}%
 \contentsline {figure}{\numberline {2.8}{\ignorespaces Mechanisme \ac {EPZ} beschreven door \citeauthor {sec18has3:online}\relax }}{12}{figure.caption.18}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Voorbeeld van de mogelijke scenarios bij een total distance attack\relax }}{16}{figure.caption.19}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Voorbeeld werking k-means clustering~\cite {InDepthk59:online}\relax }}{17}{figure.caption.20}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Voorbeeld van entry gates gevonden door k-means clustering en identificatie van de \ac {EPZ}\relax }}{17}{figure.caption.22}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Voorbeeld van het genereren van een roadgraph\relax }}{19}{figure.caption.23}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Voorbeeld van de mogelijke scenarios bij een total distance attack scenario\relax }}{16}{figure.caption.19}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Voorbeeld van een inner distance attack situatie\relax }}{16}{figure.caption.20}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Voorbeeld werking k-means clustering~\cite {InDepthk59:online}\relax }}{17}{figure.caption.21}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Voorbeeld van entry gates gevonden door k-means clustering en identificatie van de \ac {EPZ}\relax }}{18}{figure.caption.23}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Voorbeeld van het genereren van een roadgraph\relax }}{19}{figure.caption.24}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Haversine illustratie voor het berekenen van de afstand\cite {Distance97:online}\relax }}{21}{figure.caption.25}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
