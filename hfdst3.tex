@@ -205,7 +205,7 @@ paper~\citeauthor{Dhondt_Pochat_Voulimeneas_Joosen_Volckaert_2022}, maar er
 worden enkele gegevens op een andere manier benadert volgens de huidige
 definitie van de aanvaller.
 
-\subsection{Roadgraph}\label{sec:roadgraph}
+\subsection{Roadgraph en Distance Matrix}\label{sec:roadgraph}
 Voor elke gevonden EPZ is het noodzakelijk om een graafvoorstelling van de
 omgeving op te stellen. Op Figuur~\ref{fig:graph_generation} is een voorbeeld
 terug te vinden van hoe een graaf kan worden geëxtraheerd. Er worden punten
@@ -241,6 +241,19 @@ waarde van $3.0m$.
     \end{subfigure}
 \end{figure}
 
+Op basis van de nodes in deze graaf, kan de \textit{Distance Matrix} worden
+opgesteld. Dit is een matrix die voor alle startnodes (op de rand van de
+\ac{EPZ}) de theoretische afstand bevat tot alle nodes aanwezig in de graaf.
+Gebruikmakend van het Dijkstra algoritme\footnote{Het Dijkstra-algoritme is een
+    algoritme in de grafentheorie dat wordt gebruikt om de kortste weg te vinden
+    tussen twee knooppunten in een gewogen grafiek. Het algoritme werkt door
+    iteratief knooppunten toe te voegen aan een `bezochte' set en de kortste
+    afstand te berekenen vanaf het beginpunt naar elk aangrenzend knooppunt dat nog
+    niet is bezocht\cite{dijkstra}.}, die het in staat stelt om voor elk punt de
+kortste theoretische afstand te bepalen tot alle punten in de graaf. Deze
+afstanden worden opgeslagen, en zijn belangrijk in een verder stadium van de
+aanval.
+
 \subsection{Begin- en eindnodes}
 Voor elke activiteit is het volledige traject buiten de \ac{EPZ} gegeven. Dit
 omvat alle \ac{gps}-punten die niet verborgen zijn. De begin- en eindnodes van
@@ -270,7 +283,7 @@ cumulatieve afstand gegeven is. Het tweede scenario gaat ervan uit dat alle
 afstandsgegevens verborgen worden. Het alternatieve type data waar dus mee zal
 moeten gewerkt worden is dus \ac{gps}-data.
 
-\subsection{Berekeningen distance binnenin de EPZ}\label{sec:berekeningen}
+\subsection{Berekeningen afstand binnenin de EPZ}\label{sec:berekeningen}
 Om voorspellingen te kunnen doen zullen volgens de inferentie aanval die hier
 besproken wordt twee belangrijke gegevens ter beschikking moeten zijn. Met name
 het straatnetwerk met de mogelijks gevolgde routes, wat werd besproken in
@@ -312,7 +325,7 @@ niet perfect sferisch, wat de nauwkeurigheid kan beïnvloeden. Maar voor de
 doeleinden van deze thesis is dit voldoende nauwkeurig, zeker omdat de
 afstanden in deze context relatief klein zijn, waardoor over het algemeen
 slechts een minimale buiging is.
-\begin{equation}[h]\label{eq:haversine}
+\begin{equation}\label{eq:haversine}
     d = 2r \arcsin\left(\sqrt{\sin^2\left(\frac{\phi_2-\phi_1}{2}\right)+\cos(\phi_1)\cos(\phi_2)\sin^2\left(\frac{\lambda_2-\lambda_1}{2}\right)}\right)
 \end{equation}
 \begin{figure}[h]
@@ -333,10 +346,6 @@ doordat in dit geval de twee afstanden te achterhalen zijn. $d_{start} =
 wanneer deze niet beschikbaar zijn, is dit niet mogelijk, in dit geval zijn
 deze afstanden niet individueel te achterhalen.
 
-% Basseren op totale verstreken tijd of niet?
-
-% Welke gps afwijkingne zijn er\
-
 \section{Voorspellen locatie}
 Alle nodige gegevens zijn nu beschikbaar om de gevoelige locatie te
 achterhalen. Hier wordt besproken hoe voor elke bruikbare activiteit een
@@ -353,38 +362,96 @@ kortste route binnenin de \ac{EPZ} wordt gevolgd. Al deze activiteiten proberen
 we dus in de mate van het mogelijke eruit te filteren.
 
 Het geval waarbij een gebruiker niet de kortste route volgt vanaf de rand van
-de \ac{EPZ} tot de gevoelige locatie kan in zekere mate worden gefilterd door
-te stellen dat een \ldots......
+de \ac{EPZ} tot de gevoelige locatie kan in zekere mate worden opgevangen door
+te stellen dat een activiteit enkel wordt gebruikt wanneer de nog af te leggen
+afstand binnenin de \ac{EPZ} kleiner dan de maximaal mogelijk af te leggen weg.
+In de andere gevallen zal de activiteit worden gefilterd. De maximale afstand
+die hiervoor nodig is wordt bepaald gebruik makend van de \textit{Distance
+    Matrix}, die beschreven staat in Sectie~\ref{sec:roadgraph}. De maximale
+afstand is gelijk aan de maximale afstand terug te vinden in de matrix, voor de
+bijhorende startnode. Dit is de afstand die een gebruiker maximaal kan afleggen
+naar eender welke node op de graaf, vertrekkend van de startnode, door het
+volgen van de theoretisch kortste route. Dit zal ook voor een stuk gevallen in
+rekening brengen waarbij de activiteit voor een stuk verborgen wordt, maar niet
+zal eindigen op de gevoelige locatie.
+
+Op een gelijkaardige manier kan een filtering gebeuren voor afgelegde afstanden
+die lager zijn dan de minimale mogelijke afstand. Dit zou opnieuw activiteiten
+kunnen filteren die niet eindigen op de gevoelige afstand. De minimale afstand
+is dan ook degene tot de node met de laagste minimale afstand tot deze node
+vanaf het zichtbare startpunt/eindpunt van de activiteit, gelegen op de rand
+van de \ac{EPZ}.
+
+Ook worden de zichtbare eind- en beginpunten van de activiteiten gecontrolleerd
+naar compatibiliteit met de road graph. Alle eind- en beginpunten worden
+gesnapt op de roadgraph. Ze worden dus vervangen door de dichtstbijzijnde node
+op de graaf. Indien het verschil in afstand tussen de originele locatie en de
+gesnapte locatie te groot is, wordt de activiteit gefilterd. Dit wijst dan op
+een te grote afwijking tussen de activiteit en de road graph, of op inaccurate
+gps-data.
+
+Als laatste wordt ook nog gekeken naar afwijkingen bij de \acp{E.G.}. Indien
+bij het bepalen van een \acp{E.G.} een afwijking wordt vastgesteld tussen de
+verschillende gebruikte endpoints/startpoints, die groter is dan drie maal de
+standaardafwijking, wordt de activiteit gefilterd. Dit wijst dan op een te
+grote spreiding bij de entry gates, en dus op een grote kans op inaccurate
+voorspellingen.
 
 \subsection{Bepalen van de locatie}
+Om een predictie te maken per activiteit wordt de inner distance die berekent
+werd in Sectie~\ref{sec:berekeningen} gebruikt. Deze wordt dan gematched met
+het stratennetwerk. Het idee hierachter is om een alle mogelijke routes
+binnenin de \ac{EPZ} af te leggen (die de kortste route vormt naar de nodes op
+het pad), en te stoppen wanneer de afgelegde afstand gelijk is aan de berekende
+inner distance. Het resultaat van al deze routes is dan een node, die mogelijks
+de gevoelige locatie kan zijn. In de praktijk kan dit mechanisme op een
+simpelere manier worden toegepast door het gebruik van de voorafgaande distance
+matrix. De berekende inner distance zal worden vergeleken met de afstand in de
+distance matrix, en de nodes in de \ac{EPZ} die het dichtst bij deze afstand
+liggen zullen worden geselecteerd als kandidaten voor de gevoelige locatie.
+Indien dit proces herhaald wordt voor alle beschikbare activiteiten, met
+mogelijks verschillende Entry Gates, zullen er verschillende kandidaten worden
+gevonden. Ook zullen bepaalde nodes meer dan één keer worden voorspeld. In de
+volgende stap zullen alle predicties worden samengenomen in één voorspelling.
 
 \subsection{Meest voorspelde locatie}
+Een verzameling van nodes is nu bekomen, die normaliter ook de gevoelige
+locatie bevat. Om deze te bepalen, wordt regressie-analyse toegepast, aan de
+hand van de \ac{LAD} methode. Het resultaat van deze regressie-analyse zal een
+\ac{gps}-locatie zijn, die onze \textit{eindvoorspelling} zal vormen.
 
-\section{Afwijkingen}
-%  Beschrijven hoe zo'n aanval werkt - Karels methodiek uitwerken
-% Afstanden wijken af
-% Fouten in GPS data
-% Fouten bij mappen GPS op het Strava routeplan
-% Bij het aan en uitzetten van Strava - route verspringt!
-% Afwijkende punten - zie grafiek
+De \ac{LAD} methode wordt gebruikt om een lineaire regressie uit te voeren op
+een set punten, door de som van de absolute waarden van de absolute verschillen
+te minimaliseren.\ \ac{LAD} staat gekend als een robuuste methode die erg
+nuttig blijkt te zijn voor datasets met grote uitschieters. In
+Vergelijking~\ref{eq:LAD} is te zien dat, door het werken met absolute waarden
+van de vergelijking staat afwijkingen tussen de waarden, de extremen in mindere
+mate doorwegen in de berekeningen. Dit is een groot voordeel ten opzichte van
+andere regressietechnieken, zoals
+bijvoorbeeld~\ac{OLS}\cite{iqbal2021application}.~\ac{OLS} werkt gelijkaardig,
+maar zoals te zien is in Vergelijking~\ref{eq:OLS} probeert de som van de
+kwadratische afwijkingen te minimaliseren. Uitschieters zullen dus meer
+doorwegen. Een nadeel van \ac{LAD} is dat het berekenen van de LAD-schattingen
+meer rekentijd en computerbronnen vereist dan \ac{OLS}, wat het minder geschikt
+maakt voor grote datasets.
+\begin{equation} \label{eq:LAD}
+    LAD:\indent  \min\sum\limits_{i=1}^n|y_i - \hat{y}|
+\end{equation}
+\begin{equation} \label{eq:OLS}
+    OLS:\indent  \min\sum\limits_{i=1}^n{(y_i - \hat{y})}^2
+\end{equation}
 
-% Afstanden mogelijks berekenen op 2 manieren 
-% 1. Coordinaten 
-% 2. Cumulatieve afstanden van de punten
+LAD regressie wordt in deze thesis door de aard van de data, en van de
+voorspellingen, meer bepaald door de grote kans op uitschieters. Gps-data kan
+erg onnauwkeurig zijn, en grote of kleine afwijkingen kunnen dus voorkomen. Ook
+is het mogelijk dat door acties van een sporter zoals bijvoorbeeld eenmalig de
+kortste route niet volgen een uitschieters voorvallen. Rekentijd is in deze
+thesis geen probleem, aangezien het aantal voorspelde locaties beperkt.
 
-% Werkwijze
-%     1. Bereken tijd in de EPZ
-%           Wanneer ge stil staat... in de EPZ
-%           Eerste - laatste tijd
-%           Snelheid
-%               Zelf berekenen (Maar komt overeen met degene gegeven door Strava - Strava geeft sommige weer als NULL, dus kan er niet mee werken)
-%               Strava: m/h
-%               Zelf: m/s
-%     2. Berkenen outerdistance op verschillende manieren
-%     2. Berekenen inner distance
-%           Voor complete dataset => visualize verschillen tss de berekende en de gegeven inner distance
-%           opm: Wanneer je stil staat in den EPZ => aanval niet mogelijk (Gemiddelde snelheid obv moving time <-> Mijn methode gebruikt elapsed_time)
-%           haversine => Vectorized
-%       Methodiek volledig uitschrijven + analyse van deze waarden
-
-% Bepalen bij welke omstandigheden het werkt/niet werkt
+In de context van deze thesis kan de Vergelijking~\ref{eq:LAD} worden toegepast
+voor elke voorspelde locatie. Alle voorspelde locaties zullen worden beschouwd
+als mogelijke \textit{eindvoorspelling}. Deze zal dan in de vergelijking
+$\hat{y}$ voorstellen. De absolute waarde van het verschil tussen de
+eindvoorspelling en alle punten zal worden opgeteld. Er wordt dan gezocht naar
+de \textit{eindvoorspelling} die de som van de absolute waarden, en dit is dan
+de resulterende predictie.

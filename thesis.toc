@@ -22,17 +22,17 @@
 \contentsline {subsection}{\numberline {3.1.1}Assumpties}{15}{subsection.3.1.1}%
 \contentsline {section}{\numberline {3.2}Identificeren van de EPZ}{16}{section.3.2}%
 \contentsline {section}{\numberline {3.3}Bepalen nodige gegevens voor predictie}{18}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Roadgraph}{18}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Begin- en eindnodes}{19}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}Berekeningen distance binnenin de EPZ}{20}{subsection.3.3.3}%
-\contentsline {section}{\numberline {3.4}Voorspellen locatie}{22}{section.3.4}%
+\contentsline {subsection}{\numberline {3.3.1}Roadgraph en Distance Matrix}{18}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Begin- en eindnodes}{20}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Berekeningen afstand binnenin de EPZ}{20}{subsection.3.3.3}%
+\contentsline {section}{\numberline {3.4}Voorspellen locatie}{21}{section.3.4}%
 \contentsline {subsection}{\numberline {3.4.1}Filteren activiteiten}{22}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Bepalen van de locatie}{22}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.4.3}Meest voorspelde locatie}{22}{subsection.3.4.3}%
-\contentsline {section}{\numberline {3.5}Afwijkingen}{22}{section.3.5}%
-\contentsline {chapter}{\numberline {4}Resultaten en Evaluatie}{23}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Gps punten die te ver uit elkaar liggen}{23}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Evaluatie van de aanval}{23}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Resultaten}{23}{section.4.3}%
-\contentsline {chapter}{\numberline {5}Conclusies}{25}{chapter.5}%
-\contentsline {chapter}{\numberline {A}Uitleg over de appendices}{29}{appendix.A}%
+\contentsline {subsection}{\numberline {3.4.2}Bepalen van de locatie}{23}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Meest voorspelde locatie}{23}{subsection.3.4.3}%
+\contentsline {chapter}{\numberline {4}Gebruikte data en afwijkingen}{25}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Resultaten en Evaluatie}{26}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Gps punten die te ver uit elkaar liggen}{26}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Evaluatie van de aanval}{26}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Resultaten}{26}{section.5.3}%
+\contentsline {chapter}{\numberline {6}Conclusies}{28}{chapter.6}%
+\contentsline {chapter}{\numberline {A}Uitleg over de appendices}{32}{appendix.A}%

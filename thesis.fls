@@ -1286,6 +1286,13 @@ INPUT hfdst5.tex
 INPUT ./hfdst5.tex
 INPUT ./hfdst5.tex
 INPUT hfdst5.tex
+INPUT ./hfdst6.tex
+INPUT ./hfdst6.tex
+INPUT ./hfdst6.tex
+INPUT hfdst6.tex
+INPUT ./hfdst6.tex
+INPUT ./hfdst6.tex
+INPUT hfdst6.tex
 INPUT /usr/share/texmf-dist/fonts/vf/adobe/times/zpzccmry.vf
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/zapfchan/pzcmi8r.tfm

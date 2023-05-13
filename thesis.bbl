@@ -39,6 +39,12 @@ Early, J.~J. and Sykulski, A.~M. (2020).
 \newblock Smoothing and interpolating noisy gps data with smoothing splines.
 \newblock {\em Journal of Atmospheric and Oceanic Technology}, 37(3):449 -- 465.
 
+\bibitem[EduPristine, 2017]{WhatisSt19:online}
+EduPristine (2017).
+\newblock What is standard deviation and how is it important?
+\newblock \url{https://www.edupristine.com/blog/what-is-standard-deviation}.
+\newblock (Accessed on 05/12/2023).
+
 \bibitem[Hern, 2018]{Fitnesst33:online}
 Hern, A. (2018).
 \newblock Fitness tracking app strava gives away location of secret us army bases | gps | the guardian.
@@ -49,6 +55,16 @@ Hern, A. (2018).
 Howard, P. and Parks, M. (2012).
 \newblock Social media and political change: Capacity, constraint, and consequence.
 \newblock {\em Journal of Communication}, 62.
+
+\bibitem[Iqbal, 2021]{iqbal2021application}
+Iqbal, M. (2021).
+\newblock Application of regression techniques with their advantages and disadvantages.
+\newblock {\em Elektron. Mag}, 4:11--17.
+
+\bibitem[Javaid, 2013]{dijkstra}
+Javaid, A. (2013).
+\newblock Understanding dijkstra algorithm.
+\newblock {\em SSRN Electronic Journal}.
 
 \bibitem[Ladetto et~al., 2001]{article}
 Ladetto, Q., Gabaglio, V., and Merminod, B. (2001).

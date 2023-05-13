@@ -2,47 +2,47 @@ This is BibTeX, Version 0.99d (TeX Live 2023/Arch Linux)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: thesis.aux
 The style file: apalike.bst
-Database file #1: bibliografie.bib
+Database file #1: bibliografie_eng.bib
 Warning--empty journal in sec18has3:online
-You've used 27 entries,
+You've used 30 entries,
             1935 wiz_defined-function locations,
-            628 strings with 9538 characters,
-and the built_in function-call counts, 7726 in all, are:
-= -- 801
-> -- 272
-< -- 24
-+ -- 89
-- -- 84
-* -- 531
-:= -- 1498
-add.period$ -- 96
-call.type$ -- 27
-change.case$ -- 176
-chr.to.int$ -- 24
-cite$ -- 28
-duplicate$ -- 300
-empty$ -- 477
-format.name$ -- 121
-if$ -- 1445
+            645 strings with 9935 characters,
+and the built_in function-call counts, 8590 in all, are:
+= -- 891
+> -- 293
+< -- 27
++ -- 95
+- -- 90
+* -- 589
+:= -- 1661
+add.period$ -- 106
+call.type$ -- 30
+change.case$ -- 194
+chr.to.int$ -- 27
+cite$ -- 31
+duplicate$ -- 337
+empty$ -- 539
+format.name$ -- 130
+if$ -- 1609
 int.to.chr$ -- 4
 int.to.str$ -- 0
-missing$ -- 8
-newline$ -- 152
-num.names$ -- 81
-pop$ -- 98
+missing$ -- 10
+newline$ -- 168
+num.names$ -- 90
+pop$ -- 108
 preamble$ -- 1
-purify$ -- 177
+purify$ -- 195
 quote$ -- 0
-skip$ -- 253
+skip$ -- 284
 stack$ -- 0
-substring$ -- 374
-swap$ -- 6
+substring$ -- 429
+swap$ -- 8
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 160
+type$ -- 178
 warning$ -- 1
-while$ -- 56
+while$ -- 64
 width$ -- 0
-write$ -- 362
+write$ -- 401
 (There was 1 warning)
