@@ -1,24 +1,34 @@
 \babel@toc {dutch}{}\relax 
 \babel@toc {dutch}{}\relax 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Voorbeeldactiviteit Strava\relax }}{2}{figure.caption.10}%
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Voorbeeldactiviteit Strava\relax }}{2}{figure.caption.11}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Verschil snelheid en tempo\relax }}{6}{figure.caption.11}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Data van een activiteit\relax }}{7}{figure.caption.12}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Voorbeeld van de werking van \textit {Map Snapping}\relax }}{9}{figure.caption.13}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Voorbeeld Data smoothing with moving average\relax }}{9}{figure.caption.14}%
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Voorbeeld van de werking van een \ac {EPZ}\relax }}{11}{figure.caption.15}%
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Voorbeeld translatie EPZ\relax }}{11}{figure.caption.16}%
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Voorbeeld filtering van punten binnen \ac {EPZ}\relax }}{12}{figure.caption.17}%
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Mechanisme \ac {EPZ} beschreven door \citeauthor {sec18has3:online}\relax }}{12}{figure.caption.18}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Verschil snelheid en tempo\relax }}{6}{figure.caption.12}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Data van een activiteit\relax }}{7}{figure.caption.13}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Voorbeeld van de werking van \textit {Map Snapping}\relax }}{9}{figure.caption.14}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Voorbeeld Data smoothing with moving average\relax }}{9}{figure.caption.15}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Voorbeeld van de werking van een \ac {EPZ}\relax }}{11}{figure.caption.16}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Voorbeeld translatie EPZ\relax }}{11}{figure.caption.17}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Voorbeeld filtering van punten binnen \ac {EPZ}\relax }}{12}{figure.caption.18}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Mechanisme \ac {EPZ} beschreven door \citeauthor {sec18has3:online}\relax }}{12}{figure.caption.19}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Voorbeeld van de mogelijke scenarios bij een total distance attack scenario\relax }}{16}{figure.caption.19}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Voorbeeld van een inner distance attack situatie\relax }}{16}{figure.caption.20}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Voorbeeld werking k-means clustering~\cite {InDepthk59:online}\relax }}{17}{figure.caption.21}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Voorbeeld van entry gates gevonden door k-means clustering en identificatie van de \ac {EPZ}\relax }}{18}{figure.caption.23}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Voorbeeld van het genereren van een roadgraph\relax }}{19}{figure.caption.24}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Haversine illustratie voor het berekenen van de afstand\cite {Distance97:online}\relax }}{22}{figure.caption.25}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Voorbeeld van de mogelijke scenarios bij een total distance attack scenario\relax }}{16}{figure.caption.20}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Voorbeeld van een inner distance attack situatie\relax }}{16}{figure.caption.21}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Voorbeeld werking k-means clustering~\cite {InDepthk59:online}\relax }}{17}{figure.caption.22}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Voorbeeld van entry gates gevonden door k-means clustering en identificatie van de \ac {EPZ}\relax }}{18}{figure.caption.24}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Voorbeeld van het genereren van een roadgraph\relax }}{19}{figure.caption.25}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Haversine illustratie voor het berekenen van de afstand\cite {Distance97:online}\relax }}{22}{figure.caption.26}%
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Geografische spreiding van de activiteiten in de dataset\relax }}{27}{figure.caption.31}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Post op sociale media van Strava die de evolutie van het totaal aantal activiteiten weergeeft\cite {StravaMi72:online}\relax }}{27}{figure.caption.34}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces \ac {CDF} plot van het aantal activiteiten per gebruiker\relax }}{28}{figure.caption.33}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Voorbeelden van gps-drift\relax }}{29}{figure.caption.35}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Voorbeelden van \ac {gps}-bounce\cite {BadGPSDa19:online}\relax }}{29}{figure.caption.36}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Voorbeeld van zowel gps-drift en gps-bounce uit de dataset\relax }}{30}{figure.caption.37}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Voorbeeld van signal loss uit de gebruikte dataset\relax }}{31}{figure.caption.38}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Verschil tussen de berekende afstand en de theoretische afstand voor één gebruiker\relax }}{32}{figure.caption.39}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Verdeling van het verschil tussen de berekende afstand en de theoretische afstand buiten de \ac {EPZ} \relax }}{34}{figure.caption.40}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Verdeling van de afstanden tussen twee opeenvolgende gps-punten\relax }}{35}{figure.caption.42}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

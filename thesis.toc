@@ -5,8 +5,8 @@
 \contentsline {chapter}{Abstract}{vii}{chapter*.3}%
 \contentsline {chapter}{Inhoud}{x}{chapter*.5}%
 \contentsline {chapter}{Figurenlijst}{xii}{chapter*.6}%
-\contentsline {chapter}{Tabellenlijst}{xiii}{chapter*.7}%
-\contentsline {chapter}{Lijst met afkortingen}{xiv}{chapter*.8}%
+\contentsline {chapter}{Tabellenlijst}{xiii}{chapter*.9}%
+\contentsline {chapter}{Lijst met afkortingen}{xiv}{chapter*.10}%
 \contentsline {chapter}{\numberline {1}Inleiding}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Situering}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Doelstelling}{2}{section.1.2}%
@@ -30,9 +30,15 @@
 \contentsline {subsection}{\numberline {3.4.2}Bepalen van de locatie}{23}{subsection.3.4.2}%
 \contentsline {subsection}{\numberline {3.4.3}Meest voorspelde locatie}{23}{subsection.3.4.3}%
 \contentsline {chapter}{\numberline {4}Gebruikte data en afwijkingen}{25}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Resultaten en Evaluatie}{26}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Gps punten die te ver uit elkaar liggen}{26}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Evaluatie van de aanval}{26}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Resultaten}{26}{section.5.3}%
-\contentsline {chapter}{\numberline {6}Conclusies}{28}{chapter.6}%
-\contentsline {chapter}{\numberline {A}Uitleg over de appendices}{32}{appendix.A}%
+\contentsline {section}{\numberline {4.1}Karakteristieken van de gebruikte dataset}{26}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Mogelijke afwijkingen binnenin de dataset}{28}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Mogelijke fouten bij gps-data}{28}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Gps-fouten in de gebruikte dataset}{31}{subsection.4.2.2}%
+\contentsline {section}{\numberline {4.3}Gps punten die te ver uit elkaar liggen}{33}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Technieken gps-data te verbeteren}{33}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Stilstaande gebruiker}{33}{section.4.5}%
+\contentsline {chapter}{\numberline {5}Resultaten en Evaluatie}{36}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Evaluatie van de aanval}{36}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Resultaten}{36}{section.5.2}%
+\contentsline {chapter}{\numberline {6}Conclusies}{38}{chapter.6}%
+\contentsline {chapter}{\numberline {A}Uitleg over de appendices}{42}{appendix.A}%

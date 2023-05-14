@@ -4,7 +4,7 @@
 %                                                                 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
-\chapter{Setting aanval}\label{sec:inferentieaanval}
+\chapter{Setting aanval}\label{chap:inferentieaanval}
 Gedurende dit hoofdstuk wordt de setting alsook de werking van de aanval
 beschreven. De aanval is sterk gebaseerd op de aanvallen
 van~\citeauthor{Dhondt_Pochat_Voulimeneas_Joosen_Volckaert_2022}\cite{Dhondt_Pochat_Voulimeneas_Joosen_Volckaert_2022}
@@ -41,7 +41,7 @@ aanvaller toegang tot alle data die publiek beschikbaar is. Deze gebruikt dan
 voornamelijk afgelegde weg als basis.
 
 De aanvaller die in deze thesis wordt beschreven, heeft echter geen toegang tot
-deze afstandsdata. Hij heeft wel nog toegang tot de ruwe GPS-data, maar ook de
+deze afstandsdata. Hij heeft wel nog toegang tot de ruwe gps-data, maar ook de
 snelheid, het tempo enzovoort. Het onderzoek bestaat er dus uit om te
 onderzoeken in hoeverre een aanval nog mogelijk is wanneer de afstandsdata
 onbruikbaar zou zijn. Een alternatieve aanpak wordt dus onderzocht om de
@@ -453,5 +453,10 @@ voor elke voorspelde locatie. Alle voorspelde locaties zullen worden beschouwd
 als mogelijke \textit{eindvoorspelling}. Deze zal dan in de vergelijking
 $\hat{y}$ voorstellen. De absolute waarde van het verschil tussen de
 eindvoorspelling en alle punten zal worden opgeteld. Er wordt dan gezocht naar
-de \textit{eindvoorspelling} die de som van de absolute waarden, en dit is dan
-de resulterende predictie.
+de \textit{eindvoorspelling} die de som van de absolute waarden het meest
+minimaliseert, en dit is dan de resulterende predictie.
+
+% Extra: Figuur of filteren van activiteiten
+% Figuur predicties uitleggen
+% Figuur LAD predictie invoegen
+% Voorbeeld van de matrix - en hoe de node via die matrix wordt bepaald

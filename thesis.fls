@@ -1279,23 +1279,93 @@ INPUT hfdst4.tex
 INPUT ./hfdst4.tex
 INPUT ./hfdst4.tex
 INPUT hfdst4.tex
-INPUT ./hfdst5.tex
-INPUT ./hfdst5.tex
-INPUT ./hfdst5.tex
-INPUT hfdst5.tex
-INPUT ./hfdst5.tex
-INPUT ./hfdst5.tex
-INPUT hfdst5.tex
-INPUT ./hfdst6.tex
-INPUT ./hfdst6.tex
-INPUT ./hfdst6.tex
-INPUT hfdst6.tex
-INPUT ./hfdst6.tex
-INPUT ./hfdst6.tex
-INPUT hfdst6.tex
+INPUT ./fig/Afwijkingen&Analyses/Heatmap.png
+INPUT ./fig/Afwijkingen&Analyses/Heatmap.png
+INPUT fig/Afwijkingen&Analyses/Heatmap.png
+INPUT ./fig/Afwijkingen&Analyses/Heatmap.png
+INPUT ./fig/Afwijkingen&Analyses/Heatmap.png
+INPUT ./fig/Afwijkingen&Analyses/CDF_amountActivities.jpg
+INPUT ./fig/Afwijkingen&Analyses/CDF_amountActivities.jpg
+INPUT fig/Afwijkingen&Analyses/CDF_amountActivities.jpg
+INPUT ./fig/Afwijkingen&Analyses/CDF_amountActivities.jpg
+INPUT ./fig/Afwijkingen&Analyses/CDF_amountActivities.jpg
+INPUT ./fig/Strava_3billion.png
+INPUT ./fig/Strava_3billion.png
+INPUT fig/Strava_3billion.png
+INPUT ./fig/Strava_3billion.png
+INPUT ./fig/Strava_3billion.png
 INPUT /usr/share/texmf-dist/fonts/vf/adobe/times/zpzccmry.vf
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/zapfchan/pzcmi8r.tfm
+INPUT ./fig/Afwijkingen&Analyses/Crooked Routes/GPS-Drift.png
+INPUT ./fig/Afwijkingen&Analyses/Crooked Routes/GPS-Drift.png
+INPUT fig/Afwijkingen&Analyses/Crooked Routes/GPS-Drift.png
+INPUT ./fig/Afwijkingen&Analyses/Crooked Routes/GPS-Drift.png
+INPUT ./fig/Afwijkingen&Analyses/Crooked Routes/GPS-Drift.png
+INPUT ./fig/Afwijkingen&Analyses/Crooked Routes/GPS-Drift_onlnie.jpg
+INPUT ./fig/Afwijkingen&Analyses/Crooked Routes/GPS-Drift_onlnie.jpg
+INPUT fig/Afwijkingen&Analyses/Crooked Routes/GPS-Drift_onlnie.jpg
+INPUT ./fig/Afwijkingen&Analyses/Crooked Routes/GPS-Drift_onlnie.jpg
+INPUT ./fig/Afwijkingen&Analyses/Crooked Routes/GPS-Drift_onlnie.jpg
+INPUT ./fig/Afwijkingen&Analyses/Crooked Routes/Crooked GPS Route_Cart.png
+INPUT ./fig/Afwijkingen&Analyses/Crooked Routes/Crooked GPS Route_Cart.png
+INPUT fig/Afwijkingen&Analyses/Crooked Routes/Crooked GPS Route_Cart.png
+INPUT ./fig/Afwijkingen&Analyses/Crooked Routes/Crooked GPS Route_Cart.png
+INPUT ./fig/Afwijkingen&Analyses/Crooked Routes/Crooked GPS Route_Cart.png
+INPUT ./fig/Afwijkingen&Analyses/Crooked Routes/GPS_bounce_map.jpg
+INPUT ./fig/Afwijkingen&Analyses/Crooked Routes/GPS_bounce_map.jpg
+INPUT fig/Afwijkingen&Analyses/Crooked Routes/GPS_bounce_map.jpg
+INPUT ./fig/Afwijkingen&Analyses/Crooked Routes/GPS_bounce_map.jpg
+INPUT ./fig/Afwijkingen&Analyses/Crooked Routes/GPS_bounce_map.jpg
+INPUT ./fig/Afwijkingen&Analyses/Crooked Routes/1_notSnapped.png
+INPUT ./fig/Afwijkingen&Analyses/Crooked Routes/1_notSnapped.png
+INPUT fig/Afwijkingen&Analyses/Crooked Routes/1_notSnapped.png
+INPUT ./fig/Afwijkingen&Analyses/Crooked Routes/1_notSnapped.png
+INPUT ./fig/Afwijkingen&Analyses/Crooked Routes/1_notSnapped.png
+INPUT ./fig/Afwijkingen&Analyses/Crooked Routes/1_Full_withArrow.png
+INPUT ./fig/Afwijkingen&Analyses/Crooked Routes/1_Full_withArrow.png
+INPUT fig/Afwijkingen&Analyses/Crooked Routes/1_Full_withArrow.png
+INPUT ./fig/Afwijkingen&Analyses/Crooked Routes/1_Full_withArrow.png
+INPUT ./fig/Afwijkingen&Analyses/Crooked Routes/1_Full_withArrow.png
+INPUT ./fig/Afwijkingen&Analyses/Crooked Routes/1_Full_original.png
+INPUT ./fig/Afwijkingen&Analyses/Crooked Routes/1_Full_original.png
+INPUT fig/Afwijkingen&Analyses/Crooked Routes/1_Full_original.png
+INPUT ./fig/Afwijkingen&Analyses/Crooked Routes/1_Full_original.png
+INPUT ./fig/Afwijkingen&Analyses/Crooked Routes/1_Full_original.png
+INPUT ./fig/Afwijkingen&Analyses/Graphs/Verschil_Theoretische_innerDistance.png
+INPUT ./fig/Afwijkingen&Analyses/Graphs/Verschil_Theoretische_innerDistance.png
+INPUT fig/Afwijkingen&Analyses/Graphs/Verschil_Theoretische_innerDistance.png
+INPUT ./fig/Afwijkingen&Analyses/Graphs/Verschil_Theoretische_innerDistance.png
+INPUT ./fig/Afwijkingen&Analyses/Graphs/Verschil_Theoretische_innerDistance.png
+INPUT ./fig/Afwijkingen&Analyses/Graphs/100_Differences_tov_theoretische_BefSmoothening.png
+INPUT ./fig/Afwijkingen&Analyses/Graphs/100_Differences_tov_theoretische_BefSmoothening.png
+INPUT fig/Afwijkingen&Analyses/Graphs/100_Differences_tov_theoretische_BefSmoothening.png
+INPUT ./fig/Afwijkingen&Analyses/Graphs/100_Differences_tov_theoretische_BefSmoothening.png
+INPUT ./fig/Afwijkingen&Analyses/Graphs/100_Differences_tov_theoretische_BefSmoothening.png
+INPUT ./fig/Afwijkingen&Analyses/Graphs/95_Differences_tov_theoretische_BefSmoothening.png
+INPUT ./fig/Afwijkingen&Analyses/Graphs/95_Differences_tov_theoretische_BefSmoothening.png
+INPUT fig/Afwijkingen&Analyses/Graphs/95_Differences_tov_theoretische_BefSmoothening.png
+INPUT ./fig/Afwijkingen&Analyses/Graphs/95_Differences_tov_theoretische_BefSmoothening.png
+INPUT ./fig/Afwijkingen&Analyses/Graphs/95_Differences_tov_theoretische_BefSmoothening.png
+INPUT ./fig/Afwijkingen&Analyses/Graphs/Afstand tussen 2 gps-punten.png
+INPUT ./fig/Afwijkingen&Analyses/Graphs/Afstand tussen 2 gps-punten.png
+INPUT fig/Afwijkingen&Analyses/Graphs/Afstand tussen 2 gps-punten.png
+INPUT ./fig/Afwijkingen&Analyses/Graphs/Afstand tussen 2 gps-punten.png
+INPUT ./fig/Afwijkingen&Analyses/Graphs/Afstand tussen 2 gps-punten.png
+INPUT ./hfdst5.tex
+INPUT ./hfdst5.tex
+INPUT ./hfdst5.tex
+INPUT hfdst5.tex
+INPUT ./hfdst5.tex
+INPUT ./hfdst5.tex
+INPUT hfdst5.tex
+INPUT ./hfdst6.tex
+INPUT ./hfdst6.tex
+INPUT ./hfdst6.tex
+INPUT hfdst6.tex
+INPUT ./hfdst6.tex
+INPUT ./hfdst6.tex
+INPUT hfdst6.tex
 INPUT ./thesis.bbl
 INPUT thesis.bbl
 INPUT ./thesis.bbl

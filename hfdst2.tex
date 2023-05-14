@@ -111,8 +111,8 @@ gebruiker zal enkel zicht hebben op de het zichtbare deel, het onzichtbare deel
 zal dus voor een andere gebruiker niet zichtbaar zijn. Anders geformuleerd, de
 activiteit zal voor deze persoon dus als het ware afgekapt zijn, en zal in zijn
 zichtbare versie op een andere plek starten en eindigen. In de volgende
-Secties~\ref{Algemene Privacy} \&~\ref{EPZ} wordt meer in detail ingegaan op de
-werking van deze methodiek.
+Secties~\ref{sec:Algemene Privacy} \&~\ref{EPZ} wordt meer in detail ingegaan
+op de werking van deze methodiek.
 
 Een laatste kanttekening die hierbij gemaakt moet worden, is dat voor een
 gebruiker verschillende eenheden mogelijk zijn om uit te kiezen. Er is keuze
@@ -126,7 +126,7 @@ eenheden.
     \caption{Data van een activiteit}\label{fig:activityData}
 \end{figure}
 
-\subsection{Berekening Afstanden}
+\subsection{Berekening Afstanden}\label{sec:afstandsberekeningen_strava}
 Fitnesstrackers krijgen vanuit de buitenwereld ruwe data binnen. Deze data moet
 dus verwerkt worden vooraleer ze bruikbaar is voor de gebruiker. Er werd al
 kort ingegaan in Sectie~\ref{data} op de berekening die Strava gebruikt voor de
@@ -193,7 +193,7 @@ algemeen) op een traject probeert te optimaliseren opdat ze een vloeiend
 `curve' vormen. Dit wordt bekomen door ruis, schommelingen en onnauwkeurigheden
 te filteren uit het traject. Hiervoor bestaan verschillende implementaties.
 Aangezien Strava geen openbare informatie verstrekt over het gebruik van
-GPS-smoothing, is het niet bekend of ze deze techniek effectief toepassen. Het
+gps-smoothing, is het niet bekend of ze deze techniek effectief toepassen. Het
 is dus gissen naar, indien ze deze zouden gebruiken, welke implementatie dan
 wel gebruikt wordt. De makkelijkste en meest modulaire methode om aan
 smoothening te doen, is \textit{Smoothing met Moving Average}. Deze methode
@@ -219,7 +219,7 @@ curve de ruwe data voorstelt, dus voorafgaand op het `smoothen', en de rode de
 \end{figure}
 % - https://support.strava.com/hc/en-us/articles/216917707-Bad-GPS-Data
 
-\subsection{Algemeen Privacybeleid}\label{Algemene Privacy}
+\subsection{Algemeen Privacybeleid}\label{sec:Algemene Privacy}
 Het delen van alle data die vervat zit in zo'n activiteit met alle andere
 gebruikers op het platform, is zeker niet altijd wenselijk. De ontwikkelaars
 kiezen er dan ook voor om gebruikers de mogelijkheid te geven om hun privacy te
@@ -343,7 +343,7 @@ deze paper een nadruk gelegd op de translatie van de \ac{EPZ}, en hoe deze de
 privacy van een gebruiker verhoogt. Een inferentie aanval, wordt er beschreven
 die gebruikmaakt van de totale afstand die terug te vinden bij de activiteit.
 Het principe van deze inferentie aanval wordt uitvoerig beschreven in
-Sectie~\ref{sec:inferentieaanval}. In het kort werkt de aanval als volgt: aan
+Sectie~\ref{chap:inferentieaanval}. In het kort werkt de aanval als volgt: aan
 de hand van de totale afgelegde afstand in combinatie met het wegennetwerk in
 die omgeving, wordt een poging gedaan om alle mogelijke routes die de sporter
 binnenin de \ac{EPZ} zou kunnen afgelegd hebben te reconstrueren. Dit gebeurt

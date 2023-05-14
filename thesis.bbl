@@ -11,6 +11,12 @@ Carr, C.~T. and Hayes, R.~A. (2015).
 \newblock Social media: Defining, developing, and divining.
 \newblock {\em Atlantic Journal of Communication}, 23(1):46–65.
 
+\bibitem[Clement, 2019]{CursusSt38:online}
+Clement, L. (2019).
+\newblock Cursus statistiek 2019-2020.
+\newblock \url{https://statomics.github.io/statistiekCursusNotas/index.html}.
+\newblock (Accessed on 05/14/2023).
+
 \bibitem[Croft, 2015]{Snapping96:online}
 Croft, J. (2015).
 \newblock Snapping gps tracks to roads.
@@ -119,11 +125,17 @@ Strava, I. (2021b).
 \newblock \url{https://blog.strava.com/nl/press/yis2021/}.
 \newblock (Accessed on 02/26/2023).
 
-\bibitem[Strava, 2022]{MovingTi80:online}
-Strava, I. (2022).
+\bibitem[Strava, 2022a]{MovingTi80:online}
+Strava, I. (2022a).
 \newblock Moving time, speed, and pace calculations – strava support.
 \newblock \url{https://support.strava.com/hc/en-us/articles/115001188684-Moving-Time-Speed-and-Pace-Calculations}.
 \newblock (Accessed on 02/26/2023).
+
+\bibitem[Strava, 2022b]{WhyisGPS70:online}
+Strava, I. (2022b).
+\newblock Why is gps data sometimes inaccurate? – strava support.
+\newblock \url{https://support.strava.com/hc/en-us/articles/216917917-Why-is-GPS-data-sometimes-inaccurate-}.
+\newblock (Accessed on 05/14/2023).
 
 \bibitem[Strava, 2023a]{Activity24:online}
 Strava, I. (2023a).
@@ -142,6 +154,12 @@ Strava, I. (2023c).
 \newblock How distance is calculated – strava support.
 \newblock \url{https://support.strava.com/hc/en-us/articles/216919487-How-Distance-is-Calculated}.
 \newblock (Accessed on 03/01/2023).
+
+\bibitem[Strava, uary]{StravaMi72:online}
+Strava, I. (February).
+\newblock Strava milestones: 50 million athletes and 3 billion activity uploads.
+\newblock \url{https://blog.strava.com/press/strava-milestones-50-million-athletes-and-3-billion-activity-uploads/}.
+\newblock (Accessed on 05/14/2023).
 
 \bibitem[Vanmeldert, 2022]{Sportapp72:online}
 Vanmeldert, D. (2022).
