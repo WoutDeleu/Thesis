@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex thesis"] 1684096121 "thesis.aux" "thesis.bbl" "thesis" 1684096130 0
+["bibtex thesis"] 1684096121 "thesis.aux" "thesis.bbl" "thesis" 1684096384 0
   "./bibliografie_eng.bib" 1684078945 17071 fd558106c623e4e9a4cca6d345db6d1d ""
   "/usr/share/texmf-dist/bibtex/bst/base/apalike.bst" 1680514707 24635 604dafcc79f521a11ea73e506e1fbd98 ""
-  "thesis.aux" 1684096130 25912 d5f85425e5e3352c08a7683fa1fee8b4 "pdflatex"
+  "thesis.aux" 1684096384 25912 d5f85425e5e3352c08a7683fa1fee8b4 "pdflatex"
   (generated)
   "thesis.bbl"
   "thesis.blg"
   (rewritten before read)
-["pdflatex"] 1684096121 "/home/woutd/Documents/School/Industriele Ingenieurswetenschappen/Thesis/Workspace/Thesis/thesis.tex" "thesis.pdf" "thesis" 1684096130 0
+["pdflatex"] 1684096375 "/home/woutd/Documents/School/Industriele Ingenieurswetenschappen/Thesis/Workspace/Thesis/thesis.tex" "thesis.pdf" "thesis" 1684096384 0
   "/home/woutd/Documents/School/Industriele Ingenieurswetenschappen/Thesis/Workspace/Thesis/thesis.tex" 1683973420 4826 fdef1bfc0f45dbff3c0f0f307c21cc4f ""
   "/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc" 1680514707 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1680514707 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -203,19 +203,19 @@
   "hfdst1.tex" 1683561255 5672 5390d70cd44ded4443ea301e8b396485 ""
   "hfdst2.tex" 1684092649 22877 71c6c16025c4111208c67696da013cc5 ""
   "hfdst3.tex" 1684079240 28038 41417df65448cc30a9754749401ff7b2 ""
-  "hfdst4.tex" 1684096116 18456 126c12f437acb23ad1cbd5c8b1da4d87 ""
+  "hfdst4.tex" 1684096371 18500 15058e65b5c07eefaa3b7d07a14231a8 ""
   "hfdst5.tex" 1684096072 10824 08f5dcf8efe4665f93f94494e74b05e7 ""
   "hfdst6.tex" 1684066623 849 95576e4ab84d7b3c38b8b3d856c51b2b ""
   "private/back_fiiw_gent.pdf" 1677078672 25221 eb4a4b3bbd5f2448e5f372106824b40a ""
   "private/cover_fiiw_gent.pdf" 1677078672 106699 2eb7a5ee64b6d81148af63e102ca8970 ""
   "samenvatting.tex" 1684069240 4963 c067a6dfdd7815d0b52d28e15464559f ""
-  "thesis.aux" 1684096130 25912 d5f85425e5e3352c08a7683fa1fee8b4 "pdflatex"
+  "thesis.aux" 1684096384 25912 d5f85425e5e3352c08a7683fa1fee8b4 "pdflatex"
   "thesis.bbl" 1684096121 8668 35cb7741118e084a598515d84291741c "bibtex thesis"
-  "thesis.lof" 1684096130 3838 c4decde70b2046013945e62202775d46 "pdflatex"
-  "thesis.lot" 1684096130 730 efdb47f58ba6b4454b86f37401e42e41 "pdflatex"
-  "thesis.out" 1684096130 6719 47c58cc8d5ec1b549b87d1939d359609 "pdflatex"
+  "thesis.lof" 1684096384 3838 c4decde70b2046013945e62202775d46 "pdflatex"
+  "thesis.lot" 1684096384 730 efdb47f58ba6b4454b86f37401e42e41 "pdflatex"
+  "thesis.out" 1684096384 6719 47c58cc8d5ec1b549b87d1939d359609 "pdflatex"
   "thesis.tex" 1683973420 4826 fdef1bfc0f45dbff3c0f0f307c21cc4f ""
-  "thesis.toc" 1684096130 3437 039676a1e3420aee2d78eca19a16e7a7 "pdflatex"
+  "thesis.toc" 1684096384 3437 039676a1e3420aee2d78eca19a16e7a7 "pdflatex"
   "voorwoord.tex" 1680529509 740 1279f80fa356f5b201bb94f9acc9a83f ""
   (generated)
   "thesis.aux"
