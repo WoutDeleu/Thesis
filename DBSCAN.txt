@@ -1,0 +1,71 @@
+\section{Identificeren van de EPZ}
+De eerste stap is het identificeren van de \ac{EPZ}. Alhoewel deze stap niet
+noodzakelijk is, vernauwt deze de zoekruimte drastisch. Hierbij worden van alle
+activiteiten die van een gebruiker ter beschikking zijn gesteld, de zichtbare
+begin- en eindpunten genomen. Deze zullen dan via het \ac{DBSCAN}-algoritme
+worden gegroepeerd opdat ze de zogenaamde \textit{entry gates} zullen aantonen.
+
+~\ac{DBSCAN} is een algoritme dat clusters kan vinden in een dataset. Het vindt
+clusters op basis van hun dichtheid~\cite{KMeansvs80:online}. In tegenstelling tot
+K-means\footnote{K-means clustering is een unsupervised machine learning
+    techniek die veel wordt gebruikt bij het clusteren van
+    data~\cite{Understa24:online}. Het is een iteratief proces waarbij het
+    algoritme $k$ clusters tracht te creëren waarbij de datapunten in elke cluster
+    zo dicht mogelijk bij het gemiddelde van die cluster liggen. Het is gericht op
+    op het vinden van de geometrische middelpunten van clusters.}, dat gebaseerd is
+op het vinden van de geometrische middelpunten van clusters, richt \ac{DBSCAN}
+zich op het vinden van gebieden met een hoge dichtheid van punten.~\ac{DBSCAN}
+heeft als voordeel dat het goed overweg kan met uitschieters, want in deze
+context erg nuttig blijkt. Het werkt als volgt:
+\begin{enumerate}
+    \item Selecteer een willekeurig niet-bezocht punt uit de begin- en eindpunten.
+    \item Bepaal of het punt een kernpunt is door te controleren of er binnen een
+          bepaalde afstand een minimum aantal punten aanwezig is. Als dit het geval is,
+          wordt het punt als een kernpunt beschouwd en wordt een nieuwe cluster gestart.
+    \item Breid de cluster uit door alle punten binnen de afstand van het kernpunt toe te
+          voegen aan de cluster. Herhaal dit proces voor alle punten in de buurt totdat
+          er geen nieuwe punten meer kunnen worden toegevoegd.
+    \item Ga door naar het volgende niet-bezochte punt en herhaal de stappen 2 en 3
+          totdat alle punten in de dataset zijn bezocht.
+    \item Punten die niet tot een cluster behoren en niet voldoen aan de criteria voor
+          kernpunten, worden beschouwd als ruispunten.
+\end{enumerate}
+In de
+implementatie van~\citeauthor{Dhondt_Pochat_Voulimeneas_Joosen_Volckaert_2022}
+waarop deze thesis gebaseerd wordt, is een cirkel stabiel wanneer het verschil
+in afstand tussen twee opeenvolgende gevonden cirkels kleiner is dan een
+drempelwaarde, in dit geval 10
+meter~\cite{Dhondt_Pochat_Voulimeneas_Joosen_Volckaert_2022, Verdonck_2022}. Het minimaal aantal punten per cluster is één. Op
+Figuur~\ref{fig:dbscan} is te zien hoe de clustering bij elke iteratie beter
+wordt. In de context van het identificeren van de \ac{EPZ} zal het gebruikt
+worden om \ac{gps}-punten te groeperen op basis van hun locaties. Punten die
+dezelfde entry gate representeren, zullen in dezelfde cluster terecht komen.
+
+K-means clustering is een unsupervised machine learning techniek die veel wordt
+gebruikt bij het clusteren van data. Het is een iteratief proces waarbij het
+algoritme $k$ clusters tracht te creëren waarbij de datapunten in elke cluster
+zo dicht mogelijk bij het gemiddelde van die cluster
+liggen~\cite{Understa24:online}. Dit algoritme kiest willekeurig initiële
+middelpunten voor de verschillende clusters. Daarna worden alle punten in de
+data toegekend aan de cluster met de laagste Euclidische afstand tot het
+centrum van deze cluster. Daarna worden de gemiddeldes van deze clusters
+herberekend, en worden deze gezien als nieuwe centrums. Opnieuw worden alle
+punten aan de correcte cluster toegekend, en het proces wordt verschillende
+iteraties herhaald tot een ietwat stabiele cirkel bekomen wordt.
+
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}[b]{.33\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{fig/kmeans/1.png}
+    \end{subfigure}\hfill
+    \begin{subfigure}[b]{.33\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{fig/kmeans/2.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{.33\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{fig/kmeans/3.png}
+    \end{subfigure}
+    \caption{Voorbeeld werking van het DBSCAN algoritme~\cite{InDepthk59:online}}\label{fig:dbscan}
+\end{figure}

@@ -51,6 +51,12 @@ EduPristine (2017).
 \newblock \url{https://www.edupristine.com/blog/what-is-standard-deviation}.
 \newblock (Accessed on 05/12/2023).
 
+\bibitem[Hashemifar, 2018]{KMeansvs80:online}
+Hashemifar, S. (2018).
+\newblock Kmeans vs. dbscan. in data science and machine learning… | by soroush hashemifar | medium.
+\newblock \url{https://soroushhashemifar.medium.com/kmeans-vs-dbscan-d9d5f9dbee8b}.
+\newblock (Accessed on 05/17/2023).
+
 \bibitem[Hern, 2018]{Fitnesst33:online}
 Hern, A. (2018).
 \newblock Fitness tracking app strava gives away location of secret us army bases | gps | the guardian.
@@ -155,11 +161,23 @@ Strava, I. (2023c).
 \newblock \url{https://support.strava.com/hc/en-us/articles/216919487-How-Distance-is-Calculated}.
 \newblock (Accessed on 03/01/2023).
 
+\bibitem[Strava, 2023d]{StravaGl10:online}
+Strava, I. (2023d).
+\newblock Strava global heatmap.
+\newblock \url{https://www.strava.com/heatmap#7.00/-120.90000/38.36000/hot/all}.
+\newblock (Accessed on 05/17/2023).
+
 \bibitem[Strava, uary]{StravaMi72:online}
 Strava, I. (February).
 \newblock Strava milestones: 50 million athletes and 3 billion activity uploads.
 \newblock \url{https://blog.strava.com/press/strava-milestones-50-million-athletes-and-3-billion-activity-uploads/}.
 \newblock (Accessed on 05/14/2023).
+
+\bibitem[TechTarget, 2011]{Whatishe21:online}
+TechTarget (2011).
+\newblock What is heat map (heatmap)? | definition from techtarget.
+\newblock \url{https://www.techtarget.com/searchbusinessanalytics/definition/heat-map}.
+\newblock (Accessed on 05/17/2023).
 
 \bibitem[Vanmeldert, 2022]{Sportapp72:online}
 Vanmeldert, D. (2022).

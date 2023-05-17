@@ -5,10 +5,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
 \chapter{Setting aanval}\label{chap:inferentieaanval}
-Gedurende dit hoofdstuk wordt de setting alsook de werking van de aanval
-beschreven. De aanval is sterk gebaseerd op de aanvallen
-van~\citeauthor{Dhondt_Pochat_Voulimeneas_Joosen_Volckaert_2022}\cite{Dhondt_Pochat_Voulimeneas_Joosen_Volckaert_2022}
-en~\citeauthor{Verdonck_2022}\cite{Verdonck_2022}. Deze aanvallen worden
+In dit hoofdstuk wordt de setting alsook de werking van de aanval beschreven.
+De aanval is sterk gebaseerd op de aanvallen
+van~\citeauthor{Dhondt_Pochat_Voulimeneas_Joosen_Volckaert_2022}
+en~\citeauthor{Verdonck_2022}~\cite{Verdonck_2022,
+    Dhondt_Pochat_Voulimeneas_Joosen_Volckaert_2022}. Deze aanvallen worden
 inferentie-aanvallen genoemd, vanwege het feit dat uit metadata essentiële
 gegevens kunnen worden geïnfereerd. In het geval
 van~\citeauthor{Dhondt_Pochat_Voulimeneas_Joosen_Volckaert_2022} gaat dit over
@@ -16,12 +17,12 @@ afgelegde afstand binnenin de \ac{EPZ}. In het geval
 van~\citeauthor{Verdonck_2022} gaat dit dan weer over geïnduceerde
 hoogteverschillen binnen de privacy zone. Allereerst zal kort de mogelijkheden
 van een aanvaller in de huidige setting worden besproken. Daarna wordt de
-inferentie aanval
+inferentieaanval
 van~\citeauthor{Dhondt_Pochat_Voulimeneas_Joosen_Volckaert_2022}, die de basis
 vormt voor de aanval in deze thesis, besproken volgens een opdeling in drie
 stappen.
 
-\section{Definitie aanvaller}
+\section{Definitie aanvaller}\label{sec:definitie-aanvaller}
 Deze thesis voert een onderzoek naar de mogelijkheid om een \ac{EPZ} te
 omzeilen. De studie wordt dus gevoerd vanuit het opzicht van een aanvaller.
 Vooraleer de werking van een aanval wordt beschreven, is het belangrijk om een
@@ -32,10 +33,10 @@ een activiteit. Hij heeft echter wel zicht op alle metadata die publiekelijk
 gedeeld zijn. Dit is data zoals afgelegde afstand, snelheid, tempo, \ldots
 Aangezien de aanval gaat over het omzeilen \acp{EPZ} worden activiteiten
 beschouwd die gecloaked zijn. De aanvaller heeft dus geen zicht op de reële
-start- en/of eindlocatie, zijn doel is dan ook om ondanks de aanwezigheid van
+start- en/of eindlocatie. Zijn doel is dan ook om ondanks de aanwezigheid van
 cloaking deze gevoelige locatie te achterhalen.
 
-Vanuit het oogpunt van de inferentie-aanval beschreven
+Vanuit het oogpunt van de inferentieaanval beschreven
 door~\citeauthor{Dhondt_Pochat_Voulimeneas_Joosen_Volckaert_2022} heeft de
 aanvaller toegang tot alle data die publiek beschikbaar is. Deze gebruikt dan
 voornamelijk afgelegde weg als basis.
@@ -47,17 +48,25 @@ onderzoeken in hoeverre een aanval nog mogelijk is wanneer de afstandsdata
 onbruikbaar zou zijn. Een alternatieve aanpak wordt dus onderzocht om de
 inferentie-aanval alsnog succesvol te kunnen uitvoeren.
 
+De beschreven aanvaller is beschreven in een theoretisch kader. We bestuderen
+onder welke omstandigheden de aanval mogelijk is, en welke maatregelen
+effectief blijken. Het globale scenario waar we van uitgaan is: wat als
+fitnesstrackers de afstandsgegevens op een bepaalde manier zouden verbergen of
+onbruikbaar maken, door bijvoorbeeld afrondingen te maken, of onzekerheid toe
+te voegen.
+
 \subsection{Assumpties}
 Om de aanval te kunnen uitvoeren, moeten enkele assumpties worden gemaakt.
 \citeauthor{Dhondt_Pochat_Voulimeneas_Joosen_Volckaert_2022} maakte al enkele
-assumpties om de inferentie aanval succesvol uit te voeren. Voor dit onderzoek
-moeten deze dus ook gelden. De eerste bestaat eruit opdat de zichtbare begin
--en eindpunten op de cirkel moeten liggen. Ten tweede moet de beschermde
-locatie op de roadgraph liggen, hij kan niet buiten het voor ons te mappen
-gebied liggen, bijvoorbeeld in een bos waar geen pad ligt. Er wordt dieper
-ingegaan op de roadgraph in Sectie~\ref{sec:roadgraph}. Als laatste, maar
-desalniettemin belangrijk punt moet de gebruiker binnenin de \ac{EPZ} de
-kortste route volgen.~\cite{Dhondt_Pochat_Voulimeneas_Joosen_Volckaert_2022}
+assumpties om de inferentieaanval succesvol uit te voeren. Voor dit onderzoek
+is het dus logisch om dezelfde veronderstellingen te maken. Zo kunnen we een
+nuttige vergelijking maken. De eerste assumptie bestaat eruit opdat de
+zichtbare begin -en eindpunten op de cirkel moeten liggen. Ten tweede moet de
+beschermde locatie op de roadgraph liggen. Hij kan niet buiten het voor ons te
+mappen gebied liggen, bijvoorbeeld in een bos waar geen pad ligt. Er wordt
+dieper ingegaan op de roadgraph in Sectie~\ref{sec:roadgraph}. Als laatste,
+maar desalniettemin belangrijk punt moet de gebruiker binnenin de \ac{EPZ} de
+kortste route volgen~\cite{Dhondt_Pochat_Voulimeneas_Joosen_Volckaert_2022}.
 
 Dhondt et al.\ maakt nog een laatste assumptie over start- en eindpunten, die
 hetzelfde moeten zijn. Dit is echter niet van toepassing op dit onderzoek. Het
@@ -104,22 +113,25 @@ behouden, de rest wordt gefilterd in deze context.
 \end{figure}
 
 Deze thesis baseert zich ook voor een stuk op gemiddelde snelheden en tempo's.
-Hierdoor stellen we volgende bijkomende assumptie voor: Een gebruiker mag niet
+Hierdoor stellen we volgende bijkomende assumptie voor: een gebruiker mag niet
 stilstaan binnenin de \ac{EPZ}. Platformen zoals Strava hebben namelijk een
-ingebouwde functie die bij het uploaden van een activiteit tijden waarbij een
-gebruiker stilstaat aan bijvoorbeeld een rood licht filtert. Zo kunnen ze een
-meer representatieve gemiddelde snelheid en tempo berekenen en weergeven. Dit
-wil wel zeggen dat de totale bewegingstijd waarop de gemiddelde snelheid en
-tempo gebaseerd zijn, niet overeenkomt met de totale tijd van de activiteit.
-Bij een berekening gebaseerd op totale verstreken tijd zou een significante
-fout kunnen optreden.
+ingebouwde functie die bij het uploaden van een activiteit tijdstippen waarbij
+een gebruiker stilstaat aan bijvoorbeeld een rood licht filtert. De gebruikers
+hebben op deze manier een representatievere gemiddelde snelheid en gemiddeld
+tempo. Dit wil wel zeggen dat de totale bewegingstijd waarop de gemiddelde
+snelheid en tempo gebaseerd zijn, niet overeenkomt met de totale tijd van de
+activiteit. Bij een berekening gebaseerd op totale verstreken tijd zou een
+significante fout kunnen optreden.
+% Momenteel zijn op de meeste platformen beide
+% tijden afzonderlijk gegeven, maar in het theoretisch kader van dit onderzoek
+% lijkt het ook nuttig om te testen in hoeverre de aanval succesvol is indien gene 
 
 \section{Identificeren van de EPZ}
-De eerste hiervan is het identificeren van de \ac{EPZ}. Alhoewel deze stap niet
+De eerste stap is het identificeren van de \ac{EPZ}. Alhoewel deze stap niet
 noodzakelijk is, vernauwt deze de zoekruimte drastisch. Hierbij worden van alle
 activiteiten die van een gebruiker ter beschikking zijn gesteld, de zichtbare
-begin- en eindpunten genomen. Deze zullen dan via k-means clustering worden
-gegroepeerd opdat ze de zogenaamde \textit{entry gates} zullen aantonen.
+begin- en eindpunten genomen. Deze zullen dan via het k-means algoritme worden
+gegroepeerd en een cirkel vormen.
 
 K-means clustering is een unsupervised machine learning techniek die veel wordt
 gebruikt bij het clusteren van data. Het is een iteratief proces waarbij het
@@ -131,17 +143,19 @@ data toegekend aan de cluster met de laagste Euclidische afstand tot het
 centrum van deze cluster. Daarna worden de gemiddeldes van deze clusters
 herberekend, en worden deze gezien als nieuwe centrums. Opnieuw worden alle
 punten aan de correcte cluster toegekend, en het proces wordt verschillende
-iteraties herhaald tot een ietwat stabiele cirkel bekomen wordt. In de
-implementatie van~\citeauthor{Dhondt_Pochat_Voulimeneas_Joosen_Volckaert_2022}
-waarop deze thesis gebaseerd wordt, is een cirkel stabiel wanneer het verschil
-in afstand tussen twee opeenvolgende gevonden cirkels kleiner is dan een
-drempelwaarde, in dit geval 10
-meter\cite{Dhondt_Pochat_Voulimeneas_Joosen_Volckaert_2022, Verdonck_2022}. Op
-Figuur~\ref{fig:kmeans} is te zien hoe de clustering bij elke iteratie beter
-wordt. In de context van het identificeren van de \ac{EPZ} zal het gebruikt
-worden om \ac{gps}-punten te groeperen op basis van hun locaties. Punten die
-dezelfde entry gate representeren, zullen in dezelfde cluster terecht komen.
+iteraties herhaald. Op Figuur~\ref{fig:kmeans} is te zien hoe de clustering bij
+elke iteratie beter wordt.
 
+In de context van het identificeren van de \ac{EPZ} zal het gebruikt worden om
+\ac{gps}-punten te groeperen op basis van hun locaties. In plaats van te werken
+met een centraal punt, zal er gewerkt worden met een cirkelvormige zone. De
+euclidische afstand zal in dit geval berekent worden ten opzichte van de rand
+van deze cirkel. Bij elke iteratie zal een nieuwe cirkel worden beschouwd, en
+zullen de afstanden opnieuw worden berekent. Het proces wordt herhaald totdat
+een ietwat stabiele cirkel bekomen wordt. Een cirkel is stabiel wanneer het
+verschil in afstand tussen twee opeenvolgende gevonden cirkels kleiner is dan
+een drempelwaarde, in dit geval 10
+meter~\cite{Dhondt_Pochat_Voulimeneas_Joosen_Volckaert_2022, Verdonck_2022}.
 \begin{figure}[h]
     \centering
     \begin{subfigure}[b]{.33\textwidth}
@@ -157,24 +171,6 @@ dezelfde entry gate representeren, zullen in dezelfde cluster terecht komen.
         \includegraphics[width=1\textwidth]{fig/kmeans/3.png}
     \end{subfigure}
     \caption{Voorbeeld werking k-means clustering~\cite{InDepthk59:online}}\label{fig:kmeans}
-\end{figure}
-
-De besproken entry gates zijn zoals de naam al doet vermoeden de
-`toegangspoorten' tot de cirkel. Dit is waar de gebruiker de \ac{EPZ} betreedt
-en/of verlaat. Deze punten zouden dus in theorie de \ac{EPZ} perfect moeten
-definiëren. Maar door de fouten die standaard met het meten van gps-punten
-komen\footnote{Gps-metingen bevatten standaard onnauwkeurigheden, er kan
-    bouncing of signal loss voor een bepaalde interval optreden. Ook kan slechts op
-    bepaalde tijdsintervallen de locatie worden genomen, perfect op de cirkel kan
-    dus nooit gemeten worden.} is dit niet perfect. Op Figuur~\ref{fig:entrygate}
-is te zien dat meerdere eindpunten van activiteiten geclusterd worden tot één
-\ac{E.G.}, op de figuur voorgesteld door een kruis. Een cirkel kan worden
-gedefinieerd door drie punten, bijgevolg moeten er dus ten minste drie
-\ac{E.G.} gevonden worden.
-\begin{figure}
-    \centering
-    \includegraphics[width=0.5\linewidth]{fig/EPZ-mechanisme/Entry_Gate.png}
-    \caption{Voorbeeld van entry gates gevonden door k-means clustering en identificatie van de \ac{EPZ}}\label{fig:entrygate}
 \end{figure}
 
 Het algoritme zal na de identificatie van de \ac{EPZ} ook nog nakijken of er
@@ -196,13 +192,50 @@ bestaat de kans dat voorspellingen van locaties gebeuren buiten de verhullende
 zone. Ook is in dit geval een groter stuk van het stratenplan nodig om de
 locatie te achterhalen.
 
+\section{Identificatie Entry Gates}
+Entry gates zijn zoals de naam al doet vermoeden de `toegangspoorten' tot de
+\ac{EPZ}. Dit is waar de gebruiker de \ac{EPZ} betreedt en/of verlaat. Deze
+`zones' vormen zich dan ook rond wegen die de \ac{EPZ} betreden. Op
+Figuur~\ref{fig:entrygate} is te zien dat meerdere eindpunten van activiteiten
+geclusterd worden en een \ac{E.G.} vormen. Dit is van belang belangrijk bij het
+filteren van afwijkende activiteiten. De detectie ervan gebeurt via het \ac{DBSCAN}-algoritme.
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{fig/EPZ-mechanisme/Entry_Gate.png}
+    \caption{Voorbeeld van entry gates gevonden door k-means clustering en identificatie van de \ac{EPZ}}\label{fig:entrygate}
+\end{figure}
+
+\ac{DBSCAN} is een algoritme dat clusters kan vinden in een dataset. Het vindt
+clusters op basis van hun dichtheid~\cite{KMeansvs80:online}. In tegenstelling tot het eerder besproken
+k-means clustering algoritme, dat gebaseerd is
+op het vinden van de geometrische middelpunten van clusters, richt \ac{DBSCAN}
+zich op het vinden van gebieden met een hoge dichtheid van punten.\ \ac{DBSCAN}
+heeft als voordeel dat het goed overweg kan met uitschieters, want in deze
+context erg nuttig blijkt. Het werkt als volgt:
+\begin{enumerate}
+    \item Selecteer een willekeurig niet-bezocht punt uit de begin- en eindpunten.
+    \item Bepaal of het punt een kernpunt is door te controleren of er binnen een
+          bepaalde afstand een minimum aantal punten aanwezig is. Als dit het geval is,
+          wordt het punt als een kernpunt beschouwd en wordt een nieuwe cluster gestart.
+    \item Breid de cluster uit door alle punten binnen de afstand van het kernpunt toe te
+          voegen aan de cluster. Herhaal dit proces voor alle punten in de buurt totdat
+          er geen nieuwe punten meer kunnen worden toegevoegd.
+    \item Ga door naar het volgende niet-bezochte punt en herhaal de stappen 2 en 3
+          totdat alle punten in de dataset zijn bezocht.
+    \item Punten die niet tot een cluster behoren en niet voldoen aan de criteria voor
+          kernpunten, worden beschouwd als ruispunten.
+\end{enumerate}
+Het doet dit aan de hand van twee parameters: de maximale afstand tussen een punt en
+een ander punt in de dataset, wat in deze context vastgelegd is op 22.9 meter en een minimaal aantal punten dat de cluster moet
+bevatten, in dit geval één.
+
 \section{Bepalen nodige gegevens voor predictie}
-Na de bepaling van de \acp{EPZ} voor de gebruiker wordt overgegaan tot het
+Na het bepalen van de \acp{EPZ} voor de gebruiker wordt overgegaan tot het
 berekenen en achterhalen van de bijhorende gegevens die nodig zijn om de
 gevoelige locatie te voorspellen. Hiervoor wordt verder ingegaan op de
 methodiek in de
 paper~\citeauthor{Dhondt_Pochat_Voulimeneas_Joosen_Volckaert_2022}, maar er
-worden enkele gegevens op een andere manier benadert volgens de huidige
+worden enkele gegevens op een andere manier benaderd volgens de huidige
 definitie van de aanvaller.
 
 \subsection{Roadgraph en Distance Matrix}\label{sec:roadgraph}
@@ -249,7 +282,7 @@ Gebruikmakend van het Dijkstra algoritme\footnote{Het Dijkstra-algoritme is een
     tussen twee knooppunten in een gewogen grafiek. Het algoritme werkt door
     iteratief knooppunten toe te voegen aan een `bezochte' set en de kortste
     afstand te berekenen vanaf het beginpunt naar elk aangrenzend knooppunt dat nog
-    niet is bezocht\cite{dijkstra}.}, die het in staat stelt om voor elk punt de
+    niet is bezocht~\cite{dijkstra}.}, die het in staat stelt om voor elk punt de
 kortste theoretische afstand te bepalen tot alle punten in de graaf. Deze
 afstanden worden opgeslagen, en zijn belangrijk in een verder stadium van de
 aanval.
@@ -274,9 +307,9 @@ belangrijkste zijn de cumulatieve afstand tot dit punt\footnote{De totale
     afstand afgelegd vanaf het begin van de activiteit tot en met het punt in
     kwestie.}, en de cumulatieve tijd tot dit punt\footnote{De totale afstand
     afgelegd vanaf het begin van de activiteit tot en met het punt in kwestie.}.
-Bij de aanval van Dhondt et al.\ wordt de afstand gebruikt om predicties t
-doen, dit wil dus zeggen dat deze afstand dus aan de basis zal liggen. Maar in
-deze thesis wordt ervan uitgegaan dat afstanden verborgen worden. Onder het
+Bij de aanval van Dhondt et al.\ wordt de afstand gebruikt om predicties te
+doen. Dit wil dus zeggen dat deze afstand dus aan de basis zal liggen. In deze
+thesis wordt ervan uitgegaan dat afstanden verborgen worden. Onder het
 verbergen van afstanden wordt een onderscheid gemaakt tussen 2 scenarios: het
 eerste gaat ervan uit dat de totale afstand verborgen wordt, maar de
 cumulatieve afstand gegeven is. Het tweede scenario gaat ervan uit dat alle
@@ -284,15 +317,16 @@ afstandsgegevens verborgen worden. Het alternatieve type data waar dus mee zal
 moeten gewerkt worden is dus \ac{gps}-data.
 
 \subsection{Berekeningen afstand binnenin de EPZ}\label{sec:berekeningen}
-Om voorspellingen te kunnen doen zullen volgens de inferentie aanval die hier
+Om voorspellingen te kunnen doen zullen volgens de inferentieaanval die hier
 besproken wordt twee belangrijke gegevens ter beschikking moeten zijn. Met name
 het straatnetwerk met de mogelijks gevolgde routes, wat werd besproken in
 Sectie~\ref{sec:roadgraph}, en de afstand die wordt afgelegd binnenin de
-\ac{EPZ}. Deze afstand benoemen we ook als de \textit{inner distance}.
+\ac{EPZ}. Deze afstand benoemen we ook als de \textit{inner distance} (dit is
+niet te verwarren met de \textit{inner ditstance attack}).
 
 In de implementatie
 van~\citeauthor{Dhondt_Pochat_Voulimeneas_Joosen_Volckaert_2022} kan de
-\textit{inner distance} simpelweg berekent worden door het verschil te nemen
+\textit{inner distance} simpelweg berekend worden door het verschil te nemen
 tussen de afgelegde afstand buiten de verhulde zone (deze noemen we de
 \textit{outer distance}), en de totale afstand: \[inner\ distance = total\
     distance - outer\ distance \]
@@ -308,7 +342,7 @@ zijn, ontbreekt nu ook de \textit{outer distance}. We bepalen deze dan ook via
 de \ac{gps}-coördinaten. Dit gebeurd door de som te nemen van de afstanden van
 alle opeenvolgende punten. Let wel dat we de afstand tussen twee
 \ac{gps}-punten berekenen gebruik makend van de \textit{haversine} formule.
-Equation~\ref{eq:haversine} is een uitwerking van de formule. Deze berekent de
+Formule~\ref{eq:haversine} is een uitwerking van de formule. Deze berekent de
 afstand tussen twee punten op een bolvormig oppervlak, in dit geval de aarde.
 Om de afstand tussen twee punten op het aardoppervlak te berekenen, moeten de
 breedte- en lengtegraden van elk punt worden omgezet naar radialen. Vervolgens
@@ -331,7 +365,7 @@ slechts een minimale buiging is.
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.5\textwidth]{fig/haversine.png}
-    \caption{Haversine illustratie voor het berekenen van de afstand\cite{Distance97:online}}\label{fig:haversine}
+    \caption{Haversine illustratie voor het berekenen van de afstand~\cite{Distance97:online}}\label{fig:haversine}
 \end{figure}
 
 Uit de voorgaande paragrafen kunnen we dus besluiten dat de inner distance af
@@ -390,30 +424,39 @@ gesnapte locatie te groot is, wordt de activiteit gefilterd. Dit wijst dan op
 een te grote afwijking tussen de activiteit en de road graph, of op inaccurate
 gps-data.
 
-Als laatste wordt ook nog gekeken naar afwijkingen bij de \acp{E.G.}. Indien
-bij het bepalen van een \acp{E.G.} een afwijking wordt vastgesteld tussen de
-verschillende gebruikte endpoints/startpoints, die groter is dan drie maal de
-standaardafwijking, wordt de activiteit gefilterd. Dit wijst dan op een te
-grote spreiding bij de entry gates, en dus op een grote kans op inaccurate
+Als laatste wordt nog gekeken naar afwijkingen bij de \acp{E.G.}. Indien bij
+activiteit een afwijking wordt vastgesteld tussen de zichtbare begin- en
+eindpunten en de \ac{E.G.} die groter is dan drie maal de standaardafwijking,
+wordt de activiteit gefilterd. Dit wijst dan op een te grote spreiding bij ten
+opzichte van de \ac{E.G.}, en dus op een grote kans op inaccurate
 voorspellingen.
 
 \subsection{Bepalen van de locatie}
 Om een predictie te maken per activiteit wordt de inner distance die berekent
 werd in Sectie~\ref{sec:berekeningen} gebruikt. Deze wordt dan gematched met
-het stratennetwerk. Het idee hierachter is om een alle mogelijke routes
-binnenin de \ac{EPZ} af te leggen (die de kortste route vormt naar de nodes op
-het pad), en te stoppen wanneer de afgelegde afstand gelijk is aan de berekende
-inner distance. Het resultaat van al deze routes is dan een node, die mogelijks
-de gevoelige locatie kan zijn. In de praktijk kan dit mechanisme op een
-simpelere manier worden toegepast door het gebruik van de voorafgaande distance
-matrix. De berekende inner distance zal worden vergeleken met de afstand in de
-distance matrix, en de nodes in de \ac{EPZ} die het dichtst bij deze afstand
-liggen zullen worden geselecteerd als kandidaten voor de gevoelige locatie.
-Indien dit proces herhaald wordt voor alle beschikbare activiteiten, met
-mogelijks verschillende Entry Gates, zullen er verschillende kandidaten worden
-gevonden. Ook zullen bepaalde nodes meer dan één keer worden voorspeld. In de
-volgende stap zullen alle predicties worden samengenomen in één voorspelling.
-
+het stratennetwerk. Het idee hierachter is om alle mogelijke routes (die de
+kortste route vormt naar de nodes op het pad) binnenin de \ac{EPZ} af te
+leggen, en te stoppen wanneer de afgelegde afstand gelijk is aan de berekende
+inner distance. Het resultaat van deze gevolgde route is dan een node, die
+mogelijks de gevoelige locatie kan voorstellen. In de praktijk kan dit
+mechanisme op een simpele manier worden toegepast door het gebruik van de
+vooraf berekende distance matrix. De berekende inner distance zal worden
+vergeleken met de afstanden in de distance matrix, en de nodes in de \ac{EPZ}
+die het dichtst bij deze afstand liggen zullen worden geselecteerd als
+kandidaten voor de gevoelige locatie. Een willekeurig voorbeeld hiervan is te
+zien op Figuur~\ref{fig:matrix_prediction}, voor een afstand van $12.30m$, voor
+\textit{EG1}. Het resultaat in dit voorbeeld zal \textit{Node3} zijn. In dit
+voorbeeld wordt nu slechts één node voorspelt, maar in de praktijk kunnen dit
+er meerdere zijn. Indien dit proces herhaald wordt voor alle beschikbare
+activiteiten, met mogelijks verschillende Entry Gates, zullen er verschillende
+kandidaten worden gevonden. Ook zullen bepaalde nodes meer dan één keer worden
+voorspeld. In de volgende stap zullen alle predicties worden samengenomen in
+één voorspelling.
+\begin{figure}
+    \centering
+    \includegraphics[width=0.6\linewidth]{fig/RoadGraph/Matrix_Prediction.png}
+    \caption{Willekeurig voorbeeld van Distance Matrix met een voorspelling van $12,3m$}\label{fig:matrix_prediction}
+\end{figure}
 \subsection{Meest voorspelde locatie}
 Een verzameling van nodes is nu bekomen, die normaliter ook de gevoelige
 locatie bevat. Om deze te bepalen, wordt regressie-analyse toegepast, aan de
@@ -428,8 +471,8 @@ Vergelijking~\ref{eq:LAD} is te zien dat, door het werken met absolute waarden
 van de vergelijking staat afwijkingen tussen de waarden, de extremen in mindere
 mate doorwegen in de berekeningen. Dit is een groot voordeel ten opzichte van
 andere regressietechnieken, zoals
-bijvoorbeeld~\ac{OLS}\cite{iqbal2021application}.~\ac{OLS} werkt gelijkaardig,
-maar zoals te zien is in Vergelijking~\ref{eq:OLS} probeert de som van de
+bijvoorbeeld~\ac{OLS}~\cite{iqbal2021application}.~\ac{OLS} werkt gelijkaardig,
+maar zoals te zien is in Vergelijking~\ref{eq:OLS} probeert deze de som van de
 kwadratische afwijkingen te minimaliseren. Uitschieters zullen dus meer
 doorwegen. Een nadeel van \ac{LAD} is dat het berekenen van de LAD-schattingen
 meer rekentijd en computerbronnen vereist dan \ac{OLS}, wat het minder geschikt
@@ -441,22 +484,22 @@ maakt voor grote datasets.
     OLS:\indent  \min\sum\limits_{i=1}^n{(y_i - \hat{y})}^2
 \end{equation}
 
-LAD regressie wordt in deze thesis door de aard van de data, en van de
+In de context gebruiken we LAD regressie door de aard van de data en
 voorspellingen, meer bepaald door de grote kans op uitschieters. Gps-data kan
 erg onnauwkeurig zijn, en grote of kleine afwijkingen kunnen dus voorkomen. Ook
 is het mogelijk dat door acties van een sporter zoals bijvoorbeeld eenmalig de
-kortste route niet volgen een uitschieters voorvallen. Rekentijd is in deze
-thesis geen probleem, aangezien het aantal voorspelde locaties beperkt.
+kortste route niet volgen, uitschieters voorvallen. Rekentijd is in deze thesis
+geen probleem, aangezien het aantal voorspelde over het algemeen locaties
+beperkt is.
 
-In de context van deze thesis kan de Vergelijking~\ref{eq:LAD} worden toegepast
+In de context van deze thesis kan Vergelijking~\ref{eq:LAD} worden toegepast
 voor elke voorspelde locatie. Alle voorspelde locaties zullen worden beschouwd
 als mogelijke \textit{eindvoorspelling}. Deze zal dan in de vergelijking
 $\hat{y}$ voorstellen. De absolute waarde van het verschil tussen de
-eindvoorspelling en alle punten zal worden opgeteld. Er wordt dan gezocht naar
-de \textit{eindvoorspelling} die de som van de absolute waarden het meest
-minimaliseert, en dit is dan de resulterende predictie.
+eindvoorspelling en alle overige punten zal worden opgeteld. Er wordt gezocht
+naar het punt waarbij de som van de absolute waarde minimaal is, en dit is dan
+de resulterende predictie, de \textbf{eindvoorspelling}.
 
 % Extra: Figuur of filteren van activiteiten
 % Figuur predicties uitleggen
 % Figuur LAD predictie invoegen
-% Voorbeeld van de matrix - en hoe de node via die matrix wordt bepaald

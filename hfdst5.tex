@@ -4,6 +4,44 @@
 %                                                                 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Resultaten en Evaluatie}
+De aanval werd tot hiertoe al volledig beschreven en toegelicht, en de dataset
+die gebruikt wordt om de aanval werd ook al besproken. Dit hoofdstuk bespreekt
+hoe de evaluatie wordt aangepakt, wat de bekomen resultaten zijn en wat ze
+betekenen.
+
+\section{Evaluatie van de aanval}
+Het doel van de aanval is om een locatie te voorspellen waar een gebruiker bij
+zijn activiteiten vertrekt of aankomt, ondanks het feit dat deze locatie wordt
+verborgen door het gebruik van een \ac{EPZ}. Maar indien we dit zouden
+uittesten op activiteiten die al een \ac{EPZ} bevatten zouden we de bekomen
+resultaten niet kunnen verifiëren. Daarom zullen we de aanval uittesten en
+evalueren op publieke activiteiten die geen \ac{EPZ} bevatten, en deze manueel
+voorzien van een \ac{EPZ}. Zo kunnen we de bekomen resultaten vergelijken met
+een referentie, namelijk de \textit{grondwaarheid} of de \textit{ground truth}.
+
+\subsection{De grondwaarheid}
+De grondwaarheid van een gebruiker is de effectieve woonplaats, of de plaats
+waar deze persoon meestal vanuit vertrekt of aankomt. Dit is de locatie die we
+beschouwen als degene waarrond de \ac{EPZ} wordt aangebracht, en dat tracht
+verborgen te worden. De grondwaarheid is dus de locatie die we trachten te
+achterhalen. We bepalen deze locatie door de activiteiten van een gebruiker te
+overlopen, en indien 15 of meer begin- of eindpunten binnen een straal van $50
+    meter$ liggen, dan berekenen we hiervan het gemiddelde en wordt dit gemiddelde
+gemapt op de roadgraph. Dit punt gematcht op de roadgraph stelt dan de
+grondwaarheid voor van deze gebruiker. Hassan et al.\ stelden dat $50 meter$
+vergelijkbaar is met een breedte van een gemiddeld perceel, en dat dit dus een
+goede benadering is van de grondwaarheid~\cite{sec18has3:online,
+    Verdonck_2022}. Let wel, er zijn meerdere grondwaarheden mogelijk.
+
+Een tweede kanttekening die we hierbij moeten maken is dat de effectieve begin-
+en eindlocaties niet altijd perfect op het wegennetwerk zullen liggen, een
+gebruiker kan bijvoorbeeld starten op een parking of een oprijlaan, wat niet
+vervat zit in het netwerk. De predicties moeten dit dus in rekening brengen.
+
+\subsection{Manueel een EPZ aanbrengen}\label{sec:zelf_cloaking}
+
+\subsection{Evaluatie-aspecten}
+
 % Beschrijven hoe getest en geëvalueerd wordt
 %   - Zeggen dat een uncloaked activities manueel worden gecloaked - Aanbrengen EPZ
 %   - Bepaling GT
@@ -28,8 +66,6 @@
 %  
 
 % Filter voor gps punten met te grote afstanden
-\section{Evaluatie van de aanval}
-
 \section{Resultaten}
 \begin{table}[H]
     \centering
@@ -57,6 +93,28 @@
 \begin{table}[H]
     \centering
     \captionsetup{justification=centering}
+    \caption{Attack with normal gps-points (No Smoothing)}\label{tab:noSmoothing}
+    \scalebox{0.5}{
+        \begin{tabular}{lrrrrrrrr}
+            \toprule
+            {}         & Success Rate (\%) & Correctness (m) & Accuracy & Reduction (\%) & Uncertainty Region ($m^2$) & Certainty & Spatial Certainty & Degree of Anonymity (\%) \\
+            Radius (m) &                   &                 &          &                &                            &           &                   &                          \\
+            \midrule
+            200        & 72.06             & 59.92           & 21       & 81.89          & 473.05                     & 2.22      & 1.01              & 33.43                    \\
+            400        & 2.08              & 351.85          & 17       & 90.71          & 446.35                     & 2.15      & 1.67              & 27.80                    \\
+            600        & 4.55              & 473.15          & 27       & 92.46          & 734.62                     & 2.57      & 2.17              & 30.67                    \\
+            800        & 2.13              & 651.38          & 42       & 95.06          & 1161.95                    & 2.87      & 2.32              & 30.84                    \\
+            1000       & 0.00              & 737.93          & 37       & 96.84          & 994.80                     & 2.76      & 2.22              & 29.69                    \\
+            1200       & 0.00              & 955.79          & 22       & 97.63          & 592.09                     & 2.54      & 2.28              & 25.16                    \\
+            1400       & 0.00              & 986.46          & 25       & 98.08          & 697.50                     & 2.44      & 2.21              & 23.70                    \\
+            \bottomrule
+        \end{tabular}
+    }
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \captionsetup{justification=centering}
     \caption{Attack result with different smoothing window sizes}\label{tab:smoothing}
     \Rotatebox{270}{
         \scalebox{0.7}{
@@ -65,7 +123,8 @@
                 {}         &                      & Success Rate (\%) & Correctness (m) & Accuracy & Reduction (\%) & Uncertainty Region ($m^2$) & Certainty & Spatial Certainty & Degree of Anonymity (\%) \\
                 Radius (m) & Smoothing Window (n) &                   &                 &          &                &                            &           &                   &                          \\
                 \midrule
-                200        & / (No smoothing)     & 72.06             & 59.92           & 21       & 81.89          & 473.05                     & 2.22      & 1.01              & 33.43                    \\
+
+                \hline
                 200        & 5                    & 73.98             & 60.35           & 22       & 82.41          & 450.52                     & 2.21      & 1.03              & 32.92                    \\
                 600        & 5                    & 62.50             & 124.71          & 32       & 94.64          & 720.98                     & 2.59      & 1.58              & 29.95                    \\
                 800        & 5                    & 58.93             & 186.66          & 38       & 96.31          & 806.26                     & 2.87      & 1.82              & 31.83                    \\
@@ -106,5 +165,20 @@
                 \bottomrule
             \end{tabular}
         }
+    }
+\end{table}
+\begin{table}[H]
+    \centering
+    \captionsetup{justification=centering}
+    \caption{Attack result with different smoothing window sizes}\label{tab:smoothing}
+    \scalebox{0.5}{
+        \begin{tabular}{lrrrrrrrrr}
+            \toprule
+            {}         &                      & Success Rate (\%) & Correctness (m) & Accuracy & Reduction (\%) & Uncertainty Region ($m^2$) & Certainty & Spatial Certainty & Degree of Anonymity (\%) \\
+            Radius (m) & Smoothing Window (n) &                   &                 &          &                &                            &           &                   &                          \\
+            \midrule
+            200        & 5                    & 53.33             & 88.56           & 28       & 77.23          & 613.0                      & 2.45      & 1.28              & 37.86                    \\
+            \bottomrule
+        \end{tabular}
     }
 \end{table}

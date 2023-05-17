@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex article"] 1683481278 "article.aux" "article.bbl" "article" 1683481280 0
-  "./bibliografie.bib" 1683104219 15019 2071d847b2f303bfa982e09ccff91d55 ""
+["bibtex article"] 1684332224 "article.aux" "article.bbl" "article" 1684332225 0
+  "./bibliografie_eng.bib" 1684320381 17585 c992d841ab595705b3918569916bddef ""
   "/usr/share/texmf-dist/bibtex/bst/ieeetran/IEEEtran.bst" 1678901238 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "article.aux" 1683481279 2317 71f9bf7d1d7c5eb5009f5eec9e91f781 "pdflatex"
+  "article.aux" 1684332224 2321 cfe26ad3f72c206b1767bb8b441ca160 "pdflatex"
   (generated)
   "article.bbl"
   "article.blg"
   (rewritten before read)
-["pdflatex"] 1683481279 "/home/woutd/Documents/School/Industriele Ingenieurswetenschappen/Thesis/Workspace/Thesis/article.tex" "article.pdf" "article" 1683481280 0
-  "/home/woutd/Documents/School/Industriele Ingenieurswetenschappen/Thesis/Workspace/Thesis/article.tex" 1683481276 15056 f49cd043ba816b9b355805ce976e2a4e ""
+["pdflatex"] 1684332224 "/home/woutd/Documents/School/Industriele Ingenieurswetenschappen/Thesis/Workspace/Thesis/article.tex" "article.pdf" "article" 1684332225 0
+  "/home/woutd/Documents/School/Industriele Ingenieurswetenschappen/Thesis/Workspace/Thesis/article.tex" 1684332222 15060 739e05c096029c6aa2d81ae159b6bec5 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc" 1680514707 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1680514707 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/adobe/courier/pcrr7t.tfm" 1680514707 960 379cc0019370a9e0208a0a3f949f847a ""
@@ -94,9 +94,9 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1680592190 4491781 539e3b5e308794ddb50e5f94f0e971f4 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1680592144 8204071 263b607c80875fb47d4853e21e23206a ""
   "IEEEtran.cls" 1683481239 281924 8f6112e074a1b20708389ca9f5e12ed9 ""
-  "article.aux" 1683481279 2317 71f9bf7d1d7c5eb5009f5eec9e91f781 "pdflatex"
-  "article.bbl" 1683481279 1056 e0d8c81e033712fb4e681312e2d088de "bibtex article"
-  "article.tex" 1683481276 15056 f49cd043ba816b9b355805ce976e2a4e ""
+  "article.aux" 1684332224 2321 cfe26ad3f72c206b1767bb8b441ca160 "pdflatex"
+  "article.bbl" 1684332224 1056 e0d8c81e033712fb4e681312e2d088de "bibtex article"
+  "article.tex" 1684332222 15060 739e05c096029c6aa2d81ae159b6bec5 ""
   "fig/image.jpg" 1677078672 1643642 b0baa2b89e1147955b27da44d231347b ""
   (generated)
   "article.aux"

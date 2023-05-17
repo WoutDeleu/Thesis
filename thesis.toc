@@ -9,7 +9,7 @@
 \contentsline {chapter}{Lijst met afkortingen}{xiv}{chapter*.10}%
 \contentsline {chapter}{\numberline {1}Inleiding}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Situering}{1}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Doelstelling}{2}{section.1.2}%
+\contentsline {section}{\numberline {1.2}Doelstelling}{3}{section.1.2}%
 \contentsline {chapter}{\numberline {2}Achtergrond}{4}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Fitnesstrackers}{4}{section.2.1}%
 \contentsline {subsection}{\numberline {2.1.1}Activiteiten}{4}{subsection.2.1.1}%
@@ -20,25 +20,27 @@
 \contentsline {chapter}{\numberline {3}Setting aanval}{14}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Definitie aanvaller}{14}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}Assumpties}{15}{subsection.3.1.1}%
-\contentsline {section}{\numberline {3.2}Identificeren van de EPZ}{16}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Bepalen nodige gegevens voor predictie}{18}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Roadgraph en Distance Matrix}{18}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Begin- en eindnodes}{20}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}Berekeningen afstand binnenin de EPZ}{20}{subsection.3.3.3}%
-\contentsline {section}{\numberline {3.4}Voorspellen locatie}{21}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Filteren activiteiten}{22}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Bepalen van de locatie}{23}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.4.3}Meest voorspelde locatie}{23}{subsection.3.4.3}%
-\contentsline {chapter}{\numberline {4}Gebruikte data en afwijkingen}{25}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Karakteristieken van de gebruikte dataset}{26}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Mogelijke afwijkingen binnenin de dataset}{28}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Mogelijke fouten bij gps-data}{28}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Gps-fouten in de gebruikte dataset}{31}{subsection.4.2.2}%
-\contentsline {section}{\numberline {4.3}Gps punten die te ver uit elkaar liggen}{33}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Technieken gps-data te verbeteren}{33}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Stilstaande gebruiker}{33}{section.4.5}%
-\contentsline {chapter}{\numberline {5}Resultaten en Evaluatie}{36}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Evaluatie van de aanval}{36}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Resultaten}{36}{section.5.2}%
-\contentsline {chapter}{\numberline {6}Conclusies}{38}{chapter.6}%
-\contentsline {chapter}{\numberline {A}Uitleg over de appendices}{42}{appendix.A}%
+\contentsline {section}{\numberline {3.2}Identificeren van de EPZ}{17}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Identificatie Entry Gates}{18}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Bepalen nodige gegevens voor predictie}{19}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Roadgraph en Distance Matrix}{19}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Begin- en eindnodes}{20}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Berekeningen afstand binnenin de EPZ}{21}{subsection.3.4.3}%
+\contentsline {section}{\numberline {3.5}Voorspellen locatie}{23}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Filteren activiteiten}{23}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Bepalen van de locatie}{24}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}Meest voorspelde locatie}{25}{subsection.3.5.3}%
+\contentsline {chapter}{\numberline {4}Gebruikte data en afwijkingen}{26}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Karakteristieken van de gebruikte dataset}{27}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Mogelijke afwijkingen binnenin de dataset}{29}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Mogelijke fouten bij gps-data}{29}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Gps-fouten in de gebruikte dataset}{32}{subsection.4.2.2}%
+\contentsline {section}{\numberline {4.3}Technieken gps-data te verbeteren}{33}{section.4.3}%
+\contentsline {chapter}{\numberline {5}Resultaten en Evaluatie}{37}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Evaluatie van de aanval}{37}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}De grondwaarheid}{37}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Manueel een EPZ aanbrengen}{38}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.1.3}Evaluatie-aspecten}{38}{subsection.5.1.3}%
+\contentsline {section}{\numberline {5.2}Resultaten}{38}{section.5.2}%
+\contentsline {chapter}{\numberline {6}Conclusies}{41}{chapter.6}%
+\contentsline {chapter}{\numberline {A}Uitleg over de appendices}{45}{appendix.A}%

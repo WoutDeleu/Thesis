@@ -7,27 +7,27 @@
 \chapter{Achtergrond}
 
 \section{Fitnesstrackers}
-Zoals al enkele malen werd aangehaald, ligt de focus van deze scriptie op
-mogelijke tekortkomingen/vulnerabilities betreffende privacybeleid in
-fitnesstrackers. Maar voordat een aanval op basis van deze kwetsbaarheden kan
-opgezet worden, is het noodzakelijk om een vat te krijgen op welke manier een
-fitnesstracker info verzamelt en weergeeft. En meer precies, hoe de mechanismen
-die de privacy voorzien voor de gebruikers in detail werken.
+De focus van deze scriptie ligt op mogelijke tekortkomingen/vulnerabilities
+betreffende privacybeleid in fitnesstrackers. Maar vooraleer we een aanval op
+basis van deze kwetsbaarheden kunnen opzetten, is het noodzakelijk om een vat
+te krijgen op welke manier een fitnesstracker info verzamelt en weergeeft, en
+meer precies, hoe de mechanismen die de privacy voorzien voor de gebruikers in
+detail werken.
 
 De data waarmee de aanval wordt opgezet en waarmee wordt geëxperimenteerd, is
 afkomstig van de populaire fitnesstracker
 \textit{Strava\footnote{\url{https://www.strava.com/}}}. Dit is een sociaal
-netwerk, waarbij alle soorten sporters hun activiteiten kunnen delen. Dit gaat
+netwerk waarbij alle soorten sporters hun activiteiten kunnen delen. Dit gaat
 over lopen, wandelen, fietsen, zwemmen, \ldots, maar ook sporten als fitnessen,
 voetballen, \ldots De verzamelde data wordt volgens het perspectief van een
-mogelijke aanval gefilterd. Enkel data die gevoelige informatie met betrekking
-tot woonplaats zou kunnen vrijgeven wordt behouden. Dit zal er dus op neerkomen
-dat enkel activiteiten die relevante \ac{gps}-informatie bevatten in
-beschouwing worden genomen. Dit gaat dan meer specifiek over \textit{runs,
-    hikes, walks, and rides}.
+mogelijke aanval gefilterd, niet alle data blijkt nuttig te zijn. Enkel data
+die gevoelige informatie met betrekking tot de woonplaats zou kunnen vrijgeven
+wordt behouden. Dit zal er dus op neerkomen dat enkel activiteiten die
+relevante \ac{gps}-informatie bevatten in beschouwing worden genomen. Dit gaat
+dan meer specifiek over \textit{runs, hikes, walks, and rides}.
 
 \subsection{Activiteiten}\label{data}
-Een Strava activiteit bevat erg veel informatie. Echter is niet alles even
+Een Strava-activiteit bevat erg veel informatie. Echter is niet alles even
 bruikbaar. Een correcte abstractie van de onnodige data is dus nodig.
 Figuur~\ref{fig:activityData} geeft een voorbeeld van een gedetailleerde
 activiteit weer. Een gebruiker is in staat om de activiteit een titel te geven,
@@ -42,8 +42,8 @@ het aantal calorieën verbrand. Als extra kunnen hier enkele statistieken
 m.b.t.\ het gebruikte materiaal, zoals type fiets, loopschoenen, hartslagmeter,
 enzovoort worden weergegeven. Een belangrijk onderscheid in deze context is het
 verschil tussen de beweegtijd en de verstreken tijd. Deze twee lijken in
-definitie gelijk, maar dit zijn ze niet. Strava, en vaak fitnessplatformen in
-het algemeen werken met twee verschillende soorten tijdsberekeningen voor het
+definitie gelijk, maar dit zijn ze niet. Strava, en fitnessplatformen in het
+algemeen werken met twee verschillende soorten tijdsberekeningen voor het
 bekomen van een accuratere gemiddelde snelheid of tempo. De verstreken tijd is
 simpelweg het tijdsinterval tussen het vertrek van de activiteit en de
 aankomsttijd ervan. De bewegingstijd is de tijd waarbij de gebruiker zich
@@ -99,20 +99,20 @@ tussentijden en de grafiek van snelheid. Optioneel kan hierbij ook nog een
 visualisatie van de afgelegde hoogte en de hartslag worden weergegeven, indien
 de gebruiker hiervoor met de juiste meetinstrumenten zijn sportactiviteit
 opneemt. De tussentijden en de grafiek van snelheid zijn qua inhoud
-gelijkaardig, met als verschil dat deze erg precies kan worden bestudeerd. Op
-de grafiek is voor elk afstandspunt de ogenblikkelijke snelheid zichtbaar. Bij
-de tussentijden wordt de gemiddelde snelheid over een kilometer weergegeven. De
-kaart die de route weergeeft is zeker ook belangrijk om even te bestuderen.
-Deze bevat namelijk alle \ac{gps}-geregistreerde punten, en verbindt deze ook
-om zo één aaneensluitende route te vormen. Wanneer deze echter in detail
-bestudeerd wordt, samen met de legende die aanwezig is, is te zien dat de route
-uit twee delen bestaat, een zichtbaar deel en een onzichtbaar deel. Een andere
-gebruiker zal enkel zicht hebben op de het zichtbare deel, het onzichtbare deel
-zal dus voor een andere gebruiker niet zichtbaar zijn. Anders geformuleerd, de
-activiteit zal voor deze persoon dus als het ware afgekapt zijn, en zal in zijn
-zichtbare versie op een andere plek starten en eindigen. In de volgende
-Secties~\ref{sec:Algemene Privacy} \&~\ref{EPZ} wordt meer in detail ingegaan
-op de werking van deze methodiek.
+gelijkaardig, met als verschil dat de waarden op de grafiek erg precies kunnen
+worden bestudeerd. Op de grafiek is voor elk afstandspunt de ogenblikkelijke
+snelheid zichtbaar. Bij de tussentijden wordt de gemiddelde snelheid over een
+kilometer weergegeven. De kaart die de route weergeeft is zeker ook belangrijk
+om even te bestuderen. Deze bevat namelijk alle \ac{gps}-geregistreerde punten,
+en verbindt deze ook om zo één aaneensluitende route te vormen. Wanneer deze
+echter in detail bestudeerd wordt, samen met de legende die aanwezig is, is te
+zien dat de route uit twee delen bestaat, een zichtbaar deel en een onzichtbaar
+deel. Een andere gebruiker zal enkel zicht hebben op de het zichtbare deel, het
+onzichtbare deel zal dus voor een andere gebruiker niet zichtbaar zijn. Anders
+geformuleerd, de activiteit zal voor deze persoon dus als het ware afgekapt
+zijn, en zal in zijn zichtbare versie op een andere plek starten en eindigen.
+In de volgende Secties~\ref{sec:Algemene Privacy} \&~\ref{EPZ} wordt meer in
+detail ingegaan op de werking van deze methodiek.
 
 Een laatste kanttekening die hierbij gemaakt moet worden, is dat voor een
 gebruiker verschillende eenheden mogelijk zijn om uit te kiezen. Er is keuze
@@ -148,14 +148,16 @@ worden uitgevoerd.
 
 Het alternatief voor de GPS-calculated distance is de \textit{Ground Speed
     Distance} methodiek. Deze afstand kan enkel worden bepaald in het geval van een
-fietsactiviteit. Deze afstand wordt berekend door het aantal omwentelingen te
-vermenigvuldigen met de omtrek van het fietswiel~\cite{HowDista47:online}.
+fietsactiviteit met behulp van een capabele fietscomputer die omwentelingen van
+de wielen kan meten. De fietscomputer berekent dan de afstand door het aantal
+omwentelingen te vermenigvuldigen met de omtrek van het
+fietswiel~\cite{HowDista47:online}.
 
 De bovenstaande afstandsberekeningen zijn de twee technieken die de officiële
-support documentatie van Strava beschrijft~\cite{HowDista47:online}. Echter
-blijkt wanneer de afstand op deze manier manueel berekent worden, afwijkende
+supportdocumentatie van Strava beschrijft~\cite{HowDista47:online}. Echter
+blijkt wanneer we de afstand op deze manier manueel berekenen, afwijkende
 resultaten bekomen worden. Dit is zeer waarschijnlijk te wijten aan de
-preprocessing van de data die gebeurd bij het uploaden van een activiteit.
+preprocessing van de data die gebeurt bij het uploaden van een activiteit.
 Alhoewel dit niet expliciet gedocumenteerd staat doen de resultaten dit wel
 sterk vermoeden. De hypothese is dat tijdens het uploaden, de afstand
 herberekend wordt. De \ac{gps}-punten zullen worden geanalyseerd, en er zullen
@@ -171,7 +173,7 @@ naar de dichtste node op de desbetreffende \textit{roadgraph}\footnote{De
     nodes. Elke weg of pad, bevat één of meerdere nodes, zodat een skeletstructuur
     ontstaat, die een abstractie van het wegennetwerk
     voorstelt~\cite{seiler2022haul}}, op Figuur~\ref{fig:MapSnapping} is de werking
-ervan te zien\cite{Snapping96:online}.
+ervan te zien~\cite{Snapping96:online}.
 \begin{figure}[h]
     \centering
     \begin{subfigure}[b]{.5\textwidth}
@@ -187,26 +189,25 @@ ervan te zien\cite{Snapping96:online}.
     \caption{Voorbeeld van de werking van \textit{Map Snapping}}\label{fig:MapSnapping}
 \end{figure}
 
-Daarnaast bestaat de kans dat er gebruik gemaakt wordt van smoothening.
-Smoothing is een proces dat ruwe \ac{gps}-punten (of datapunten in het
-algemeen) op een traject probeert te optimaliseren opdat ze een vloeiend
-`curve' vormen. Dit wordt bekomen door ruis, schommelingen en onnauwkeurigheden
-te filteren uit het traject. Hiervoor bestaan verschillende implementaties.
-Aangezien Strava geen openbare informatie verstrekt over het gebruik van
-gps-smoothing, is het niet bekend of ze deze techniek effectief toepassen. Het
-is dus gissen naar, indien ze deze zouden gebruiken, welke implementatie dan
-wel gebruikt wordt. De makkelijkste en meest modulaire methode om aan
-smoothening te doen, is \textit{Smoothing met Moving Average}. Deze methode
-bestaat eruit om van een aantal punten in een bepaalde range (ook `window'
-genoemd) het gemiddelde te nemen, en vervolgens op te schuiven. Het gemiddelde
-wordt berekend met volgende formule: $\overline{y_x} = \frac{y_x + y_{x+1} +
-        \ldots + y_{x+n}}{x+n}$, voor punt x, met n als
-window-grootte~\cite{Smoothin16:online,
+Daarnaast bestaat de kans dat er gebruik gemaakt wordt van smoothing. Smoothing
+is een proces dat ruwe \ac{gps}-punten (of datapunten in het algemeen) op een
+traject probeert te optimaliseren opdat ze een vloeiend `curve' vormen. Dit
+wordt bekomen door ruis, schommelingen en onnauwkeurigheden te filteren uit het
+traject. Hiervoor bestaan verschillende implementaties. Aangezien Strava geen
+openbare informatie verstrekt over het gebruik van gps-smoothing, is het niet
+bekend of ze deze techniek effectief toepassen. Het is dus gissen naar, indien
+ze deze zouden gebruiken, welke implementatie dan wel gebruikt wordt. De
+makkelijkste en meest modulaire methode om aan smoothing te doen, is
+\textit{Smoothing met Moving Average}. Deze methode bestaat eruit om van een
+aantal punten in een bepaalde range (ook `window' genoemd) het gemiddelde te
+nemen, en vervolgens op te schuiven. Het gemiddelde wordt berekend met volgende
+formule: $\overline{y_x} = \frac{y_x + y_{x+1} + \ldots + y_{x+n}}{x+n}$, voor
+punt x, met n als window-grootte~\cite{Smoothin16:online,
     SmoothingandInterpolatingNoisyGPSDatawithSmoothingSplines, Smoothin86:online}.
 Zo kan voor elk punt een evenwichtige waarde op de nieuwe grafiek bekomen
 worden, en krijgt de grafiek een meer vloeiende vorm. Merk wel op dat de
 precisie van de route afneemt op deze manier. Bij het smoothen van een traject
-wordt het aantal gebruikte punten namelijk vermindert volgens de grootte van de
+wordt het aantal gebruikte punten namelijk verminderd volgens de grootte van de
 window. Afhankelijk van de grootte, worden meer (resp.\ minder) punten
 samengenomen, en zo minder/meer punten weergegeven op de grafiek. Een voorbeeld
 is terug te vinden op Figuur~\ref{fig:SmoothingExample}, waarbij de blauwe
@@ -220,45 +221,45 @@ curve de ruwe data voorstelt, dus voorafgaand op het `smoothen', en de rode de
 % - https://support.strava.com/hc/en-us/articles/216917707-Bad-GPS-Data
 
 \subsection{Algemeen Privacybeleid}\label{sec:Algemene Privacy}
-Het delen van alle data die vervat zit in zo'n activiteit met alle andere
-gebruikers op het platform, is zeker niet altijd wenselijk. De ontwikkelaars
-kiezen er dan ook voor om gebruikers de mogelijkheid te geven om hun privacy te
-bewaren. In deze sectie wordt de focus gelegd op de mechanismen gebruikt door
-\textit{Strava}. Als opmerking valt te melden dat in heel wat andere
-sport-applicaties vergelijkbare, zo niet dezelfde methodieken worden gebruikt.
-Een eerste algemeen mechanisme bestaat eruit om de gebruiker de keuze te geven
-om alle activiteiten en alle gegevens over het profiel heen te laten voldoen
-aan bepaalde privacy regels. Deze regels kunnen ook per activiteit worden
-ingesteld. Onder de keuzes staan meestal drie opties, \textit{zichtbaar voor
-    iedereen}, \textit{zichtbaar voor volgers} en \textit{zichtbaar voor niemand}.
-Er kan ook zelf een keuze gemaakt worden om specifieke elementen van een
-activiteit niet te delen met de buitenwereld, zoals bijvoorbeeld de
-zichtbaarheid van de route op de kaart.\cite{Activity24:online}
+Het is zeker niet altijd wenselijk om alle data die vervat zit in zo'n
+activiteit met alle andere gebruikers op het platform te delen. De
+ontwikkelaars kiezen er dan ook voor om gebruikers de mogelijkheid te geven om
+hun privacy te bewaren. In deze sectie wordt de focus gelegd op de mechanismen
+gebruikt door \textit{Strava}. Als opmerking valt te melden dat in heel wat
+andere sport-applicaties vergelijkbare, zo niet dezelfde methodieken worden
+gebruikt. Een eerste algemeen mechanisme bestaat eruit om de gebruiker de keuze
+te geven om alle activiteiten en alle gegevens over het profiel heen te laten
+voldoen aan bepaalde privacy regels. Deze regels kunnen ook per activiteit
+worden ingesteld. Onder de keuzes staan meestal drie opties, \textit{zichtbaar
+    voor iedereen}, \textit{zichtbaar voor volgers} en \textit{zichtbaar voor
+    niemand}. Er kan ook zelf een keuze gemaakt worden om specifieke elementen van
+een activiteit niet te delen met de buitenwereld, zoals bijvoorbeeld de
+zichtbaarheid van de route op de kaart~\cite{Activity24:online}.
 
 \section{Endpoint Privacy Zones}\label{EPZ}
 Een tweede belangrijke maatregel is het gebruik van de de \acp{EPZ}. Een
-\ac{EPZ} is een cirkelzone met een bepaalde straal rond een \ac{gps}-punt. Het
-punt in kwestie zal dus de betreffende \textit{gevoelige locatie} zijn. De
-straal van deze cirkel\footnote{Op Strava heeft de \ac{EPZ} de vorm van een
-    cirkel, maar op andere platformen kunnen andere vormen de norm zijn, bv.\
-    polygonen.} kan worden gekozen door de gebruiker, en in het geval van Strava
-hebben gebruikers keuze uit waarden van 0 tot 1600m, in stappen van 200m.
-Wanneer een gebruiker binnen deze zone zijn activiteit beëindigt of begint, dan
-zal dat deel van de route binnen de \ac{EPZ} niet zichtbaar zijn voor anderen.
-Vanuit het perspectief van een andere gebruiker zal de activiteit dus starten
-en/of eindigen op de rand van deze cirkel (die natuurlijk niet zichtbaar is).
-Merk op dat een sporter ook andere gevoelige locaties kan verbergen op de
-kaart. Bijvoorbeeld een frequent bezocht café, of een huis van een partner waar
-regelmatig een tussenstop plaatsvindt. Een tweede opmerking is dat wanneer een
-gebruiker de \ac{EPZ} doorkruist, maar er niet in stopt, dat deel van de route
-onaangepast blijft. Op Figuur~\ref{fig:EPZ_Voorbeeld} zijn de verschillende
-perspectieven te zien, hoe het er als uploader uitziet, en hoe het eruit ziet
-voor een andere gebruiker. Het traject die de buitenstaander te zien krijgt,
-zijn alle punten die zich buiten de \ac{EPZ} bevinden. Merk ook op dat de
-eigenaar van de activiteit zicht heeft op de invloed van de \ac{EPZ}, dus wat
-zal verborgen worden erdoor, en wat zichtbaar blijft. Dit onderscheid wordt
-gemaakt door het verschil in kleur, oranje voor de publiek zichtbare punten en
-grijs voor de onzichtbare.
+\ac{EPZ} is een cirkelvormige zone met een bepaalde straal rond een
+\ac{gps}-punt. Het punt in kwestie zal dus de betreffende \textit{gevoelige
+    locatie} zijn. De straal van deze cirkel\footnote{Op Strava heeft de \ac{EPZ}
+    de vorm van een cirkel, maar op andere platformen kunnen andere vormen de norm
+    zijn, bv.\ polygonen.} kan worden gekozen door de gebruiker, en in het geval
+van Strava hebben gebruikers keuze uit waarden van 0 tot 1600m, in stappen van
+200m. Wanneer een gebruiker binnen deze zone zijn activiteit beëindigt of
+begint, dan zal dat deel van de route binnen de \ac{EPZ} niet zichtbaar zijn
+voor anderen. Vanuit het perspectief van een andere gebruiker zal de activiteit
+dus starten en/of eindigen op de rand van deze cirkel (die natuurlijk niet
+zichtbaar is). Merk op dat een sporter ook andere gevoelige locaties kan
+verbergen op de kaart. Bijvoorbeeld een frequent bezocht café, of een huis van
+een partner waar regelmatig een tussenstop plaatsvindt. Een tweede opmerking is
+dat wanneer een gebruiker de \ac{EPZ} doorkruist, maar er niet in stopt, dat
+deel van de route onaangepast blijft. Op Figuur~\ref{fig:EPZ_Voorbeeld} zijn de
+verschillende perspectieven te zien, hoe het er als uploader uitziet, en hoe
+het eruit ziet voor een andere gebruiker. Het traject dat de buitenstaander te
+zien krijgt, bestaat uit alle punten die zich buiten de \ac{EPZ} bevinden. Merk
+ook op dat de eigenaar van de activiteit zicht heeft op de invloed van de
+\ac{EPZ}, dus wat zal verborgen worden erdoor, en wat zichtbaar blijft. Dit
+onderscheid wordt gemaakt door het verschil in kleur, oranje voor de publiek
+zichtbare punten en grijs voor de onzichtbare.
 \begin{figure}[h]
     \centering
     \begin{subfigure}[b]{.49\textwidth}
@@ -274,9 +275,9 @@ grijs voor de onzichtbare.
     \caption{Voorbeeld van de werking van een \ac{EPZ}}\label{fig:EPZ_Voorbeeld}
 \end{figure}
 
-De methodiek die fitnesstrackers volgen bij het opzetten van een \ac{EPZ} werkt
-als volgt, de gevoelige locatie wordt genomen als beginlocatie. Hieruit zal
-a.d.h.v.\ de op voorhand vastgelegde \ac{EPZ}-straal een cirkel worden
+De methodiek die fitnesstrackers toepassen bij het opzetten van een \ac{EPZ}
+werkt als volgt, de gevoelige locatie wordt genomen als beginlocatie. Hieruit
+zal a.d.h.v.\ de op voorhand vastgelegde \ac{EPZ}-straal een cirkel worden
 opgesteld. Het centrum van deze cirkel zal hierna een translatie ondervinden in
 een willekeurige richting. Dit kan een verschuiving zijn met een afstand die
 maximaal 70\% van de straal van de \ac{EPZ} bedraagt. Dit mechanisme is te zien
@@ -290,7 +291,7 @@ op Figuur~\ref{fig:translation}. Het transleren van deze cirkel wordt ook
 
 Daarna worden alle punten vertrekkende vanaf de gevoelige locatie tot aan de
 rand van de \ac{EPZ}, en vanaf de rand van de \ac{EPZ} tot aan de gevoelige
-locatie verwijdert van het zichtbare traject. Merk op dat punten die de
+locatie verwijderd van het zichtbare traject. Merk op dat punten die de
 \ac{EPZ} doorkruisen, maar niet vertrekken of aankomen bij de gevoelige locatie
 niet worden gefilterd. Een voorbeeld van deze filtering is te zien op
 Figuur~\ref{fig:drop points}.
@@ -302,24 +303,23 @@ Figuur~\ref{fig:drop points}.
 
 \section{Literatuur}
 In het verleden is al wat onderzoek verricht in de richting van de
-doeltreffendheid van \acp{EPZ} bij
-fitnesstrackers.~\citeauthor{sec18has3:online} beschreef in 2018 een
-implementatie van EPZ waarbij het centrum van de zone de gevoelige locatie is.
-M.a.w.\ het identificeren van deze zone is dus voldoende om de gevoelige
-locatie te achterhalen\cite{sec18has3:online}. In tegenstelling tot dit
-onderzoek, wordt ervan uitgegaan dat het centrum geen translatie ondervindt, en
-er dus geen spatial cloaking wordt toegepast. In deze paper wordt gefocust op
-de reconstructie van de cirkel op basis van 3 punten op de rand, wat te zien is
-op Figuur~\ref{fig:Hassan_EPZ}. Deze 3 randpunten worden dus bekomen door
+doeltreffendheid van \acp{EPZ} bij fitnesstrackers. Hassan et al.\ beschreef in
+2018 een implementatie van EPZ waarbij het centrum van de zone de gevoelige
+locatie is. M.a.w.\ het identificeren van deze zone is dus voldoende om de
+gevoelige locatie te achterhalen~\cite{sec18has3:online}. In tegenstelling tot
+deze thesis, wordt ervan uitgegaan dat het centrum geen translatie ondervindt,
+en er dus geen spatial cloaking wordt toegepast. In deze paper wordt gefocust
+op de reconstructie van de cirkel op basis van 3 punten op de rand, wat te zien
+is op Figuur~\ref{fig:Hassan_EPZ}. Deze 3 randpunten worden dus bekomen door
 begin/eindpunten te nemen van activiteiten, volgens het perspectief van
 gebruiker die geen eigenaar is. Deze begin/eindpunten zullen zich altijd op de
 rand van de cirkel begeven. Door het toepassen bekwam Hassan et al.\ een succes
-rate tot 95.1 Spatial cloaking werd er aangehaald als mogelijke countermeasure
+rate tot 95.1 Spatial cloaking werd er aangehaald als mogelijke verdediging
 tegen dit soort aanvallen.
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.6\textwidth]{fig/EPZ-mechanisme/Hassan.png}
-    \caption{Mechanisme \ac{EPZ} beschreven door \citeauthor{sec18has3:online}}\label{fig:Hassan_EPZ}
+    \caption{Mechanisme \ac{EPZ} beschreven door Hassan et al.}\label{fig:Hassan_EPZ}
 \end{figure}
 
 Een onderzoek door~\citeauthor{10.1145/3491102.3502136} in 2022 toonde ook aan
