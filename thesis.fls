@@ -1587,6 +1587,16 @@ INPUT hfdst5.tex
 INPUT ./hfdst5.tex
 INPUT ./hfdst5.tex
 INPUT hfdst5.tex
+INPUT ./fig/Afwijkingen&Analyses/OvershootMappingDistance.png
+INPUT ./fig/Afwijkingen&Analyses/OvershootMappingDistance.png
+INPUT fig/Afwijkingen&Analyses/OvershootMappingDistance.png
+INPUT ./fig/Afwijkingen&Analyses/OvershootMappingDistance.png
+INPUT ./fig/Afwijkingen&Analyses/OvershootMappingDistance.png
+INPUT ./fig/bootstrapping.png
+INPUT ./fig/bootstrapping.png
+INPUT fig/bootstrapping.png
+INPUT ./fig/bootstrapping.png
+INPUT ./fig/bootstrapping.png
 INPUT ./hfdst6.tex
 INPUT ./hfdst6.tex
 INPUT ./hfdst6.tex

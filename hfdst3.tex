@@ -7,18 +7,18 @@
 \chapter{Setting aanval}\label{chap:inferentieaanval}
 In dit hoofdstuk wordt de setting alsook de werking van de aanval beschreven.
 De aanval is sterk gebaseerd op de aanvallen
-van~\citeauthor{Dhondt_Pochat_Voulimeneas_Joosen_Volckaert_2022}
+van~\citeauthor{Dhondt}
 en~\citeauthor{Verdonck_2022}~\cite{Verdonck_2022,
-    Dhondt_Pochat_Voulimeneas_Joosen_Volckaert_2022}. Deze aanvallen worden
+    Dhondt}. Deze aanvallen worden
 inferentie-aanvallen genoemd, vanwege het feit dat uit metadata essentiële
 gegevens kunnen worden geïnfereerd. In het geval
-van~\citeauthor{Dhondt_Pochat_Voulimeneas_Joosen_Volckaert_2022} gaat dit over
+van~\citeauthor{Dhondt} gaat dit over
 afgelegde afstand binnenin de \ac{EPZ}. In het geval
 van~\citeauthor{Verdonck_2022} gaat dit dan weer over geïnduceerde
 hoogteverschillen binnen de privacy zone. Allereerst zal kort de mogelijkheden
 van een aanvaller in de huidige setting worden besproken. Daarna wordt de
 inferentieaanval
-van~\citeauthor{Dhondt_Pochat_Voulimeneas_Joosen_Volckaert_2022}, die de basis
+van~\citeauthor{Dhondt}, die de basis
 vormt voor de aanval in deze thesis, besproken volgens een opdeling in drie
 stappen.
 
@@ -37,7 +37,7 @@ start- en/of eindlocatie. Zijn doel is dan ook om ondanks de aanwezigheid van
 cloaking deze gevoelige locatie te achterhalen.
 
 Vanuit het oogpunt van de inferentieaanval beschreven
-door~\citeauthor{Dhondt_Pochat_Voulimeneas_Joosen_Volckaert_2022} heeft de
+door~\citeauthor{Dhondt} heeft de
 aanvaller toegang tot alle data die publiek beschikbaar is. Deze gebruikt dan
 voornamelijk afgelegde weg als basis.
 
@@ -57,7 +57,7 @@ te voegen.
 
 \subsection{Assumpties}
 Om de aanval te kunnen uitvoeren, moeten enkele assumpties worden gemaakt.
-\citeauthor{Dhondt_Pochat_Voulimeneas_Joosen_Volckaert_2022} maakte al enkele
+\citeauthor{Dhondt} maakte al enkele
 assumpties om de inferentieaanval succesvol uit te voeren. Voor dit onderzoek
 is het dus logisch om dezelfde veronderstellingen te maken. Zo kunnen we een
 nuttige vergelijking maken. De eerste assumptie bestaat eruit opdat de
@@ -66,7 +66,7 @@ beschermde locatie op de roadgraph liggen. Hij kan niet buiten het voor ons te
 mappen gebied liggen, bijvoorbeeld in een bos waar geen pad ligt. Er wordt
 dieper ingegaan op de roadgraph in Sectie~\ref{sec:roadgraph}. Als laatste,
 maar desalniettemin belangrijk punt moet de gebruiker binnenin de \ac{EPZ} de
-kortste route volgen~\cite{Dhondt_Pochat_Voulimeneas_Joosen_Volckaert_2022}.
+kortste route volgen~\cite{Dhondt}.
 
 Dhondt et al.\ maakt nog een laatste assumptie over start- en eindpunten, die
 hetzelfde moeten zijn. Dit is echter niet van toepassing op dit onderzoek. Het
@@ -155,7 +155,7 @@ zullen de afstanden opnieuw worden berekent. Het proces wordt herhaald totdat
 een ietwat stabiele cirkel bekomen wordt. Een cirkel is stabiel wanneer het
 verschil in afstand tussen twee opeenvolgende gevonden cirkels kleiner is dan
 een drempelwaarde, in dit geval 10
-meter~\cite{Dhondt_Pochat_Voulimeneas_Joosen_Volckaert_2022, Verdonck_2022}.
+meter~\cite{Dhondt, Verdonck_2022}.
 \begin{figure}[h]
     \centering
     \begin{subfigure}[b]{.33\textwidth}
@@ -194,15 +194,16 @@ locatie te achterhalen.
 
 \section{Identificatie Entry Gates}
 Entry gates zijn zoals de naam al doet vermoeden de `toegangspoorten' tot de
-\ac{EPZ}. Dit is waar de gebruiker de \ac{EPZ} betreedt en/of verlaat. Deze
-`zones' vormen zich dan ook rond wegen die de \ac{EPZ} betreden. Op
+\ac{EPZ}. Dit is waar de gebruiker de \ac{EPZ} kan betreden en/of verlaten.
+Deze `zones' vormen zich dan ook rond wegen die de \ac{EPZ} betreden. Op
 Figuur~\ref{fig:entrygate} is te zien dat meerdere eindpunten van activiteiten
 geclusterd worden en een \ac{E.G.} vormen. Dit is van belang belangrijk bij het
-filteren van afwijkende activiteiten. De detectie ervan gebeurt via het \ac{DBSCAN}-algoritme.
+filteren van afwijkende activiteiten. De detectie ervan gebeurt via het
+\ac{DBSCAN}-algoritme.
 \begin{figure}
     \centering
     \includegraphics[width=0.5\linewidth]{fig/EPZ-mechanisme/Entry_Gate.png}
-    \caption{Voorbeeld van entry gates gevonden door k-means clustering en identificatie van de \ac{EPZ}}\label{fig:entrygate}
+    \caption{Voorbeeld van entry gates gevonden door k-means clustering en de identificatie van een \ac{EPZ}}\label{fig:entrygate}
 \end{figure}
 
 \ac{DBSCAN} is een algoritme dat clusters kan vinden in een dataset. Het vindt
@@ -234,7 +235,7 @@ Na het bepalen van de \acp{EPZ} voor de gebruiker wordt overgegaan tot het
 berekenen en achterhalen van de bijhorende gegevens die nodig zijn om de
 gevoelige locatie te voorspellen. Hiervoor wordt verder ingegaan op de
 methodiek in de
-paper~\citeauthor{Dhondt_Pochat_Voulimeneas_Joosen_Volckaert_2022}, maar er
+paper~\citeauthor{Dhondt}, maar er
 worden enkele gegevens op een andere manier benaderd volgens de huidige
 definitie van de aanvaller.
 
@@ -325,7 +326,7 @@ Sectie~\ref{sec:roadgraph}, en de afstand die wordt afgelegd binnenin de
 niet te verwarren met de \textit{inner ditstance attack}).
 
 In de implementatie
-van~\citeauthor{Dhondt_Pochat_Voulimeneas_Joosen_Volckaert_2022} kan de
+van~\citeauthor{Dhondt} kan de
 \textit{inner distance} simpelweg berekend worden door het verschil te nemen
 tussen de afgelegde afstand buiten de verhulde zone (deze noemen we de
 \textit{outer distance}), en de totale afstand: \[inner\ distance = total\
@@ -501,5 +502,6 @@ naar het punt waarbij de som van de absolute waarde minimaal is, en dit is dan
 de resulterende predictie, de \textbf{eindvoorspelling}.
 
 % Extra: Figuur of filteren van activiteiten
+% Figuur die uitlegt hoe verschillende predicties worden gemaakt
 % Figuur predicties uitleggen
 % Figuur LAD predictie invoegen

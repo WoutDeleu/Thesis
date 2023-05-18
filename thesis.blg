@@ -4,45 +4,45 @@ The top-level auxiliary file: thesis.aux
 The style file: apalike.bst
 Database file #1: bibliografie_eng.bib
 Warning--empty journal in sec18has3:online
-You've used 36 entries,
+You've used 37 entries,
             1935 wiz_defined-function locations,
-            675 strings with 11039 characters,
-and the built_in function-call counts, 10114 in all, are:
-= -- 1059
-> -- 335
-< -- 33
-+ -- 109
-- -- 102
-* -- 679
-:= -- 1966
-add.period$ -- 130
-call.type$ -- 36
-change.case$ -- 230
-chr.to.int$ -- 31
-cite$ -- 37
-duplicate$ -- 397
-empty$ -- 629
-format.name$ -- 148
-if$ -- 1891
+            680 strings with 11128 characters,
+and the built_in function-call counts, 10368 in all, are:
+= -- 1087
+> -- 342
+< -- 34
++ -- 111
+- -- 104
+* -- 694
+:= -- 2017
+add.period$ -- 134
+call.type$ -- 37
+change.case$ -- 236
+chr.to.int$ -- 32
+cite$ -- 38
+duplicate$ -- 407
+empty$ -- 644
+format.name$ -- 151
+if$ -- 1938
 int.to.chr$ -- 6
 int.to.str$ -- 0
 missing$ -- 10
-newline$ -- 204
-num.names$ -- 108
-pop$ -- 120
+newline$ -- 210
+num.names$ -- 111
+pop$ -- 122
 preamble$ -- 1
-purify$ -- 231
+purify$ -- 237
 quote$ -- 0
-skip$ -- 337
+skip$ -- 346
 stack$ -- 0
-substring$ -- 501
+substring$ -- 513
 swap$ -- 8
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 214
+type$ -- 220
 warning$ -- 1
-while$ -- 76
+while$ -- 78
 width$ -- 0
-write$ -- 485
+write$ -- 499
 (There was 1 warning)

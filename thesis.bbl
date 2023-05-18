@@ -23,7 +23,13 @@ Croft, J. (2015).
 \newblock \url{https://www.jamesrcroft.com/2015/06/snapping-gps-tracks-to-roads/}.
 \newblock (Accessed on 04/07/2023).
 
-\bibitem[Dhondt et~al., 2022]{Dhondt_Pochat_Voulimeneas_Joosen_Volckaert_2022}
+\bibitem[Cui, 2020]{Introduc22:online}
+Cui, M. (2020).
+\newblock Introduction to the k-means clustering algorithm based on the elbow method.
+\newblock \url{https://www.clausiuspress.com/article/592.html}.
+\newblock (Accessed on 05/17/2023).
+
+\bibitem[Dhondt et~al., 2022]{Dhondt}
 Dhondt, K., Le~Pochat, V., Voulimeneas, A., Joosen, W., and Volckaert, S. (2022).
 \newblock A run a day won’t keep the hacker away: Inference attacks on endpoint privacy zones in fitness tracking social networks.
 \newblock osf.io/3m5ut.

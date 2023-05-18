@@ -35,12 +35,13 @@
 \contentsline {section}{\numberline {4.2}Mogelijke afwijkingen binnenin de dataset}{29}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}Mogelijke fouten bij gps-data}{29}{subsection.4.2.1}%
 \contentsline {subsection}{\numberline {4.2.2}Gps-fouten in de gebruikte dataset}{32}{subsection.4.2.2}%
-\contentsline {section}{\numberline {4.3}Technieken gps-data te verbeteren}{33}{section.4.3}%
-\contentsline {chapter}{\numberline {5}Resultaten en Evaluatie}{37}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Evaluatie van de aanval}{37}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}De grondwaarheid}{37}{subsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.1.2}Manueel een EPZ aanbrengen}{38}{subsection.5.1.2}%
-\contentsline {subsection}{\numberline {5.1.3}Evaluatie-aspecten}{38}{subsection.5.1.3}%
-\contentsline {section}{\numberline {5.2}Resultaten}{38}{section.5.2}%
-\contentsline {chapter}{\numberline {6}Conclusies}{41}{chapter.6}%
-\contentsline {chapter}{\numberline {A}Uitleg over de appendices}{45}{appendix.A}%
+\contentsline {section}{\numberline {4.3}Technieken gps-data te verbeteren}{34}{section.4.3}%
+\contentsline {chapter}{\numberline {5}Resultaten en Evaluatie}{38}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Evaluatie van de aanval}{38}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}De grondwaarheid}{38}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Manueel aanbrengen van een EPZ}{39}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.1.3}Bootstrapping}{40}{subsection.5.1.3}%
+\contentsline {subsection}{\numberline {5.1.4}Evaluatie metrieken}{41}{subsection.5.1.4}%
+\contentsline {section}{\numberline {5.2}Resultaten}{42}{section.5.2}%
+\contentsline {chapter}{\numberline {6}Conclusies}{46}{chapter.6}%
+\contentsline {chapter}{\numberline {A}Uitleg over de appendices}{50}{appendix.A}%

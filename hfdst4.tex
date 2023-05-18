@@ -14,9 +14,9 @@ onregelmatigheden opdat een gefundeerde conclusie kan worden gevormd, die
 eventueel bepaalde eigenschappen van de dataset mee in rekening brengt.
 
 Aangezien deze thesis voor een stuk verder bouwt op het onderzoek
-van~\citeauthor{Dhondt_Pochat_Voulimeneas_Joosen_Volckaert_2022}, is het
+van~\citeauthor{Dhondt}, is het
 evident om verder te werken op deze
-dataset~\cite{Dhondt_Pochat_Voulimeneas_Joosen_Volckaert_2022}. Deze dataset
+dataset~\cite{Dhondt}. Deze dataset
 werd volledig zelf gescraped vanaf de officiële \ac{API} van het platform
 `Strava'\footnote{\url{https://www.strava.com/}}. De scope van deze dataset is
 een periode van één week, startend op 11 juli 2021 00:00 \ac{UTC}. De site werd
@@ -106,7 +106,7 @@ dan 100.
 \end{figure}
 
 Let wel, alhoewel niet expliciet vermeld
-door~\citeauthor{Dhondt_Pochat_Voulimeneas_Joosen_Volckaert_2022}, is er een
+door~\citeauthor{Dhondt}, is er een
 vermoeden dat er bewust gezocht werd naar gebruikers met een zo groot mogelijk
 aantal activiteiten per gebruiker. Dit is een logische keuze, aangezien de
 aanval een hogere kans op slagen heeft bij users die meer activiteiten hebben.
@@ -312,13 +312,13 @@ zal dus zeker nodig zijn om deze te beperken.
 \end{figure}
 \begin{figure}[h]
     \centering
-    \begin{subfigure}{0.85\textwidth}
+    \begin{subfigure}{\textwidth}
         \includegraphics[width=\textwidth]{fig/Afwijkingen&Analyses/Graphs/100_Differences_tov_theoretische_BefSmoothening.png}
         \caption{100\% van de activiteiten (logaritmische schaal)}\label{fig:differences_log}
     \end{subfigure}
-    \begin{subfigure}[b]{0.85\textwidth}
+    \begin{subfigure}[b]{\textwidth}
         \includegraphics[width=\textwidth]{fig/Afwijkingen&Analyses/Graphs/95_Differences_tov_theoretische_BefSmoothening.png}
-        \caption{95\% van de activiteiten}\label{fig:differences_nolog}m
+        \caption{95\% van de activiteiten}\label{fig:differences_nolog}
     \end{subfigure}
     \caption{Verdeling van het verschil tussen de berekende afstand en de theoretische afstand buiten de \ac{EPZ} }\label{fig:differences_theoretical}
 \end{figure}
@@ -338,11 +338,12 @@ Daarnaast passen we ook een filtering toe die rekening houdt met
 \ac{gps}-sprongen. Het idee is te stellen dat wanneer \ac{gps}-sprongen
 gebeuren, en er dus een te grote afstand tussen twee opeenvolgende punten is
 deze afstand niet te laten meetellen. Dit is echter wel niet vanzelfsprekend,
-aangezien dit wel kan worden meeberekent door de platformen. Stel dat wij een
-sprong van $50m$ laten vallen, maar de platformen laten deze wel meetellen, dan
-zullen we de afwijking op het eindresultaat enkel maar verhogen. Het drempel
-voor de filtering moet dus hoog genoeg zijn om deze voorvallen te vermijden. In
-dit onderzoek kozen we voor een drempelwaarde van $200m$.
+aangezien dit wel kan worden meegenomen door de berekeningen van de platformen.
+Stel dat wij een sprong van $50m$ laten vallen, maar de platformen laten deze
+wel meetellen, dan zullen we de afwijking op het eindresultaat enkel maar
+verhogen. Het drempel voor de filtering moet dus hoog genoeg zijn om deze
+voorvallen te vermijden. In dit onderzoek kozen we voor een drempelwaarde van
+$200m$.
 
 % EXTRAAAA
 % \section{Stilstaande gebruiker}

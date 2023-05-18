@@ -17,60 +17,187 @@ uittesten op activiteiten die al een \ac{EPZ} bevatten zouden we de bekomen
 resultaten niet kunnen verifiëren. Daarom zullen we de aanval uittesten en
 evalueren op publieke activiteiten die geen \ac{EPZ} bevatten, en deze manueel
 voorzien van een \ac{EPZ}. Zo kunnen we de bekomen resultaten vergelijken met
-een referentie, namelijk de \textit{grondwaarheid} of de \textit{ground truth}.
+een referentie, namelijk de \textit{grondwaarheid} of de \ac{GT}.
 
-\subsection{De grondwaarheid}
+\subsection{De grondwaarheid}\label{sec:groundtruth}
 De grondwaarheid van een gebruiker is de effectieve woonplaats, of de plaats
 waar deze persoon meestal vanuit vertrekt of aankomt. Dit is de locatie die we
 beschouwen als degene waarrond de \ac{EPZ} wordt aangebracht, en dat tracht
 verborgen te worden. De grondwaarheid is dus de locatie die we trachten te
-achterhalen. We bepalen deze locatie door de activiteiten van een gebruiker te
-overlopen, en indien 15 of meer begin- of eindpunten binnen een straal van $50
-    meter$ liggen, dan berekenen we hiervan het gemiddelde en wordt dit gemiddelde
-gemapt op de roadgraph. Dit punt gematcht op de roadgraph stelt dan de
-grondwaarheid voor van deze gebruiker. Hassan et al.\ stelden dat $50 meter$
+achterhalen. We bepalen deze locatie door alle activiteiten van een gebruiker
+te overlopen, en indien 15 of meer begin- of eindpunten binnen een straal van
+50 meter liggen, dan berekenen we hiervan het gemiddelde en wordt dit
+gemiddelde gemapt op de roadgraph. Dit punt gematcht op de roadgraph stelt dan
+een grondwaarheid voor van deze gebruiker. Hassan et al.\ stelden dat 50 meter
 vergelijkbaar is met een breedte van een gemiddeld perceel, en dat dit dus een
 goede benadering is van de grondwaarheid~\cite{sec18has3:online,
-    Verdonck_2022}. Let wel, er zijn meerdere grondwaarheden mogelijk.
+    Verdonck_2022}. Let wel, het kan dat éen gebruiker meerdere grondwaarheden
+bevat.
 
 Een tweede kanttekening die we hierbij moeten maken is dat de effectieve begin-
-en eindlocaties niet altijd perfect op het wegennetwerk zullen liggen, een
+en eindlocaties niet altijd perfect op het wegennetwerk zullen liggen. Een
 gebruiker kan bijvoorbeeld starten op een parking of een oprijlaan, wat niet
-vervat zit in het netwerk. De predicties moeten dit dus in rekening brengen.
-
-\subsection{Manueel een EPZ aanbrengen}\label{sec:zelf_cloaking}
-
-\subsection{Evaluatie-aspecten}
-
-% Beschrijven hoe getest en geëvalueerd wordt
-%   - Zeggen dat een uncloaked activities manueel worden gecloaked - Aanbrengen EPZ
-%   - Bepaling GT
-
-% - Beschrijven persoon die stil staat in de EPZ
-% - Beschrijven verschillen + filter
-%     - Accuraatheid van de berekende afstanden adhv nodes ipv totale afstanden
-%        (strava die hier al in filtert)
-% - Studie Data :
-%     Hoeveel percent van de data staat stil in de EPZ
-
-% Basseren op totale verstreken tijd of niet?
-
-% - ASSUMPTIES
-%     - Elapsed Time = Moving Time in de EPZ
-%         => Hoeveel van de volledige dataset is dit het gevolg
-% Results eerste run
-% & Smoothing Window (n)
-% & {} 
-
-% Ground truth
-%  
-
-% Filter voor gps punten met te grote afstanden
-\section{Resultaten}
-\begin{table}[H]
+vervat zit in het netwerk. Wij mappen deze dan achteraf op het straatnetwerk,
+maar gedurende de upload berekent het platform in kwestie wel de totale
+afgelegde afstand tot het effectieve startpunt. Dit kan dus voor een afwijking
+bij de predicties zorgen.~\citeauthor{Dhondt} onderzochten deze afwijking door
+deze afwijking in een \ac{CDF} te plotten, en op zoek te gaan naar het
+elleboogpunt~\cite{Dhondt}. Het elbow point is een visueel punt in de curve
+waar zich een knik voordoet~\cite{Introduc22:online}. Dit duidt in theorie de
+optimale afweging tussen lage afwijking en hoge precisie aan. Zo
+bekomen~\citeauthor{Dhondt} een drempelwaarde van 22.95 meter om van een
+succesvolle aanval te kunnen spreken. Deze drempelwaarde is toepasselijk voor
+92\% van de gebruikers.
+\begin{figure}[h]
     \centering
+    \includegraphics[width=0.8\textwidth]{fig/Afwijkingen&Analyses/OvershootMappingDistance.png}
+    \caption{Dhondt et al.\ bepaalt grafisch de trend van de afwijkingen bij het snappen van locaties op het wegennetwerk~\cite{Dhondt}}\label{fig:overshootMappingDistance}
+\end{figure}
+
+\subsection{Manueel aanbrengen van een EPZ}\label{sec:zelf_cloaking}
+We werken zoals al eerde vermeld met publieke activiteiten die geen \ac{EPZ},
+om zo de het evaluatieproces te versimpelen. Maar om de aanval te kunnen
+uitvoeren moet we dus nog manueel een \ac{EPZ} aanbrengen. Zo kunnen we een
+situatie creëren die de werkelijke situatie benadert, en kunnen we ons
+aanvalsmodel uitvoeren. Het is dus wel belangrijk dat de aangebrachte \ac{EPZ}
+op een realistische manier wordt aangebracht, op een manier die de
+werkelijkheid weerspiegelt.
+
+Sectie~\ref{sec:EPZ} bespreekt al uitvoerig het mechanisme van een \ac{EPZ}, en
+hoe deze wordt bepaald. Om het even kort te recapituleren, een \ac{EPZ} wordt
+bepaald door een centraal punt (de gevoelige locatie), wat een willekeurige
+translatie zal ondervinden\footnote{In de context van de beschrijving van
+    Hassan et al.\ gebeurd er geen translatie, maar deze thesis gaat wel degelijk
+    uit van een model waarbij spatial cloaking op toegepast
+    is~\cite{sec18has3:online}.}, en een gekozen straal. Vanaf het getransleerde
+punt wordt een cirkel opgezet met de desbetreffende straal. Strava als
+fitnessplatform heeft de grootste keuze uit mogelijke stralen, namelijk van 200
+meter tot 1600 meter in sprongen van 200 meter. Het doel is om de effectiviteit
+van de aanval vast te leggen voor verschillende radiussen, dus zullen we per
+gebruiker en per aanval een \ac{EPZ} opzetten met alle verschillende radiussen.
+Zo kunnen we het effect van de radius zien, maar ook de types aanval onderling
+onafhankelijk van de straal vergelijken. We starten dus vanaf de \ac{GT}. Deze
+locatie ondervindt dan een willekeurige translatie. De verschuiving van het
+punt kan gebeuren in alle richting, en kiezen we dus willekeurig. De afstand
+van de translatie kan in principe ook willekeurig worden gekozen, maar moet wel
+binnen bepaalde grenzen liggen, namelijk tussen 0 en 70\% van de straal van de
+\ac{EPZ}. De cirkel kan dan worden opgesteld, met als middelpunt het
+getransleerde punt, en de bijhorende straal. Alle punten die zich binnen deze
+zone bevinden, zullen worden verwijdert uit de activiteit.
+% Figuur: 3 stappen hoe een EPZ wordt opgezet
+
+BETROUWBAARHEIDSINTERVALLEN =$>$ VRAGEN THOMAS \newline dit is hoe ik het
+interpreteer
+
+\subsection{Bootstrapping}
+Bij het uittesten van de aanval wordt de aanval niet zomaar gedraaid op alle
+activiteiten per gebruiker. Dit zou vertekende resultaten kunnen geven. Per
+gebruiker wordt een betrouwbaarheidsinterval berekent via
+bootstrapping~\cite{Dhondt, Verdonck_2022}. Per gebruiker wordt de set met
+manueel ververhulde activiteiten beschouwd. Het bootstrapalgoritme kiest
+hieruit willekeurig één voor één activiteiten, en plaatst deze in een nieuwe
+groep totdat deze nieuwe groep activiteiten even groot is als de originele set
+van activiteiten. Let wel, het algoritme kan meerdere malen dezelfde activiteit
+kiezen, dus met andere woorden kan de nieuw gemaakte groep duplicaten bevatten
+en bepaalde activiteiten helemaal niet bevatten. Dit gebeurt 1000 keer, en er
+worden dus 1000 verschillende sets gemaakt. Voor elke set zal dan een zal een
+voorspelling worden uitgevoerd. Zo bekomen we een aantal voorspelde locaties,
+waarvan er een kans is dat enkele locaties meerdere malen voorspeld worden. Op
+Figuur~\ref{fig:bootstrapping} is te zien hoe de distributie eruit ziet op een
+kaart~\cite{Verdonck_2022}. Op de figuur zijn de individuele voorspelling
+aangeduidt met een blauwe tot paarse kleur, afhankelijk van hoe frequent ze
+voorspeld werden (hoe meer naar de paarse of rode kleur ligt, hoe frequenter de
+node voorspeld is). Ook zichtbaar zijn de start- en eindpunten, met een
+verschillend kleur per \ac{E.G.}. De locatie van de grondwaarheid is aangeduid
+door de groene marker.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{fig/bootstrapping.png}
+    \caption{Voorbeeld van een distributie van voorspellingen bepaald door het bootstrapalgoritme~\cite{Verdonck_2022}}\label{fig:bootstrapping}
+\end{figure}
+
+\subsection{Evaluatie metrieken}
+Om iets zinnigs te kunnen vertellen over de effectiviteit van de aanval,
+definiëren we enkele metrieken die we kunnen gebruiken om de aanval te
+evalueren.
+
+De eerste evaluatie metriek is de \textit{Success Rate}~\cite{Dhondt}. Dit is
+het percentage van de uitgevoerde aanvallen waar de gevoelige locatie succesvol
+is achterhaald. Rekening houdend met de overshoots die komen met het snappen
+van locaties op het wegennetwerk, is een correcte locatie een locatie die zich
+binnen een straal van 22.95 meter van de \ac{GT} bevindt. De succes rate is dus
+het percentage van de aanvallen waar de correcte locatie zich binnen deze
+straal bevindt. Hoe hoger het percentage, hoe succesvoller de aanval.
+
+De \textit{Correctness} van een aanval is de som van de Euclidische afstanden
+tussen de \ac{GT} en de voorspelde locatie gedeeld door het aantal keer deze
+locatie werd voorspeld~\cite{Dhondt, Verdonck_2022}. Dit geeft een indicatie
+van de gemiddelde afwijking in afstand van de voorspelde locaties ten opzichte
+van de \ac{GT}. Hoe lager deze waarde, hoe preciezer de aanval. Let wel, een
+succes rate kan hoog zijn, maar de correctheid kan nog steeds hoog zijn. Dit
+duidt op een aanval die veel overshoots heeft, maar waar de correcte locatie
+zich wel binnen de straal van 22.95 meter bevindt.
+
+De \textit{Accuracy} definiëren we als de breedte van het
+betrouwbaarheidsinterval~\cite{Dhondt, Verdonck_2022}. Met de breedte van het
+betrouwbaarheidsinterval doelen we op het aantal unieke voorspellingen, het
+aantal nodes dat precies eenmalig worden voorspeld. Hoe meer unieke nodes, hoe
+hoger de accuracy en ook hoe minder `zeker' onze voorspelling is.
+
+De \textit{Reduction of the k-anonymity set} kwantificeert de de afname in de
+set van alle mogelijke eindlocaties voor en na de effectieve predicties bij een
+aanval~\cite{Dhondt, Verdonck_2022}. De mogelijke eindlocaties voor de aanval
+zijn simpelweg alle nodes in de graafvoorstelling, eventueel begrensd door de
+\ac{EPZ}. Degene na de aanval zijn al degene die voorspelt worden. De reduction
+is dus een percentage die het verschil tussen de twee sets aangeeft. Hoe hoger
+de reduction, hoe meer nodes verdwijnen uit de set van mogelijke eindlocaties
+na de aanval. Dit zegt dus iets over de hoeveelheid kandidaten het algoritme
+voorspelt, ten opzichte van hoeveel kandidaten er mogelijk zijn.
+
+De \textit{Uncertainty Region} is de som van oppervlaktes van de
+unie\footnote{De unie van de oppervlakte van twee cirkels is de som van de twee
+    oppervlakten, min één maal het overlappende deel.} van de onzekerheidsregio's
+rond de voorspelde nodes~\cite{Dhondt,Verdonck_2022}. De chaining distance, die
+in ons geval drie meter aanneemt, veroorzaakt deze onzekerheidsregio's.
+Aangezien pas om de drie meter een node bestaat, zal voor elk punt die op deze
+node gemapt is een mogelijkheid bestaan dat deze eigenlijk ergens anders in de
+een zone van drie meter rond de node ligt. Hoe groter deze waarde, hoe groter
+de onzekerheid van de aanval, aangezien dit wijst op weinig overlap.
+
+De laatste evaluatiefactor is de \textit{Degree of
+    Anonymity}~\cite{Dhondt,Verdonck_2022}. Dit is de genormaliseerde entropie van
+de verwachte distributie. Deze wordt genormaliseerd op basis van de maximale
+mogelijke entropie, en wordt bepaald op basis van percentage $p_v$. Dit is een
+percentage die aangeeft bij hoeveel percent van de voorspellingen node $p$
+voorspelt wordt. Dit zal voor vele nodes gelijk zijn aan 0. De maximale
+entropie komt voor indien elke node exactly evenveel voorspelt wordt, en is dus
+gelijk aan $\frac{1}{\# nodes}$
+
+\section{Resultaten}
+\begin{table}[h]
+    \centering
+    \scalebox{0.5}{
+        \begin{tabular}{lrrrrrrrr}
+            \toprule
+            {}         & Success Rate (\%) & Correctness (m) & Accuracy & Reduction (\%) & Uncertainty Region ($m^2$) & Certainty & Spatial Certainty & Degree of Anonymity (\%) \\
+            Radius (m) &                   &                 &          &                &                            &           &                   &                          \\
+            \midrule
+            200        & 89.86             & 28.61           & 17       & 86.06          & 352.08                     & 2.06      & 0.58              & 30.69                    \\
+            600        & 70.37             & 79.94           & 24       & 96.52          & 502.42                     & 2.32      & 1.12              & 27.15                    \\
+            800        & 73.33             & 113.68          & 27       & 97.05          & 670.53                     & 2.47      & 1.31              & 26.86                    \\
+            1000       & 68.64             & 166.74          & 33       & 97.84          & 777.57                     & 2.62      & 1.54              & 27.25                    \\
+            1200       & 58.33             & 180.97          & 27       & 98.15          & 684.71                     & 2.55      & 1.57              & 26.25                    \\
+            1400       & 57.14             & 235.76          & 33       & 98.61          & 782.30                     & 2.54      & 1.82              & 25.31                    \\
+
+            \bottomrule
+        \end{tabular}
+    }
     \captionsetup{justification=centering}
-    \caption{Attack with given Outer Distance}\label{tab:outerDistance}
+    \caption{Aanval volgens het model van Dhondt et al.~\cite{Dhondt}}\label{tab:aanval_karel}
+\end{table}
+\begin{table}[h]
+    \centering
     \scalebox{0.5}{
         \begin{tabular}{lrrrrrrrr}
             \toprule
@@ -78,7 +205,6 @@ vervat zit in het netwerk. De predicties moeten dit dus in rekening brengen.
             Radius (m) &                   &                 &          &                &                            &           &                   &                          \\
             \midrule
             200        & 81.43             & 35.96           & 15       & 86.01          & 322.32                     & 1.91      & 0.68              & 28.33                    \\
-
             400        & 79.71             & 51.38           & 21       & 93.78          & 445.30                     & 2.26      & 0.92              & 27.80                    \\
             600        & 70.77             & 96.94           & 23       & 95.78          & 542.48                     & 2.33      & 1.18              & 27.34                    \\
             800        & 65.83             & 113.18          & 30       & 97.28          & 703.00                     & 2.48      & 1.41              & 27.38                    \\
@@ -88,12 +214,11 @@ vervat zit in het netwerk. De predicties moeten dit dus in rekening brengen.
             \bottomrule
         \end{tabular}
     }
-
-\end{table}
-\begin{table}[H]
-    \centering
     \captionsetup{justification=centering}
-    \caption{Attack with normal gps-points (No Smoothing)}\label{tab:noSmoothing}
+    \caption{Aanval op basis van gegeven \textit{outer distance}, en snelheid}\label{tab:outerDistance}
+\end{table}
+\begin{table}[h]
+    \centering
     \scalebox{0.5}{
         \begin{tabular}{lrrrrrrrr}
             \toprule
@@ -110,12 +235,14 @@ vervat zit in het netwerk. De predicties moeten dit dus in rekening brengen.
             \bottomrule
         \end{tabular}
     }
+    \captionsetup{justification=centering}
+    \caption{Aanval op basis van ruwe \ac{gps}-locaties (geen smoothing) en snelheid}\label{tab:noSmoothing}
 \end{table}
 
-\begin{table}[H]
+\begin{table}[h]
     \centering
     \captionsetup{justification=centering}
-    \caption{Attack result with different smoothing window sizes}\label{tab:smoothing}
+    \caption{Aanval op basis van gesmoothe \ac{gps}-data en snelheid}\label{tab:smoothing}
     \Rotatebox{270}{
         \scalebox{0.7}{
             \begin{tabular}{lrrrrrrrrr}
@@ -167,10 +294,8 @@ vervat zit in het netwerk. De predicties moeten dit dus in rekening brengen.
         }
     }
 \end{table}
-\begin{table}[H]
+\begin{table}[h]
     \centering
-    \captionsetup{justification=centering}
-    \caption{Attack result with different smoothing window sizes}\label{tab:smoothing}
     \scalebox{0.5}{
         \begin{tabular}{lrrrrrrrrr}
             \toprule
@@ -178,7 +303,17 @@ vervat zit in het netwerk. De predicties moeten dit dus in rekening brengen.
             Radius (m) & Smoothing Window (n) &                   &                 &          &                &                            &           &                   &                          \\
             \midrule
             200        & 5                    & 53.33             & 88.56           & 28       & 77.23          & 613.0                      & 2.45      & 1.28              & 37.86                    \\
+            400        & 5                    & 43.48             & 140.37          & 38       & 90.07          & 869.30                     & 2.69      & 1.56              & 34.53                    \\
+            600        & 5                    & 44.14             & 176.17          & 34       & 94.33          & 772.82                     & 2.76      & 1.78              & 31.28                    \\
+            800        & 5                    & 40.86             & 207.75          & 44       & 96.54          & 1047.14                    & 2.95      & 1.86              & 31.82                    \\
+            1000       & 5                    & 33.01             & 279.75          & 34       & 97.20          & 898.48                     & 2.67      & 2.00              & 28.57                    \\
+            1200       & 5                    & 30.10             & 345.21          & 43       & 97.41          & 1021.74                    & 2.86      & 2.07              & 28.92                    \\
+            1400       & 5                    & 23.66             & 402.62          & 33       & 98.20          & 788.23                     & 2.68      & 1.91              & 26.67                    \\
             \bottomrule
         \end{tabular}
     }
+    \captionsetup{justification=centering}
+    \caption{Attack result with different smoothing window sizes}\label{tab:smoothingV2}
 \end{table}
+
+% Figuur: 3 stappen hoe een EPZ wordt opgezet

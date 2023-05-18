@@ -16,7 +16,7 @@
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Voorbeeld van de mogelijke scenarios bij een total distance attack scenario\relax }}{16}{figure.caption.21}%
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Voorbeeld van een inner distance attack situatie\relax }}{16}{figure.caption.22}%
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Voorbeeld werking k-means clustering~\cite {InDepthk59:online}\relax }}{17}{figure.caption.23}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Voorbeeld van entry gates gevonden door k-means clustering en identificatie van de \ac {EPZ}\relax }}{18}{figure.caption.26}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Voorbeeld van entry gates gevonden door k-means clustering en de identificatie van een \ac {EPZ}\relax }}{18}{figure.caption.26}%
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Voorbeeld van het genereren van een roadgraph\relax }}{20}{figure.caption.27}%
 \contentsline {figure}{\numberline {3.6}{\ignorespaces Haversine illustratie voor het berekenen van de afstand~\cite {Distance97:online}\relax }}{22}{figure.caption.28}%
 \contentsline {figure}{\numberline {3.7}{\ignorespaces Willekeurig voorbeeld van Distance Matrix met een voorspelling van $12,3m$\relax }}{24}{figure.caption.29}%
@@ -28,9 +28,11 @@
 \contentsline {figure}{\numberline {4.5}{\ignorespaces Voorbeelden van \ac {gps}-bounce~\cite {BadGPSDa19:online}\relax }}{31}{figure.caption.39}%
 \contentsline {figure}{\numberline {4.6}{\ignorespaces Voorbeeld van zowel gps-drift en gps-bounce uit de gebruikte dataset\relax }}{31}{figure.caption.40}%
 \contentsline {figure}{\numberline {4.7}{\ignorespaces Voorbeeld van signal loss uit de gebruikte dataset\relax }}{32}{figure.caption.41}%
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Verdeling van de afstanden tussen twee opeenvolgende gps-punten\relax }}{34}{figure.caption.43}%
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Verschil tussen de berekende afstand en de theoretische afstand voor één gebruiker\relax }}{34}{figure.caption.44}%
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Verdeling van het verschil tussen de berekende afstand en de theoretische afstand buiten de \ac {EPZ} \relax }}{36}{figure.caption.45}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Verdeling van de afstanden tussen twee opeenvolgende gps-punten\relax }}{33}{figure.caption.43}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Verschil tussen de berekende afstand en de theoretische afstand voor één gebruiker\relax }}{35}{figure.caption.44}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Verdeling van het verschil tussen de berekende afstand en de theoretische afstand buiten de \ac {EPZ} \relax }}{37}{figure.caption.45}%
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Dhondt et al.\ bepaalt grafisch de trend van de afwijkingen bij het snappen van locaties op het wegennetwerk~\cite {Dhondt}\relax }}{39}{figure.caption.47}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Voorbeeld van een distributie van voorspellingen bepaald door het bootstrapalgoritme~\cite {Verdonck_2022}\relax }}{41}{figure.caption.48}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }

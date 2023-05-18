@@ -5,11 +5,12 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {4.1}{\ignorespaces Overzicht van gebruikers en activiteiten\relax }}{27}{table.caption.35}%
-\contentsline {table}{\numberline {4.2}{\ignorespaces Verdeling van de afstanden tussen twee opeenvolgende gps-punten\relax }}{33}{table.caption.42}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Verdeling van de afstanden tussen twee opeenvolgende gps-punten\relax }}{34}{table.caption.42}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Attack with given Outer Distance\relax }}{38}{table.caption.46}%
-\contentsline {table}{\numberline {5.2}{\ignorespaces Attack with normal gps-points (No Smoothing)\relax }}{38}{table.caption.47}%
-\contentsline {table}{\numberline {5.3}{\ignorespaces Attack result with different smoothing window sizes\relax }}{39}{table.caption.48}%
-\contentsline {table}{\numberline {5.4}{\ignorespaces Attack result with different smoothing window sizes\relax }}{40}{table.caption.49}%
+\contentsline {table}{\numberline {5.1}{\ignorespaces Aanval volgens het model van Dhondt et al.~\cite {Dhondt}\relax }}{42}{table.caption.49}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces Aanval op basis van gegeven \textit {outer distance}, en snelheid\relax }}{43}{table.caption.50}%
+\contentsline {table}{\numberline {5.3}{\ignorespaces Aanval op basis van ruwe \ac {gps}-locaties (geen smoothing) en snelheid\relax }}{43}{table.caption.51}%
+\contentsline {table}{\numberline {5.4}{\ignorespaces Aanval op basis van gesmoothe \ac {gps}-data en snelheid\relax }}{44}{table.caption.52}%
+\contentsline {table}{\numberline {5.5}{\ignorespaces Attack result with different smoothing window sizes\relax }}{45}{table.caption.53}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
