@@ -116,6 +116,11 @@ Plas;, J.~V. (2016).
 \newblock \url{https://jakevdp.github.io/PythonDataScienceHandbook/05.11-k-means.html}.
 \newblock (Accessed on 05/01/2023).
 
+\bibitem[Schrader et~al., 2013]{shmoothing}
+Schrader, F., Durner, W., Fank, J., Gebler, S., Pütz, T., Hannes, M., and Wollschläger, U. (2013).
+\newblock Estimating precipitation and actual evapotranspiration from precision lysimeter measurements.
+\newblock {\em Procedia Environmental Sciences}, 19:543--552.
+
 \bibitem[Seiler, 2022]{seiler2022haul}
 Seiler, K.~M. (2022).
 \newblock Haul road mapping from gps traces.

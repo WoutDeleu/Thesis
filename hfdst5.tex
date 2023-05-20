@@ -25,14 +25,15 @@ waar deze persoon meestal vanuit vertrekt of aankomt. Dit is de locatie die we
 beschouwen als degene waarrond de \ac{EPZ} wordt aangebracht, en dat tracht
 verborgen te worden. De grondwaarheid is dus de locatie die we trachten te
 achterhalen. We bepalen deze locatie door alle activiteiten van een gebruiker
-te overlopen, en indien 15 of meer begin- of eindpunten binnen een straal van
-50 meter liggen, dan berekenen we hiervan het gemiddelde en wordt dit
-gemiddelde gemapt op de roadgraph. Dit punt gematcht op de roadgraph stelt dan
-een grondwaarheid voor van deze gebruiker. Hassan et al.\ stelden dat 50 meter
-vergelijkbaar is met een breedte van een gemiddeld perceel, en dat dit dus een
-goede benadering is van de grondwaarheid~\cite{sec18has3:online,
-    Verdonck_2022}. Let wel, het kan dat éen gebruiker meerdere grondwaarheden
-bevat.
+te overlopen, en de begin- of eindpunten die binnen een straal van 50 meter van
+elkaar aan dezelfde cluster toe te voegen via het \ac{DBSCAN}-algoritme. Indien
+een cluster bestaat uit 15 punten of meer, dan berekenen we hiervan het
+gemiddelde en wordt dit gemiddelde gemapt op de roadgraph. Dit punt gematcht op
+de roadgraph stelt dan een grondwaarheid voor van deze gebruiker. Hassan et
+al.\ stelden dat 50 meter vergelijkbaar is met een breedte van een gemiddeld
+perceel, en dat dit dus een goede benadering is van de
+grondwaarheid~\cite{sec18has3:online, Verdonck_2022}. Let wel, het kan dat éen
+gebruiker meerdere grondwaarheden bevat.
 
 Een tweede kanttekening die we hierbij moeten maken is dat de effectieve begin-
 en eindlocaties niet altijd perfect op het wegennetwerk zullen liggen. Een
@@ -155,10 +156,10 @@ De \textit{Reduction of the k-anonymity set} kwantificeert de de afname in de
 set van alle mogelijke eindlocaties voor en na de effectieve predicties bij een
 aanval~\cite{Dhondt, Verdonck_2022}. De mogelijke eindlocaties voor de aanval
 zijn simpelweg alle nodes in de graafvoorstelling, eventueel begrensd door de
-\ac{EPZ}. Degene na de aanval zijn al degene die voorspelt worden. De reduction
+\ac{EPZ}. Degene na de aanval zijn al degene die voorspelt worden. De reductie
 is dus een percentage die het verschil tussen de twee sets aangeeft. Hoe hoger
-de reduction, hoe meer nodes verdwijnen uit de set van mogelijke eindlocaties
-na de aanval. Dit zegt dus iets over de hoeveelheid kandidaten het algoritme
+de reductie, hoe meer nodes verdwijnen uit de set van mogelijke eindlocaties na
+de aanval. Dit zegt dus iets over de hoeveelheid kandidaten het algoritme
 voorspelt, ten opzichte van hoeveel kandidaten er mogelijk zijn.
 \begin{equation}
     \frac{k-\left|V_{\text {pred }, \text { ext }}\right|}{k}\label{eq:reduction}
@@ -172,9 +173,25 @@ in ons geval drie meter aanneemt, veroorzaakt deze onzekerheidsregio's.
 Aangezien pas om de drie meter een node bestaat, zal voor elk punt die op deze
 node gemapt is een mogelijkheid bestaan dat deze eigenlijk ergens anders in de
 een zone van drie meter rond de node ligt. Hoe groter deze waarde, hoe groter
-de onzekerheid van de aanval, aangezien dit wijst op weinig overlap.
+de onzekerheid van de aanval, aangezien dit wijst op weinig overlap. $C_{v_p}$
+stelt de cirkel rond een node voor, met straal $d_{\text{chain}}$.
 \begin{equation}
     \operatorname{Area}\left(\bigcup_{v_p \in V_{\text {pred }}} C_{v_p}, d_{\text {chain }}\right)\label{eq:uncertainty}
+\end{equation}
+
+De \textit{Certainty} definieert de concentratie van de
+probabiliteitsdistributie~\cite{Dhondt}. Hoe hoger deze waarde, hoe verder van
+elkaar de nodes in de probabiliteitsdistributie liggen. Hoe hoger de certainty.
+\begin{equation}
+    -\sum_{v \in V} \widehat{\operatorname{Pr}}(v \mid a) \log (\widehat{\operatorname{Pr}}(v \mid a))\label{eq:certainty}
+\end{equation}
+
+De \textit{Spatial Certainty} is de certainty, maar in plaats van de
+probabiliteit van elke node te beschouwen, gebruiken we de neighboorhood
+probabiliteit om zo de densiteit in de buurt van elke node te
+beschouwen~\cite{Dhondt}.
+\begin{equation}
+    -\sum_{v \in V} \widehat{\operatorname{Pr}}(v \mid a) \log \left(\widehat{\operatorname{Pr}_n}(v \mid a)\right)\label{eq:spatial_certainty}
 \end{equation}
 
 De laatste evaluatiefactor is de \textit{Degree of
@@ -187,16 +204,6 @@ entropie komt voor indien elke node exactly evenveel voorspelt wordt, en is dus
 gelijk aan $\frac{1}{\# nodes}$.
 \begin{equation}
     \frac{-\sum_{v \in V} \widehat{\operatorname{Pr}}(v \mid a) \log _2(\widehat{\operatorname{Pr}}(v \mid a))}{H_0(V)}\label{eq:degree_of_anonymity}
-\end{equation}
-
-\textit{Certainty} \ldots
-\begin{equation}
-    -\sum_{v \in V} \widehat{\operatorname{Pr}}(v \mid a) \log (\widehat{\operatorname{Pr}}(v \mid a))\label{eq:certainty}
-\end{equation}
-
-\textit{Spatial Certainty} \ldots
-\begin{equation}
-    -\sum_{v \in V} \widehat{\operatorname{Pr}}(v \mid a) \log \left(\widehat{\operatorname{Pr}_n}(v \mid a)\right)\label{eq:spatial_certainty}
 \end{equation}
 
 \section{Resultaten}
@@ -364,7 +371,8 @@ ietwat wisselvallig, en er is geen duidelijke trend in terug te vinden.
 % Wanneer afwijkende punten net wel of net niet afgesneden worden door de
 % \ac{EPZ}. 
 Maar wanneer we zoeken naar het best scorende smoothing window, bekomen we uit
-op een smoothing window van 100.
+op een smoothing window van 100. Dit hoge smoothing window wijst wel nog maar
+eens op de vele fouten die de \ac{gps}-data bevat.
 
 De success rate toont een relatief kleine verbetering ten opzichte van het
 model met de ruwe \ac{gps}-data bij kleine \acp{EPZ}, maar bij grotere
