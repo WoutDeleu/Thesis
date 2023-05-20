@@ -6,21 +6,16 @@
 
 \chapter{Setting aanval}\label{chap:inferentieaanval}
 In dit hoofdstuk wordt de setting alsook de werking van de aanval beschreven.
-De aanval is sterk gebaseerd op de aanvallen
-van~\citeauthor{Dhondt}
-en~\citeauthor{Verdonck_2022}~\cite{Verdonck_2022,
-    Dhondt}. Deze aanvallen worden
-inferentie-aanvallen genoemd, vanwege het feit dat uit metadata essentiële
-gegevens kunnen worden geïnfereerd. In het geval
-van~\citeauthor{Dhondt} gaat dit over
-afgelegde afstand binnenin de \ac{EPZ}. In het geval
-van~\citeauthor{Verdonck_2022} gaat dit dan weer over geïnduceerde
+De aanval is sterk gebaseerd op de aanvallen van~\citeauthor{Dhondt}
+en~\citeauthor{Verdonck_2022}~\cite{Verdonck_2022, Dhondt}. Deze aanvallen
+worden inferentie-aanvallen genoemd, vanwege het feit dat uit metadata
+essentiële gegevens kunnen worden geïnfereerd. In het geval
+van~\citeauthor{Dhondt} gaat dit over afgelegde afstand binnenin de \ac{EPZ}.
+In het geval van~\citeauthor{Verdonck_2022} gaat dit dan weer over geïnduceerde
 hoogteverschillen binnen de privacy zone. Allereerst zal kort de mogelijkheden
 van een aanvaller in de huidige setting worden besproken. Daarna wordt de
-inferentieaanval
-van~\citeauthor{Dhondt}, die de basis
-vormt voor de aanval in deze thesis, besproken volgens een opdeling in drie
-stappen.
+inferentieaanval van~\citeauthor{Dhondt}, die de basis vormt voor de aanval in
+deze thesis, besproken volgens een opdeling in drie stappen.
 
 \section{Definitie aanvaller}\label{sec:definitie-aanvaller}
 Deze thesis voert een onderzoek naar de mogelijkheid om een \ac{EPZ} te
@@ -36,10 +31,9 @@ beschouwd die gecloaked zijn. De aanvaller heeft dus geen zicht op de reële
 start- en/of eindlocatie. Zijn doel is dan ook om ondanks de aanwezigheid van
 cloaking deze gevoelige locatie te achterhalen.
 
-Vanuit het oogpunt van de inferentieaanval beschreven
-door~\citeauthor{Dhondt} heeft de
-aanvaller toegang tot alle data die publiek beschikbaar is. Deze gebruikt dan
-voornamelijk afgelegde weg als basis.
+Vanuit het oogpunt van de inferentieaanval beschreven door~\citeauthor{Dhondt}
+heeft de aanvaller toegang tot alle data die publiek beschikbaar is. Deze
+gebruikt dan voornamelijk afgelegde weg als basis.
 
 De aanvaller die in deze thesis wordt beschreven, heeft echter geen toegang tot
 deze afstandsdata. Hij heeft wel nog toegang tot de ruwe gps-data, maar ook de
@@ -55,18 +49,17 @@ fitnesstrackers de afstandsgegevens op een bepaalde manier zouden verbergen of
 onbruikbaar maken, door bijvoorbeeld afrondingen te maken, of onzekerheid toe
 te voegen.
 
-\subsection{Assumpties}
+\subsection{Assumpties}\label{sec:assumpties}
 Om de aanval te kunnen uitvoeren, moeten enkele assumpties worden gemaakt.
-\citeauthor{Dhondt} maakte al enkele
-assumpties om de inferentieaanval succesvol uit te voeren. Voor dit onderzoek
-is het dus logisch om dezelfde veronderstellingen te maken. Zo kunnen we een
-nuttige vergelijking maken. De eerste assumptie bestaat eruit opdat de
-zichtbare begin -en eindpunten op de cirkel moeten liggen. Ten tweede moet de
-beschermde locatie op de roadgraph liggen. Hij kan niet buiten het voor ons te
-mappen gebied liggen, bijvoorbeeld in een bos waar geen pad ligt. Er wordt
-dieper ingegaan op de roadgraph in Sectie~\ref{sec:roadgraph}. Als laatste,
-maar desalniettemin belangrijk punt moet de gebruiker binnenin de \ac{EPZ} de
-kortste route volgen~\cite{Dhondt}.
+\citeauthor{Dhondt} maakte al enkele assumpties om de inferentieaanval
+succesvol uit te voeren. Voor dit onderzoek is het dus logisch om dezelfde
+veronderstellingen te maken. Zo kunnen we een nuttige vergelijking maken. De
+eerste assumptie bestaat eruit opdat de zichtbare begin -en eindpunten op de
+cirkel moeten liggen. Ten tweede moet de beschermde locatie op de roadgraph
+liggen. Hij kan niet buiten het voor ons te mappen gebied liggen, bijvoorbeeld
+in een bos waar geen pad ligt. Er wordt dieper ingegaan op de roadgraph in
+Sectie~\ref{sec:roadgraph}. Als laatste, maar desalniettemin belangrijk punt
+moet de gebruiker binnenin de \ac{EPZ} de kortste route volgen~\cite{Dhondt}.
 
 Dhondt et al.\ maakt nog een laatste assumptie over start- en eindpunten, die
 hetzelfde moeten zijn. Dit is echter niet van toepassing op dit onderzoek. Het
@@ -154,8 +147,7 @@ van deze cirkel. Bij elke iteratie zal een nieuwe cirkel worden beschouwd, en
 zullen de afstanden opnieuw worden berekent. Het proces wordt herhaald totdat
 een ietwat stabiele cirkel bekomen wordt. Een cirkel is stabiel wanneer het
 verschil in afstand tussen twee opeenvolgende gevonden cirkels kleiner is dan
-een drempelwaarde, in dit geval 10
-meter~\cite{Dhondt, Verdonck_2022}.
+een drempelwaarde, in dit geval 10 meter~\cite{Dhondt, Verdonck_2022}.
 \begin{figure}[h]
     \centering
     \begin{subfigure}[b]{.33\textwidth}
@@ -234,10 +226,8 @@ bevatten, in dit geval één.
 Na het bepalen van de \acp{EPZ} voor de gebruiker wordt overgegaan tot het
 berekenen en achterhalen van de bijhorende gegevens die nodig zijn om de
 gevoelige locatie te voorspellen. Hiervoor wordt verder ingegaan op de
-methodiek in de
-paper~\citeauthor{Dhondt}, maar er
-worden enkele gegevens op een andere manier benaderd volgens de huidige
-definitie van de aanvaller.
+methodiek in de paper~\citeauthor{Dhondt}, maar er worden enkele gegevens op
+een andere manier benaderd volgens de huidige definitie van de aanvaller.
 
 \subsection{Roadgraph en Distance Matrix}\label{sec:roadgraph}
 Voor elke gevonden EPZ is het noodzakelijk om een graafvoorstelling van de
@@ -325,11 +315,10 @@ Sectie~\ref{sec:roadgraph}, en de afstand die wordt afgelegd binnenin de
 \ac{EPZ}. Deze afstand benoemen we ook als de \textit{inner distance} (dit is
 niet te verwarren met de \textit{inner ditstance attack}).
 
-In de implementatie
-van~\citeauthor{Dhondt} kan de
-\textit{inner distance} simpelweg berekend worden door het verschil te nemen
-tussen de afgelegde afstand buiten de verhulde zone (deze noemen we de
-\textit{outer distance}), en de totale afstand: \[inner\ distance = total\
+In de implementatie van~\citeauthor{Dhondt} kan de \textit{inner distance}
+simpelweg berekend worden door het verschil te nemen tussen de afgelegde
+afstand buiten de verhulde zone (deze noemen we de \textit{outer distance}), en
+de totale afstand: \[inner\ distance = total\
     distance - outer\ distance \]
 
 In deze thesis moet dit echter gebeuren met een tussenstap. In het eerste
@@ -399,16 +388,16 @@ we dus in de mate van het mogelijke eruit te filteren.
 Het geval waarbij een gebruiker niet de kortste route volgt vanaf de rand van
 de \ac{EPZ} tot de gevoelige locatie kan in zekere mate worden opgevangen door
 te stellen dat een activiteit enkel wordt gebruikt wanneer de nog af te leggen
-afstand binnenin de \ac{EPZ} kleiner dan de maximaal mogelijk af te leggen weg.
-In de andere gevallen zal de activiteit worden gefilterd. De maximale afstand
-die hiervoor nodig is wordt bepaald gebruik makend van de \textit{Distance
-    Matrix}, die beschreven staat in Sectie~\ref{sec:roadgraph}. De maximale
-afstand is gelijk aan de maximale afstand terug te vinden in de matrix, voor de
-bijhorende startnode. Dit is de afstand die een gebruiker maximaal kan afleggen
-naar eender welke node op de graaf, vertrekkend van de startnode, door het
-volgen van de theoretisch kortste route. Dit zal ook voor een stuk gevallen in
-rekening brengen waarbij de activiteit voor een stuk verborgen wordt, maar niet
-zal eindigen op de gevoelige locatie.
+afstand binnenin de \ac{EPZ} kleiner os dan de maximaal mogelijk af te leggen
+weg. In de andere gevallen zal de activiteit worden gefilterd. De maximale
+afstand die hiervoor nodig is wordt bepaald gebruik makend van de
+\textit{Distance Matrix}, die beschreven staat in Sectie~\ref{sec:roadgraph}.
+De maximale afstand is gelijk aan de maximale afstand terug te vinden in de
+matrix, voor de bijhorende startnode. Dit is de afstand die een gebruiker
+maximaal kan afleggen naar eender welke node op de graaf, vertrekkend van de
+startnode, door het volgen van de theoretisch kortste route. Dit zal ook voor
+een stuk gevallen in rekening brengen waarbij de activiteit voor een stuk
+verborgen wordt, maar niet zal eindigen op de gevoelige locatie.
 
 Op een gelijkaardige manier kan een filtering gebeuren voor afgelegde afstanden
 die lager zijn dan de minimale mogelijke afstand. Dit zou opnieuw activiteiten
@@ -417,7 +406,7 @@ is dan ook degene tot de node met de laagste minimale afstand tot deze node
 vanaf het zichtbare startpunt/eindpunt van de activiteit, gelegen op de rand
 van de \ac{EPZ}.
 
-Ook worden de zichtbare eind- en beginpunten van de activiteiten gecontrolleerd
+Ook worden de zichtbare eind- en beginpunten van de activiteiten gecontroleerd
 naar compatibiliteit met de road graph. Alle eind- en beginpunten worden
 gesnapt op de roadgraph. Ze worden dus vervangen door de dichtstbijzijnde node
 op de graaf. Indien het verschil in afstand tussen de originele locatie en de
@@ -433,7 +422,7 @@ opzichte van de \ac{E.G.}, en dus op een grote kans op inaccurate
 voorspellingen.
 
 \subsection{Bepalen van de locatie}
-Om een predictie te maken per activiteit wordt de inner distance die berekent
+Om een predictie te maken per activiteit wordt de inner distance die berekend
 werd in Sectie~\ref{sec:berekeningen} gebruikt. Deze wordt dan gematched met
 het stratennetwerk. Het idee hierachter is om alle mogelijke routes (die de
 kortste route vormt naar de nodes op het pad) binnenin de \ac{EPZ} af te
@@ -442,26 +431,12 @@ inner distance. Het resultaat van deze gevolgde route is dan een node, die
 mogelijks de gevoelige locatie kan voorstellen. In de praktijk kan dit
 mechanisme op een simpele manier worden toegepast door het gebruik van de
 vooraf berekende distance matrix. De berekende inner distance zal worden
-vergeleken met de afstanden in de distance matrix, en de nodes in de \ac{EPZ}
-die het dichtst bij deze afstand liggen zullen worden geselecteerd als
-kandidaten voor de gevoelige locatie. Een willekeurig voorbeeld hiervan is te
-zien op Figuur~\ref{fig:matrix_prediction}, voor een afstand van $12.30m$, voor
-\textit{EG1}. Het resultaat in dit voorbeeld zal \textit{Node3} zijn. In dit
-voorbeeld wordt nu slechts één node voorspelt, maar in de praktijk kunnen dit
-er meerdere zijn. Indien dit proces herhaald wordt voor alle beschikbare
-activiteiten, met mogelijks verschillende Entry Gates, zullen er verschillende
-kandidaten worden gevonden. Ook zullen bepaalde nodes meer dan één keer worden
-voorspeld. In de volgende stap zullen alle predicties worden samengenomen in
-één voorspelling.
-\begin{figure}
-    \centering
-    \includegraphics[width=0.6\linewidth]{fig/RoadGraph/Matrix_Prediction.png}
-    \caption{Willekeurig voorbeeld van Distance Matrix met een voorspelling van $12,3m$}\label{fig:matrix_prediction}
-\end{figure}
-\subsection{Meest voorspelde locatie}
-Een verzameling van nodes is nu bekomen, die normaliter ook de gevoelige
-locatie bevat. Om deze te bepalen, wordt regressie-analyse toegepast, aan de
-hand van de \ac{LAD} methode. Het resultaat van deze regressie-analyse zal een
+vergeleken met de afstanden in de distance matrix.
+
+\subsection{Regressie om te komen tot een eindvoorspelling}
+Om de routes die we in vorige sectie bepaalden om te vormen tot één
+eindvoorspelling, wordt regressie-analyse toegepast, aan de hand van de
+\ac{LAD} methode. Het resultaat van deze regressie-analyse zal een
 \ac{gps}-locatie zijn, die onze \textit{eindvoorspelling} zal vormen.
 
 De \ac{LAD} methode wordt gebruikt om een lineaire regressie uit te voeren op
@@ -469,9 +444,8 @@ een set punten, door de som van de absolute waarden van de absolute verschillen
 te minimaliseren.\ \ac{LAD} staat gekend als een robuuste methode die erg
 nuttig blijkt te zijn voor datasets met grote uitschieters. In
 Vergelijking~\ref{eq:LAD} is te zien dat, door het werken met absolute waarden
-van de vergelijking staat afwijkingen tussen de waarden, de extremen in mindere
-mate doorwegen in de berekeningen. Dit is een groot voordeel ten opzichte van
-andere regressietechnieken, zoals
+van de vergelijking, extremen in mindere mate doorwegen in de berekeningen. Dit
+is een groot voordeel ten opzichte van andere regressietechnieken, zoals
 bijvoorbeeld~\ac{OLS}~\cite{iqbal2021application}.~\ac{OLS} werkt gelijkaardig,
 maar zoals te zien is in Vergelijking~\ref{eq:OLS} probeert deze de som van de
 kwadratische afwijkingen te minimaliseren. Uitschieters zullen dus meer
@@ -479,10 +453,10 @@ doorwegen. Een nadeel van \ac{LAD} is dat het berekenen van de LAD-schattingen
 meer rekentijd en computerbronnen vereist dan \ac{OLS}, wat het minder geschikt
 maakt voor grote datasets.
 \begin{equation} \label{eq:LAD}
-    LAD:\indent  \min\sum\limits_{i=1}^n|y_i - \hat{y}|
+    LAD:\indent  \min\sum\limits_{i=1}^n|d_i - d_{inner}|
 \end{equation}
 \begin{equation} \label{eq:OLS}
-    OLS:\indent  \min\sum\limits_{i=1}^n{(y_i - \hat{y})}^2
+    OLS:\indent  \min\sum\limits_{i=1}^n{(d_i - d_{inner})}^2
 \end{equation}
 
 In de context gebruiken we LAD regressie door de aard van de data en
@@ -490,16 +464,25 @@ voorspellingen, meer bepaald door de grote kans op uitschieters. Gps-data kan
 erg onnauwkeurig zijn, en grote of kleine afwijkingen kunnen dus voorkomen. Ook
 is het mogelijk dat door acties van een sporter zoals bijvoorbeeld eenmalig de
 kortste route niet volgen, uitschieters voorvallen. Rekentijd is in deze thesis
-geen probleem, aangezien het aantal voorspelde over het algemeen locaties
-beperkt is.
+geen probleem, aangezien de dataset beperkt is tot 100 activiteiten.
 
 In de context van deze thesis kan Vergelijking~\ref{eq:LAD} worden toegepast
-voor elke voorspelde locatie. Alle voorspelde locaties zullen worden beschouwd
-als mogelijke \textit{eindvoorspelling}. Deze zal dan in de vergelijking
-$\hat{y}$ voorstellen. De absolute waarde van het verschil tussen de
-eindvoorspelling en alle overige punten zal worden opgeteld. Er wordt gezocht
-naar het punt waarbij de som van de absolute waarde minimaal is, en dit is dan
-de resulterende predictie, de \textbf{eindvoorspelling}.
+voor elke node in de graaf. Elke node in graaf zullen we individueel beschouwen
+worden als een mogelijke eindvoorspelling. Het verschil tussen de nog af te
+leggen afstand voor deze activiteit en de afstand tot de node van het zichtbare
+begin- of eindpunt van de activiteit stelt dan de afwijking voor van deze
+activiteit. Indien we dit sommeren over alle activiteiten voor dezelfde node,
+bekomen we een waarde die de totale afwijking voorsteld indien we voor deze
+node als eindpredictie zouden kiezen. We overlopen alle nodes in de graaf, en
+selecteren deze met de laagste totale afwijking. Deze node zal dan de
+\textbf{eindvoorspelling} voor deze activiteit voorstellen.
+
+% Alle voorspelde locaties zullen worden beschouwd als mogelijke
+% \textit{eindvoorspelling}. Deze zal dan in de vergelijking $\hat{y}$
+% voorstellen. De absolute waarde van het verschil tussen de eindvoorspelling en
+% alle overige punten zal worden opgeteld. Er wordt gezocht naar het punt waarbij
+% de som van de absolute waarde minimaal is, en dit is dan de resulterende
+% predictie, de \textbf{eindvoorspelling}.
 
 % Extra: Figuur of filteren van activiteiten
 % Figuur die uitlegt hoe verschillende predicties worden gemaakt

@@ -111,8 +111,8 @@ deel. Een andere gebruiker zal enkel zicht hebben op de het zichtbare deel, het
 onzichtbare deel zal dus voor een andere gebruiker niet zichtbaar zijn. Anders
 geformuleerd, de activiteit zal voor deze persoon dus als het ware afgekapt
 zijn, en zal in zijn zichtbare versie op een andere plek starten en eindigen.
-In de volgende Secties~\ref{sec:Algemene Privacy} \&~\ref{sec:EPZ} wordt meer in
-detail ingegaan op de werking van deze methodiek.
+In de volgende Secties~\ref{sec:Algemene Privacy} \&~\ref{sec:EPZ} wordt meer
+in detail ingegaan op de werking van deze methodiek.
 
 Een laatste kanttekening die hierbij gemaakt moet worden, is dat voor een
 gebruiker verschillende eenheden mogelijk zijn om uit te kiezen. Er is keuze
@@ -186,7 +186,7 @@ ervan te zien~\cite{Snapping96:online}.
         \caption{Voorbeeldroute met map snapping}
         \includegraphics[width=0.5\textwidth]{fig/Map Snapping/after.png}\label{fig:after_MapSnapping}
     \end{subfigure}
-    \caption{Voorbeeld van de werking van \textit{Map Snapping}}\label{fig:MapSnapping}
+    \caption{Voorbeeld van de werking van \textit{Map Snapping}~\cite{Snapping96:online}}\label{fig:MapSnapping}
 \end{figure}
 
 Daarnaast bestaat de kans dat er gebruik gemaakt wordt van smoothing. Smoothing
@@ -216,9 +216,97 @@ curve de ruwe data voorstelt, dus voorafgaand op het `smoothen', en de rode de
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.6\linewidth]{fig/SmoothingExample.png}
-    \caption{Voorbeeld Data smoothing with moving average}\label{fig:SmoothingExample}
+    \caption{Voorbeeld Data smoothing met een moving average~\cite{SmoothingandInterpolatingNoisyGPSDatawithSmoothingSplines}}\label{fig:SmoothingExample}
 \end{figure}
 % - https://support.strava.com/hc/en-us/articles/216917707-Bad-GPS-Data
+
+\section{Mogelijke gps-fouten}\label{sec:gps-fouten}
+Zoals reeds aangehaald kunnen er bij het verzamelen van \ac{gps}-data
+significante fouten optreden. Met \ac{gps}-fouten wordt gedoeld op data die de
+\ac{gps}-sensor opvangt die niet overeenstemt met de werkelijke
+\ac{gps}-locatie. Deze fouten kunnen verschillende oorzaken hebben. De
+belangrijkste zijn hierbij \textit{\ac{gps}-drift}, \textit{\ac{gps}-signal
+    loss} en \textit{\ac{gps}-bounce}.
+
+Gps-drift is een fenomeen waarbij de \ac{gps}-locatie van een gebruiker afwijkt
+van de effectieve locatie. Een voorbeeld vanuit het Strava-platform is terug te
+vinden op Figuur~\ref{fig:gps_drift_Strava}. Hierbij is te zien dat de
+gebruiker een deel van de route door gebouwen heen en door het water aflegt.
+Dit kan worden veroorzaakt door dichtbebouwde omgevingen, en omgevingsfactoren
+zoals hoge bomen. Om dit tegen te gaan, zou eventueel de eerder beschreven
+methode van map-snapping kunnen worden toegepast.
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}[b]{.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{fig/Afwijkingen&Analyses/Crooked Routes/GPS-drift.png}
+        \caption{Voorbeeld van gps-drift op Strava}\label{fig:gps_drift_Strava}
+    \end{subfigure}\hfill
+    \begin{subfigure}[b]{.49\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{fig/Afwijkingen&Analyses/Crooked Routes/GPS-Drift_onlnie.jpg}
+        \caption{Voorbeeld van gps-drift op een satellietkaart, veroorzaakt door dichte boomgroei~\cite{BadGPSDa19:online}}
+    \end{subfigure}
+    \caption{Voorbeelden van gps-drift}
+\end{figure}
+
+Gps-bouncing is een fenomeen veroorzaakt door hoge gebouwen. Het
+\ac{gps}-signaal zal hierbij weerkaatsen tussen de gebouwen, op weg naar het
+toestel satelliet. De extra vertraging zorgt er voor dat het apparaat onterecht
+denkt een afstand afgelegd te hebben. De uitkomst van het traject is dan
+onvoorspelbaar, wat leidt tot een `cluster' van \ac{gps}-punten wanneer dit
+voor een paar punten in dezelfde omgeving gebeurt. Voorbeelden hiervan zijn
+terug te vinden op Figuur~\ref{fig:gps_bounce}. Om dit fenomeen op zijn beurt
+tegen te gaan, is het best om smoothing te toe te passen bij het berekenen.
+\begin{figure}
+    \centering
+    \begin{subfigure}[b]{0.49\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{fig/Afwijkingen&Analyses/Crooked Routes/Crooked GPS Route_Cart.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{fig/Afwijkingen&Analyses/Crooked Routes/GPS_bounce_map.jpg}
+    \end{subfigure}
+    \caption{Voorbeelden van \ac{gps}-bounce~\cite{BadGPSDa19:online}}\label{fig:gps_bounce}
+\end{figure}
+
+Er zijn ook voorbeelden waarbij beide fenomenen voorkomen, zoals te zien is op
+Figuur~\ref{fig:gps_drift_bounce_Strava}. Indien op een naïve manier de afstand
+berekenen zal een zich een significant verschil voordoen tussen de afstand die
+de gebruiker werkelijk afgelegd heeft, en de berekende afstand. Onder de naïve
+manier van afstandsberekening begrijpen we de totale som van het
+afstandsverschil tussen twee opeenvolgende punten te nemen.
+\begin{figure}
+    \centering
+    \includegraphics[width=0.7\textwidth]{fig/Afwijkingen&Analyses/Crooked Routes/1_notSnapped.png}
+    \caption{Voorbeeld van zowel gps-drift en gps-bounce uit de gebruikte dataset}\label{fig:gps_drift_bounce_Strava}
+\end{figure}
+
+Een laatste fenomeen dat kan optreden is \ac{gps}-signal loss. Hierbij gaat het
+signaal van de gebruiker verloren, en wordt pas op een later tijdstip terug een
+nieuw signaal ontvangen, waardoor een sprong werd gemaakt. In dit geval zou map
+matching opnieuw een goede oplossing om dit tegen te gaan. Een tweede oorzaak
+die kan leiden tot signal loss, die zeker van toepassing is bij fitness
+trackers, is de mogelijkheid tot het pauzeren van een activiteit. In dit geval
+wordt de activiteit gepauzeerd voor een bepaald tijdsframe, en wordt er geen
+data meer verzameld. Wanneer de activiteit terug wordt hervat, zal er een
+sprong zijn in de \ac{gps}-locaties, wat kan leiden tot een verkeerde
+berekening van de afstand. In het geval van een pauze zal mapmatching geen
+oplossing zijn, maar zou deze `sprongafstand' best weggelaten worden in de
+berekeningen. Een voorbeeld hiervan is terug te vinden op
+Figuur~\ref{fig:gps_signal_loss}.
+\begin{figure}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{fig/Afwijkingen&Analyses/Crooked Routes/1_Full_withArrow.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{fig/Afwijkingen&Analyses/Crooked Routes/1_Full_original.png}
+    \end{subfigure}
+    \caption{Voorbeeld van signal loss uit de gebruikte dataset}\label{fig:gps_signal_loss}
+\end{figure}
 
 \subsection{Algemeen Privacybeleid}\label{sec:Algemene Privacy}
 Het is zeker niet altijd wenselijk om alle data die vervat zit in zo'n
@@ -298,7 +386,7 @@ Figuur~\ref{fig:drop points}.
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.7\linewidth]{fig/EPZ-mechanisme/DropEPZPoints.png}
-    \caption{Voorbeeld filtering van punten binnen \ac{EPZ}}\label{fig:drop points}
+    \caption{Voorbeeld filtering van punten binnen \ac{EPZ}~\cite{Dhondt}}\label{fig:drop points}
 \end{figure}
 
 \section{Literatuur}
@@ -319,7 +407,7 @@ tegen dit soort aanvallen.
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.6\textwidth]{fig/EPZ-mechanisme/Hassan.png}
-    \caption{Mechanisme \ac{EPZ} beschreven door Hassan et al.}\label{fig:Hassan_EPZ}
+    \caption{Mechanisme \ac{EPZ} beschreven door Hassan et al.~\cite{sec18has3:online}}\label{fig:Hassan_EPZ}
 \end{figure}
 
 Een onderzoek door~\citeauthor{10.1145/3491102.3502136} in 2022 toonde ook aan
@@ -337,12 +425,11 @@ perfect zijn, en ook te omzeilen zijn door een persoon die geen technische
 achtergrond heeft.
 
 Dhondt et al.\ voerde tevens ook een studie in 2022 naar de mogelijke lekken
-aanwezig in het principe van
-\acp{EPZ}~\cite{Dhondt}. Er wordt in
-deze paper een nadruk gelegd op de translatie van de \ac{EPZ}, en hoe deze de
-privacy van een gebruiker verhoogt. Een inferentie aanval, wordt er beschreven
-die gebruikmaakt van de totale afstand die terug te vinden bij de activiteit.
-Het principe van deze inferentie aanval wordt uitvoerig beschreven in
+aanwezig in het principe van \acp{EPZ}~\cite{Dhondt}. Er wordt in deze paper
+een nadruk gelegd op de translatie van de \ac{EPZ}, en hoe deze de privacy van
+een gebruiker verhoogt. Een inferentie aanval, wordt er beschreven die
+gebruikmaakt van de totale afstand die terug te vinden bij de activiteit. Het
+principe van deze inferentie aanval wordt uitvoerig beschreven in
 Sectie~\ref{chap:inferentieaanval}. In het kort werkt de aanval als volgt: aan
 de hand van de totale afgelegde afstand in combinatie met het wegennetwerk in
 die omgeving, wordt een poging gedaan om alle mogelijke routes die de sporter
@@ -359,13 +446,12 @@ data ligt dan ook aan de grond van de inferentie aanval volgens Dhondt et al.
 
 Het meest recente werk in dit domein is de thesis
 van~\citeauthor{Verdonck_2022}~\cite{Verdonck_2022}. Deze thesis bouwt in grote
-mate verder op de paper van
-\citeauthor{Dhondt}, maar er wordt
-alternatieve data gebruikt. Er wordt een onderzoek gedaan in hoeverre de
-resultaten kunnen worden bekomen door het gebruik van hoogtedata om beschermde
-locaties te achterhalen. Via de kennis van hoogtedata van het stratenplan kan
-via de gekende hoogteverschillen een inferentie aanval opgezet worden, die nu
-geen afstanden maar hoogteverschillen infereerd. Op deze manier
+mate verder op de paper van \citeauthor{Dhondt}, maar er wordt alternatieve
+data gebruikt. Er wordt een onderzoek gedaan in hoeverre de resultaten kunnen
+worden bekomen door het gebruik van hoogtedata om beschermde locaties te
+achterhalen. Via de kennis van hoogtedata van het stratenplan kan via de
+gekende hoogteverschillen een inferentie aanval opgezet worden, die nu geen
+afstanden maar hoogteverschillen infereerd. Op deze manier
 bekomt~\citeauthor{Verdonck_2022} een succes rate van 36\%. Dit lagere
 succesratio is terug te brengen naar het feit dat hoogtedata een stuk minder
 precies zijn. Ook is hoogtetoename in heel wat regios niet zo significant, wat

@@ -11,7 +11,7 @@
 %\documentclass[11pt,a4paper,twoside,openright]{report}
 
 \usepackage[a4paper,left=3.5cm, right=2.5cm, top=3.5cm, bottom=3.5cm]{geometry}
-
+\usepackage{filecontents}
 \usepackage{amsmath}                 % wiskundige formules
 \usepackage{tikz}
 \usepackage{booktabs}
@@ -36,7 +36,7 @@
 \chapterfont{\raggedleft\sffamily}
 
 \usepackage[graphicx]{realboxes}
-
+\interfootnotelinepenalty=10000
 \usepackage{float}                      % De optie H voor de plaatsing van figuren op de plaats waar je ze invoegt. bvb. \begin{figure}[H]
 %\usepackage{longtable}					% tabellen die over meerdere pagina's gespreid worden
 %\usepackage[times]{quotchap}           % indien je fancy hoofdstuktitels wil
@@ -121,6 +121,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \appendix
 \input{bijlage1}
+\input{bijlage2}
 
-\includepdf{private/back_fiiw_gent.pdf}
+\includepdf{article.pdf}{}
+
+\AtEndDocument{\includepdf{private/back_fiiw_gent.pdf}}
 \end{document}

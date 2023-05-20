@@ -4,13 +4,14 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Overzicht van gebruikers en activiteiten\relax }}{27}{table.caption.35}%
-\contentsline {table}{\numberline {4.2}{\ignorespaces Verdeling van de afstanden tussen twee opeenvolgende gps-punten\relax }}{34}{table.caption.42}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces Overzicht van gebruikers en activiteiten\relax }}{30}{table.caption.38}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Verdeling van de afstanden tussen twee opeenvolgende gps-punten\relax }}{33}{table.caption.41}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Aanval volgens het model van Dhondt et al.~\cite {Dhondt}\relax }}{42}{table.caption.49}%
-\contentsline {table}{\numberline {5.2}{\ignorespaces Aanval op basis van gegeven \textit {outer distance}, en snelheid\relax }}{43}{table.caption.50}%
-\contentsline {table}{\numberline {5.3}{\ignorespaces Aanval op basis van ruwe \ac {gps}-locaties (geen smoothing) en snelheid\relax }}{43}{table.caption.51}%
-\contentsline {table}{\numberline {5.4}{\ignorespaces Aanval op basis van gesmoothe \ac {gps}-data en snelheid\relax }}{44}{table.caption.52}%
-\contentsline {table}{\numberline {5.5}{\ignorespaces Attack result with different smoothing window sizes\relax }}{45}{table.caption.53}%
+\contentsline {table}{\numberline {5.1}{\ignorespaces Aanval volgens het model van Dhondt et al.~\cite {Dhondt}\relax }}{44}{table.caption.49}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces Aanval op basis van gegeven \textit {outer distance}, en snelheid\relax }}{44}{table.caption.50}%
+\contentsline {table}{\numberline {5.3}{\ignorespaces Aanval op basis van ruwe \ac {gps}-locaties (geen smoothing) en snelheid\relax }}{45}{table.caption.51}%
+\contentsline {table}{\numberline {5.4}{\ignorespaces Aanval op basis van gesmoothe \ac {gps}-data en snelheid, met een empirisch bepaald optimaal smoothing window $n=100$\relax }}{45}{table.caption.52}%
 \addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {A.1}{\ignorespaces Aanval op basis van gesmoothe \ac {gps}-data en snelheid\relax }}{51}{table.caption.54}%
 \addvspace {10\p@ }

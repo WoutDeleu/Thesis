@@ -86,18 +86,15 @@ getransleerde punt, en de bijhorende straal. Alle punten die zich binnen deze
 zone bevinden, zullen worden verwijdert uit de activiteit.
 % Figuur: 3 stappen hoe een EPZ wordt opgezet
 
-BETROUWBAARHEIDSINTERVALLEN =$>$ VRAGEN THOMAS \newline dit is hoe ik het
-interpreteer
-
 \subsection{Bootstrapping}
 Bij het uittesten van de aanval wordt de aanval niet zomaar gedraaid op alle
 activiteiten per gebruiker. Dit zou vertekende resultaten kunnen geven. Per
 gebruiker wordt een betrouwbaarheidsinterval berekent via
-bootstrapping~\cite{Dhondt, Verdonck_2022}. Per gebruiker wordt de set met
-manueel ververhulde activiteiten beschouwd. Het bootstrapalgoritme kiest
-hieruit willekeurig één voor één activiteiten, en plaatst deze in een nieuwe
-groep totdat deze nieuwe groep activiteiten even groot is als de originele set
-van activiteiten. Let wel, het algoritme kan meerdere malen dezelfde activiteit
+bootstrapping~\cite{Dhondt, Verdonck_2022}. Ook wordt de set met manueel
+ververhulde activiteiten beschouwd. Het bootstrapalgoritme kiest hieruit
+willekeurig één voor één activiteiten, en plaatst deze in een nieuwe groep
+totdat deze nieuwe groep activiteiten even groot is als de originele set van
+activiteiten. Let wel, het algoritme kan meerdere malen dezelfde activiteit
 kiezen, dus met andere woorden kan de nieuw gemaakte groep duplicaten bevatten
 en bepaalde activiteiten helemaal niet bevatten. Dit gebeurt 1000 keer, en er
 worden dus 1000 verschillende sets gemaakt. Voor elke set zal dan een zal een
@@ -120,7 +117,10 @@ door de groene marker.
 \subsection{Evaluatie metrieken}
 Om iets zinnigs te kunnen vertellen over de effectiviteit van de aanval,
 definiëren we enkele metrieken die we kunnen gebruiken om de aanval te
-evalueren.
+evalueren. We gebruiken hiervoor de metrieken die ook gebruikt werden in de
+studies van~\citeauthor{Dhondt} en~\citeauthor{Verdonck_2022}, om zo onze
+resultaten er mee te kunnen vergelijken. In totaal gebruiken we acht
+verschillende evaluatiemetrieken.
 
 De eerste evaluatie metriek is de \textit{Success Rate}~\cite{Dhondt}. Dit is
 het percentage van de uitgevoerde aanvallen waar de gevoelige locatie succesvol
@@ -137,7 +137,13 @@ van de gemiddelde afwijking in afstand van de voorspelde locaties ten opzichte
 van de \ac{GT}. Hoe lager deze waarde, hoe preciezer de aanval. Let wel, een
 succes rate kan hoog zijn, maar de correctheid kan nog steeds hoog zijn. Dit
 duidt op een aanval die veel overshoots heeft, maar waar de correcte locatie
-zich wel binnen de straal van 22.95 meter bevindt.
+zich wel binnen de straal van 22.95 meter bevindt. De probabiliteitsdistributie
+wordt gegeven door $\widehat{\operatorname{Pr}}(v \mid a)$, waarbij $v$ de
+beschermde locaties voor activiteit $a$ zijn in
+Vergelijking~\ref{eq:correctness}.
+\begin{equation}
+    \sum_{v \in V} \widehat{\operatorname{Pr}}(v \mid a) \operatorname{dist}\left(v, v_{G T}\right)\label{eq:correctness}
+\end{equation}
 
 De \textit{Accuracy} definiëren we als de breedte van het
 betrouwbaarheidsinterval~\cite{Dhondt, Verdonck_2022}. Met de breedte van het
@@ -154,8 +160,11 @@ is dus een percentage die het verschil tussen de twee sets aangeeft. Hoe hoger
 de reduction, hoe meer nodes verdwijnen uit de set van mogelijke eindlocaties
 na de aanval. Dit zegt dus iets over de hoeveelheid kandidaten het algoritme
 voorspelt, ten opzichte van hoeveel kandidaten er mogelijk zijn.
+\begin{equation}
+    \frac{k-\left|V_{\text {pred }, \text { ext }}\right|}{k}\label{eq:reduction}
+\end{equation}
 
-De \textit{Uncertainty Region} is de som van oppervlaktes van de
+De \textit{Uncertainty Region ($m^2$)} is de som van oppervlaktes van de
 unie\footnote{De unie van de oppervlakte van twee cirkels is de som van de twee
     oppervlakten, min één maal het overlappende deel.} van de onzekerheidsregio's
 rond de voorspelde nodes~\cite{Dhondt,Verdonck_2022}. De chaining distance, die
@@ -164,6 +173,9 @@ Aangezien pas om de drie meter een node bestaat, zal voor elk punt die op deze
 node gemapt is een mogelijkheid bestaan dat deze eigenlijk ergens anders in de
 een zone van drie meter rond de node ligt. Hoe groter deze waarde, hoe groter
 de onzekerheid van de aanval, aangezien dit wijst op weinig overlap.
+\begin{equation}
+    \operatorname{Area}\left(\bigcup_{v_p \in V_{\text {pred }}} C_{v_p}, d_{\text {chain }}\right)\label{eq:uncertainty}
+\end{equation}
 
 De laatste evaluatiefactor is de \textit{Degree of
     Anonymity}~\cite{Dhondt,Verdonck_2022}. Dit is de genormaliseerde entropie van
@@ -172,33 +184,111 @@ mogelijke entropie, en wordt bepaald op basis van percentage $p_v$. Dit is een
 percentage die aangeeft bij hoeveel percent van de voorspellingen node $p$
 voorspelt wordt. Dit zal voor vele nodes gelijk zijn aan 0. De maximale
 entropie komt voor indien elke node exactly evenveel voorspelt wordt, en is dus
-gelijk aan $\frac{1}{\# nodes}$
+gelijk aan $\frac{1}{\# nodes}$.
+\begin{equation}
+    \frac{-\sum_{v \in V} \widehat{\operatorname{Pr}}(v \mid a) \log _2(\widehat{\operatorname{Pr}}(v \mid a))}{H_0(V)}\label{eq:degree_of_anonymity}
+\end{equation}
+
+\textit{Certainty} \ldots
+\begin{equation}
+    -\sum_{v \in V} \widehat{\operatorname{Pr}}(v \mid a) \log (\widehat{\operatorname{Pr}}(v \mid a))\label{eq:certainty}
+\end{equation}
+
+\textit{Spatial Certainty} \ldots
+\begin{equation}
+    -\sum_{v \in V} \widehat{\operatorname{Pr}}(v \mid a) \log \left(\widehat{\operatorname{Pr}_n}(v \mid a)\right)\label{eq:spatial_certainty}
+\end{equation}
 
 \section{Resultaten}
+Nu we alle evaluatiemetrieken besproken hebben, kunnen we overgaan naar de
+evaluatie van de geteste scenarios. Elk getest scenario zal afzonderlijk worden
+besproken, en in het laatste deel zal een vergelijking gemaakt worden tussen de
+verschillende scenario's. De resultaten van de aanvallen worden weergegeven in
+tabellen, die telkens voor elke metriek een score weergeven. Ook draaien we
+voor (zo goed als alle) scenario's een aanval voor enkele radiussen.
+
+Daarnaast worden de alle resultaten ook grafisch weergegeven op
+Figuur~\ref{fig:attack_comparison}. Dit geeft een mooi globaal overzicht van
+alle modellen ten opzichte van elkaar, en maakt de onderlinge verschillen
+zichtbaar. Bij de bespreking van de resultaten zullen we dan ook zowel
+refereren naar de tabellen als naar de grafieken.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{fig/result_graphs/all_results.png}
+    \caption{Vergelijking van de verschillende aanvallen}\label{fig:attack_comparison}
+\end{figure}
+
+Over het algemeen is een gelijklopende trend merkbaar bij het veranderen van de
+\acp{EPZ}. Bij een toenemende radius zakt de succesratio doordat een grotere
+radius meer nodes met zich meebrengt. En meer nodes zorgt voor meer mogelijke
+verwarring in de \ac{LAD} regressie~\cite{Verdonck_2022}. Dit brengt ook een
+grotere degree of anonymity en uncertainty region met zich mee. Het aantal
+voorspellingen neemt niet evenredig toe met het aantal nodes in de graaf
+naarmate de omvang toeneemt, wat resulteert in een verhoogde reduction. Als
+laatste valt ook op dat de correctness ook stijgt bij een grotere radius. Dit
+komt door een grotere kans op schending van één van de gestelde assumpties uit
+Sectie~\ref{sec:assumpties}. Deze sectie stelt onder andere dat een gebruiker
+het kortste pad moet volgen binnenin de \ac{EPZ}. Echter hoe groter de \ac{EPZ}
+van omvang is, hoe groter de kans dat hieraan niet voldaan wordt, en dus ook
+resulteren in een hogere correctness.
+
+\subsection{Model volgens Dhondt et al.}
+Het eerste model dat we testen is het model van
+\citeauthor{Dhondt}~\cite{Dhondt}, Tabel~\ref{tab:aanval_karel} toont de
+betreffende resultaten. We gebruiken deze resultaten om de rest van de ermee
+resultaten te vergelijken. Het model van~\citeauthor{Dhondt} heeft geen
+restricties betreffende de beschikbare data, het kan dus alle data gebruiken.
+Het is dan ook logisch dat dit resulteert in goeie scores. Het doel van de
+andere aanvallen was dan ook deze waardes te benaderen, maar met alternatieve
+data. Het aanvalsmodel is geïmplementeerd en uitgevoerd op ons eigen systeem op
+de beschikbare fractie van de dataset, wat de lichte verschillen ten opzichte
+van de resultaten beschreven in de desbetreffende paper verklaart. We zien hier
+dan ook een hoge succes rate, die relatief weinig afneemt bij hogere radiussen.
+De rest van de statistieken wijzen ook op een goeie aanval, wat naar de
+verwachtingen is.
+
 \begin{table}[h]
     \centering
-    \scalebox{0.5}{
+    \scalebox{0.55}{
         \begin{tabular}{lrrrrrrrr}
             \toprule
             {}         & Success Rate (\%) & Correctness (m) & Accuracy & Reduction (\%) & Uncertainty Region ($m^2$) & Certainty & Spatial Certainty & Degree of Anonymity (\%) \\
             Radius (m) &                   &                 &          &                &                            &           &                   &                          \\
             \midrule
             200        & 89.86             & 28.61           & 17       & 86.06          & 352.08                     & 2.06      & 0.58              & 30.69                    \\
+            400        & 79.1              & 56.82           & 21       & 93.21          & 469.76                     & 2.26      & 1.01              & 28.31                    \\
             600        & 70.37             & 79.94           & 24       & 96.52          & 502.42                     & 2.32      & 1.12              & 27.15                    \\
             800        & 73.33             & 113.68          & 27       & 97.05          & 670.53                     & 2.47      & 1.31              & 26.86                    \\
             1000       & 68.64             & 166.74          & 33       & 97.84          & 777.57                     & 2.62      & 1.54              & 27.25                    \\
             1200       & 58.33             & 180.97          & 27       & 98.15          & 684.71                     & 2.55      & 1.57              & 26.25                    \\
             1400       & 57.14             & 235.76          & 33       & 98.61          & 782.30                     & 2.54      & 1.82              & 25.31                    \\
-
             \bottomrule
         \end{tabular}
     }
     \captionsetup{justification=centering}
     \caption{Aanval volgens het model van Dhondt et al.~\cite{Dhondt}}\label{tab:aanval_karel}
 \end{table}
+
+\subsection{Gegeven outer distance}
+Het eerste scenario dat we testen is het model waarbij de outer distance
+rechtstreeks af te lezen valt uit de data. We bespraken dit geval al
+kortstondig in Sectie~\ref{sec:berekeningen}. Dit model komt voor wanneer de
+cumulatieve afstanden gegeven zijn. Het voordeel die dit model heeft is dat er
+geen \ac{gps}-data nodig is.
+
+Hierbij zien we gelijkaardige trend als bij het model van~\citeauthor{Dhondt},
+met op de meeste scores een kleine afname ten opzichte ervan. Er slechts één
+tussenstap is ten opzichte van het model van~\citeauthor{Dhondt}, namelijk het
+omreken van snelheid en de tijd tot de totale afstand. Dit verklaart dan ook
+meteen de kleine afnames en toenames in de resultaten. Deze omrekening zal een
+kleine afwijking met zich meebrengen, waarschijnlijk door afrondingen en
+mogelijke additionele berekeningen van Strava, bij het berekenen van de
+snelheid.
+
 \begin{table}[h]
     \centering
-    \scalebox{0.5}{
+    \scalebox{0.55}{
         \begin{tabular}{lrrrrrrrr}
             \toprule
             {}         & Success Rate (\%) & Correctness (m) & Accuracy & Reduction (\%) & Uncertainty Region ($m^2$) & Certainty & Spatial Certainty & Degree of Anonymity (\%) \\
@@ -217,9 +307,26 @@ gelijk aan $\frac{1}{\# nodes}$
     \captionsetup{justification=centering}
     \caption{Aanval op basis van gegeven \textit{outer distance}, en snelheid}\label{tab:outerDistance}
 \end{table}
+
+\subsection{Ruwe gps-data}
+De volgende aanval is deze zonder gegeven outer distance, maar ook zonder
+smoothing. Dit zorgt ervoor dat de aanvaller de ruwe \ac{gps}-data gebruikt
+voor het berekenen van de outer distance. In dit geval zit zowel de afwijking
+die afkomstig is van de snelheidsomrekening, die besproken werd in het vorige
+model (waarbij de outer distance gegeven is) alsook de afwijkingen die
+afkomstig zijn van de \ac{gps}-data zelf.
+
+De afwijkingen veroorzaakt wegen zoals verwacht relatief sterk door. Zeker bij
+grotere radiussen heeft dit een grote impact op de resultaten. Vanaf een radius
+van 1000 meter is de success rate zelfs 0\%. Maar ook bij de rest van de
+metrieken zien we een aanzienlijk slechtere score die erger wordt bij een
+hogere \ac{EPZ}-radius. Dit is te wijten aan de grote afwijkingen die de
+\ac{gps}-data in zijn geheel met zich mee brengt, zeker bij grotere radiussen
+weegt dit sterk door. Hoe groter de af te leggen afstand, in dit geval de inner
+distance, hoe groter de fout.
 \begin{table}[h]
     \centering
-    \scalebox{0.5}{
+    \scalebox{0.55}{
         \begin{tabular}{lrrrrrrrr}
             \toprule
             {}         & Success Rate (\%) & Correctness (m) & Accuracy & Reduction (\%) & Uncertainty Region ($m^2$) & Certainty & Spatial Certainty & Degree of Anonymity (\%) \\
@@ -239,61 +346,34 @@ gelijk aan $\frac{1}{\# nodes}$
     \caption{Aanval op basis van ruwe \ac{gps}-locaties (geen smoothing) en snelheid}\label{tab:noSmoothing}
 \end{table}
 
-\begin{table}[h]
-    \centering
-    \captionsetup{justification=centering}
-    \caption{Aanval op basis van gesmoothe \ac{gps}-data en snelheid}\label{tab:smoothing}
-    \Rotatebox{270}{
-        \scalebox{0.7}{
-            \begin{tabular}{lrrrrrrrrr}
-                \toprule
-                {}         &                      & Success Rate (\%) & Correctness (m) & Accuracy & Reduction (\%) & Uncertainty Region ($m^2$) & Certainty & Spatial Certainty & Degree of Anonymity (\%) \\
-                Radius (m) & Smoothing Window (n) &                   &                 &          &                &                            &           &                   &                          \\
-                \midrule
+\subsection{Smoothing}
+Het laatste model is hetzelfde als het voorgaande, maar nu wordt wel smoothing
+gebruikt op de routes in een poging om de afwijkingen van de \ac{gps}-data te
+verminderen. In Sectie~\ref{sec:berekeningen} bescreven we het mechanisme.
+Zeker de extremen zullen worden afgevlakt, waardoor de fouten van een kleinere
+orde zouden moeten hebben. Dit toont zich ook in de resultaten. Het gebruikte
+smoothing-algoritme heeft één parameter die wij kunnen aanpassen, namelijk de
+smoothing window. Deze parameter bepaalt hoeveel punten er per window worden
+gecombineerd. Het optimale smoothing window wordt hier bepaald door het
+uitvoeren van een aantal experimenten, en hiervan de resultaten met elkaar
+vergelijken. Deze resultaten zijn terug te vinden in
+Bijlage~\ref{ch:smoothing_results} op Tabel~\ref{tab:full_smoothing}. Deze zijn
+ietwat wisselvallig, en er is geen duidelijke trend in terug te vinden.
+% De hypothese is dat dit komt door de
+% factor van willekeur die meespeelt bij het manueel opzetten van de \ac{EPZ}.
+% Wanneer afwijkende punten net wel of net niet afgesneden worden door de
+% \ac{EPZ}. 
+Maar wanneer we zoeken naar het best scorende smoothing window, bekomen we uit
+op een smoothing window van 100.
 
-                \hline
-                200        & 5                    & 73.98             & 60.35           & 22       & 82.41          & 450.52                     & 2.21      & 1.03              & 32.92                    \\
-                600        & 5                    & 62.50             & 124.71          & 32       & 94.64          & 720.98                     & 2.59      & 1.58              & 29.95                    \\
-                800        & 5                    & 58.93             & 186.66          & 38       & 96.31          & 806.26                     & 2.87      & 1.82              & 31.83                    \\
-                1000       & 5                    & 40.20             & 243.65          & 34       & 97.43          & 812.48                     & 2.66      & 1.85              & 28.42                    \\
-                1200       & 5                    & 50.00             & 249.91          & 42       & 97.55          & 1007.75                    & 2.92      & 1.91              & 29.35                    \\
-                1400       & 5                    & 40.38             & 248.87          & 41       & 97.98          & 977.24                     & 2.99      & 2.11              & 29.81                    \\
-                \hline
-                200        & 10                   & 70.59             & 69.52           & 22       & 81.14          & 480.38                     & 2.2       & 1.06              & 33.34                    \\
-                200        & 15                   & 71.67             & 61.49           & 22       & 82.75          & 480.13                     & 2.17      & 1.01              & 32.96                    \\
-                200        & 20                   & 70.94             & 61.21           & 21       & 82.76          & 458.57                     & 2.21      & 1.03              & 33.35                    \\
-                200        & 25                   & 72.17             & 60.44           & 22       & 83.07          & 464.94                     & 2.17      & 1.02              & 32.89                    \\
-                \hline
-                200        & 50                   & 72.12             & 60.67           & 20       & 82.4           & 451.9                      & 2.15      & 1.03              & 32.28                    \\
-                600        & 50                   & 54.44             & 150.15          & 35       & 94.50          & 793.84                     & 2.59      & 1.63              & 29.96                    \\
-                400        & 50                   & 70.53             & 96.87           & 31       & 90.66          & 685.01                     & 2.52      & 1.38              & 32.7                     \\
-                800        & 50                   & 50.60             & 190.30          & 37       & 96.61          & 834.45                     & 2.72      & 1.83              & 29.26                    \\
-                1000       & 50                   & 52.38             & 224.32          & 36       & 97.08          & 906.66                     & 2.71      & 1.88              & 27.93                    \\
-                1200       & 50                   & 38.46             & 275.84          & 48       & 97.77          & 1127.09                    & 2.96      & 1.94              & 30.14                    \\
-                1400       & 50                   & 40.24             & 335.89          & 41       & 97.96          & 1037.62                    & 2.83      & 2.11              & 27.80                    \\
-                \hline
-                200        & 100                  & 75.0              & 61.37           & 20       & 82.22          & 450.15                     & 2.15      & 1.04              & 32.57                    \\
-                600        & 100                  & 58.97             & 141.04          & 29       & 94.89          & 692.52                     & 2.47      & 1.61              & 29.51                    \\
-                800        & 100                  & 56.34             & 217.13          & 36       & 96.30          & 773.61                     & 2.80      & 1.94              & 30.30                    \\
-                1000       & 100                  & 41.27             & 234.27          & 35       & 97.43          & 802.93                     & 2.69      & 1.87              & 29.13                    \\
-                1200       & 100                  & 44.12             & 278.00          & 39       & 98.06          & 953.93                     & 2.73      & 1.92              & 27.86                    \\
-                1400       & 100                  & 32.81             & 294.24          & 34       & 98.28          & 841.94                     & 2.82      & 2.06              & 27.51                    \\
-                \hline
-                200        & 110                  & 72.62             & 62.94           & 19       & 82.46          & 432.95                     & 2.15      & 1.04              & 32.23                    \\
-                200        & 125                  & 72.15             & 66.86           & 20       & 82.01          & 461.84                     & 2.16      & 1.04              & 32.2                     \\
-                \hline
-                200        & 150                  & 72.73             & 67.81           & 20       & 82.25          & 475.05                     & 2.14      & 1.05              & 31.7                     \\
-                400        & 150                  & 63.01             & 91.54           & 31       & 90.41          & 681.20                     & 2.51      & 1.44              & 32.77                    \\
-                600        & 150                  & 62.69             & 145.28          & 33       & 94.05          & 831.22                     & 2.63      & 1.75              & 30.28                    \\
-                800        & 150                  & 52.54             & 179.38          & 41       & 96.96          & 990.78                     & 2.70      & 1.68              & 29.72                    \\
-                1000       & 150                  & 40.68             & 255.28          & 30       & 97.57          & 776.27                     & 2.54      & 1.82              & 27.57                    \\
-                1200       & 150                  & 42.19             & 309.25          & 35       & 97.61          & 888.10                     & 2.73      & 2.05              & 26.69                    \\
-                1400       & 150                  & 37.50             & 328.00          & 38       & 98.13          & 904.30                     & 2.75      & 2.08              & 27.24                    \\
-                \bottomrule
-            \end{tabular}
-        }
-    }
-\end{table}
+De success rate toont een relatief kleine verbetering ten opzichte van het
+model met de ruwe \ac{gps}-data bij kleine \acp{EPZ}, maar bij grotere
+\acp{EPZ} zwakt deze veel minder zwaar af. Ook de andere metrieken vertonen een
+gelijkaardig patroon, waarbij de afzwakking veel minder sterk is dan bij het
+gebruik van ruwe \ac{gps}-punten. Dit toont dat het gebruik van smoothing zeker
+een significante toegevoegde waarde heeft. Let wel dit smoothing window
+empirisch bepaald en optimaal gekozen voor deze dataset. Voor een andere
+dataset kan het optimale window een verschillende waarde aannemen.
 \begin{table}[h]
     \centering
     \scalebox{0.5}{
@@ -302,18 +382,17 @@ gelijk aan $\frac{1}{\# nodes}$
             {}         &                      & Success Rate (\%) & Correctness (m) & Accuracy & Reduction (\%) & Uncertainty Region ($m^2$) & Certainty & Spatial Certainty & Degree of Anonymity (\%) \\
             Radius (m) & Smoothing Window (n) &                   &                 &          &                &                            &           &                   &                          \\
             \midrule
-            200        & 5                    & 53.33             & 88.56           & 28       & 77.23          & 613.0                      & 2.45      & 1.28              & 37.86                    \\
-            400        & 5                    & 43.48             & 140.37          & 38       & 90.07          & 869.30                     & 2.69      & 1.56              & 34.53                    \\
-            600        & 5                    & 44.14             & 176.17          & 34       & 94.33          & 772.82                     & 2.76      & 1.78              & 31.28                    \\
-            800        & 5                    & 40.86             & 207.75          & 44       & 96.54          & 1047.14                    & 2.95      & 1.86              & 31.82                    \\
-            1000       & 5                    & 33.01             & 279.75          & 34       & 97.20          & 898.48                     & 2.67      & 2.00              & 28.57                    \\
-            1200       & 5                    & 30.10             & 345.21          & 43       & 97.41          & 1021.74                    & 2.86      & 2.07              & 28.92                    \\
-            1400       & 5                    & 23.66             & 402.62          & 33       & 98.20          & 788.23                     & 2.68      & 1.91              & 26.67                    \\
+            200        & 100                  & 75.0              & 61.37           & 20       & 82.22          & 450.15                     & 2.15      & 1.04              & 32.57                    \\
+            600        & 100                  & 58.97             & 141.04          & 29       & 94.89          & 692.52                     & 2.47      & 1.61              & 29.51                    \\
+            800        & 100                  & 56.34             & 217.13          & 36       & 96.30          & 773.61                     & 2.80      & 1.94              & 30.30                    \\
+            1000       & 100                  & 41.27             & 234.27          & 35       & 97.43          & 802.93                     & 2.69      & 1.87              & 29.13                    \\
+            1200       & 100                  & 44.12             & 278.00          & 39       & 98.06          & 953.93                     & 2.73      & 1.92              & 27.86                    \\
+            1400       & 100                  & 32.81             & 294.24          & 34       & 98.28          & 841.94                     & 2.82      & 2.06              & 27.51                    \\
             \bottomrule
         \end{tabular}
     }
     \captionsetup{justification=centering}
-    \caption{Attack result with different smoothing window sizes}\label{tab:smoothingV2}
+    \caption{Aanval op basis van gesmoothe \ac{gps}-data en snelheid, met een empirisch bepaald optimaal smoothing window $n=100$}\label{tab:optimal_smoothing}
 \end{table}
 
 % Figuur: 3 stappen hoe een EPZ wordt opgezet
