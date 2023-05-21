@@ -8,11 +8,11 @@
 Deze thesis toont aan dat de inferentie-aanvallen mogelijk zijn op basis van
 snelheden en \ac{gps}-data, weliswaar met een lagere success rate en grotere
 onzekerheid. Indien de cumulatieve afstand ter beschikking is, kan via een
-eenvoudige omrekening $inner\ distance = total\ time \times average\ pace -
-    outer\ distance$ de aanval nog steeds worden uitgevoerd met een success rate
+eenvoudige omrekening ($inner\ distance = total\ time \times average\ pace -
+      outer\ distance$) de aanval nog steeds worden uitgevoerd met een success rate
 van 81.43\%, 79.71\%, 70.77\%, 65.83\%, 62.39\%, 57.98\%, 49.15\% voor de
 desbetreffende radii, wat absoluut aanvaardbaar is. Indien de cumulatieve
-afstandsdata op hun beurt niet voor handen is, kan via \ac{gps}-locaties een
+afstandsdata op zijn beurt niet voor handen is, kan via \ac{gps}-locaties een
 additionele omrekening gebeuren om de aanval alsnog te doen slagen. Door het
 gebruik van smoothing algoritmes kan de aanval ook in precisie winnen, en komen
 we tot een success rate van 75.0\%, 58.97\%, 56.34\%, 41.27\%, 44.12\%, 32.81\%
@@ -27,38 +27,39 @@ thesis is echter aan de kleine kant. De getrokken conclusies in deze thesis
 mogen dus niet zomaar worden geëxtrapoleerd naar de volledige groep van
 Stravagebruikers.
 
-Dhondt et al.\ beschreef enkele maatregelen om de privacy van gebruikers te
+Dhondt et al.\ beschreven enkele maatregelen om de privacy van gebruikers te
 verzekeren, zoals het afronden van afstandsdata of het toevoegen van
 \textit{noise} aan deze data om deze zo onbruikbaar te stellen~\cite{Dhondt}.
 Dit is dus niet meer van toepassing, alle \textit{`Distance-Focused
-    Countermeasures'} beschreven door~\citeauthor{Dhondt} kunnen worden omzeild in
-deze thesis. De aanvaller kan de afstandsdata in theorie herberekenen, en
-ultiem nog steeds de aanval tot een goed einde brengen. Alle distance based
-maatregelen die \citeauthor{Dhondt} beschreven zijn dus in principe niet meer
-bruikbaar. We zouden deze countermeasures in principe kunnen uitbreiden door
-hierbij de snelheid en/of tijd in rekening te brengen. Bijvoorbeeld bij
-generalisation, wat neerkomt op afronding van een afstand die zichtbaar is naar
-de buitenwereld, kan de snelheid op dezelfde manier een manipulatie ondergaan.
-Voor alle countermeasures in deze categorie, behalve \textit{Shifting
-    Distances} geldt dit principe, namelijk dat deze momenteel nutteloos zijn ten
-opzichte van ons aanvalsmodel, maar indien deze uitgebreid worden naar de tijd
-en/of snelheid, deze wel nuttig kunnen zijn. Alhoewel niet expliciet getest, is
-de hypothese dat alle countermeasures, indien uitgebreid naar de snelheid en/of
-tijd, hetzelfde effect zullen hebben. Het is en blijft natuurlijk een afweging
-tussen privacy en gebruiksvriendelijkheid. De besproken countermeasures zijn:
+      Countermeasures'} beschreven door~\citeauthor{Dhondt} kunnen worden omzeild
+door ons aanvalsmodel. De aanvaller kan de afstandsdata in theorie
+herberekenen, en ultiem nog steeds de aanval tot een goed einde brengen. Alle
+distance based maatregelen die \citeauthor{Dhondt} beschreven zijn dus in
+principe niet meer bruikbaar. We zouden deze countermeasures in principe kunnen
+uitbreiden door hierbij de snelheid en/of tijd in rekening te brengen.
+Bijvoorbeeld bij generalisation, wat neerkomt op afronding van een afstand die
+zichtbaar is naar de buitenwereld, kan de snelheid op dezelfde manier een
+manipulatie ondergaan. Voor alle countermeasures in deze categorie, behalve
+\textit{Shifting Distances} geldt dit principe, namelijk dat deze teniet worden
+gedaan ten opzichte van ons aanvalsmodel, maar indien deze uitgebreid worden
+naar de tijd en/of snelheid zouden deze alsnog nuttig kunnen blijken. Alhoewel
+niet expliciet getest, is de hypothese dat alle countermeasures, indien
+uitgebreid naar de snelheid en/of tijd, een gelijkaardig effect zullen hebben.
+Het is en blijft natuurlijk een afweging tussen privacy en
+gebruiksvriendelijkheid. De besproken countermeasures zijn:
 \begin{itemize}
-    \item \textit{Generalisation} houdt in dat de afstand wordt afgerond tot een bepaalde
-          precisie.~\citeauthor{Dhondt} stelt een precisie van 500 meter
-          voor~\cite{Dhondt}.
-    \item \textit{Noisy Distances} is een techniek waarbij een willekeurige waarde wordt
-          toegevoegd of afgetrokken aan de afstand.
-    \item \textit{Shifting Distances} verschuift de zichtbare begin- of eindpunten van een activiteit met een willekeurige afstand, in een willekeurige richting,
-          zodat geen het vertrekpunt onzeker wordt~\cite{Dhondt}. Dit zorgt voor problemen bij het reconstrueren van de route.
-    \item \textit{Truncation} stelt dat het verborgen traject niet mee in rekening wordt gebracht in de
-          totale afstand~\cite{Dhondt}. Dit verwijdert eigenlijk het verborgen traject volledig uit de activiteit.
+      \item \textit{Generalisation} houdt in dat de afstand wordt afgerond tot een bepaalde
+            precisie.~\citeauthor{Dhondt} stelt een precisie van 500 meter
+            voor~\cite{Dhondt}.
+      \item \textit{Noisy Distances} is een techniek waarbij een willekeurige waarde wordt
+            toegevoegd of afgetrokken van de afstand~\cite{Dhondt}.
+      \item \textit{Shifting Distances} verschuift de zichtbare begin- of eindpunten van een activiteit met een willekeurige afstand, in een willekeurige richting,
+            zodat geen het vertrekpunt onzeker wordt~\cite{Dhondt}. Dit zorgt voor problemen bij het reconstrueren van de route.
+      \item \textit{Truncation} stelt dat het verborgen traject niet mee in rekening wordt gebracht in de
+            totale afstand~\cite{Dhondt}. Dit verwijdert eigenlijk het verborgen traject volledig uit de activiteit.
 \end{itemize}
 De countermeasure \textit{Shifting Distances} is de enige die niet kan worden
-omzeild door onze implementatie, doordat voor deze implementatie ook de
+omzeild door onze implementatie, doordat voor ons model ook de
 zichtbare begin- en eindpunten worden genomen, en een vitaal onderdeel van de
 aanval zijn, net zoals bij het model door~\citeauthor{Dhondt}.
 
@@ -66,10 +67,10 @@ In het geval van de andere categorie van countermeasures, namelijk de
 `EPZ-Focused Countermeasures', is de verwachting dat deze wel nog steeds gelden
 als nuttige countermeasures. Deze countermeasures zijn:
 \begin{itemize}
-    \item \textit{Increasing \ac{EPZ} radii} wat, zoals de naam doet vermoeden inhoudt dat de \ac{EPZ} wordt vergroot~\cite{Dhondt}. We merken op dat de aanval
-          aanzienlijk minder presteert bij grote \ac{EPZ} radiussen.
-    \item \textit{Complex \ac{EPZ} shapes} houdt in dat de \ac{EPZ} niet langer een cirkel is, maar een
-          complexere vorm aanneemt~\cite{Dhondt}. Dit kan bijvoorbeeld een veelhoek zijn.
+      \item \textit{Increasing \ac{EPZ} radii} wat, zoals de naam doet vermoeden inhoudt dat de \ac{EPZ} wordt vergroot~\cite{Dhondt}. We merken op dat de aanval
+            aanzienlijk minder presteert bij grote \ac{EPZ} radiussen.
+      \item \textit{Complex \ac{EPZ} shapes} houdt in dat de \ac{EPZ} niet langer een cirkel is, maar een
+            complexere vorm aanneemt~\cite{Dhondt}. Dit kan bijvoorbeeld een veelhoek zijn.
 \end{itemize}
 
 Als laatste merken we wel op dat onze aanval enkel mogelijk is bij activiteiten
@@ -85,21 +86,21 @@ beschrijven te voorkomen.
 Naast de volledige uiteenzetting van dit onderzoek, zijn er nog enkele zaken
 die misschien niet in detail genoeg werden onderzocht, en die ook interessante
 resultaten zouden kunnen naar voor brengen. Ook zijn er bepaalde onderwerpen
-die hierop verder bouwen en ook het onderzoeken waard zijn. Daaronder valt het
-implementeren van het beschreven roadsnapping, wat eventueel zou kunnen leiden
-tot een hogere success rate bij het uitvoeren van de aanval. Zeker de
-combinatie en afhankelijkheid met het smoothing mechanisme kan een interessant
-onderwerp zijn. Hierbij zou ook nog kunnen worden geëxperimenteerd met een
-dynamisch smoothing window~\cite{shmoothing}. Dit is een smoothing window dat
-zich aanpast aan de eigenschappen van het signaal, zoals de ruis of
+die hierop verder bouwen en ook het onderzoeken waard kunnen zijn. Daaronder
+valt het implementeren van het beschreven roadsnapping, wat eventueel zou
+kunnen leiden tot een hogere success rate bij het uitvoeren van de aanval.
+Zeker de combinatie en afhankelijkheid met het smoothing mechanisme kan een
+interessant onderwerp zijn. Hierbij zou ook nog kunnen worden geëxperimenteerd
+met een dynamisch smoothing window~\cite{shmoothing}. Dit is een smoothing
+window dat zich aanpast aan de eigenschappen van het signaal, zoals de ruis of
 veranderingssnelheid van de grafiek. Bijvoorbeeld dat de breedte van het
 venster verhoogt bij grote hoeveelheden ruis is een mogelijke implementatie.
 
 Ook zou er een additionele analyse kunnen plaatsvinden om te zien onder welke
-omstandigheden de aanval het meest succesvol is. Er zou bijvoorbeeld kunnen
-worden getest bij welke bebouwingsdichtheid de aanval het meest succesvol is.
-Een belangrijk eigenschap die hierbij zeker ook moet getest worden is de
-hoeveelheid activiteiten die zorgen voor een succesvolle aanval.
+externe omstandigheden de aanval het meest succesvol is. Er zou bijvoorbeeld
+kunnen worden getest bij welke bebouwingsdichtheid de aanval het meest
+succesvol is. Een belangrijk eigenschap die hierbij zeker ook aan bod moet
+komen is de hoeveelheid activiteiten die zorgen voor een succesvolle aanval.
 
 Daarnaast zou in een bijkomstig onderzoek dat een wat bredere invloed heeft op
 het onderzoeksdomein kunnen worden onderzocht in hoeverre omgevingsfactoren
@@ -110,7 +111,7 @@ met een veel lagere precisie dan een met meer inwoners in een stad. De 22.5
 meter die nu empirisch werd bepaalt zou dus kunnen worden aangepast op basis
 van de bebouwingsdichtheid.
 
-Als laatste is er een idee om een ander implementatie van de \ac{LAD}-methode
+Als laatste is er een idee om een ander implementatie van de \ac{LAD}-regressie
 te gebruiken. Nu wordt voor elke activiteit de afwijking berekent ten opzichte
 van de nodes in de graaf, en wordt de node gekozen die over de volledige lijn
 de laagste afwijking bevat. Een alternatief zou kunnen zijn om voor elke
@@ -119,9 +120,9 @@ die activiteit. En uiteindelijk de node te verkiezen die in totaal de laagste
 totale som van alle onderlinge afstanden heeft. Met andere woorden, degene die
 het meest gecentreerd ligt. De \ac{LAD}-methode die beschreven werd in deze
 thesis gaat op zoek naar een zo laag mogelijke afwijking voor elke activiteit,
-ervan uitgaande van het ideale scenario dat elke activiteit stopt of begint op
-dezelfde locatie. In de hier alternatief beschreven \ac{LAD}-methode gaan
-vertrekken we er eerder vanuit dat activiteiten alternatieve locaties aanwijzen
+uitgaande van het ideale scenario waarbij elke activiteit stopt of begint op
+dezelfde locatie. In de hier alternatief beschreven \ac{LAD}-methode vertrekken
+we er eerder vanuit het feit dat activiteiten alternatieve locaties aanwijzen
 volgens hun afstand, door het feit dat ze effectief niet op dezelfde locatie
 eindigen. Gebruikers stoppen eens wat verder, eens wat vroeger, enzovoort. De
 alternatieve implementatie van de \ac{LAD}-methode zou dit dus voor een stuk

@@ -4,35 +4,35 @@
 %                                                                 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Resultaten en Evaluatie}
-De aanval werd tot hiertoe al volledig beschreven en toegelicht, en de dataset
-die gebruikt wordt om de aanval werd ook al besproken. Dit hoofdstuk bespreekt
-hoe de evaluatie wordt aangepakt, wat de bekomen resultaten zijn en wat ze
-betekenen.
+Het aanvalsmodel werd tot hiertoe al volledig beschreven en toegelicht, net als
+de dataset die gebruikt wordt om de aanval uit te testen. Dit hoofdstuk
+bespreekt hoe de evaluatie wordt aangepakt, wat de bekomen resultaten zijn en
+wat ze betekenen.
 
 \section{Evaluatie van de aanval}
-Het doel van de aanval is om een locatie te voorspellen waar een gebruiker bij
-zijn activiteiten vertrekt of aankomt, ondanks het feit dat deze locatie wordt
-verborgen door het gebruik van een \ac{EPZ}. Maar indien we dit zouden
-uittesten op activiteiten die al een \ac{EPZ} bevatten zouden we de bekomen
-resultaten niet kunnen verifiëren. Daarom zullen we de aanval uittesten en
-evalueren op publieke activiteiten die geen \ac{EPZ} bevatten, en deze manueel
-voorzien van een \ac{EPZ}. Zo kunnen we de bekomen resultaten vergelijken met
-een referentie, namelijk de \textit{grondwaarheid} of de \ac{GT}.
+Het doel van de aanval is om de locatie te voorspellen waar een gebruiker
+effectief vertrekt of aankomt bij het uitvoeren van een sportactiviteit,
+ondanks het feit dat deze locatie wordt verborgen door het gebruik van een
+\ac{EPZ}. Maar indien we dit zouden uittesten op activiteiten die al cloaking
+ondergingen door het platform zouden we de bekomen resultaten niet kunnen
+valideren. Daarom zullen we de aanval uittesten en evalueren op publieke
+activiteiten die geen \ac{EPZ} bevatten, en deze manueel voorzien van een
+\ac{EPZ}. Zo kunnen we de bekomen resultaten vergelijken met een referentie,
+namelijk de \textit{grondwaarheid} of de \ac{GT}.
 
 \subsection{De grondwaarheid}\label{sec:groundtruth}
 De grondwaarheid van een gebruiker is de effectieve woonplaats, of de plaats
 waar deze persoon meestal vanuit vertrekt of aankomt. Dit is de locatie die we
-beschouwen als degene waarrond de \ac{EPZ} wordt aangebracht, en dat tracht
-verborgen te worden. De grondwaarheid is dus de locatie die we trachten te
-achterhalen. We bepalen deze locatie door alle activiteiten van een gebruiker
-te overlopen, en de begin- of eindpunten die binnen een straal van 50 meter van
-elkaar aan dezelfde cluster toe te voegen via het \ac{DBSCAN}-algoritme. Indien
+beschouwen als degene waarrond de \ac{EPZ} wordt aangebracht, en die wij ultiem
+trachten te achterhalen. We bepalen deze locatie door alle activiteiten van een
+gebruiker te overlopen, en de begin- of eindpunten die binnen een straal van 50
+meter uit elkaar liggen aan dezelfde cluster toe te voegen volgens het
+\ac{DBSCAN}-algoritme. Hassan et al.\ stelden dat 50 meter vergelijkbaar is met
+een breedte van een gemiddeld perceel, en dat dit dus een goede benadering
+vormt voor de maximale afwijking~\cite{sec18has3:online, Verdonck_2022}. Indien
 een cluster bestaat uit 15 punten of meer, dan berekenen we hiervan het
-gemiddelde en wordt dit gemiddelde gemapt op de roadgraph. Dit punt gematcht op
-de roadgraph stelt dan een grondwaarheid voor van deze gebruiker. Hassan et
-al.\ stelden dat 50 meter vergelijkbaar is met een breedte van een gemiddeld
-perceel, en dat dit dus een goede benadering is van de
-grondwaarheid~\cite{sec18has3:online, Verdonck_2022}. Let wel, het kan dat éen
+gemiddelde en wordt dit gemiddelde gemapt op de roadgraph. Dit gesnapte punt
+stelt dan een grondwaarheid voor van deze gebruiker. Let wel, het kan dat éen
 gebruiker meerdere grondwaarheden bevat.
 
 Een tweede kanttekening die we hierbij moeten maken is dat de effectieve begin-
@@ -42,10 +42,10 @@ vervat zit in het netwerk. Wij mappen deze dan achteraf op het straatnetwerk,
 maar gedurende de upload berekent het platform in kwestie wel de totale
 afgelegde afstand tot het effectieve startpunt. Dit kan dus voor een afwijking
 bij de predicties zorgen.~\citeauthor{Dhondt} onderzochten deze afwijking door
-deze afwijking in een \ac{CDF} te plotten, en op zoek te gaan naar het
-elleboogpunt~\cite{Dhondt}. Het elbow point is een visueel punt in de curve
-waar zich een knik voordoet~\cite{Introduc22:online}. Dit duidt in theorie de
-optimale afweging tussen lage afwijking en hoge precisie aan. Zo
+een \ac{CDF} te plotten die alle afwijkingen visualiseert, en op zoek te gaan
+naar het elleboogpunt~\cite{Dhondt}. Het elbow point is een visueel punt in de
+curve waar zich een knik voordoet~\cite{Introduc22:online}. Dit duidt in
+theorie de optimale afweging tussen lage afwijking en hoge precisie aan. Zo
 bekomen~\citeauthor{Dhondt} een drempelwaarde van 22.95 meter om van een
 succesvolle aanval te kunnen spreken. Deze drempelwaarde is toepasselijk voor
 92\% van de gebruikers.
@@ -61,8 +61,8 @@ om zo de het evaluatieproces te versimpelen. Maar om de aanval te kunnen
 uitvoeren moet we dus nog manueel een \ac{EPZ} aanbrengen. Zo kunnen we een
 situatie creëren die de werkelijke situatie benadert, en kunnen we ons
 aanvalsmodel uitvoeren. Het is dus wel belangrijk dat de aangebrachte \ac{EPZ}
-op een realistische manier wordt aangebracht, op een manier die de
-werkelijkheid weerspiegelt.
+op een realistische manier wordt aangebracht zodat deze de werkelijkheid
+weerspiegelt.
 
 Sectie~\ref{sec:EPZ} bespreekt al uitvoerig het mechanisme van een \ac{EPZ}, en
 hoe deze wordt bepaald. Om het even kort te recapituleren, een \ac{EPZ} wordt
@@ -75,38 +75,38 @@ punt wordt een cirkel opgezet met de desbetreffende straal. Strava als
 fitnessplatform heeft de grootste keuze uit mogelijke stralen, namelijk van 200
 meter tot 1600 meter in sprongen van 200 meter. Het doel is om de effectiviteit
 van de aanval vast te leggen voor verschillende radiussen, dus zullen we per
-gebruiker en per aanval een \ac{EPZ} opzetten met alle verschillende radiussen.
-Zo kunnen we het effect van de radius zien, maar ook de types aanval onderling
-onafhankelijk van de straal vergelijken. We starten dus vanaf de \ac{GT}. Deze
-locatie ondervindt dan een willekeurige translatie. De verschuiving van het
-punt kan gebeuren in alle richting, en kiezen we dus willekeurig. De afstand
-van de translatie kan in principe ook willekeurig worden gekozen, maar moet wel
-binnen bepaalde grenzen liggen, namelijk tussen 0 en 70\% van de straal van de
-\ac{EPZ}. De cirkel kan dan worden opgesteld, met als middelpunt het
-getransleerde punt, en de bijhorende straal. Alle punten die zich binnen deze
-zone bevinden, zullen worden verwijdert uit de activiteit.
+gebruiker en per aanvalsmodel een \ac{EPZ} opzetten met alle verschillende
+radiussen. Zo kunnen we het effect van de radius zien, maar ook de types aanval
+onderling onafhankelijk van de straal vergelijken. We starten dus vanaf de
+\ac{GT}. Deze locatie ondervindt dan een willekeurige translatie. De
+verschuiving van het punt kan gebeuren in alle richting, en kiezen we dus
+willekeurig. De afstand van de translatie kan in principe ook willekeurig
+worden gekozen, maar moet wel binnen bepaalde grenzen liggen, namelijk tussen 0
+en 70\% van de straal van de \ac{EPZ}. De cirkel kan dan worden opgesteld, met
+als middelpunt het getransleerde punt, en de bijhorende straal. Alle punten die
+zich binnen deze zone bevinden, zullen worden verwijdert uit de activiteit.
 % Figuur: 3 stappen hoe een EPZ wordt opgezet
 
 \subsection{Bootstrapping}
-Bij het uittesten van de aanval wordt de aanval niet zomaar gedraaid op alle
-activiteiten per gebruiker. Dit zou vertekende resultaten kunnen geven. Per
-gebruiker wordt een betrouwbaarheidsinterval berekent via
-bootstrapping~\cite{Dhondt, Verdonck_2022}. Ook wordt de set met manueel
-ververhulde activiteiten beschouwd. Het bootstrapalgoritme kiest hieruit
-willekeurig één voor één activiteiten, en plaatst deze in een nieuwe groep
-totdat deze nieuwe groep activiteiten even groot is als de originele set van
-activiteiten. Let wel, het algoritme kan meerdere malen dezelfde activiteit
-kiezen, dus met andere woorden kan de nieuw gemaakte groep duplicaten bevatten
-en bepaalde activiteiten helemaal niet bevatten. Dit gebeurt 1000 keer, en er
-worden dus 1000 verschillende sets gemaakt. Voor elke set zal dan een zal een
-voorspelling worden uitgevoerd. Zo bekomen we een aantal voorspelde locaties,
-waarvan er een kans is dat enkele locaties meerdere malen voorspeld worden. Op
+Bij het uittesten van de aanval wordt de aanval niet zomaar een enkele keer
+uitgevoerd voor alle activiteiten per gebruiker. Dit zou vertekende resultaten
+kunnen geven. Per gebruiker wordt een betrouwbaarheidsinterval berekent via
+bootstrapping~\cite{Dhondt, Verdonck_2022}. De set met manueel verhulde
+activiteiten wordt beschouwd. Het bootstrapalgoritme kiest hieruit willekeurig
+één voor één activiteiten, en plaatst deze in een nieuwe groep totdat deze
+nieuwe groep activiteiten even groot is als de originele set van activiteiten.
+Let wel, het algoritme kan meerdere malen dezelfde activiteit kiezen, dus met
+andere woorden kan de nieuw gemaakte groep duplicaten bevatten en andere
+activiteiten helemaal niet bevatten. Dit gebeurt 1000 keer, en er worden dus
+1000 verschillende sets gemaakt. Voor elke set zal een voorspelling worden
+uitgevoerd. Zo bekomen we een aantal voorspelde locaties, waarvan er een kans
+is dat enkele locaties meerdere malen voorspeld worden. Op
 Figuur~\ref{fig:bootstrapping} is te zien hoe de distributie eruit ziet op een
 kaart~\cite{Verdonck_2022}. Op de figuur zijn de individuele voorspelling
 aangeduidt met een blauwe tot paarse kleur, afhankelijk van hoe frequent ze
 voorspeld werden (hoe meer naar de paarse of rode kleur ligt, hoe frequenter de
 node voorspeld is). Ook zichtbaar zijn de start- en eindpunten, met een
-verschillend kleur per \ac{E.G.}. De locatie van de grondwaarheid is aangeduid
+verschillend kleur per \ac{E.G.} De locatie van de grondwaarheid is aangeduid
 door de groene marker.
 
 \begin{figure}[h]
@@ -116,20 +116,19 @@ door de groene marker.
 \end{figure}
 
 \subsection{Evaluatie metrieken}
-Om iets zinnigs te kunnen vertellen over de effectiviteit van de aanval,
+Om iets zinnigs te kunnen vertellen over de effectiviteit van de aanval
 definiëren we enkele metrieken die we kunnen gebruiken om de aanval te
 evalueren. We gebruiken hiervoor de metrieken die ook gebruikt werden in de
 studies van~\citeauthor{Dhondt} en~\citeauthor{Verdonck_2022}, om zo onze
-resultaten er mee te kunnen vergelijken. In totaal gebruiken we acht
+resultaten er eenduidig mee te kunnen vergelijken. In totaal gebruiken we acht
 verschillende evaluatiemetrieken.
 
 De eerste evaluatie metriek is de \textit{Success Rate}~\cite{Dhondt}. Dit is
 het percentage van de uitgevoerde aanvallen waar de gevoelige locatie succesvol
 is achterhaald. Rekening houdend met de overshoots die komen met het snappen
 van locaties op het wegennetwerk, is een correcte locatie een locatie die zich
-binnen een straal van 22.95 meter van de \ac{GT} bevindt. De succes rate is dus
-het percentage van de aanvallen waar de correcte locatie zich binnen deze
-straal bevindt. Hoe hoger het percentage, hoe succesvoller de aanval.
+binnen een straal van 22.95 meter van de \ac{GT} bevindt. Hoe hoger het
+percentage, hoe succesvoller de aanval.
 
 De \textit{Correctness} van een aanval is de som van de Euclidische afstanden
 tussen de \ac{GT} en de voorspelde locatie gedeeld door het aantal keer deze
@@ -147,20 +146,21 @@ Vergelijking~\ref{eq:correctness}.
 \end{equation}
 
 De \textit{Accuracy} definiëren we als de breedte van het
-betrouwbaarheidsinterval~\cite{Dhondt, Verdonck_2022}. Met de breedte van het
-betrouwbaarheidsinterval doelen we op het aantal unieke voorspellingen, het
-aantal nodes dat precies eenmalig worden voorspeld. Hoe meer unieke nodes, hoe
-hoger de accuracy en ook hoe minder `zeker' onze voorspelling is.
+betrouwbaarheidsinterval~\cite{Dhondt, Verdonck_2022}. Met deze breedte doelen
+we op het aantal unieke voorspellingen, het aantal nodes dat precies eenmalig
+worden voorspeld. Hoe meer unieke nodes, hoe hoger de accuracy en ook hoe
+minder `zeker' onze voorspelling is.
 
 De \textit{Reduction of the k-anonymity set} kwantificeert de de afname in de
-set van alle mogelijke eindlocaties voor en na de effectieve predicties bij een
+set van alle mogelijke eindlocaties voor en na de effectieve predicties van een
 aanval~\cite{Dhondt, Verdonck_2022}. De mogelijke eindlocaties voor de aanval
 zijn simpelweg alle nodes in de graafvoorstelling, eventueel begrensd door de
-\ac{EPZ}. Degene na de aanval zijn al degene die voorspelt worden. De reductie
-is dus een percentage die het verschil tussen de twee sets aangeeft. Hoe hoger
-de reductie, hoe meer nodes verdwijnen uit de set van mogelijke eindlocaties na
-de aanval. Dit zegt dus iets over de hoeveelheid kandidaten het algoritme
-voorspelt, ten opzichte van hoeveel kandidaten er mogelijk zijn.
+\ac{EPZ}. Degene na de aanval zijn alle nodes die effectief voorspelt worden.
+De reductie is dus een percentage die het verschil tussen de twee sets
+aangeeft. Hoe hoger de reductie, hoe meer nodes verdwijnen uit de set van
+mogelijke eindlocaties na de aanval. Dit zegt dus iets over de hoeveelheid
+kandidaten het algoritme voorspelt, ten opzichte van hoeveel kandidaten er
+mogelijk zijn.
 \begin{equation}
     \frac{k-\left|V_{\text {pred }, \text { ext }}\right|}{k}\label{eq:reduction}
 \end{equation}
@@ -170,10 +170,10 @@ unie\footnote{De unie van de oppervlakte van twee cirkels is de som van de twee
     oppervlakten, min één maal het overlappende deel.} van de onzekerheidsregio's
 rond de voorspelde nodes~\cite{Dhondt,Verdonck_2022}. De chaining distance, die
 in ons geval drie meter aanneemt, veroorzaakt deze onzekerheidsregio's.
-Aangezien pas om de drie meter een node bestaat, zal voor elk punt die op deze
-node gemapt is een mogelijkheid bestaan dat deze eigenlijk ergens anders in de
-een zone van drie meter rond de node ligt. Hoe groter deze waarde, hoe groter
-de onzekerheid van de aanval, aangezien dit wijst op weinig overlap. $C_{v_p}$
+Aangezien pas om de drie meter een node bestaat, zal voor elke voorspelde node
+een kans bestaan dat deze eigenlijk een punt representeert die ergens in de
+zone van drie meter rond deze node ligt. Hoe groter deze waarde, hoe groter de
+onzekerheid van de aanval, aangezien dit wijst op weinig overlap. $C_{v_p}$
 stelt de cirkel rond een node voor, met straal $d_{\text{chain}}$.
 \begin{equation}
     \operatorname{Area}\left(\bigcup_{v_p \in V_{\text {pred }}} C_{v_p}, d_{\text {chain }}\right)\label{eq:uncertainty}
@@ -181,7 +181,7 @@ stelt de cirkel rond een node voor, met straal $d_{\text{chain}}$.
 
 De \textit{Certainty} definieert de concentratie van de
 probabiliteitsdistributie~\cite{Dhondt}. Hoe hoger deze waarde, hoe verder van
-elkaar de nodes in de probabiliteitsdistributie liggen. Hoe hoger de certainty.
+elkaar de nodes in de probabiliteitsdistributie liggen.
 \begin{equation}
     -\sum_{v \in V} \widehat{\operatorname{Pr}}(v \mid a) \log (\widehat{\operatorname{Pr}}(v \mid a))\label{eq:certainty}
 \end{equation}
@@ -209,12 +209,12 @@ gelijk aan $\frac{1}{\# nodes}$.
 \section{Resultaten}
 Nu we alle evaluatiemetrieken besproken hebben, kunnen we overgaan naar de
 evaluatie van de geteste scenarios. Elk getest scenario zal afzonderlijk worden
-besproken, en in het laatste deel zal een vergelijking gemaakt worden tussen de
-verschillende scenario's. De resultaten van de aanvallen worden weergegeven in
-tabellen, die telkens voor elke metriek een score weergeven. Ook draaien we
-voor (zo goed als alle) scenario's een aanval voor enkele radiussen.
+besproken alsook onderling vergeleken worden. De resultaten van de aanvallen
+worden weergegeven in tabellen, die telkens voor elke metriek een score
+weergeven. Ook draaien we voor (zo goed als) alle beschreven scenario's een
+aanval voor enkele radiussen.
 
-Daarnaast worden de alle resultaten ook grafisch weergegeven op
+Daarnaast worden alle resultaten ook grafisch weergegeven op
 Figuur~\ref{fig:attack_comparison}. Dit geeft een mooi globaal overzicht van
 alle modellen ten opzichte van elkaar, en maakt de onderlinge verschillen
 zichtbaar. Bij de bespreking van de resultaten zullen we dan ook zowel
@@ -226,34 +226,35 @@ refereren naar de tabellen als naar de grafieken.
     \caption{Vergelijking van de verschillende aanvallen}\label{fig:attack_comparison}
 \end{figure}
 
-Over het algemeen is een gelijklopende trend merkbaar bij het veranderen van de
-\acp{EPZ}. Bij een toenemende radius zakt de succesratio doordat een grotere
-radius meer nodes met zich meebrengt. En meer nodes zorgt voor meer mogelijke
-verwarring in de \ac{LAD} regressie~\cite{Verdonck_2022}. Dit brengt ook een
-grotere degree of anonymity en uncertainty region met zich mee. Het aantal
-voorspellingen neemt niet evenredig toe met het aantal nodes in de graaf
-naarmate de omvang toeneemt, wat resulteert in een verhoogde reduction. Als
-laatste valt ook op dat de correctness ook stijgt bij een grotere radius. Dit
-komt door een grotere kans op schending van één van de gestelde assumpties uit
+Over het algemeen is een gelijklopende trend merkbaar over de modellen heen,
+bij het veranderen van de \acp{EPZ}. Bij een toenemende radius zakt de
+succesratio doordat een grotere radius meer nodes met zich meebrengt. En meer
+nodes zorgt voor meer mogelijke verwarring in de \ac{LAD}
+regressie~\cite{Verdonck_2022}. Dit brengt ook een grotere degree of anonymity
+en uncertainty region met zich mee. Het aantal voorspellingen neemt niet
+evenredig toe met het aantal nodes in de graaf naarmate de omvang toeneemt, wat
+resulteert in een verhoogde reduction. Als laatste valt ook op dat de
+correctness ook stijgt bij een grotere radius. Dit komt door een grotere kans
+op schending van één van de gestelde assumpties uit
 Sectie~\ref{sec:assumpties}. Deze sectie stelt onder andere dat een gebruiker
 het kortste pad moet volgen binnenin de \ac{EPZ}. Echter hoe groter de \ac{EPZ}
-van omvang is, hoe groter de kans dat hieraan niet voldaan wordt, en dus ook
+van omvang is, hoe groter de kans dat hieraan niet voldaan wordt, en wat zal
 resulteren in een hogere correctness.
 
 \subsection{Model volgens Dhondt et al.}
 Het eerste model dat we testen is het model van
 \citeauthor{Dhondt}~\cite{Dhondt}, Tabel~\ref{tab:aanval_karel} toont de
-betreffende resultaten. We gebruiken deze resultaten om de rest van de ermee
-resultaten te vergelijken. Het model van~\citeauthor{Dhondt} heeft geen
+betreffende resultaten. We gebruiken deze resultaten als referentie voor de
+rest van de resultaten. Het model van~\citeauthor{Dhondt} heeft geen
 restricties betreffende de beschikbare data, het kan dus alle data gebruiken.
-Het is dan ook logisch dat dit resulteert in goeie scores. Het doel van de
-andere aanvallen was dan ook deze waardes te benaderen, maar met alternatieve
-data. Het aanvalsmodel is geïmplementeerd en uitgevoerd op ons eigen systeem op
-de beschikbare fractie van de dataset, wat de lichte verschillen ten opzichte
-van de resultaten beschreven in de desbetreffende paper verklaart. We zien hier
-dan ook een hoge succes rate, die relatief weinig afneemt bij hogere radiussen.
-De rest van de statistieken wijzen ook op een goeie aanval, wat naar de
-verwachtingen is.
+Het is dan ook logisch dat dit resulteert in goeie scores. We zien hier dan ook
+een hoge succes rate, die relatief weinig afneemt bij hogere radiussen. De rest
+van de statistieken wijzen ook op een goeie aanval, wat naar de verwachtingen
+is. Het doel van de andere aanvallen was dan ook deze waardes te benaderen,
+maar met alternatieve data.Het aanvalsmodel is geïmplementeerd en uitgevoerd op
+ons eigen systeem op de beschikbare fractie van de dataset, wat de lichte
+verschillen ten opzichte van de resultaten beschreven in de desbetreffende
+paper verklaart.
 
 \begin{table}[h]
     \centering
@@ -281,17 +282,17 @@ verwachtingen is.
 Het eerste scenario dat we testen is het model waarbij de outer distance
 rechtstreeks af te lezen valt uit de data. We bespraken dit geval al
 kortstondig in Sectie~\ref{sec:berekeningen}. Dit model komt voor wanneer de
-cumulatieve afstanden gegeven zijn. Het voordeel die dit model heeft is dat er
-geen \ac{gps}-data nodig is.
+cumulatieve afstanden ter beschikking zijn. Het voordeel dat dit model heeft is
+dat er geen \ac{gps}-data nodig is.
 
 Hierbij zien we gelijkaardige trend als bij het model van~\citeauthor{Dhondt},
-met op de meeste scores een kleine afname ten opzichte ervan. Er slechts één
-tussenstap is ten opzichte van het model van~\citeauthor{Dhondt}, namelijk het
-omreken van snelheid en de tijd tot de totale afstand. Dit verklaart dan ook
-meteen de kleine afnames en toenames in de resultaten. Deze omrekening zal een
-kleine afwijking met zich meebrengen, waarschijnlijk door afrondingen en
-mogelijke additionele berekeningen van Strava, bij het berekenen van de
-snelheid.
+met op de meeste scores een kleine achteruitgang ten opzichte ervan. Er is
+slechts één tussenstap is ten opzichte van het model van~\citeauthor{Dhondt},
+namelijk het omreken van snelheid en de tijd tot de totale afstand. Dit
+verklaart dan ook meteen de kleine afnames en toenames in de resultaten. Deze
+omrekening zal een kleine afwijking met zich meebrengen, waarschijnlijk door
+afrondingen en mogelijke additionele berekeningen van Strava bij het berekenen
+van de snelheid.
 
 \begin{table}[h]
     \centering
@@ -316,21 +317,21 @@ snelheid.
 \end{table}
 
 \subsection{Ruwe gps-data}
-De volgende aanval is deze zonder gegeven outer distance, maar ook zonder
-smoothing. Dit zorgt ervoor dat de aanvaller de ruwe \ac{gps}-data gebruikt
-voor het berekenen van de outer distance. In dit geval zit zowel de afwijking
-die afkomstig is van de snelheidsomrekening, die besproken werd in het vorige
-model (waarbij de outer distance gegeven is) alsook de afwijkingen die
-afkomstig zijn van de \ac{gps}-data zelf.
+De volgende aanval is deze zonder gegeven cumulatieve afstand, maar ook zonder
+smoothing. Dit zorgt ervoor dat de aanvaller de ruwe \ac{gps}-data rechtstreeks
+gebruikt voor het berekenen van de outer distance. In dit geval zit zowel de
+afwijking die afkomstig is van de snelheidsomrekening, die besproken werd in
+het vorige model (waarbij de outer distance gegeven is) alsook de afwijkingen
+die afkomstig zijn van de \ac{gps}-data zelf vervat in de resultaten.
 
 De afwijkingen veroorzaakt wegen zoals verwacht relatief sterk door. Zeker bij
 grotere radiussen heeft dit een grote impact op de resultaten. Vanaf een radius
 van 1000 meter is de success rate zelfs 0\%. Maar ook bij de rest van de
-metrieken zien we een aanzienlijk slechtere score die erger wordt bij een
-hogere \ac{EPZ}-radius. Dit is te wijten aan de grote afwijkingen die de
-\ac{gps}-data in zijn geheel met zich mee brengt, zeker bij grotere radiussen
-weegt dit sterk door. Hoe groter de af te leggen afstand, in dit geval de inner
-distance, hoe groter de fout.
+metrieken zien we een aanzienlijk slechtere score een sterke achteruitgang
+vertoond bij een hogere \ac{EPZ}-radius. Dit is te wijten aan de grote
+afwijkingen die de \ac{gps}-data in zijn geheel met zich mee brengt, zeker bij
+grotere radiussen weegt dit sterk door. Hoe groter de af te leggen afstand, in
+dit geval de inner distance, hoe groter de fout.
 \begin{table}[h]
     \centering
     \scalebox{0.55}{
@@ -354,34 +355,34 @@ distance, hoe groter de fout.
 \end{table}
 
 \subsection{Smoothing}
-Het laatste model is hetzelfde als het voorgaande, maar nu wordt wel smoothing
-gebruikt op de routes in een poging om de afwijkingen van de \ac{gps}-data te
-verminderen. In Sectie~\ref{sec:berekeningen} bescreven we het mechanisme.
-Zeker de extremen zullen worden afgevlakt, waardoor de fouten van een kleinere
-orde zouden moeten hebben. Dit toont zich ook in de resultaten. Het gebruikte
-smoothing-algoritme heeft één parameter die wij kunnen aanpassen, namelijk de
-smoothing window. Deze parameter bepaalt hoeveel punten er per window worden
-gecombineerd. Het optimale smoothing window wordt hier bepaald door het
-uitvoeren van een aantal experimenten, en hiervan de resultaten met elkaar
-vergelijken. Deze resultaten zijn terug te vinden in
+Het laatste model is gelijkaardig aan het voorgaande, met als verschil dat nu
+wel smoothing wordt toegepast op de routes in een poging om de afwijkingen van
+de \ac{gps}-data te verminderen. In Sectie~\ref{sec:berekeningen} bescreven we
+het mechanisme. Zeker de extremen zullen worden afgevlakt, waardoor de fouten
+van een kleinere orde zouden moeten hebben. Dit toont zich ook in de
+resultaten. Het gebruikte smoothing-algoritme heeft één parameter die wij
+kunnen aanpassen, namelijk de smoothing window. Deze parameter bepaalt hoeveel
+punten er per window worden gecombineerd. Het optimale smoothing window wordt
+hier bepaald door het uitvoeren van een aantal experimenten, en hiervan de
+resultaten met elkaar vergelijken. Deze resultaten zijn terug te vinden in
 Bijlage~\ref{ch:smoothing_results} op Tabel~\ref{tab:full_smoothing}. Deze zijn
 ietwat wisselvallig, en er is geen duidelijke trend in terug te vinden.
 % De hypothese is dat dit komt door de
 % factor van willekeur die meespeelt bij het manueel opzetten van de \ac{EPZ}.
 % Wanneer afwijkende punten net wel of net niet afgesneden worden door de
 % \ac{EPZ}. 
-Maar wanneer we zoeken naar het best scorende smoothing window, bekomen we uit
-op een smoothing window van 100. Dit hoge smoothing window wijst wel nog maar
-eens op de vele fouten die de \ac{gps}-data bevat.
+Maar wanneer we zoeken naar het best scorende smoothing window, komen we uit op
+een smoothing window van 100. Dit hoge smoothing window wijst wel nog maar eens
+op de vele fouten die de \ac{gps}-data bevat.
 
 De success rate toont een relatief kleine verbetering ten opzichte van het
 model met de ruwe \ac{gps}-data bij kleine \acp{EPZ}, maar bij grotere
-\acp{EPZ} zwakt deze veel minder zwaar af. Ook de andere metrieken vertonen een
-gelijkaardig patroon, waarbij de afzwakking veel minder sterk is dan bij het
-gebruik van ruwe \ac{gps}-punten. Dit toont dat het gebruik van smoothing zeker
-een significante toegevoegde waarde heeft. Let wel dit smoothing window
-empirisch bepaald en optimaal gekozen voor deze dataset. Voor een andere
-dataset kan het optimale window een verschillende waarde aannemen.
+\acp{EPZ} tonen de metrieken veel minder verval. Ook de andere metrieken
+vertonen een gelijkaardig patroon, waarbij de afzwakking veel minder sterk is
+dan bij het gebruik van ruwe \ac{gps}-punten. Dit toont dat het gebruik van
+smoothing zeker een significante toegevoegde waarde heeft. Let wel dit
+smoothing window empirisch bepaald en optimaal gekozen voor deze dataset. Voor
+een andere dataset kan het optimale window een verschillende waarde aannemen.
 \begin{table}[h]
     \centering
     \scalebox{0.5}{

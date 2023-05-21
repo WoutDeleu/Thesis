@@ -134,20 +134,10 @@ liggen~\cite{Understa24:online}. Dit algoritme kiest willekeurig initiële
 middelpunten voor de verschillende clusters. Daarna worden alle punten in de
 data toegekend aan de cluster met de laagste Euclidische afstand tot het
 centrum van deze cluster. Daarna worden de gemiddeldes van deze clusters
-herberekend, en worden deze gezien als nieuwe centrums. Opnieuw worden alle
-punten aan de correcte cluster toegekend, en het proces wordt verschillende
-iteraties herhaald. Op Figuur~\ref{fig:kmeans} is te zien hoe de clustering bij
-elke iteratie beter wordt.
-
-In de context van het identificeren van de \ac{EPZ} zal het gebruikt worden om
-\ac{gps}-punten te groeperen op basis van hun locaties. In plaats van te werken
-met een centraal punt, zal er gewerkt worden met een cirkelvormige zone. De
-euclidische afstand zal in dit geval berekent worden ten opzichte van de rand
-van deze cirkel. Bij elke iteratie zal een nieuwe cirkel worden beschouwd, en
-zullen de afstanden opnieuw worden berekent. Het proces wordt herhaald totdat
-een ietwat stabiele cirkel bekomen wordt. Een cirkel is stabiel wanneer het
-verschil in afstand tussen twee opeenvolgende gevonden cirkels kleiner is dan
-een drempelwaarde, in dit geval 10 meter~\cite{Dhondt, Verdonck_2022}.
+herberekend, en worden deze gemiddeldes gezien als nieuwe centrums. Opnieuw
+worden alle punten aan de correcte cluster toegekend, en op die manier het
+proces wordt verschillende iteraties herhaald. Op Figuur~\ref{fig:kmeans} is te
+zien hoe de clustering bij elke iteratie beter wordt.
 \begin{figure}[h]
     \centering
     \begin{subfigure}[b]{.33\textwidth}
@@ -165,7 +155,17 @@ een drempelwaarde, in dit geval 10 meter~\cite{Dhondt, Verdonck_2022}.
     \caption{Voorbeeld werking k-means clustering~\cite{InDepthk59:online}}\label{fig:kmeans}
 \end{figure}
 
-Het algoritme zal na de identificatie van de \ac{EPZ} ook nog nakijken of er
+In de context van het identificeren van de \ac{EPZ} zal het gebruikt worden om
+\ac{gps}-punten te groeperen op basis van hun locaties. In plaats van te werken
+met een centraal punt, zal er gewerkt worden met een cirkelvormige zone. De
+euclidische afstand zal in dit geval berekent worden ten opzichte van de rand
+van deze cirkel. Bij elke iteratie zal een nieuwe cirkel worden beschouwd, en
+zullen de afstanden opnieuw worden berekent. Het proces wordt herhaald totdat
+een ietwat stabiele cirkel bekomen wordt. Een cirkel is stabiel wanneer het
+verschil in afstand tussen twee opeenvolgende gevonden cirkels kleiner is dan
+een drempelwaarde, in dit geval 10 meter~\cite{Dhondt, Verdonck_2022}.
+
+Het algoritme zal na de identificatie van een \ac{EPZ} ook nog nakijken of er
 niet meer dan één \ac{EPZ} te vinden is. Er wordt onderzocht of punten die
 meegenomen zijn in de beschouwing van de huidige \ac{EPZ}, toch niet horen bij
 een mogelijke andere \ac{EPZ} van de user. Als controle wordt van elk eind- of
@@ -177,17 +177,17 @@ berekende afstand groter is, worden meer clusters toegevoegd aan het algoritme
 van k-means clustering. Dit zal dus een nieuwe privacy zone aanwijzen.
 
 Deze stap is niet noodzakelijk in het globale verhaal van de thesis, maar is
-wel een stap die de zoekruimte erg kan verkleinen. Indien het algoritme één of
-meerdere \acp{EPZ} vindt, dan zullen er enkel voorspellingen gebeuren in de
-regio binnenin. Indien dit niet het geval is en er geen \ac{EPZ} gevonden is,
-bestaat de kans dat voorspellingen van locaties gebeuren buiten de verhullende
-zone. Ook is in dit geval een groter stuk van het stratenplan nodig om de
-locatie te achterhalen.
+wel een stap die de zoekruimte drastisch kan verkleinen. Indien het algoritme
+één of meerdere \acp{EPZ} vindt, dan zullen er enkel voorspellingen gebeuren in
+de regio binnenin de geïdentificeerde zone. Indien dit niet het geval is en er
+geen \ac{EPZ} gevonden is, bestaat de kans dat voorspellingen van locaties
+gebeuren buiten de verhullende zone. Ook is in dit geval een groter stuk van
+het stratennetwerk nodig om de locatie te achterhalen.
 
 \section{Identificatie Entry Gates}
 Entry gates zijn zoals de naam al doet vermoeden de `toegangspoorten' tot de
-\ac{EPZ}. Dit is waar de gebruiker de \ac{EPZ} kan betreden en/of verlaten.
-Deze `zones' vormen zich dan ook rond wegen die de \ac{EPZ} betreden. Op
+\ac{EPZ}. Dit zijn de `zones' waar de gebruiker de \ac{EPZ} kan betreden en/of
+verlaten. Deze vormen zich dan ook rond wegen die de \ac{EPZ} betreden. Op
 Figuur~\ref{fig:entrygate} is te zien dat meerdere eindpunten van activiteiten
 geclusterd worden en een \ac{E.G.} vormen. Dit is van belang belangrijk bij het
 filteren van afwijkende activiteiten. De detectie ervan gebeurt via het
@@ -200,27 +200,28 @@ filteren van afwijkende activiteiten. De detectie ervan gebeurt via het
 
 \ac{DBSCAN} is een algoritme dat clusters kan vinden in een dataset. Het vindt
 clusters op basis van hun dichtheid~\cite{KMeansvs80:online}. In tegenstelling tot het eerder besproken
-k-means clustering algoritme, dat gebaseerd is
-op het vinden van de geometrische middelpunten van clusters, richt \ac{DBSCAN}
+k-means clustering algoritme dat gebaseerd is
+op het vinden van de geometrische van clusters, richt \ac{DBSCAN}
 zich op het vinden van gebieden met een hoge dichtheid van punten.\ \ac{DBSCAN}
 heeft als voordeel dat het goed overweg kan met uitschieters, want in deze
 context erg nuttig blijkt. Het werkt als volgt:
 \begin{enumerate}
-    \item Selecteer een willekeurig niet-bezocht punt uit de begin- en eindpunten.
+    \item Selecteer een willekeurig niet-bezocht punt uit de set van zichtbare begin- en
+          eindpunten.
     \item Bepaal of het punt een kernpunt is door te controleren of er binnen een
           bepaalde afstand een minimum aantal punten aanwezig is. Als dit het geval is,
           wordt het punt als een kernpunt beschouwd en wordt een nieuwe cluster gestart.
-    \item Breid de cluster uit door alle punten binnen de afstand van het kernpunt toe te
-          voegen aan de cluster. Herhaal dit proces voor alle punten in de buurt totdat
-          er geen nieuwe punten meer kunnen worden toegevoegd.
+    \item Breid de cluster uit door alle punten binnen deze afstand van het kernpunt toe
+          te voegen aan de cluster. Herhaal dit proces voor alle punten in de buurt
+          totdat er geen nieuwe punten meer kunnen worden toegevoegd.
     \item Ga door naar het volgende niet-bezochte punt en herhaal de stappen 2 en 3
           totdat alle punten in de dataset zijn bezocht.
     \item Punten die niet tot een cluster behoren en niet voldoen aan de criteria voor
           kernpunten, worden beschouwd als ruispunten.
 \end{enumerate}
-Het doet dit aan de hand van twee parameters: de maximale afstand tussen een punt en
-een ander punt in de dataset, wat in deze context vastgelegd is op 22.9 meter en een minimaal aantal punten dat de cluster moet
-bevatten, in dit geval één.
+Het doet dit aan de hand van twee parameters: de maximale afstand tussen twee
+punten in eenzelfde cluster, wat in deze context vastgelegd is op 22.9 meter en
+een minimaal aantal punten dat de cluster moet bevatten, in dit geval één.
 
 \section{Bepalen nodige gegevens voor predictie}
 Na het bepalen van de \acp{EPZ} voor de gebruiker wordt overgegaan tot het
@@ -485,6 +486,7 @@ selecteren deze met de laagste totale afwijking. Deze node zal dan de
 % predictie, de \textbf{eindvoorspelling}.
 
 % Extra: Figuur of filteren van activiteiten
+% Extra figuur die kmeans toepast op cirkelidentificatie
 % Figuur die uitlegt hoe verschillende predicties worden gemaakt
 % Figuur predicties uitleggen
 % Figuur LAD predictie invoegen
