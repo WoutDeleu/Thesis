@@ -64,9 +64,8 @@ snelheid is dan ook $\frac{m}{s}$ of, in het geval van fitnesstrackers,
 $\frac{km}{h}$. Het tempo wordt berekend volgens de formule $ \quad
     tempo(\frac{\min}{km}) = \frac{t(\min)}{d(km)}$. De eenheid van tempo is
 $\frac{\min}{km}$. Om deze berekeningen wat te standaardiseren, werd gedurende
-deze thesis gekozen om altijd de omrekening te maken naar tempo
-$\frac{\min}{km}$, om zo over de volledige lijn met dezelfde standaard te
-werken.
+deze thesis gekozen om altijd de omrekening te maken naar snelheid
+$\frac{km}{h}$, om zo over de volledige lijn met dezelfde standaard te werken.
 \begin{figure}[h]
     \centering
     \begin{subfigure}[b]{.5\textwidth}
@@ -250,11 +249,11 @@ methode van map-snapping kunnen worden toegepast.
     \caption{Voorbeelden van gps-drift}
 \end{figure}
 
-Gps-bouncing is een fenomeen veroorzaakt door hoge gebouwen. Het
+Gps-bouncing is een fenomeen hoofdzakelijk veroorzaakt door hoge gebouwen. Het
 \ac{gps}-signaal zal hierbij weerkaatsen tussen de gebouwen, op weg naar het
-toestel satelliet. De extra vertraging zorgt er voor dat het apparaat onterecht
-denkt een afstand afgelegd te hebben. De uitkomst van het traject is dan
-onvoorspelbaar, wat leidt tot een `cluster' van \ac{gps}-punten wanneer dit
+toestel vanaf de satelliet. De extra vertraging zorgt er voor dat het apparaat
+onterecht denkt een afstand afgelegd te hebben. De uitkomst van het traject is
+dan onvoorspelbaar, wat leidt tot een `cluster' van \ac{gps}-punten wanneer dit
 voor een paar punten in dezelfde omgeving gebeurt. Voorbeelden hiervan zijn
 terug te vinden op Figuur~\ref{fig:gps_bounce}. Om dit fenomeen op zijn beurt
 tegen te gaan, is het best om smoothing te toe te passen bij het berekenen.

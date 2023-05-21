@@ -23,4 +23,26 @@
 \bibitem{Dhondt}
 K.~Dhondt, V.~Le~Pochat, A.~Voulimeneas, W.~Joosen, and S.~Volckaert, ``A run a day won’t keep the hacker away: Inference attacks on endpoint privacy zones in fitness tracking social networks,'' osf.io/3m5ut, Nov 2022.
 
+\bibitem{Sportapp72:online}
+D.~Vanmeldert, ``Sportapp strava laat fietsdieven of stalkers nog altijd meekijken | vrt nws: nieuws,'' \url{https://www.vrt.be/vrtnws/nl/2022/10/28/strava-kul/}, October 2022, (Accessed on 02/20/2023).
+
+\bibitem{Cyclistw89:online}
+A.~Bowden, ``Cyclist who had five bikes stolen says thieves are looking for quick times on strava to try and find high-end bikes – warns other users to check their privacy settings | road.cc,'' \url{https://road.cc/content/news/248798-cyclist-who-had-five-bikes-stolen-says-thieves-are-looking-quick-times-strava}, September 2018, (Accessed on 02/20/2023).
+
+\bibitem{Fitnesst33:online}
+A.~Hern, ``Fitness tracking app strava gives away location of secret us army bases | gps | the guardian,'' \url{https://www.theguardian.com/world/2018/jan/28/fitness-tracking-app-gives-away-location-of-secret-us-army-bases}, January 2018, (Accessed on 02/20/2023).
+
+\bibitem{Verdonck_2022}
+T.~Verdonck, ``\BIBforeignlanguage{dut}{Inferentie-aanvallen met hoogteprofielen tegen (endpoint) privacy zones in fitness tracking sociale netwerken},'' Master's thesis, KU Leuven. Faculteit Industriële Ingenieurswetenschappen, Leuven, 2022, book Title: Inferentie-aanvallen met hoogteprofielen tegen (endpoint) privacy zones in fitness tracking sociale netwerken.
+
+\bibitem{sec18has3:online}
+\BIBentryALTinterwordspacing
+A.~B. Wajih Ul~Hassan, Saad~Hussain, ``\BIBforeignlanguage{en}{Analysis of privacy protections in fitness tracking social networks -or- you can run, but can you hide?}'' August 2018. [Online]. Available: \url{https://osf.io/3m5ut/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{strava_companie}
+\BIBentryALTinterwordspacing
+``Strava logo,'' Strava. [Online]. Available: \url{https://www.strava.com}
+\BIBentrySTDinterwordspacing
+
 \end{thebibliography}
