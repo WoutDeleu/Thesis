@@ -28,25 +28,25 @@ mogen dus niet zomaar worden geëxtrapoleerd naar de volledige groep van
 Stravagebruikers.
 
 Dhondt et al.\ beschreven enkele maatregelen om de privacy van gebruikers te
-verzekeren, zoals het afronden van afstandsdata of het toevoegen van
-\textit{noise} aan deze data om deze zo onbruikbaar te stellen~\cite{Dhondt}.
-Dit is dus niet meer van toepassing, alle \textit{`Distance-Focused
-      Countermeasures'} beschreven door~\citeauthor{Dhondt} kunnen worden omzeild
-door ons aanvalsmodel. De aanvaller kan de afstandsdata in theorie
-herberekenen, en ultiem nog steeds de aanval tot een goed einde brengen. Alle
-distance based maatregelen die \citeauthor{Dhondt} beschreven zijn dus in
-principe niet meer bruikbaar. We zouden deze countermeasures in principe kunnen
-uitbreiden door hierbij de snelheid en/of tijd in rekening te brengen.
-Bijvoorbeeld bij generalisation, wat neerkomt op afronding van een afstand die
-zichtbaar is naar de buitenwereld, kan de snelheid op dezelfde manier een
-manipulatie ondergaan. Voor alle countermeasures in deze categorie, behalve
-\textit{Shifting Distances} geldt dit principe, namelijk dat deze teniet worden
-gedaan ten opzichte van ons aanvalsmodel, maar indien deze uitgebreid worden
-naar de tijd en/of snelheid zouden deze alsnog nuttig kunnen blijken. Alhoewel
-niet expliciet getest, is de hypothese dat alle countermeasures, indien
-uitgebreid naar de snelheid en/of tijd, een gelijkaardig effect zullen hebben.
-Het is en blijft natuurlijk een afweging tussen privacy en
-gebruiksvriendelijkheid. De besproken countermeasures zijn:
+verzekeren, zoals het afronden van afstandsdata of het toevoegen van ruis aan
+deze data om deze zo onbruikbaar te maken~\cite{Dhondt}. Dit is dus niet meer
+van toepassing, alle \textit{`Distance-Focused Countermeasures'} beschreven
+door~\citeauthor{Dhondt} kunnen worden omzeild door ons aanvalsmodel. De
+aanvaller kan de afstandsdata in theorie herberekenen, en ultiem nog steeds de
+aanval tot een goed einde brengen. Alle distance based maatregelen die
+\citeauthor{Dhondt} beschreven zijn dus in principe niet meer bruikbaar. We
+zouden deze countermeasures in principe kunnen uitbreiden door hierbij de
+snelheid en/of tijd in rekening te brengen. Bijvoorbeeld bij generalisation,
+wat neerkomt op afronding van een afstand die zichtbaar is naar de
+buitenwereld, kan de snelheid op dezelfde manier een manipulatie ondergaan.
+Voor alle countermeasures in deze categorie, behalve \textit{Shifting
+      Distances} geldt dit principe, namelijk dat deze teniet worden gedaan ten
+opzichte van ons aanvalsmodel, maar indien deze uitgebreid worden naar de tijd
+en/of snelheid zouden deze alsnog nuttig kunnen blijken. Alhoewel niet
+expliciet getest, is de hypothese dat alle countermeasures, indien uitgebreid
+naar de snelheid en/of tijd, een gelijkaardig effect zullen hebben. Het is en
+blijft natuurlijk een afweging tussen privacy en gebruiksvriendelijkheid. De
+besproken countermeasures zijn:
 \begin{itemize}
       \item \textit{Generalisation} houdt in dat de afstand wordt afgerond tot een bepaalde
             precisie.~\citeauthor{Dhondt} stelt een precisie van 500 meter
@@ -54,7 +54,7 @@ gebruiksvriendelijkheid. De besproken countermeasures zijn:
       \item \textit{Noisy Distances} is een techniek waarbij een willekeurige waarde wordt
             toegevoegd of afgetrokken van de afstand~\cite{Dhondt}.
       \item \textit{Shifting Distances} verschuift de zichtbare begin- of eindpunten van een activiteit met een willekeurige afstand, in een willekeurige richting,
-            zodat geen het vertrekpunt onzeker wordt~\cite{Dhondt}. Dit zorgt voor problemen bij het reconstrueren van de route.
+            zodat het vertrekpunt onzeker wordt~\cite{Dhondt}. Dit zorgt voor problemen bij het reconstrueren van de route.
       \item \textit{Truncation} stelt dat het verborgen traject niet mee in rekening wordt gebracht in de
             totale afstand~\cite{Dhondt}. Dit verwijdert eigenlijk het verborgen traject volledig uit de activiteit.
 \end{itemize}
@@ -104,15 +104,15 @@ komen is de hoeveelheid activiteiten die zorgen voor een succesvolle aanval.
 
 Daarnaast zou in een bijkomstig onderzoek dat een wat bredere invloed heeft op
 het onderzoeksdomein kunnen worden onderzocht in hoeverre omgevingsfactoren
-zoals bebouwingsdichtheide een invloed hebben op de success rate en dergelijke.
+zoals bebouwingsdichtheid een invloed hebben op de success rate en dergelijke.
 En of de success rate niet dynamisch kan worden gesteld op basis van deze
 dichtheid. Een straat die slechts één huis bevat is immers al te onderscheiden
 met een veel lagere precisie dan een met meer inwoners in een stad. De 22.5
-meter die nu empirisch werd bepaalt zou dus kunnen worden aangepast op basis
+meter die nu empirisch werd bepaald zou dus kunnen worden aangepast op basis
 van de bebouwingsdichtheid.
 
 Als laatste is er een idee om een ander implementatie van de \ac{LAD}-regressie
-te gebruiken. Nu wordt voor elke activiteit de afwijking berekent ten opzichte
+te gebruiken. Nu wordt voor elke activiteit de afwijking berekend ten opzichte
 van de nodes in de graaf, en wordt de node gekozen die over de volledige lijn
 de laagste afwijking bevat. Een alternatief zou kunnen zijn om voor elke
 activiteit een node te kiezen die de laagste afwijking heeft ten opzichte van
@@ -122,7 +122,7 @@ het meest gecentreerd ligt. De \ac{LAD}-methode die beschreven werd in deze
 thesis gaat op zoek naar een zo laag mogelijke afwijking voor elke activiteit,
 uitgaande van het ideale scenario waarbij elke activiteit stopt of begint op
 dezelfde locatie. In de hier alternatief beschreven \ac{LAD}-methode vertrekken
-we er eerder vanuit het feit dat activiteiten alternatieve locaties aanwijzen
+we eerder vanuit het feit dat activiteiten alternatieve locaties aanwijzen
 volgens hun afstand, door het feit dat ze effectief niet op dezelfde locatie
 eindigen. Gebruikers stoppen eens wat verder, eens wat vroeger, enzovoort. De
 alternatieve implementatie van de \ac{LAD}-methode zou dit dus voor een stuk

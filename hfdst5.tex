@@ -32,7 +32,7 @@ een breedte van een gemiddeld perceel, en dat dit dus een goede benadering
 vormt voor de maximale afwijking~\cite{sec18has3:online, Verdonck_2022}. Indien
 een cluster bestaat uit 15 punten of meer, dan berekenen we hiervan het
 gemiddelde en wordt dit gemiddelde gemapt op de roadgraph. Dit gesnapte punt
-stelt dan een grondwaarheid voor van deze gebruiker. Let wel, het kan dat éen
+stelt dan een grondwaarheid voor van deze gebruiker. Let wel, het kan dat één
 gebruiker meerdere grondwaarheden bevat.
 
 Een tweede kanttekening die we hierbij moeten maken is dat de effectieve begin-
@@ -56,13 +56,13 @@ succesvolle aanval te kunnen spreken. Deze drempelwaarde is toepasselijk voor
 \end{figure}
 
 \subsection{Manueel aanbrengen van een EPZ}\label{sec:zelf_cloaking}
-We werken zoals al eerde vermeld met publieke activiteiten die geen \ac{EPZ},
-om zo de het evaluatieproces te versimpelen. Maar om de aanval te kunnen
-uitvoeren moet we dus nog manueel een \ac{EPZ} aanbrengen. Zo kunnen we een
-situatie creëren die de werkelijke situatie benadert, en kunnen we ons
-aanvalsmodel uitvoeren. Het is dus wel belangrijk dat de aangebrachte \ac{EPZ}
-op een realistische manier wordt aangebracht zodat deze de werkelijkheid
-weerspiegelt.
+We werken zoals al eerder vermeld met publieke activiteiten die geen \ac{EPZ}
+bevatten, om zo de het evaluatieproces te versimpelen. Maar om de aanval te
+kunnen uitvoeren moet we dus nog manueel een \ac{EPZ} aanbrengen. Zo kunnen we
+een situatie creëren die de werkelijke situatie benadert, en kunnen we ons
+aanvalsmodel uitvoeren. Het is dus wel belangrijk dat het zelf geïmplementeerde
+\ac{EPZ}-mechanisme op een realistische manier wordt aangebracht zodat deze de
+werkelijkheid weerspiegelt.
 
 Sectie~\ref{sec:EPZ} bespreekt al uitvoerig het mechanisme van een \ac{EPZ}, en
 hoe deze wordt bepaald. Om het even kort te recapituleren, een \ac{EPZ} wordt
@@ -79,18 +79,18 @@ gebruiker en per aanvalsmodel een \ac{EPZ} opzetten met alle verschillende
 radiussen. Zo kunnen we het effect van de radius zien, maar ook de types aanval
 onderling onafhankelijk van de straal vergelijken. We starten dus vanaf de
 \ac{GT}. Deze locatie ondervindt dan een willekeurige translatie. De
-verschuiving van het punt kan gebeuren in alle richting, en kiezen we dus
-willekeurig. De afstand van de translatie kan in principe ook willekeurig
-worden gekozen, maar moet wel binnen bepaalde grenzen liggen, namelijk tussen 0
-en 70\% van de straal van de \ac{EPZ}. De cirkel kan dan worden opgesteld, met
-als middelpunt het getransleerde punt, en de bijhorende straal. Alle punten die
+verschuiving van het punt kan gebeuren in alle richtingen, en kiezen we dus
+lukraak. De afstand van de translatie kan in principe ook willekeurig worden
+gekozen, maar moet wel binnen bepaalde grenzen liggen, namelijk tussen 0 en
+70\% van de straal van de \ac{EPZ}. De cirkel kan dan worden opgesteld, met als
+middelpunt het getransleerde punt, en de bijhorende straal. Alle punten die
 zich binnen deze zone bevinden, zullen worden verwijdert uit de activiteit.
 % Figuur: 3 stappen hoe een EPZ wordt opgezet
 
 \subsection{Bootstrapping}
 Bij het uittesten van de aanval wordt de aanval niet zomaar een enkele keer
 uitgevoerd voor alle activiteiten per gebruiker. Dit zou vertekende resultaten
-kunnen geven. Per gebruiker wordt een betrouwbaarheidsinterval berekent via
+kunnen geven. Per gebruiker wordt een betrouwbaarheidsinterval berekend via
 bootstrapping~\cite{Dhondt, Verdonck_2022}. De set met manueel verhulde
 activiteiten wordt beschouwd. Het bootstrapalgoritme kiest hieruit willekeurig
 één voor één activiteiten, en plaatst deze in een nieuwe groep totdat deze
@@ -102,12 +102,12 @@ activiteiten helemaal niet bevatten. Dit gebeurt 1000 keer, en er worden dus
 uitgevoerd. Zo bekomen we een aantal voorspelde locaties, waarvan er een kans
 is dat enkele locaties meerdere malen voorspeld worden. Op
 Figuur~\ref{fig:bootstrapping} is te zien hoe de distributie eruit ziet op een
-kaart~\cite{Verdonck_2022}. Op de figuur zijn de individuele voorspelling
+kaart~\cite{Verdonck_2022}. Op de figuur is de individuele voorspelling
 aangeduidt met een blauwe tot paarse kleur, afhankelijk van hoe frequent ze
-voorspeld werden (hoe meer naar de paarse of rode kleur ligt, hoe frequenter de
-node voorspeld is). Ook zichtbaar zijn de start- en eindpunten, met een
-verschillend kleur per \ac{E.G.} De locatie van de grondwaarheid is aangeduid
-door de groene marker.
+voorspeld werden (hoe meer de kleure naar de paarse of rode kleur neigt, hoe
+frequenter de node voorspeld is). Ook zichtbaar zijn de start- en eindpunten,
+met een verschillend kleur per \ac{E.G.} De locatie van de grondwaarheid is
+aangeduid door de groene marker.
 
 \begin{figure}[h]
     \centering
@@ -151,8 +151,8 @@ we op het aantal unieke voorspellingen, het aantal nodes dat precies eenmalig
 worden voorspeld. Hoe meer unieke nodes, hoe hoger de accuracy en ook hoe
 minder `zeker' onze voorspelling is.
 
-De \textit{Reduction of the k-anonymity set} kwantificeert de de afname in de
-set van alle mogelijke eindlocaties voor en na de effectieve predicties van een
+De \textit{Reduction of the k-anonymity set} kwantificeert de afname in de set
+van alle mogelijke eindlocaties voor en na de effectieve predicties van een
 aanval~\cite{Dhondt, Verdonck_2022}. De mogelijke eindlocaties voor de aanval
 zijn simpelweg alle nodes in de graafvoorstelling, eventueel begrensd door de
 \ac{EPZ}. Degene na de aanval zijn alle nodes die effectief voorspelt worden.
@@ -199,7 +199,7 @@ De laatste evaluatiefactor is de \textit{Degree of
 de verwachte distributie. Deze wordt genormaliseerd op basis van de maximale
 mogelijke entropie, en wordt bepaald op basis van percentage $p_v$. Dit is een
 percentage die aangeeft bij hoeveel percent van de voorspellingen node $p$
-voorspelt wordt. Dit zal voor vele nodes gelijk zijn aan 0. De maximale
+voorspeld wordt. Dit zal voor vele nodes gelijk zijn aan 0. De maximale
 entropie komt voor indien elke node exactly evenveel voorspelt wordt, en is dus
 gelijk aan $\frac{1}{\# nodes}$.
 \begin{equation}
@@ -324,14 +324,14 @@ afwijking die afkomstig is van de snelheidsomrekening, die besproken werd in
 het vorige model (waarbij de outer distance gegeven is) alsook de afwijkingen
 die afkomstig zijn van de \ac{gps}-data zelf vervat in de resultaten.
 
-De afwijkingen veroorzaakt wegen zoals verwacht relatief sterk door. Zeker bij
-grotere radiussen heeft dit een grote impact op de resultaten. Vanaf een radius
-van 1000 meter is de success rate zelfs 0\%. Maar ook bij de rest van de
-metrieken zien we een aanzienlijk slechtere score een sterke achteruitgang
-vertoond bij een hogere \ac{EPZ}-radius. Dit is te wijten aan de grote
-afwijkingen die de \ac{gps}-data in zijn geheel met zich mee brengt, zeker bij
-grotere radiussen weegt dit sterk door. Hoe groter de af te leggen afstand, in
-dit geval de inner distance, hoe groter de fout.
+Deze afwijkingen wegen zoals verwacht relatief sterk door. Zeker bij grotere
+radiussen heeft dit een grote impact op de resultaten. Vanaf een radius van
+1000 meter is de success rate zelfs 0\%. Maar ook bij de rest van de metrieken
+zien we dat de score een sterke achteruitgang vertoond bij een hogere
+\ac{EPZ}-radius. Dit is te wijten aan de grote afwijkingen die de \ac{gps}-data
+in zijn geheel met zich mee brengt, zeker bij grotere radiussen weegt dit sterk
+door. Hoe groter de af te leggen afstand, in dit geval de inner distance, hoe
+groter de fout.
 \begin{table}[h]
     \centering
     \scalebox{0.55}{
@@ -357,14 +357,14 @@ dit geval de inner distance, hoe groter de fout.
 \subsection{Smoothing}
 Het laatste model is gelijkaardig aan het voorgaande, met als verschil dat nu
 wel smoothing wordt toegepast op de routes in een poging om de afwijkingen van
-de \ac{gps}-data te verminderen. In Sectie~\ref{sec:berekeningen} bescreven we
-het mechanisme. Zeker de extremen zullen worden afgevlakt, waardoor de fouten
-van een kleinere orde zouden moeten hebben. Dit toont zich ook in de
-resultaten. Het gebruikte smoothing-algoritme heeft één parameter die wij
-kunnen aanpassen, namelijk de smoothing window. Deze parameter bepaalt hoeveel
-punten er per window worden gecombineerd. Het optimale smoothing window wordt
-hier bepaald door het uitvoeren van een aantal experimenten, en hiervan de
-resultaten met elkaar vergelijken. Deze resultaten zijn terug te vinden in
+de \ac{gps}-data te verminderen. In Sectie~\ref{sec:berekeningen} beschreven we
+het mechanisme. Zeker de extremen zullen worden afgevlakt, wat de fouten tot
+een lagere orde zou moeten reduceren. Dit toont zich ook in de resultaten. Het
+gebruikte smoothing-algoritme heeft één parameter die wij kunnen aanpassen,
+namelijk de smoothing window. Deze parameter bepaalt hoeveel punten er per
+window worden gecombineerd. Het optimale smoothing window wordt hier bepaald
+door het uitvoeren van een aantal experimenten, en hiervan de resultaten met
+elkaar vergelijken. Deze resultaten zijn terug te vinden in
 Bijlage~\ref{ch:smoothing_results} op Tabel~\ref{tab:full_smoothing}. Deze zijn
 ietwat wisselvallig, en er is geen duidelijke trend in terug te vinden.
 % De hypothese is dat dit komt door de
@@ -381,8 +381,9 @@ model met de ruwe \ac{gps}-data bij kleine \acp{EPZ}, maar bij grotere
 vertonen een gelijkaardig patroon, waarbij de afzwakking veel minder sterk is
 dan bij het gebruik van ruwe \ac{gps}-punten. Dit toont dat het gebruik van
 smoothing zeker een significante toegevoegde waarde heeft. Let wel dit
-smoothing window empirisch bepaald en optimaal gekozen voor deze dataset. Voor
-een andere dataset kan het optimale window een verschillende waarde aannemen.
+smoothing window werd empirisch bepaald en optimaal gekozen voor deze dataset.
+Voor een andere dataset kan het optimale window een verschillende waarde
+aannemen.
 \begin{table}[h]
     \centering
     \scalebox{0.5}{
