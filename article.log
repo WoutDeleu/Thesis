@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.4)  21 MAY 2023 23:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.4)  22 MAY 2023 20:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -210,6 +210,25 @@ File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen173
 \Gin@req@width=\dimen174
+) (/usr/share/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen175
+\lightrulewidth=\dimen176
+\cmidrulewidth=\dimen177
+\belowrulesep=\dimen178
+\belowbottomsep=\dimen179
+\aboverulesep=\dimen180
+\abovetopsep=\dimen181
+\cmidrulesep=\dimen182
+\cmidrulekern=\dimen183
+\defaultaddspace=\dimen184
+\@cmidla=\count282
+\@cmidlb=\count283
+\@aboverulesep=\dimen185
+\@belowrulesep=\dimen186
+\@thisruleclass=\count284
+\@lastruleclass=\count285
+\@thisrulewidth=\dimen187
 ) (/usr/share/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
 ) (/usr/share/texmf-dist/tex/latex/xcolor/xcolor.sty
@@ -231,7 +250,7 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
 ) (/usr/share/texmf-dist/tex/latex/mdwtools/footnote.sty
 Package: footnote 1997/01/28 1.13 Save footnotes around boxes
 \fn@notes=\box55
-\fn@width=\dimen175
+\fn@width=\dimen188
 ) (/usr/share/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
@@ -270,11 +289,11 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
  (/usr/share/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
-\c@section@level=\count282
+\c@section@level=\count286
 )
-\@linkdim=\dimen176
-\Hy@linkcounter=\count283
-\Hy@pagecounter=\count284
+\@linkdim=\dimen189
+\Hy@linkcounter=\count287
+\Hy@pagecounter=\count288
  (/usr/share/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2023-02-07 v7.00v Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
@@ -284,7 +303,7 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 ) (/usr/share/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count285
+\Hy@SavedSpaceFactor=\count289
  (/usr/share/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2023-02-07 v7.00v Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
@@ -297,17 +316,17 @@ Package hyperref Info: Plain pages OFF on input line 4192.
 Package hyperref Info: Backreferencing OFF on input line 4197.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4425.
-\c@Hy@tempcnt=\count286
+\c@Hy@tempcnt=\count290
 LaTeX Info: Redefining \url on input line 4763.
-\XeTeXLinkMargin=\dimen177
+\XeTeXLinkMargin=\dimen190
  (/usr/share/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
  (/usr/share/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
-\Fld@menulength=\count287
-\Field@Width=\dimen178
-\Fld@charsize=\dimen179
+\Fld@menulength=\count291
+\Field@Width=\dimen191
+\Fld@charsize=\dimen192
 Package hyperref Info: Hyper figures OFF on input line 6042.
 Package hyperref Info: Link nesting OFF on input line 6047.
 Package hyperref Info: Hyper index ON on input line 6050.
@@ -319,9 +338,9 @@ Package hyperref Info: PDF/A mode OFF on input line 6072.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count288
-\c@Item=\count289
-\c@Hfootnote=\count290
+\Hy@abspage=\count292
+\c@Item=\count293
+\c@Hfootnote=\count294
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
  (/usr/share/texmf-dist/tex/latex/hyperref/hpdftex.def
@@ -330,8 +349,8 @@ File: hpdftex.def 2023-02-07 v7.00v Hyperref driver for pdfTeX
 Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
 with kernel methods
 )
-\Fld@listcount=\count291
-\c@bookmark@seq@number=\count292
+\Fld@listcount=\count295
+\c@bookmark@seq@number=\count296
  (/usr/share/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
  (/usr/share/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
@@ -346,14 +365,14 @@ Package: subcaption 2023/02/19 v1.6 Sub-captions (AR)
 Package: caption 2023/03/12 v3.6j Customizing captions (AR)
  (/usr/share/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2023/03/12 v2.4 caption3 kernel (AR)
-\caption@tempdima=\dimen180
-\captionmargin=\dimen181
-\caption@leftmargin=\dimen182
-\caption@rightmargin=\dimen183
-\caption@width=\dimen184
-\caption@indent=\dimen185
-\caption@parindent=\dimen186
-\caption@hangindent=\dimen187
+\caption@tempdima=\dimen193
+\captionmargin=\dimen194
+\caption@leftmargin=\dimen195
+\caption@rightmargin=\dimen196
+\caption@width=\dimen197
+\caption@indent=\dimen198
+\caption@parindent=\dimen199
+\caption@hangindent=\dimen256
 Package caption Info: Unknown document class (or package),
 (caption)             standard defaults will be used.
 Package caption Info: \@makecaption = \long macro:#1#2->\ifx \@captype \@IEEEtablestring \footnotesize \bgroup \par \centering \@IEEEtabletopskipstrut {\normalfont \footnotesize #1}\\{\normalfont \footnotesize \scshape #2}\par \addvspace {0.5\baselineskip }\egroup \@IEEEtablecaptionsepspace \else \@IEEEfigurecaptionsepspace \setbox \@tempboxa \hbox {\normalfont \footnotesize {#1.}\nobreakspace \nobreakspace #2}\ifdim \wd \@tempboxa >\hsize \setbox \@tempboxa \hbox {\normalfont \footnotesize {#1.}\nobreakspace \nobreakspace }\parbox [t]{\hsize }{\normalfont \footnotesize \noindent \unhbox \@tempboxa #2}\else \ifCLASSOPTIONconference \hbox to\hsize {\normalfont \footnotesize \hfil \box \@tempboxa \hfil }\else \hbox to\hsize {\normalfont \footnotesize \box \@tempboxa \hfil }\fi \fi \fi  on input line 1176.
@@ -363,14 +382,14 @@ Package caption Warning: Unknown document class (or package),
 (caption)                standard defaults will be used.
 See the caption package documentation for explanation.
 
-\c@caption@flags=\count293
-\c@continuedfloat=\count294
+\c@caption@flags=\count297
+\c@continuedfloat=\count298
 Package caption Info: hyperref package is loaded.
 )
 Package caption Info: New subtype `subfigure' on input line 239.
-\c@subfigure=\count295
+\c@subfigure=\count299
 Package caption Info: New subtype `subtable' on input line 239.
-\c@subtable=\count296
+\c@subtable=\count300
 ) (/usr/share/texmf-dist/tex/latex/koma-script/scrextend.sty
 Package: scrextend 2022/10/12 v3.38 KOMA-Script package (extend other classes with features of KOMA-Script classes)
  (/usr/share/texmf-dist/tex/latex/koma-script/scrkbase.sty
@@ -393,43 +412,47 @@ LaTeX Warning: Command \@footnotemark  has changed.
 
 ) (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count297
+\l__color_backend_stack_int=\count301
 \l__pdf_internal_box=\box56
-) (./article.aux)
+) (./article.aux
+
+LaTeX Warning: Label `eq:inner' multiply defined.
+
+)
 \openout1 = `article.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
 
 -- Lines per column: 56 (exact).
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count298
-\scratchdimen=\dimen188
+\scratchcounter=\count302
+\scratchdimen=\dimen257
 \scratchbox=\box57
-\nofMPsegments=\count299
-\nofMParguments=\count300
+\nofMPsegments=\count303
+\nofMParguments=\count304
 \everyMPshowfont=\toks23
-\MPscratchCnt=\count301
-\MPscratchDim=\dimen189
-\MPnumerator=\count302
-\makeMPintoPDFobject=\count303
+\MPscratchCnt=\count305
+\MPscratchDim=\dimen258
+\MPnumerator=\count306
+\makeMPintoPDFobject=\count307
 \everyMPtoPDFconversion=\toks24
 ) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -437,76 +460,139 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring OFF on input line 21.
+Package hyperref Info: Link coloring OFF on input line 25.
  (./article.out) (./article.out)
 \@outlinefile=\write3
 \openout3 = `article.out'.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: scrextend package is loaded.
-\caption@addmargin@hsize=\dimen190
-\caption@addmargin@linewidth=\dimen191
+\caption@addmargin@hsize=\dimen259
+\caption@addmargin@linewidth=\dimen260
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 75.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 80.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 75.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 80.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<fig/VoorbeeldActiviteiten/VoorbeeldActiviteit_Personal.png, id=34, 717.43031pt x 970.3753pt>
+<fig/VoorbeeldActiviteiten/VoorbeeldActiviteit_Personal.png, id=122, 717.43031pt x 970.3753pt>
 File: fig/VoorbeeldActiviteiten/VoorbeeldActiviteit_Personal.png Graphic file (type png)
 <use fig/VoorbeeldActiviteiten/VoorbeeldActiviteit_Personal.png>
-Package pdftex.def Info: fig/VoorbeeldActiviteiten/VoorbeeldActiviteit_Personal.png  used on input line 87.
+Package pdftex.def Info: fig/VoorbeeldActiviteiten/VoorbeeldActiviteit_Personal.png  used on input line 92.
 (pdftex.def)             Requested size: 252.0pt x 340.8506pt.
  [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}
 
 
  <./fig/VoorbeeldActiviteiten/VoorbeeldActiviteit_Personal.png (PNG copy)>]
-<fig/Logo_Strava.png, id=54, 168.63pt x 35.4123pt>
+<fig/Logo_Strava.png, id=143, 168.63pt x 35.4123pt>
 File: fig/Logo_Strava.png Graphic file (type png)
 <use fig/Logo_Strava.png>
-Package pdftex.def Info: fig/Logo_Strava.png  used on input line 141.
+Package pdftex.def Info: fig/Logo_Strava.png  used on input line 147.
 (pdftex.def)             Requested size: 151.20154pt x 31.75294pt.
-<fig/Afwijkingen&Analyses/Crooked Routes/Crooked GPS Route_Cart.png, id=59, 622.325pt x 470.75874pt>
+<fig/Afwijkingen&Analyses/Crooked Routes/Crooked GPS Route_Cart.png, id=148, 622.325pt x 470.75874pt>
 File: fig/Afwijkingen&Analyses/Crooked Routes/Crooked GPS Route_Cart.png Graphic file (type png)
 <use fig/Afwijkingen&Analyses/Crooked Routes/Crooked GPS Route_Cart.png>
-Package pdftex.def Info: fig/Afwijkingen&Analyses/Crooked Routes/Crooked GPS Route_Cart.png  used on input line 173.
+Package pdftex.def Info: fig/Afwijkingen&Analyses/Crooked Routes/Crooked GPS Route_Cart.png  used on input line 180.
 (pdftex.def)             Requested size: 120.95892pt x 91.49948pt.
-<fig/Afwijkingen&Analyses/Crooked Routes/1_Full_withArrow.png, id=60, 432.46921pt x 384.59608pt>
+<fig/Afwijkingen&Analyses/Crooked Routes/1_Full_withArrow.png, id=149, 432.46921pt x 384.59608pt>
 File: fig/Afwijkingen&Analyses/Crooked Routes/1_Full_withArrow.png Graphic file (type png)
 <use fig/Afwijkingen&Analyses/Crooked Routes/1_Full_withArrow.png>
-Package pdftex.def Info: fig/Afwijkingen&Analyses/Crooked Routes/1_Full_withArrow.png  used on input line 178.
+Package pdftex.def Info: fig/Afwijkingen&Analyses/Crooked Routes/1_Full_withArrow.png  used on input line 185.
 (pdftex.def)             Requested size: 95.76123pt x 85.15715pt.
-<fig/Afwijkingen&Analyses/Crooked Routes/GPS-Drift.png, id=61, 1606.0pt x 924.45375pt>
+<fig/Afwijkingen&Analyses/Crooked Routes/GPS-Drift.png, id=150, 1606.0pt x 924.45375pt>
 File: fig/Afwijkingen&Analyses/Crooked Routes/GPS-Drift.png Graphic file (type png)
 <use fig/Afwijkingen&Analyses/Crooked Routes/GPS-Drift.png>
-Package pdftex.def Info: fig/Afwijkingen&Analyses/Crooked Routes/GPS-Drift.png  used on input line 183.
-(pdftex.def)             Requested size: 151.20154pt x 87.03407pt.
- [2 <./fig/Logo_Strava.png> <./fig/Afwijkingen&Analyses/Crooked Routes/Crooked GPS Route_Cart.png> <./fig/Afwijkingen&Analyses/Crooked Routes/1_Full_withArrow.png> <./fig/Afwijkingen&Analyses/Crooked Routes/GPS-Drift.png>] (./article.bbl
-Overfull \hbox (47.3453pt too wide) in paragraph at lines 30--31
-\OT1/ptm/m/n/8 248798-[]cyclist-[]who-[]had-[]^^Lve-[]bikes-[]stolen-[]says-[]thieves-[]are-[]looking-[]quick-[]times-[]strava$[],
+Package pdftex.def Info: fig/Afwijkingen&Analyses/Crooked Routes/GPS-Drift.png  used on input line 190.
+(pdftex.def)             Requested size: 189.0pt x 108.78554pt.
+ [2 <./fig/Logo_Strava.png> <./fig/Afwijkingen&Analyses/Crooked Routes/Crooked GPS Route_Cart.png> <./fig/Afwijkingen&Analyses/Crooked Routes/1_Full_withArrow.png> <./fig/Afwijkingen&Analyses/Crooked Routes/GPS-Drift.png>]
+<fig/EPZ-mechanisme/DropEPZPoints.png, id=164, 992.95969pt x 474.27188pt>
+File: fig/EPZ-mechanisme/DropEPZPoints.png Graphic file (type png)
+<use fig/EPZ-mechanisme/DropEPZPoints.png>
+Package pdftex.def Info: fig/EPZ-mechanisme/DropEPZPoints.png  used on input line 223.
+(pdftex.def)             Requested size: 252.0pt x 120.3624pt.
+ [3 <./fig/EPZ-mechanisme/DropEPZPoints.png (PNG copy)>]
+
+Package caption Warning: \label without proper reference on input line 361.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:heatmap' on page 4 undefined on input line 351.
+
+<fig/Afwijkingen&Analyses/Heatmap.png, id=182, 2034.60126pt x 1253.68375pt>
+File: fig/Afwijkingen&Analyses/Heatmap.png Graphic file (type png)
+<use fig/Afwijkingen&Analyses/Heatmap.png>
+Package pdftex.def Info: fig/Afwijkingen&Analyses/Heatmap.png  used on input line 361.
+(pdftex.def)             Requested size: 189.0pt x 116.44217pt.
+<fig/Afwijkingen&Analyses/CDF_amountActivities.jpg, id=185, 462.528pt x 346.896pt>
+File: fig/Afwijkingen&Analyses/CDF_amountActivities.jpg Graphic file (type jpg)
+<use fig/Afwijkingen&Analyses/CDF_amountActivities.jpg>
+Package pdftex.def Info: fig/Afwijkingen&Analyses/CDF_amountActivities.jpg  used on input line 398.
+(pdftex.def)             Requested size: 201.60077pt x 151.20024pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<fig/Afwijkingen&Analyses/Graphs/Afstand tussen 2 gps-punten.png, id=187, 642.4pt x 481.8pt>
+File: fig/Afwijkingen&Analyses/Graphs/Afstand tussen 2 gps-punten.png Graphic file (type png)
+<use fig/Afwijkingen&Analyses/Graphs/Afstand tussen 2 gps-punten.png>
+Package pdftex.def Info: fig/Afwijkingen&Analyses/Graphs/Afstand tussen 2 gps-punten.png  used on input line 419.
+(pdftex.def)             Requested size: 252.0pt x 188.99663pt.
+[4 <./fig/Afwijkingen&Analyses/Heatmap.png>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<fig/Afwijkingen&Analyses/Graphs/Verschil_Theoretische_innerDistance.png, id=209, 618.31pt x 465.74pt>
+File: fig/Afwijkingen&Analyses/Graphs/Verschil_Theoretische_innerDistance.png Graphic file (type png)
+<use fig/Afwijkingen&Analyses/Graphs/Verschil_Theoretische_innerDistance.png>
+Package pdftex.def Info: fig/Afwijkingen&Analyses/Graphs/Verschil_Theoretische_innerDistance.png  used on input line 438.
+(pdftex.def)             Requested size: 252.0pt x 189.81757pt.
+<fig/Afwijkingen&Analyses/Graphs/100_Differences_tov_theoretische_BefSmoothening.png, id=210, 1927.2pt x 1041.8925pt>
+File: fig/Afwijkingen&Analyses/Graphs/100_Differences_tov_theoretische_BefSmoothening.png Graphic file (type png)
+<use fig/Afwijkingen&Analyses/Graphs/100_Differences_tov_theoretische_BefSmoothening.png>
+Package pdftex.def Info: fig/Afwijkingen&Analyses/Graphs/100_Differences_tov_theoretische_BefSmoothening.png  used on input line 443.
+(pdftex.def)             Requested size: 252.0pt x 136.22978pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[5 <./fig/Afwijkingen&Analyses/CDF_amountActivities.jpg> <./fig/Afwijkingen&Analyses/Graphs/Afstand tussen 2 gps-punten.png> <./fig/Afwijkingen&Analyses/Graphs/Verschil_Theoretische_innerDistance.png>] [6 <./fig/Afwijkingen&Analyses/Graphs/100_Differences_tov_theoretische_BefSmoothening.png>]
+<fig/result_graphs/all_results.png, id=231, 388.0899pt x 360.6273pt>
+File: fig/result_graphs/all_results.png Graphic file (type png)
+<use fig/result_graphs/all_results.png>
+Package pdftex.def Info: fig/result_graphs/all_results.png  used on input line 577.
+(pdftex.def)             Requested size: 252.0pt x 234.17384pt.
+ [7 <./fig/result_graphs/all_results.png>] (./article.bbl
+Underfull \hbox (badness 1558) in paragraph at lines 30--31
+\OT1/ptm/m/n/8 { warns other users to check their pri-vacy set-tings | road.cc,''
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--31
+[]$\OT1/ptm/m/n/8 https : / / road\OML/cmm/m/it/8 :\OT1/ptm/m/n/8 cc / content / news / 248798 -[] cyclist -[] who -[] had -[] ^^Lve -[] bikes -[] stolen -[]
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 33--34
-[]\OT1/ptm/m/n/8 A. Hern, ``Fit-ness track-ing app strava gives away
+[]\OT1/ptm/m/n/8 A. Hern, ``Fit-ness track-ing app strava gives away lo-ca-tion
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 33--34
-\OT1/ptm/m/n/8 lo-ca-tion of se-cret us army bases | gps | the
+\OT1/ptm/m/n/8 of se-cret us army bases | gps | the guardian,'' []$https :
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 33--34
-\OT1/ptm/m/n/8 guardian,'' []$https : / / www . theguardian . com / world / 2018 / jan / 28 /
+\OT1/ptm/m/n/8 / / www\OML/cmm/m/it/8 :\OT1/ptm/m/n/8 theguardian\OML/cmm/m/it/8 :\OT1/ptm/m/n/8 com / world / 2018 / jan / 28 / ^^Ltness -[] tracking -[] app -[] gives -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 33--34
-\OT1/ptm/m/n/8 ^^Ltness-[]tracking-[]app-[]gives-[]away-[]location-[]of-[]secret-[]us-[]army-[]bases$[],
+Underfull \hbox (badness 2020) in paragraph at lines 33--34
+\OT1/ptm/m/n/8 away -[] location -[] of -[] secret -[] us -[] army -[] bases$[], Jan-uary 2018, (Ac-cessed on
  []
 
 ** WARNING: IEEEtran.bst: No hyphenation pattern has been
@@ -515,7 +601,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--34
 ** WARNING: IEEEtran.bst: No hyphenation pattern has been
 ** loaded for the language `en'. Using the pattern for
 ** the default language instead.
-)
+) [8]
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -527,25 +613,31 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[3
+[9
 
 ] (./article.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `article.out' has not changed.
-(rerunfilecheck)             Checksum: 92F2E7E1EDB94158173CEBB517B2CCE1;702.
+(rerunfilecheck)             Checksum: 63D4FBD966661AEECE7E44384F6213F4;3711.
  ) 
 Here is how much of TeX's memory you used:
- 13387 strings out of 476025
- 219959 string characters out of 5796533
- 1869388 words of memory out of 5000000
- 33630 multiletter control sequences out of 15000+600000
- 554203 words of font info for 108 fonts, out of 8000000 for 9000
+ 13606 strings out of 476025
+ 225301 string characters out of 5796533
+ 1882388 words of memory out of 5000000
+ 33782 multiletter control sequences out of 15000+600000
+ 555339 words of font info for 109 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 108i,8n,106p,522b,505s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on article.pdf (3 pages, 6489870 bytes).
+ 108i,10n,106p,522b,542s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on article.pdf (9 pages, 7815285 bytes).
 PDF statistics:
- 113 PDF objects out of 1000 (max. 8388607)
- 89 compressed objects within 1 object stream
- 21 named destinations out of 1000 (max. 500000)
- 74 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 335 PDF objects out of 1000 (max. 8388607)
+ 275 compressed objects within 3 object streams
+ 71 named destinations out of 1000 (max. 500000)
+ 285 words of extra memory for PDF output out of 10000 (max. 10000000)
 

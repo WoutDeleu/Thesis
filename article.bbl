@@ -45,4 +45,12 @@ A.~B. Wajih Ul~Hassan, Saad~Hussain, ``\BIBforeignlanguage{en}{Analysis of priva
 ``Strava logo,'' Strava. [Online]. Available: \url{https://www.strava.com}
 \BIBentrySTDinterwordspacing
 
+\bibitem{neira2022graph}
+M.~Neira and R.~Murcio, ``Graph representation learning for street networks,'' 2022.
+
+\bibitem{sheppard1922practical}
+\BIBentryALTinterwordspacing
+W.~Sheppard and C.~Soule, \emph{Practical Navigation}.\hskip 1em plus 0.5em minus 0.4em\relax World Technical Institute, 1922. [Online]. Available: \url{https://books.google.be/books?id=8S0wAAAAYAAJ}
+\BIBentrySTDinterwordspacing
+
 \end{thebibliography}

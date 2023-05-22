@@ -33,21 +33,21 @@ cloaking deze gevoelige locatie te achterhalen.
 
 Vanuit het oogpunt van de inferentieaanval beschreven door~\citeauthor{Dhondt}
 heeft de aanvaller toegang tot alle data die publiek beschikbaar is. Deze
-gebruikt dan voornamelijk afgelegde weg als basis.
+gebruikt dan voornamelijk afgelegde weg als basis. De aanvaller die in deze
+thesis wordt beschreven, heeft echter geen toegang tot deze afstandsdata. Hij
+heeft wel nog toegang tot de ruwe gps-data, maar ook de snelheid, het tempo
+enzovoort. Het onderzoek bestaat er dus uit om te zien in hoeverre een aanval
+nog mogelijk is wanneer de afstandsdata onbruikbaar zou zijn. We onderzoeken
+dus een alternatieve aanpak om de inferentie-aanval alsnog succesvol te kunnen
+uitvoeren.
 
-De aanvaller die in deze thesis wordt beschreven, heeft echter geen toegang tot
-deze afstandsdata. Hij heeft wel nog toegang tot de ruwe gps-data, maar ook de
-snelheid, het tempo enzovoort. Het onderzoek bestaat er dus uit om te
-onderzoeken in hoeverre een aanval nog mogelijk is wanneer de afstandsdata
-onbruikbaar zou zijn. Een alternatieve aanpak wordt dus onderzocht om de
-inferentie-aanval alsnog succesvol te kunnen uitvoeren.
-
-De beschreven aanvaller is beschreven in een theoretisch kader. We bestuderen
-onder welke omstandigheden de aanval mogelijk is, en welke maatregelen
-effectief blijken. Het globale scenario waar we van uitgaan is: wat als
-fitnesstrackers de afstandsgegevens op een bepaalde manier zouden verbergen of
-onbruikbaar maken, door bijvoorbeeld afrondingen te maken, of onzekerheid toe
-te voegen.
+We beschrijven aanvaller in een theoretisch kader. We bestuderen onder welke
+omstandigheden de aanval mogelijk is, en welke maatregelen effectief blijken.
+Het globale scenario waar we van uitgaan is: wat als fitnesstrackers de
+afstandsgegevens op een bepaalde manier zouden verbergen of onbruikbaar maken,
+door bijvoorbeeld afrondingen te maken, of onzekerheid toe te voegen? Is de
+aanval dan nog mogelijk, en zo ja, hoe effectief is deze dan nog, en wat voor
+gevolgen heeft dit ten opzichte van eerder bespoken beschermingsmaatregelen?
 
 \subsection{Assumpties}\label{sec:assumpties}
 Om de aanval te kunnen uitvoeren, moeten enkele assumpties worden gemaakt.
@@ -55,11 +55,12 @@ Om de aanval te kunnen uitvoeren, moeten enkele assumpties worden gemaakt.
 succesvol uit te voeren. Voor dit onderzoek is het dus logisch om dezelfde
 veronderstellingen te maken. Zo kunnen we een nuttige vergelijking maken. De
 eerste assumptie bestaat eruit opdat de zichtbare begin -en eindpunten op de
-cirkel moeten liggen. Ten tweede moet de beschermde locatie op de roadgraph
-liggen. Hij kan niet buiten het voor ons te mappen gebied liggen, bijvoorbeeld
-in een bos waar geen pad ligt. Er wordt dieper ingegaan op de roadgraph in
-Sectie~\ref{sec:roadgraph}. Als laatste, maar desalniettemin belangrijk punt
-moet de gebruiker binnenin de \ac{EPZ} de kortste route volgen~\cite{Dhondt}.
+rand van de \ac{EPZ} moeten liggen. Ten tweede moet de beschermde locatie op de
+roadgraph liggen. Hij kan niet buiten het voor ons te mappen gebied liggen,
+bijvoorbeeld in een bos waar geen pad ligt. Er wordt dieper ingegaan op de
+roadgraph in Sectie~\ref{sec:roadgraph}. Als laatste, maar desalniettemin
+belangrijk punt moet de gebruiker binnenin de \ac{EPZ} de kortste route
+volgen~\cite{Dhondt}.
 
 Dhondt et al.\ maakt nog een laatste assumptie over start- en eindpunten, die
 hetzelfde moeten zijn. Dit is echter niet van toepassing op dit onderzoek. Het
@@ -333,17 +334,18 @@ zijn, ontbreekt nu ook de \textit{outer distance}. We bepalen deze dan ook via
 de \ac{gps}-coördinaten. Dit gebeurd door de som te nemen van de afstanden van
 alle opeenvolgende punten. Let wel dat we de afstand tussen twee
 \ac{gps}-punten berekenen gebruik makend van de \textit{haversine} formule.
-Formule~\ref{eq:haversine} is een uitwerking van de formule. Deze berekent de
-afstand tussen twee punten op een bolvormig oppervlak, in dit geval de aarde.
-Om de afstand tussen twee punten op het aardoppervlak te berekenen, moeten de
-breedte- en lengtegraden van elk punt worden omgezet naar radialen. Vervolgens
-worden deze waarden ingevoerd in de formule, samen met de straal van de aarde
-($r$), meestal genomen als $6.371 km$. De formule berekent dan de haversine van
-de helft van het verschil tussen de breedtegraden en de haversine van de helft
-van het verschil tussen de lengtegraden ($\lambda$), evenals de cosinus van de
+Formule~\ref{eq:haversine} is een uitwerking van de
+formule~\cite{sheppard1922practical}. Deze berekent de afstand tussen twee
+punten op een bolvormig oppervlak, in dit geval de aarde. Om de afstand tussen
+twee punten op het aardoppervlak te berekenen, moeten de breedte- en
+lengtegraden van elk punt worden omgezet naar radialen. Vervolgens worden deze
+waarden ingevoerd in de formule, samen met de straal van de aarde ($r$),
+meestal genomen als $6.371 km$. De formule berekent dan de haversine van de
+helft van het verschil tussen de breedtegraden en de haversine van de helft van
+het verschil tussen de lengtegraden ($\lambda$), evenals de cosinus van de
 breedtegraden ($\phi$) van beide punten. Deze waarden worden vervolgens
 gebruikt om de afstand tussen de twee punten te berekenen tussen de punten P \&
-Q op Figuur~\ref{fig:haversine}~\cite{sheppard1922practical}.
+Q op Figuur~\ref{fig:haversine}.
 
 Merk op dat ook dit een benadering is van de werkelijke afstand. De aarde is
 niet perfect sferisch, wat de nauwkeurigheid kan beïnvloeden. Maar voor de
@@ -433,6 +435,10 @@ mogelijks de gevoelige locatie kan voorstellen. In de praktijk kan dit
 mechanisme op een simpele manier worden toegepast door het gebruik van de
 vooraf berekende distance matrix. De berekende inner distance zal worden
 vergeleken met de afstanden in de distance matrix.
+
+Deze methodiek zal worden herhaald voor elke activiteit die niet werd
+gefilterd. Al deze voorspellingen zullen worden gebundeld tot één voorspelling
+in de volgende stap.
 
 \subsection{Regressie om te komen tot een eindvoorspelling}
 Om de routes die we in vorige sectie bepaalden om te vormen tot één
