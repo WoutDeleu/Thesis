@@ -35,7 +35,7 @@ en er een korte beschrijving aan toe te voegen. Ook een foto kan optioneel
 toegevoegd worden. De exacte datum en tijd van de start van de activiteit wordt
 hierbij ook weergegeven.
 
-Rechts daarvan zijn de algemene basisstatistieken te zien. Deze zijn de totale
+Rechts bovenaan zijn de algemene basisstatistieken te zien. Deze zijn de totale
 afgelegde afstand, de totale bewegingstijd, de gemiddelde snelheid of het
 gemiddelde tempo, het totale hoogteverschil, de totale verstreken tijden, en
 het aantal calorieën verbrand. Als extra kunnen hier enkele statistieken
@@ -82,13 +82,13 @@ $\frac{km}{h}$, om zo over de volledige lijn met dezelfde standaard te werken.
 \end{figure}
 
 Onder de basisstatistieken zijn de \textit{Strava-segmenten} te zien. Een
-Strava-segment is een specifiek deel van een bepaalde route dat door gebruikers
-van de sport-app kan worden gemarkeerd, gedeeld en vergeleken met andere
-gebruikers. Het segment is een bepaalde afstand en route, bijvoorbeeld een klim
-of afdaling, die vaak wordt beschouwd als een uitdagende of iconische sectie
-van een bepaalde fiets- of hardlooproute. Gebruikers van Strava kunnen een
-segment maken door de begin- en eindpunten op een kaart aan te geven en een
-naam en beschrijving toe te voegen. Zodra het segment is gemaakt, kunnen andere
+Strava-segment is een specifiek deel van een bepaalde route dat gebruikers van
+de sport-app kunnen markeren, delen en vergelijken met andere gebruikers. Het
+segment is een bepaalde afstand en route, bijvoorbeeld een klim of afdaling,
+die vaak wordt beschouwd als een uitdagende of iconische sectie van een
+bepaalde fiets- of hardlooproute. Gebruikers van Strava kunnen een segment
+maken door de begin- en eindpunten op een kaart aan te geven en een naam en
+beschrijving toe te voegen. Zodra het segment is gemaakt, kunnen andere
 gebruikers het segment vinden en deelnemen aan een leaderboard, waarop de
 snelste tijden worden bijgehouden en vergeleken met andere gebruikers.
 Segmenten worden vaak gebruikt om prestaties te meten en te vergelijken.
@@ -141,9 +141,9 @@ activiteit op te nemen. Er zal dan ook mogelijkheid zijn om real time info te
 zien. Op elk punt zal de afstand vanaf het startpunt gekend zijn, en het is
 deze afstand die gedeeld zal worden op het platform. Het grote nadeel hierbij
 is het real-time aspect. Fouten kunnen moeilijker on the fly worden
-gecorrigeerd. Een tweede aanpak is om \ac{gps}-data pas bij het uploaden te
-verwerken. De \ac{gps}-data wordt dan geanalyseerd, en de nodige berekeningen
-worden uitgevoerd.
+gecorrigeerd. Een tweede aanpak voor GPS-calculated distance is om
+\ac{gps}-data pas bij het uploaden te verwerken. De \ac{gps}-data wordt dan
+geanalyseerd, en de nodige berekeningen worden uitgevoerd.
 
 Het alternatief voor de GPS-calculated distance is de \textit{Ground Speed
     Distance} methodiek. Deze afstand kan enkel worden bepaald in het geval van een
@@ -159,10 +159,10 @@ resultaten bekomen worden. Dit is zeer waarschijnlijk te wijten aan de
 preprocessing van de data die gebeurt bij het uploaden van een activiteit.
 Alhoewel dit niet expliciet gedocumenteerd staat doen de resultaten dit wel
 sterk vermoeden. De hypothese is dat tijdens het uploaden, de afstand
-herberekend wordt. De \ac{gps}-punten zullen worden geanalyseerd, en er zullen
-technieken worden gebruikt om de resultaten hiervan te verbeteren. De twee
-meest waarschijnlijke technieken zijn \textit{Map Snapping} en
-\textit{Smoothing}.
+herberekend wordt. De \ac{gps}-punten zullen worden geanalyseerd, en dat het
+platform hierbij technieken gebruikt om de resultaten hiervan te verbeteren. De
+twee meest waarschijnlijke technieken zijn \textit{Map Snapping} (ook wel
+\textit{Map Matching} genoemd) en \textit{Smoothing}.
 
 Map Snapping of Snap to Roads is een techniek waarbij \ac{gps}-punten worden
 verschoven naar de dichtstbijzijnde weg. Per \ac{gps}-punt wordt dan gezocht
@@ -217,7 +217,22 @@ curve de ruwe data voorstelt, dus voorafgaand op het `smoothen', en de rode de
     \includegraphics[width=0.6\linewidth]{fig/SmoothingExample.png}
     \caption{Voorbeeld Data smoothing met een moving average~\cite{SmoothingandInterpolatingNoisyGPSDatawithSmoothingSplines}}\label{fig:SmoothingExample}
 \end{figure}
-% - https://support.strava.com/hc/en-us/articles/216917707-Bad-GPS-Data
+
+\subsection{Algemeen Privacybeleid}\label{sec:Algemene Privacy}
+Het is zeker niet altijd wenselijk om alle data die vervat zit in zo'n
+activiteit met alle andere gebruikers op het platform te delen. De
+ontwikkelaars kiezen er dan ook voor om gebruikers de mogelijkheid te geven om
+hun privacy te bewaren. In deze sectie wordt de focus gelegd op de mechanismen
+gebruikt door \textit{Strava}. Er valt op dat heel wat andere sport-applicaties
+vergelijkbare, zo niet dezelfde methodieken gebruiken. Een eerste algemeen
+mechanisme bestaat eruit om de gebruiker de keuze te geven om alle activiteiten
+en alle gegevens over het profiel heen te laten voldoen aan bepaalde privacy
+regels. Deze regels kunnen ook per activiteit worden ingesteld. Onder de keuzes
+staan meestal drie opties, \textit{zichtbaar voor iedereen}, \textit{zichtbaar
+    voor volgers} en \textit{zichtbaar voor niemand}. Er kan ook zelf een keuze
+gemaakt worden om specifieke elementen van een activiteit niet te delen met de
+buitenwereld, zoals bijvoorbeeld de zichtbaarheid van de route op de
+kaart~\cite{Activity24:online}.
 
 \section{Mogelijke gps-fouten}\label{sec:gps-fouten}
 Zoals reeds aangehaald kunnen er bij het verzamelen van \ac{gps}-data
@@ -228,12 +243,18 @@ belangrijkste zijn hierbij \textit{\ac{gps}-drift}, \textit{\ac{gps}-signal
     loss} en \textit{\ac{gps}-bounce}.
 
 Gps-drift is een fenomeen waarbij de \ac{gps}-locatie van een gebruiker afwijkt
-van de effectieve locatie. Een voorbeeld vanuit het Strava-platform is terug te
-vinden op Figuur~\ref{fig:gps_drift_Strava}. Hierbij is te zien dat de
-gebruiker een deel van de route door gebouwen heen en door het water aflegt.
-Dit kan worden veroorzaakt door dichtbebouwde omgevingen, en omgevingsfactoren
-zoals hoge bomen. Om dit tegen te gaan, zou eventueel de eerder beschreven
-methode van map-snapping kunnen worden toegepast.
+van de effectieve locatie. Twee voorbeeld zijn terug te vinden op
+Figuur~\ref{fig:gps_drift}, waarvan Figuur~\ref{fig:gps_drift_Strava}
+rechtstreeks afkomstig is vanaf Strava. Hierbij is te zien dat de gebruiker een
+deel van de route door gebouwen heen en door het water aflegt. Dit kan worden
+veroorzaakt door dichtbebouwde omgevingen, en omgevingsfactoren zoals hoge
+bomen. Er zijn enkele redenen waarom dit gebeurd, namelijk hoge gebouwen,
+wolkenkrabbers of dichte boombedekking kunnen het GPS-signaal verstoren.
+GPS-satellieten zenden radiosignalen uit die gemakkelijk kunnen worden
+belemmerd of geblokkeerd door fysieke obstakels. Wanneer het signaal wordt
+verstoord, kan de GPS-ontvanger moeite hebben om nauwkeurige locatiegegevens te
+berekenen. Reflectie van signalen kan op zijn beurt ook een impact hebben. De
+eerder beschreven map snapping kan dit eventueel tegengaan.
 \begin{figure}[h]
     \centering
     \begin{subfigure}[b]{.45\textwidth}
@@ -246,17 +267,18 @@ methode van map-snapping kunnen worden toegepast.
         \includegraphics[width=\textwidth]{fig/Afwijkingen&Analyses/Crooked Routes/GPS-Drift_onlnie.jpg}
         \caption{Voorbeeld van gps-drift op een satellietkaart, veroorzaakt door dichte boomgroei~\cite{BadGPSDa19:online}}
     \end{subfigure}
-    \caption{Voorbeelden van gps-drift}
+    \caption{Voorbeelden van gps-drift}\label{fig:gps_drift}
 \end{figure}
 
 Gps-bouncing is een fenomeen hoofdzakelijk veroorzaakt door hoge gebouwen. Het
 \ac{gps}-signaal zal hierbij weerkaatsen tussen de gebouwen, op weg naar het
-toestel vanaf de satelliet. De extra vertraging zorgt er voor dat het apparaat
-onterecht denkt een afstand afgelegd te hebben. De uitkomst van het traject is
-dan onvoorspelbaar, wat leidt tot een `cluster' van \ac{gps}-punten wanneer dit
-voor een paar punten in dezelfde omgeving gebeurt. Voorbeelden hiervan zijn
-terug te vinden op Figuur~\ref{fig:gps_bounce}. Om dit fenomeen op zijn beurt
-tegen te gaan, is het best om smoothing te toe te passen bij het berekenen.
+toestel vanaf de satelliet. De vertraging zorgt er voor dat het apparaat denkt
+een extra afstand afgelegd te hebben, terwijl dit niet zo is. De uitkomst van
+het traject is dan onvoorspelbaar, wat leidt tot een `cluster' van
+\ac{gps}-punten wanneer dit voor een paar punten in dezelfde omgeving gebeurt.
+Voorbeelden hiervan zijn terug te vinden op Figuur~\ref{fig:gps_bounce}. Om dit
+fenomeen op zijn beurt tegen te gaan, is het best om smoothing toe te passen
+bij het berekenen.
 \begin{figure}
     \centering
     \begin{subfigure}[b]{0.49\textwidth}
@@ -271,11 +293,11 @@ tegen te gaan, is het best om smoothing te toe te passen bij het berekenen.
 \end{figure}
 
 Er zijn ook voorbeelden waarbij beide fenomenen voorkomen, zoals te zien is op
-Figuur~\ref{fig:gps_drift_bounce_Strava}. Indien op een naïve manier de afstand
-berekenen zal een zich een significant verschil voordoen tussen de afstand die
-de gebruiker werkelijk afgelegd heeft, en de berekende afstand. Onder de naïve
-manier van afstandsberekening begrijpen we de totale som van het
-afstandsverschil tussen twee opeenvolgende punten te nemen.
+Figuur~\ref{fig:gps_drift_bounce_Strava}. Indien we in dit geval op een naïve
+manier de totale afgelegde afstand berekenen zal zich een significant verschil
+voordoen tussen de afstand die de gebruiker werkelijk afgelegd heeft, en de
+berekende afstand. De naïve manier van afstandsberekeningen houdt in dat we de
+totale som van het afstandsverschil tussen twee opeenvolgende punten nemen.
 \begin{figure}
     \centering
     \includegraphics[width=0.7\textwidth]{fig/Afwijkingen&Analyses/Crooked Routes/1_notSnapped.png}
@@ -291,7 +313,7 @@ trackers, is de mogelijkheid tot het pauzeren van een activiteit. In dit geval
 wordt de activiteit gepauzeerd voor een bepaald tijdsframe, en wordt er geen
 data meer verzameld. Wanneer de activiteit terug wordt hervat, zal er een
 sprong zijn in de \ac{gps}-locaties, wat kan leiden tot een verkeerde
-berekening van de afstand. In het geval van een pauze zal mapmatching geen
+berekening van de afstand. In het geval van een pauze zal map matching geen
 oplossing zijn, maar zou deze `sprongafstand' best weggelaten worden in de
 berekeningen. Een voorbeeld hiervan is terug te vinden op
 Figuur~\ref{fig:gps_signal_loss}.
@@ -307,30 +329,15 @@ Figuur~\ref{fig:gps_signal_loss}.
     \caption{Voorbeeld van signal loss uit de gebruikte dataset}\label{fig:gps_signal_loss}
 \end{figure}
 
-\subsection{Algemeen Privacybeleid}\label{sec:Algemene Privacy}
-Het is zeker niet altijd wenselijk om alle data die vervat zit in zo'n
-activiteit met alle andere gebruikers op het platform te delen. De
-ontwikkelaars kiezen er dan ook voor om gebruikers de mogelijkheid te geven om
-hun privacy te bewaren. In deze sectie wordt de focus gelegd op de mechanismen
-gebruikt door \textit{Strava}. Als opmerking valt te melden dat in heel wat
-andere sport-applicaties vergelijkbare, zo niet dezelfde methodieken worden
-gebruikt. Een eerste algemeen mechanisme bestaat eruit om de gebruiker de keuze
-te geven om alle activiteiten en alle gegevens over het profiel heen te laten
-voldoen aan bepaalde privacy regels. Deze regels kunnen ook per activiteit
-worden ingesteld. Onder de keuzes staan meestal drie opties, \textit{zichtbaar
-    voor iedereen}, \textit{zichtbaar voor volgers} en \textit{zichtbaar voor
-    niemand}. Er kan ook zelf een keuze gemaakt worden om specifieke elementen van
-een activiteit niet te delen met de buitenwereld, zoals bijvoorbeeld de
-zichtbaarheid van de route op de kaart~\cite{Activity24:online}.
+Een tweede belangrijke maatregel is het gebruik van de de \acp{EPZ}.
 
 \section{Endpoint Privacy Zones}\label{sec:EPZ}
-Een tweede belangrijke maatregel is het gebruik van de de \acp{EPZ}. Een
-\ac{EPZ} is een cirkelvormige zone met een bepaalde straal rond een
+Een \ac{EPZ} is een cirkelvormige zone met een bepaalde straal rond een
 \ac{gps}-punt. Het punt in kwestie zal dus de betreffende \textit{gevoelige
-    locatie} zijn. De straal van deze cirkel\footnote{Op Strava heeft de \ac{EPZ}
-    de vorm van een cirkel, maar op andere platformen kunnen andere vormen de norm
-    zijn, bv.\ polygonen.} kan worden gekozen door de gebruiker, en in het geval
-van Strava hebben gebruikers keuze uit waarden van 0 tot 1600m, in stappen van
+    locatie} zijn. De gebruiker kan de straal van deze cirkel\footnote{Op Strava
+    heeft de \ac{EPZ} de vorm van een cirkel, maar op andere platformen kunnen
+    andere vormen de norm zijn, bv.\ polygonen.} zelf kiezen, en in het geval van
+Strava hebben gebruikers keuze uit waarden van 0 tot 1600m, in stappen van
 200m. Wanneer een gebruiker binnen deze zone zijn activiteit beëindigt of
 begint, dan zal dat deel van de route binnen de \ac{EPZ} niet zichtbaar zijn
 voor anderen. Vanuit het perspectief van een andere gebruiker zal de activiteit
@@ -378,10 +385,10 @@ op Figuur~\ref{fig:translation}. Het transleren van deze cirkel wordt ook
 
 Daarna worden alle punten vertrekkende vanaf de gevoelige locatie tot aan de
 rand van de \ac{EPZ}, en vanaf de rand van de \ac{EPZ} tot aan de gevoelige
-locatie verwijderd van het zichtbare traject. Merk op dat punten die de
-\ac{EPZ} doorkruisen, maar niet vertrekken of aankomen bij de gevoelige locatie
-niet worden gefilterd. Een voorbeeld van deze filtering is te zien op
-Figuur~\ref{fig:drop points}.
+locatie verwijderd van het zichtbare traject. Een voorbeeld van deze filtering
+is te zien op Figuur~\ref{fig:drop points}, waarbij duidelijk zichtbaar is dat
+punten die de \ac{EPZ} doorkruisen, maar niet vertrekken of aankomen bij de
+gevoelige locatie niet worden gefilterd.
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.7\linewidth]{fig/EPZ-mechanisme/DropEPZPoints.png}
@@ -390,18 +397,19 @@ Figuur~\ref{fig:drop points}.
 
 \section{Literatuur}
 In het verleden is al wat onderzoek verricht in de richting van de
-doeltreffendheid van \acp{EPZ} bij fitnesstrackers. Hassan et al.\ beschreef in
-2018 een implementatie van EPZ waarbij het centrum van de zone de gevoelige
+doeltreffendheid van \acp{EPZ} bij fitnesstrackers. Hassan et al.\ beschreven
+in 2018 een implementatie van EPZ waarbij het centrum van de zone de gevoelige
 locatie is~\cite{sec18has3:online}. M.a.w.\ het identificeren van deze zone is
 dus voldoende om de gevoelige locatie te achterhalen. In tegenstelling tot deze
 thesis, wordt ervan uitgegaan dat het centrum geen translatie ondervindt, en er
-dus geen spatial cloaking wordt toegepast. In deze paper wordt gefocust op de
-reconstructie van de cirkel op basis van 3 punten op de rand, wat te zien is op
+dus geen spatial cloaking wordt toegepast. In deze paper
+van~\citeauthor{sec18has3:online} wordt gefocust op de reconstructie van de
+cirkel op basis van 3 punten op de rand, wat te zien is op
 Figuur~\ref{fig:Hassan_EPZ}. Deze 3 randpunten worden dus bekomen door
 begin/eindpunten te nemen van activiteiten, volgens het perspectief van
 gebruiker die geen eigenaar is. Deze begin/eindpunten zullen zich altijd op de
 rand van de cirkel begeven. Door het toepassen bekwam Hassan et al.\ een succes
-rate tot 95.1 Spatial cloaking werd er aangehaald als mogelijke verdediging
+rate tot 95.1\%. Spatial cloaking werd er aangehaald als mogelijke verdediging
 tegen dit soort aanvallen.
 \begin{figure}[h]
     \centering
@@ -414,21 +422,21 @@ dat heel wat mensen in staat zijn om de gevoelige locatie te achterhalen op
 basis van hun intuïtie~\cite{10.1145/3491102.3502136}. Dit gebeurde op basis
 van enquêtes die werden afgenomen bij gebruikers van het platform. Deelnemers
 aan de enquête moesten op basis van activiteiten opgenomen door een
-fitnesstracker, die verhuld waren gebruik makend van spatial cloaking, de
-startlocatie van een gebruiker proberen te achterhalen. Uit het onderzoek bleek
-dat 68\% van de ondervraagden bij een \ac{EPZ}-radius van 200m de beschermde
-locatie tot op 50m nauwkeurig konden voorspellen. Hoe meer activiteiten ter
-beschikking zijn, hoe effectiever de deelnemers de locatie konden schatten.
-Deze resultaten op zich zijn alarmerend, en tonen aan dat \acp{EPZ} verre van
-perfect zijn, en ook te omzeilen zijn door een persoon die geen technische
-achtergrond heeft.
+fitnesstracker, die verhuld waren gebruik makend van een \ac{EPZ}, weliswaar
+zonder spatial cloaking, de startlocatie van een gebruiker proberen te
+achterhalen. Uit het onderzoek bleek dat 68\% van de ondervraagden bij een
+\ac{EPZ}-radius van 200m de beschermde locatie tot op 50m nauwkeurig konden
+voorspellen. Hoe meer activiteiten ter beschikking zijn, hoe effectiever de
+deelnemers de locatie konden schatten. Deze resultaten op zich zijn alarmerend,
+en tonen aan dat \acp{EPZ} verre van perfect zijn, en ook te omzeilen zijn door
+een persoon die geen technische achtergrond heeft.
 
 Dhondt et al.\ voerde tevens ook een studie in 2022 naar de mogelijke lekken
 aanwezig in het principe van \acp{EPZ}~\cite{Dhondt}. Er wordt in deze paper
 een nadruk gelegd op de translatie van de \ac{EPZ}, en hoe deze de privacy van
-een gebruiker verhoogt. Een inferentie aanval, wordt er beschreven die
-gebruikmaakt van de totale afstand die terug te vinden bij de activiteit. Het
-principe van deze inferentie aanval wordt uitvoerig beschreven in
+een gebruiker verhoogt. Ze beschrijven een inferentie aanval die gebruikmaakt
+van de totale afstand die terug te vinden bij de activiteit. Het principe van
+deze inferentie aanval wordt uitvoerig beschreven in
 Sectie~\ref{chap:inferentieaanval}. In het kort werkt de aanval als volgt: aan
 de hand van de totale afgelegde afstand in combinatie met het wegennetwerk in
 die omgeving, wordt een poging gedaan om alle mogelijke routes die de sporter
@@ -437,21 +445,21 @@ voor elke activiteit. Wanneer dit gedaan wordt voor verschillende trajecten,
 kan een locatie voorspeld worden die het meest waarschijnlijk wordt geacht om
 de gevoelige locatie te zijn.
 
-Deze aanpak toonde aan dat de beschreven countermeasure door Hassan et al.\
-niet feilloos is, en dat deze kan worden omzeild met een successrate van 85\%.
-Aangezien activiteiten nog steeds totale afstanden van een volledige route
-vrijgeven, kan de afstand afgelegd binnenin de EPZ geïnfereerd worden. Deze
+Dhondt et al.\ toonden aan dat de beschreven countermeasures door Hassan et
+al.\ niet feilloos zijn, en dat ze deze kunnen omzeilen met een successrate van
+85\%. Aangezien activiteiten nog steeds totale afstanden van een volledige
+route vrijgeven, kunnen ze de afstand afgelegd binnenin de EPZ infereren. Deze
 data ligt dan ook aan de grond van de inferentie aanval volgens Dhondt et al.
 
-Het meest recente werk in dit domein is de thesis
-van~\citeauthor{Verdonck_2022}~\cite{Verdonck_2022}. Deze thesis bouwt in grote
-mate verder op de paper van \citeauthor{Dhondt}, maar er wordt alternatieve
-data gebruikt. Er wordt een onderzoek gedaan in hoeverre de resultaten kunnen
-worden bekomen door het gebruik van hoogtedata om beschermde locaties te
-achterhalen. Via de kennis van hoogtedata van het stratenplan kan via de
-gekende hoogteverschillen een inferentie aanval opgezet worden, die nu geen
-afstanden maar hoogteverschillen infereerd. Op deze manier
-bekomt~\citeauthor{Verdonck_2022} een succes rate van 36\%. Dit lagere
+Het meest recente werk in dit domein is de thesis van
+\citeauthor{Verdonck_2022}~\cite{Verdonck_2022}. Deze thesis bouwt in grote
+mate verder op de paper van \citeauthor{Dhondt}, maar maakt gebruik van
+alternatieve data.\ \citeauthor{Verdonck_2022} onderzoekt in hoeverre hij
+gelijkaardige resultaten kan bekomen door het gebruik van hoogtedata om
+beschermde locaties te achterhalen. Via de kennis van hoogtedata van het
+stratenplan kan hij via de gekende hoogteverschillen een inferentie aanval
+opzetten, die nu geen afstanden maar hoogteverschillen infereerd. Op deze
+manier bekomt~\citeauthor{Verdonck_2022} een succes rate van 36\%. Dit lagere
 succesratio is terug te brengen naar het feit dat hoogtedata een stuk minder
 precies zijn. Ook is hoogtetoename in heel wat regios niet zo significant, wat
 de succesrate niet ten goeie komt.

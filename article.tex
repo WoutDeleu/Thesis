@@ -97,7 +97,7 @@ Fitness trackers each implement ways to improve user privacy. Perhaps the most
 easy way to think of is perhaps the ability to hide activities from a selection
 of people (e.g., anyone who is not a follower). Thus, only the people whom the
 user explicitly allows to view activities. A more complex alternative is to use
-EPZs. Hereby will a portion of the displayed route be hidden for external
+EPZs. Hereby a portion of the displayed route will be hidden for external
 viewers. Part of the route is cut off, so to speak. The real starting and
 ending points will lie inside the truncated part. New points will be generated,
 on the edge of the circle, which for the external observer will represent the
@@ -122,7 +122,7 @@ when omitting certain data, and thus by the use of alternative data. The focus
 of this study is mainly on velocity-based data.
 
 To achieve this objective, we must first examine the attack model according to
-Dhondt el al. Then we can describe different possible alternative attack
+Dhondt et al. Then we can describe different possible alternative attack
 scenarios, and for each work out the calculations necessary in order for this
 scenario to be possible. Before we can test and analyze the attack, we must
 consider the possible errors in the used dataset. We also perform an analysis
@@ -149,28 +149,27 @@ that contain relevant GPS information will be considered, so only
 \end{figure}
 
 \subsection{GPS faults}
-Some visible data on an activity, which can also be found on
-Figure~\ref{fig:activity}, are the distance, the duration, the average speed,
-etc. The average speed forms the core to the attack which we will describe in
-this article. This will be calculated as the total distance divided by the
-moving time of the athlete. Fitness trackers receive raw data from the devices.
-This data must therefore be processed before it is usefull fo the users.
-Especially GPS-data, which is can be exposed to a lot of faults and noise.
-There are three types of GPS faults, namely \textit{GPS drift}, \textit{GPS
-    signal loss} and \textit{GPS bounce}. GPS-drift is a phenomenon where a user's
-GPS location deviates from the effective location. This may be caused by
-densely built environments, and natural factors such as tall trees. GPS
-bouncing is a phenomenon caused mainly by tall buildings. In this situation,
-the GPS signal will bounce in between buildings on its way to the device from
-the satellite. The extra delay that the bounces bring along causes the device
-to mistakenly think it has traveled some additional distance. The outcome of
-the trajectory is then unpredictable, leading to a `cluster' of GPS points. A
-last phenomenon that can occur is GPS signal loss. This occurs when the user's
-signal is lost, and a new signal is only received at a later time stamp,
-causing a jump. A second cause that can lead to signal loss, which especially
-applies to fitness trackers, is the ability to pause an activity. I When the
-activity is resumed again, there will be a jump in GPS locations, which may
-lead to miscalculation of distance.
+Some visible data of an activity, which can also be found on
+Figure~\ref{fig:activity}, are distance, duration, average speed, etc. The
+average speed forms the core to the attack which we will describe in this
+article. This will be calculated as the total distance divided by the moving
+time of the athlete. Fitness trackers receive raw data from the devices. This
+data must therefore be processed before it is usefull fo the users. Especially
+GPS-data, which can be exposed to a lot of faults and noise. There are three
+types of GPS faults, namely \textit{GPS drift}, \textit{GPS signal loss} and
+\textit{GPS bounce}. GPS-drift is a phenomenon where a user's GPS location
+deviates from the effective location. This may be caused by densely built
+environments, and natural factors such as tall trees. GPS bouncing is an
+anomaly caused mainly by tall buildings. In this situation, the GPS signal will
+bounce in between buildings on its way to the device from the satellite. The
+extra delay that the bounces bring along causes the device to mistakenly think
+it has traveled some additional distance. The outcome of the trajectory is then
+unpredictable, leading to a `cluster' of GPS points. A last incident that can
+occur is GPS signal loss. This occurs when the user's signal is lost, and a new
+signal is only received at a later time stamp, causing a jump. A second cause
+that can lead to signal loss, which especially applies to fitness trackers, is
+the ability to pause an activity. When the activity is resumed again, there
+will be a jump in GPS locations, which may lead to miscalculation of distance.
 
 \begin{figure}[h]
     \centering
@@ -194,7 +193,7 @@ lead to miscalculation of distance.
 
 Some techniques can be used to improve the overall accuracy of the GPS data,
 and so improve the effectiveness of the attack. The main technique used in this
-thesis is \textit{smoothing}, and the hypothesis is that fitnessplatformen use
+thesis is \textit{smoothing}, and the hypothesis is that fitnessplatforms use
 this technique as well. This is a technique to enhance the accuracy and
 reliability of GPS data. There are different implementations of GPS smoothing,
 but the one used in this context is moving average filtering. This method
@@ -285,7 +284,7 @@ The actual attack can be broken down in seven steps.
           points of these activities are extracted and then grouped together using the
           k-means algorithm. This grouping helps to form a circle that represents the
           EPZ.\
-    \item Then can we move on to the identification of Entry Gates (E.G.). Entry gates
+    \item Then we can move on to the identification of Entry Gates (E.G.). Entry gates
           refer to the zones where users can enter or exit the EPZ.\ These gates are
           typically located around roads that lead into the EPZ.\ Identifying these entry
           gates is crucial for filtering out anomalous activities. The detection of entry
@@ -317,7 +316,7 @@ The actual attack can be broken down in seven steps.
           as possible. In cases where a user does not follow the shortest route from the
           EPZ boundary to the sensitive location, we can partially address this by
           considering an activity only if the remaining distance within the EPZ is
-          smaller than the maximum possible distance to be covered. Similarly, filtering
+          smaller than the maximal possible distance to be covered. Similarly, filtering
           can be applied for distances traveled that are lower than the minimum possible
           distance. Furthermore, the visible start and end points of activities are
           checked for compatibility with the road graph. If the difference in distance
@@ -348,7 +347,7 @@ only experiments with a subset of 131 users, with 101 users used for analyses
 and conclusions, and 30 users reserved for testing the attack.
 
 \subsection{Geographical distribution}
-A geographical distribution is visible in Figure~\ref{fig:heatmap} It clearly
+A geographical distribution is visible in Figure~\ref{fig:heatmap}. It clearly
 shows that most activities are located in Central Europe. Additionally, there
 is a noticeable concentration in the United States. To a lesser extent, there
 are also activities in Australia and South America. The dataset exhibits a
@@ -358,8 +357,8 @@ the dataset we have access to, with 101 users, is relatively small, which may
 result in a distorted representation of reality.
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.75\linewidth]{fig/Afwijkingen&Analyses/Heatmap.png}\label{fig:heatmap}
-    \caption{Geo-heatmap of the users in the dataset}
+    \includegraphics[width=0.85\linewidth]{fig/Afwijkingen&Analyses/Heatmap.png}
+    \caption{Geo-heatmap of the users in the dataset}\label{fig:heatmap}
 \end{figure}
 
 \subsection{Users and activities}
@@ -370,24 +369,24 @@ activities per user. It is notable that there is a significant number of
 activities available per user in the dataset. However, it's important to note
 that the dataset, with an average of 411 activities per user, is not entirely
 representative of reality. When comparing these figures with data from a study
-conducted by Strava itself in 2020, there is a mismatch apparent.
+conducted by Strava itself in 2020, there seems to be a mismatch.
 \begin{table}[h]
     \centering
     \begin{tabular}{|l||c|}
         \hline
-                                                         & \textbf{Aantal} \\
+                                             & \textbf{Amount} \\
         \hline \hline
-        Totaal \# gebruikers                             & 101             \\
+        Total \# users                       & 101             \\
         \hline
-        Totaal aantal activiteiten                       & 41 554          \\
+        Total \# activities                  & 41 554          \\
         \hline
-        Gemiddeld \# activiteiten per gebruiker          & 411             \\
+        Average \# activities per user       & 411             \\
         \hline
-        Mediaan van het \# activiteiten per gebruiker    & 296             \\
+        Median of the \# activities per user & 296             \\
         \hline
-        Maximaal \# activities voor een enkele gebruiker & 2946            \\
+        Maximal \# activities for a user     & 2946            \\
         \hline
-        Minimaal \# activities voor een enkele gebruiker & 31              \\
+        Minimaal \# activities for a user    & 31              \\
         \hline
     \end{tabular}
     \captionsetup{justification=centering}
@@ -537,7 +536,7 @@ the total area of their uncertainty regions.
 
 The \textit{Certainty metric} quantifies the concentration of the probability
 distribution. A higher Certainty value indicates that the nodes in the
-probability distribution are spread farther apart, indicating a greater level
+probability distribution are spread further apart, indicating a greater level
 of certainty or confidence in the predictions. Essentially, it measures the
 degree of dispersion or concentration of the predicted locations in the
 probability distribution.
@@ -545,10 +544,10 @@ probability distribution.
 \textit{Spatial Certainty} is a metric that considers the density or concentration of
 neighboring nodes in the vicinity of each predicted node, instead of focusing
 solely on the probability of each individual node. It takes into account the
-density or clustering of predicted locations in the neighborhood of each node.
+density or clustering of predicted locations in the neighbourhood of each node.
 A higher Spatial Certainty value indicates a higher density or concentration of
 predicted nodes in the local vicinity, suggesting a higher level of certainty
-in the predicted locations within their respective neighborhoods.
+in the predicted locations within their respective neighbourhoods.
 
 The \textit{Degree of Anonymity} is a metric that quantifies the level of
 anonymity achieved by the attack. It is calculated as the normalized entropy of

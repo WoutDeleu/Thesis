@@ -62,30 +62,31 @@ roadgraph in Sectie~\ref{sec:roadgraph}. Als laatste, maar desalniettemin
 belangrijk punt moet de gebruiker binnenin de \ac{EPZ} de kortste route
 volgen~\cite{Dhondt}.
 
-Dhondt et al.\ maakt nog een laatste assumptie over start- en eindpunten, die
-hetzelfde moeten zijn. Dit is echter niet van toepassing op dit onderzoek. Het
-onderzoek focust zich op activiteiten waar slechts één deel van het traject
-gecloaked is. Dit wil dan ook zeggen dat de gebruiker ofwel vertrekt op de
-gevoelige locatie, of er eindigt, maar niet beide. Op
-Figuur~\ref{fig:totalDistanceAttack} zijn de 2 mogelijke scenarios van een
-total distance attack terug te vinden, namelijk waarbij zowel gestart als
-geëindigd wordt binnenin de zone. Dit wordt ook een \textit{total distance
-    attack} genoemd, omdat enkel de totale afstand en de afstand buiten de \ac{EPZ}
-nodig is. Op deze figuur zijn de rode punten gelabeld \textit{Start} en
-\textit{End} de zichtbare start- en eindpunten. Dit scenario stelt dat één van
-de reële start- of eindpunten de gevoelige locatie is, aangeduid met de zwarte
-markering. Een andere aanval is de \textit{inner distance attack}, hierbij
-zullen zowel de start als het einde van een activiteit binnenin het te
-verbergen gebied liggen, dit is te zien op Figuur~\ref{fig:innerDist}. De
-kennis van de afzonderlijke afstand die de gebruiker aflegt van de start tot de
-rand van de \ac{EPZ} en van de rand van de \ac{EPZ} tot de eindlocatie is dan
-ook een vereiste. Op de Figuur is opnieuw de zichtbare randpunten aangeduid in
-het rood. Echter zal het onzichtbare traject voor beide gevallen doorlopen en
+Dhondt et al.\ maakte nog een laatste assumptie betreffende start- en
+eindpunten, meer bepaald dat deze die dezelfde locaties moeten voorstellen. Dit
+is echter niet van toepassing op dit onderzoek. Het onderzoek focust zich op
+activiteiten waar slechts één deel van het traject verborgen is. Dit wil dan
+ook zeggen dat de gebruiker ofwel vertrekt op de gevoelige locatie, of er
+eindigt, maar niet beide. Op Figuur~\ref{fig:totalDistanceAttack} zijn de 2
+mogelijke scenarios van een total distance attack terug te vinden, namelijk
+waarbij ofwel gestart als geëindigd wordt binnenin de zone. Dit wordt ook een
+\textit{total distance attack} genoemd, omdat enkel de totale afstand en de
+afstand buiten de \ac{EPZ} nodig is. Op deze figuur zijn de rode punten
+gelabeld \textit{Start} en \textit{End} de zichtbare start- en eindpunten. Dit
+scenario stelt dat één van de reële start- of eindpunten de gevoelige locatie
+is, aangeduid met de zwarte markering. Een andere aanval is de \textit{inner
+    distance attack}, hierbij zullen zowel de start als het einde van een
+activiteit binnenin het te verbergen gebied liggen, dit is te zien op
+Figuur~\ref{fig:innerDist}. De kennis van de afzonderlijke afstand die de
+gebruiker aflegt van de effectieve startlocatie tot de rand van de \ac{EPZ} en
+van de rand van de \ac{EPZ} tot de effectieve eindlocatie is dan ook een
+vereiste. Op de Figuur zijn opnieuw de zichtbare randpunten aangeduid in het
+rood. Echter zal het onzichtbare traject voor beide gevallen doorlopen en
 eindigen op de gevoelige locatie, wat in dit geval de reële start- en
 eindlocatie is. In Sectie~\ref{sec:berekeningen} wordt dieper ingegaan op de
 reden waarom een \textit{inner distance attack} niet mogelijk is. In deze
-thesis worden dus alle activiteiten enkel een verhulde start- of eindlocatie
-behouden, de rest wordt gefilterd in deze context.
+thesis worden dus alle activiteiten waarvan enkel een verhulde start- of
+eindlocatie behouden, de rest wordt gefilterd in deze context.
 \begin{figure}[h]
     \centering
     \begin{subfigure}[b]{.5\textwidth}
@@ -136,8 +137,8 @@ middelpunten voor de verschillende clusters. Daarna worden alle punten in de
 data toegekend aan de cluster met de laagste Euclidische afstand tot het
 centrum van deze cluster. Daarna worden de gemiddeldes van deze clusters
 herberekend, en worden deze gemiddeldes gezien als nieuwe centrums. Opnieuw
-worden alle punten aan de correcte cluster toegekend, en op die manier het
-proces wordt verschillende iteraties herhaald. Op Figuur~\ref{fig:kmeans} is te
+worden alle punten aan de correcte cluster toegekend, en het proces herhaald
+zich verschillende iteraties op die manier h. Op Figuur~\ref{fig:kmeans} is te
 zien hoe de clustering bij elke iteratie beter wordt.
 \begin{figure}[h]
     \centering
@@ -156,15 +157,15 @@ zien hoe de clustering bij elke iteratie beter wordt.
     \caption{Voorbeeld werking k-means clustering~\cite{InDepthk59:online}}\label{fig:kmeans}
 \end{figure}
 
-In de context van het identificeren van de \ac{EPZ} zal het gebruikt worden om
+In de context van het identificeren van de \ac{EPZ} gebruiken we k-means om
 \ac{gps}-punten te groeperen op basis van hun locaties. In plaats van te werken
-met een centraal punt, zal er gewerkt worden met een cirkelvormige zone. De
-euclidische afstand zal in dit geval berekent worden ten opzichte van de rand
-van deze cirkel. Bij elke iteratie zal een nieuwe cirkel worden beschouwd, en
-zullen de afstanden opnieuw worden berekent. Het proces wordt herhaald totdat
-een ietwat stabiele cirkel bekomen wordt. Een cirkel is stabiel wanneer het
-verschil in afstand tussen twee opeenvolgende gevonden cirkels kleiner is dan
-een drempelwaarde, in dit geval 10 meter~\cite{Dhondt, Verdonck_2022}.
+met een centraal punt, werkt onze implementatie met een cirkelvormige zone. De
+euclidische afstand zullen we in dit geval berekenen ten opzichte van de rand
+van deze cirkel. Bij elke iteratie beschouwen we een nieuwe cirkel, en
+berekenen we de afstanden opnieuw. We herhalen het proces totdat een stabiele
+cirkel bekomen wordt. Een cirkel is stabiel wanneer het verschil in afstand
+tussen twee opeenvolgende gevonden cirkels kleiner is dan een drempelwaarde, in
+dit geval 10 meter~\cite{Dhondt, Verdonck_2022}.
 
 Het algoritme zal na de identificatie van een \ac{EPZ} ook nog nakijken of er
 niet meer dan één \ac{EPZ} te vinden is. Er wordt onderzocht of punten die
@@ -220,35 +221,37 @@ context erg nuttig blijkt. Het werkt als volgt:
     \item Punten die niet tot een cluster behoren en niet voldoen aan de criteria voor
           kernpunten, worden beschouwd als ruispunten.
 \end{enumerate}
-Het doet dit aan de hand van twee parameters: de maximale afstand tussen twee
+Het algoritme maakt gebruik van twee op voorhand vast te leggen parameters: de maximale afstand tussen twee
 punten in eenzelfde cluster, wat in deze context vastgelegd is op 22.9 meter en
-een minimaal aantal punten dat de cluster moet bevatten, in dit geval één.
+een minimaal aantal punten dat de cluster moet bevatten, in dit geval één punt.
 
 \section{Bepalen nodige gegevens voor predictie}
-Na het bepalen van de \acp{EPZ} voor de gebruiker wordt overgegaan tot het
-berekenen en achterhalen van de bijhorende gegevens die nodig zijn om de
-gevoelige locatie te voorspellen. Hiervoor wordt verder ingegaan op de
-methodiek in de paper~\citeauthor{Dhondt}, maar er worden enkele gegevens op
-een andere manier benaderd volgens de huidige definitie van de aanvaller.
+Na het bepalen van de \acp{EPZ} van de gebruiker gaan we over tot het berekenen
+en achterhalen van de bijhorende gegevens die nodig zijn om de gevoelige
+locatie te voorspellen. Hiervoor wordt verder ingegaan op de methodiek in dek
+paper~\citeauthor{Dhondt}, maar er worden enkele gegevens op een andere manier
+benaderd volgens de huidige definitie van de aanvaller.
 
 \subsection{Roadgraph en Distance Matrix}\label{sec:roadgraph}
 Voor elke gevonden EPZ is het noodzakelijk om een graafvoorstelling van de
 omgeving op te stellen. Op Figuur~\ref{fig:graph_generation} is een voorbeeld
 terug te vinden van hoe een graaf kan worden geëxtraheerd. Er worden punten
-geplaatst op de straten op een vaste afstand van elkaar, en deze kunnen dan
-worden verbonden. Indien geen \acp{EPZ} geïdentificeerd zijn, dan wordt de
-omgeving die moet worden omgezet naar een graaf een stuk ruimer genomen. De
-graafvoorstelling bestaat uit een serie van nodes, die zich allemaal op een
-gekende straat bevinden. De bogen waarmee de nodes verbonden zijn, volgen het
-straatplan, opdat een node een mogelijks te volgen weg
-is~\cite{neira2022graph}. Aan de hand van de `Chaining Distance' wordt bepaald
-hoeveel afstand tussen de nodes zal zitten, en zo dus impliciet ook welke
-densiteit het netwerk zal hebben. Hoe lager de densiteit, hoe meer nodes, en
-dus ook hoe preciezer. Om voorspellingen te maken is wel een bepaalde precisie
-vereist, dus mag deze waarde niet te hoog zijn. Empirisch werd gekozen voor een
-waarde van $3.0m$.
+geplaatst op de straten op een vaste afstand van
+elkaar\footnote{\label{fn:roadgraph}Op de Figuur~\ref{fig:graph_generation}
+    zijn de afstanden niet altijd gelijk. De figuur is enkel nuttig ter
+    illustratie, en is geen perfecte representatie de werkelijkheid.}, en deze
+kunnen dan worden verbonden. Indien geen \acp{EPZ} geïdentificeerd zijn, nemen
+we een ruime omgeving die we omzetten naar een graaf. De graafvoorstelling
+bestaat uit een serie van nodes, die zich allemaal op een gekende straat
+bevinden. De bogen waarmee de nodes verbonden zijn, volgen het straatplan,
+opdat een boog een mogelijks te volgen weg is~\cite{neira2022graph}. Aan de
+hand van de `Chaining Distance' wordt bepaald hoeveel afstand tussen de nodes
+zal zitten, en zo dus impliciet ook welke densiteit het netwerk zal hebben. Hoe
+lager de densiteit, hoe meer nodes, en dus ook hoe preciezer. Om voorspellingen
+te maken is wel een bepaalde precisie vereist, dus mag deze waarde niet te hoog
+zijn. Empirisch koos \citeauthor{Dhondt} voor een waarde van $3.0$ meter.
 \begin{figure}[h]
-    \caption{Voorbeeld van het genereren van een roadgraph}\label{fig:graph_generation}
+    \caption{Voorbeeld van het genereren van een roadgraph\footref{fn:roadgraph}}\label{fig:graph_generation}
     \centering
     \begin{subfigure}[b]{.4\textwidth}
         \centering
@@ -290,10 +293,11 @@ of eindigt de sporter in de \ac{EPZ}. Dit betekent dat ofwel het reële
 eindpunt, ofwel het reële beginpunt zal overeenstemmen met de gevoelige
 locatie. In geval dat een gebruiker aankomt binnenin de \ac{EPZ}, en dus ook
 vertrekt erbuiten, starten de berekeningen vanaf het zichtbare eindpunt. En
-omgekeerd, indien hij vertrekt binnenin de \ac{EPZ}, worden de berekeningen
-gestart vanaf het zichtbare beginpunt. Deze punten zullen in het vervolg
-\textit{randpunten} genoemd worden, refererend naar de rand van de \ac{EPZ}.
-Deze \textit{randpunten} zullen de basis vormen voor de volgende berekeningen.
+omgekeerd, indien de gebruiker vertrekt binnenin de \ac{EPZ}, worden de
+berekeningen gestart vanaf het zichtbare beginpunt. Deze punten zullen in het
+vervolg \textit{randpunten} genoemd worden, refererend naar de rand van de
+\ac{EPZ}. Deze \textit{randpunten} zullen de basis vormen voor de volgende
+berekeningen.
 
 Bijhorend zijn bij de randpunten ook bepaalde extra gegevens beschikbaar. De
 belangrijkste zijn de cumulatieve afstand tot dit punt\footnote{De totale
@@ -310,9 +314,9 @@ verborgen worden. Het alternatieve type data waar dus mee zal moeten gewerkt
 worden is dus \ac{gps}-data.
 
 \subsection{Berekeningen afstand binnenin de EPZ}\label{sec:berekeningen}
-Om voorspellingen te kunnen doen zullen volgens de inferentieaanval die hier
-besproken wordt twee belangrijke gegevens ter beschikking moeten zijn. Met name
-het straatnetwerk met de mogelijks gevolgde routes, wat werd besproken in
+Om voorspellingen te kunnen doen zullen volgens de inferentieaanval die we hier
+bespreken, moeten twee belangrijke gegevens ter beschikking zijn. Met name het
+straatnetwerk met de mogelijks gevolgde routes, wat werd besproken in
 Sectie~\ref{sec:roadgraph}, en de afstand die wordt afgelegd binnenin de
 \ac{EPZ}. Deze afstand benoemen we ook als de \textit{inner distance} (dit is
 niet te verwarren met de \textit{inner ditstance attack}).
@@ -344,8 +348,8 @@ meestal genomen als $6.371 km$. De formule berekent dan de haversine van de
 helft van het verschil tussen de breedtegraden en de haversine van de helft van
 het verschil tussen de lengtegraden ($\lambda$), evenals de cosinus van de
 breedtegraden ($\phi$) van beide punten. Deze waarden worden vervolgens
-gebruikt om de afstand tussen de twee punten te berekenen tussen de punten P \&
-Q op Figuur~\ref{fig:haversine}.
+gebruikt om de afstand tussen de twee punten (P \& Q op
+Figuur~\ref{fig:haversine}) te berekenen.
 
 Merk op dat ook dit een benadering is van de werkelijke afstand. De aarde is
 niet perfect sferisch, wat de nauwkeurigheid kan beïnvloeden. Maar voor de
@@ -377,30 +381,30 @@ deze afstanden niet individueel te achterhalen.
 Alle nodige gegevens zijn nu beschikbaar om de gevoelige locatie te
 achterhalen. Hier wordt besproken hoe voor elke bruikbare activiteit een
 locatie zal worden voorspeld. Doordat voor elke activiteit één of meerdere
-locaties worden voorspeld, zullen deze moeten worden gebundeld tot één locatie,
-voor alle activiteiten.
+locaties worden voorspeld, zullen we deze moeten bundelen tot één locatie voor
+alle activiteiten.
 
 \subsection{Filteren activiteiten}
-Voorafgaand aan het voorspellen van de locatie, is het belangrijk dat enkel
-voorspellingen gebeuren met activiteiten die een nuttige voorspelling kunnen
-voortbrengen. De andere activiteiten zouden enkel de accuraatheid van de
-voorspelling naar beneden halen. Dit gaat dan over activiteiten waarbij niet de
-kortste route binnenin de \ac{EPZ} wordt gevolgd. Al deze activiteiten proberen
-we dus in de mate van het mogelijke eruit te filteren.
+Voorafgaand aan het voorspellen is het van essentieel belang om uitsluitend
+voorspellingen te maken op basis van activiteiten die een waardevolle
+voorspelling kunnen genereren. Andere activiteiten zouden enkel de accuraatheid
+van de voorspelling naar beneden halen. Dit gaat dan over activiteiten waarbij
+niet de kortste route binnenin de \ac{EPZ} wordt gevolgd. Al deze activiteiten
+proberen we dus in de mate van het mogelijke eruit te filteren.
 
 Het geval waarbij een gebruiker niet de kortste route volgt vanaf de rand van
 de \ac{EPZ} tot de gevoelige locatie kan in zekere mate worden opgevangen door
 te stellen dat een activiteit enkel wordt gebruikt wanneer de nog af te leggen
-afstand binnenin de \ac{EPZ} kleiner os dan de maximaal mogelijk af te leggen
+afstand binnenin de \ac{EPZ} kleiner is dan de maximaal mogelijk af te leggen
 weg. In de andere gevallen zal de activiteit worden gefilterd. De maximale
 afstand die hiervoor nodig is wordt bepaald gebruik makend van de
 \textit{Distance Matrix}, die beschreven staat in Sectie~\ref{sec:roadgraph}.
 De maximale afstand is gelijk aan de maximale afstand terug te vinden in de
 matrix, voor de bijhorende startnode. Dit is de afstand die een gebruiker
 maximaal kan afleggen naar eender welke node op de graaf, vertrekkend van de
-startnode, door het volgen van de theoretisch kortste route. Dit zal ook voor
-een stuk gevallen in rekening brengen waarbij de activiteit voor een stuk
-verborgen wordt, maar niet zal eindigen op de gevoelige locatie.
+startnode, door het volgen van de theoretisch kortste route. Dit zal ook
+gevallen in rekening brengen waarbij de activiteit voor een stuk verborgen
+wordt, maar niet zal eindigen op de gevoelige locatie.
 
 Op een gelijkaardige manier kan een filtering gebeuren voor afgelegde afstanden
 die lager zijn dan de minimale mogelijke afstand. Dit zou opnieuw activiteiten
@@ -414,8 +418,8 @@ naar compatibiliteit met de road graph. Alle eind- en beginpunten worden
 gesnapt op de roadgraph. Ze worden dus vervangen door de dichtstbijzijnde node
 op de graaf. Indien het verschil in afstand tussen de originele locatie en de
 gesnapte locatie te groot is, wordt de activiteit gefilterd. Dit wijst dan op
-een te grote afwijking tussen de activiteit en de road graph, of op inaccurate
-gps-data.
+een te grote afwijking tussen de gevolgde route en de road graph, of op
+inaccurate gps-data.
 
 Als laatste wordt nog gekeken naar afwijkingen bij de \acp{E.G.}. Indien bij
 activiteit een afwijking wordt vastgesteld tussen de zichtbare begin- en
@@ -450,9 +454,9 @@ De \ac{LAD} methode wordt gebruikt om een lineaire regressie uit te voeren op
 een set punten, door de som van de absolute waarden van de absolute verschillen
 te minimaliseren.\ \ac{LAD} staat gekend als een robuuste methode die erg
 nuttig blijkt te zijn voor datasets met grote uitschieters. In
-Vergelijking~\ref{eq:LAD} is te zien dat, door het werken met absolute waarden
-van de vergelijking, extremen in mindere mate doorwegen in de berekeningen. Dit
-is een groot voordeel ten opzichte van andere regressietechnieken, zoals
+Vergelijking~\ref{eq:LAD} is te zien dat, door het werken met absolute waarden,
+extremen in mindere mate doorwegen in de berekeningen. Dit is een groot
+voordeel ten opzichte van andere regressietechnieken, zoals
 bijvoorbeeld~\ac{OLS}~\cite{iqbal2021application}.~\ac{OLS} werkt gelijkaardig,
 maar zoals te zien is in Vergelijking~\ref{eq:OLS} probeert deze de som van de
 kwadratische afwijkingen te minimaliseren. Uitschieters zullen dus meer
@@ -466,7 +470,7 @@ maakt voor grote datasets.
     OLS:\indent  \min\sum\limits_{i=1}^n{(d_i - d_{inner})}^2
 \end{equation}
 
-In de context gebruiken we LAD regressie door de aard van de data en
+In deze context gebruiken we LAD regressie door de aard van de data en
 voorspellingen, meer bepaald door de grote kans op uitschieters. Gps-data kan
 erg onnauwkeurig zijn, en grote of kleine afwijkingen kunnen dus voorkomen. Ook
 is het mogelijk dat door acties van een sporter zoals bijvoorbeeld eenmalig de
@@ -475,13 +479,13 @@ geen probleem, aangezien de dataset beperkt is tot 100 activiteiten.
 
 In de context van deze thesis kan Vergelijking~\ref{eq:LAD} worden toegepast
 voor elke node in de graaf. Elke node in graaf zullen we individueel beschouwen
-worden als een mogelijke eindvoorspelling. Het verschil tussen de nog af te
-leggen afstand voor deze activiteit en de afstand tot de node van het zichtbare
-begin- of eindpunt van de activiteit stelt dan de afwijking voor van deze
-activiteit. Indien we dit sommeren over alle activiteiten voor dezelfde node,
-bekomen we een waarde die de totale afwijking voorsteld indien we voor deze
-node als eindpredictie zouden kiezen. We overlopen alle nodes in de graaf, en
-selecteren deze met de laagste totale afwijking. Deze node zal dan de
+als een mogelijke eindvoorspelling. Het verschil tussen de nog af te leggen
+afstand voor deze activiteit en de afstand tot de node van het zichtbare begin-
+of eindpunt van de activiteit stelt dan de afwijking voor van deze activiteit.
+Indien we dit sommeren over alle activiteiten voor dezelfde node, bekomen we
+een waarde die de totale afwijking voorsteld indien we voor deze node als
+eindpredictie zouden kiezen. We overlopen alle nodes in de graaf, en selecteren
+deze met de laagste totale afwijking. Deze node zal dan de
 \textbf{eindvoorspelling} voor deze activiteit voorstellen.
 
 % Alle voorspelde locaties zullen worden beschouwd als mogelijke
@@ -490,9 +494,3 @@ selecteren deze met de laagste totale afwijking. Deze node zal dan de
 % alle overige punten zal worden opgeteld. Er wordt gezocht naar het punt waarbij
 % de som van de absolute waarde minimaal is, en dit is dan de resulterende
 % predictie, de \textbf{eindvoorspelling}.
-
-% Extra: Figuur of filteren van activiteiten
-% Extra figuur die kmeans toepast op cirkelidentificatie
-% Figuur die uitlegt hoe verschillende predicties worden gemaakt
-% Figuur predicties uitleggen
-% Figuur LAD predictie invoegen

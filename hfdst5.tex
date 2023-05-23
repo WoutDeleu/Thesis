@@ -6,8 +6,8 @@
 \chapter{Resultaten en Evaluatie}
 Het aanvalsmodel werd tot hiertoe al volledig beschreven en toegelicht, net als
 de dataset die gebruikt wordt om de aanval uit te testen. Dit hoofdstuk
-bespreekt hoe de evaluatie wordt aangepakt, wat de bekomen resultaten zijn en
-wat ze betekenen.
+bespreekt hoe de evaluatie van het aanvalsmodel wordt aangepakt, wat de bekomen
+resultaten zijn en wat ze betekenen.
 
 \section{Evaluatie van de aanval}
 Het doel van de aanval is om de locatie te voorspellen waar een gebruiker
@@ -43,12 +43,11 @@ maar gedurende de upload berekent het platform in kwestie wel de totale
 afgelegde afstand tot het effectieve startpunt. Dit kan dus voor een afwijking
 bij de predicties zorgen.~\citeauthor{Dhondt} onderzochten deze afwijking door
 een \ac{CDF} te plotten die alle afwijkingen visualiseert, en op zoek te gaan
-naar het elleboogpunt~\cite{Dhondt}. Het elbow point is een visueel punt in de
+naar het elleboogpunt~\cite{Dhondt}. Het elleboogpunt is een visueel punt in de
 curve waar zich een knik voordoet~\cite{Introduc22:online}. Dit duidt in
 theorie de optimale afweging tussen lage afwijking en hoge precisie aan. Zo
 bekomen~\citeauthor{Dhondt} een drempelwaarde van 22.95 meter om van een
-succesvolle aanval te kunnen spreken. Deze drempelwaarde is toepasselijk voor
-92\% van de gebruikers.
+succesvolle aanval te kunnen spreken.
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.8\textwidth]{fig/Afwijkingen&Analyses/OvershootMappingDistance.png}
@@ -57,7 +56,7 @@ succesvolle aanval te kunnen spreken. Deze drempelwaarde is toepasselijk voor
 
 \subsection{Manueel aanbrengen van een EPZ}\label{sec:zelf_cloaking}
 We werken zoals al eerder vermeld met publieke activiteiten die geen \ac{EPZ}
-bevatten, om zo de het evaluatieproces te versimpelen. Maar om de aanval te
+bevatten, om zo de het evaluatieproces mogelijk te maken. Maar om de aanval te
 kunnen uitvoeren moet we dus nog manueel een \ac{EPZ} aanbrengen. Zo kunnen we
 een situatie creëren die de werkelijke situatie benadert, en kunnen we ons
 aanvalsmodel uitvoeren. Het is dus wel belangrijk dat het zelf geïmplementeerde
@@ -90,24 +89,24 @@ zich binnen deze zone bevinden, zullen worden verwijdert uit de activiteit.
 \subsection{Bootstrapping}
 Bij het uittesten van de aanval wordt de aanval niet zomaar een enkele keer
 uitgevoerd voor alle activiteiten per gebruiker. Dit zou vertekende resultaten
-kunnen geven. Per gebruiker wordt een betrouwbaarheidsinterval berekend via
-bootstrapping~\cite{Dhondt, Verdonck_2022}. De set met manueel verhulde
-activiteiten wordt beschouwd. Het bootstrapalgoritme kiest hieruit willekeurig
-één voor één activiteiten, en plaatst deze in een nieuwe groep totdat deze
-nieuwe groep activiteiten even groot is als de originele set van activiteiten.
-Let wel, het algoritme kan meerdere malen dezelfde activiteit kiezen, dus met
-andere woorden kan de nieuw gemaakte groep duplicaten bevatten en andere
-activiteiten helemaal niet bevatten. Dit gebeurt 1000 keer, en er worden dus
-1000 verschillende sets gemaakt. Voor elke set zal een voorspelling worden
-uitgevoerd. Zo bekomen we een aantal voorspelde locaties, waarvan er een kans
-is dat enkele locaties meerdere malen voorspeld worden. Op
-Figuur~\ref{fig:bootstrapping} is te zien hoe de distributie eruit ziet op een
-kaart~\cite{Verdonck_2022}. Op de figuur is de individuele voorspelling
-aangeduidt met een blauwe tot paarse kleur, afhankelijk van hoe frequent ze
-voorspeld werden (hoe meer de kleure naar de paarse of rode kleur neigt, hoe
-frequenter de node voorspeld is). Ook zichtbaar zijn de start- en eindpunten,
-met een verschillend kleur per \ac{E.G.} De locatie van de grondwaarheid is
-aangeduid door de groene marker.
+kunnen geven, door bijvoorbeeld één erg afwijkende activiteit. Per gebruiker
+wordt een betrouwbaarheidsinterval berekend via bootstrapping~\cite{Dhondt,
+    Verdonck_2022}. De set met manueel verhulde activiteiten wordt beschouwd. Het
+bootstrapalgoritme kiest hieruit willekeurig één voor één activiteiten, en
+plaatst deze in een nieuwe groep totdat deze nieuwe groep activiteiten even
+groot is als de originele set van activiteiten. Let wel, het algoritme kan
+meerdere malen dezelfde activiteit kiezen, dus met andere woorden kan de nieuw
+gemaakte groep duplicaten bevatten en andere activiteiten helemaal niet
+bevatten. Dit gebeurt 1000 keer, en er worden dus 1000 verschillende sets
+gemaakt. Voor elke set zal een voorspelling worden uitgevoerd. Zo bekomen we
+een aantal voorspelde locaties, waarvan er een kans is dat enkele locaties
+meerdere malen voorspeld worden. Op Figuur~\ref{fig:bootstrapping} is te zien
+hoe de distributie eruit ziet op een kaart~\cite{Verdonck_2022}. Op de figuur
+is de individuele voorspelling aangeduidt met een blauwe tot paarse kleur,
+afhankelijk van hoe frequent ze voorspeld werden (hoe meer de kleure naar de
+paarse of rode kleur neigt, hoe frequenter de node voorspeld is). Ook zichtbaar
+zijn de start- en eindpunten, met een verschillend kleur per \ac{E.G.} De
+locatie van de grondwaarheid is aangeduid door de groene marker.
 
 \begin{figure}[h]
     \centering
@@ -135,7 +134,7 @@ tussen de \ac{GT} en de voorspelde locatie gedeeld door het aantal keer deze
 locatie werd voorspeld~\cite{Dhondt, Verdonck_2022}. Dit geeft een indicatie
 van de gemiddelde afwijking in afstand van de voorspelde locaties ten opzichte
 van de \ac{GT}. Hoe lager deze waarde, hoe preciezer de aanval. Let wel, een
-succes rate kan hoog zijn, maar de correctheid kan nog steeds hoog zijn. Dit
+success rate kan hoog zijn, maar de correctheid kan nog steeds hoog zijn. Dit
 duidt op een aanval die veel overshoots heeft, maar waar de correcte locatie
 zich wel binnen de straal van 22.95 meter bevindt. De probabiliteitsdistributie
 wordt gegeven door $\widehat{\operatorname{Pr}}(v \mid a)$, waarbij $v$ de
@@ -187,7 +186,7 @@ elkaar de nodes in de probabiliteitsdistributie liggen.
 \end{equation}
 
 De \textit{Spatial Certainty} is de certainty, maar in plaats van de
-probabiliteit van elke node te beschouwen, gebruiken we de neighboorhood
+probabiliteit van elke node te beschouwen, gebruiken we de neighborhood
 probabiliteit om zo de densiteit in de buurt van elke node te
 beschouwen~\cite{Dhondt}.
 \begin{equation}
@@ -200,7 +199,7 @@ de verwachte distributie. Deze wordt genormaliseerd op basis van de maximale
 mogelijke entropie, en wordt bepaald op basis van percentage $p_v$. Dit is een
 percentage die aangeeft bij hoeveel percent van de voorspellingen node $p$
 voorspeld wordt. Dit zal voor vele nodes gelijk zijn aan 0. De maximale
-entropie komt voor indien elke node exactly evenveel voorspelt wordt, en is dus
+entropie komt voor indien elke node exact evenveel voorspelt wordt, en is dus
 gelijk aan $\frac{1}{\# nodes}$.
 \begin{equation}
     \frac{-\sum_{v \in V} \widehat{\operatorname{Pr}}(v \mid a) \log _2(\widehat{\operatorname{Pr}}(v \mid a))}{H_0(V)}\label{eq:degree_of_anonymity}
@@ -226,20 +225,19 @@ refereren naar de tabellen als naar de grafieken.
     \caption{Vergelijking van de verschillende aanvallen}\label{fig:attack_comparison}
 \end{figure}
 
-Over het algemeen is een gelijklopende trend merkbaar over de modellen heen,
-bij het veranderen van de \acp{EPZ}. Bij een toenemende radius zakt de
-succesratio doordat een grotere radius meer nodes met zich meebrengt. En meer
-nodes zorgt voor meer mogelijke verwarring in de \ac{LAD}
-regressie~\cite{Verdonck_2022}. Dit brengt ook een grotere degree of anonymity
-en uncertainty region met zich mee. Het aantal voorspellingen neemt niet
-evenredig toe met het aantal nodes in de graaf naarmate de omvang toeneemt, wat
-resulteert in een verhoogde reduction. Als laatste valt ook op dat de
-correctness ook stijgt bij een grotere radius. Dit komt door een grotere kans
-op schending van één van de gestelde assumpties uit
-Sectie~\ref{sec:assumpties}. Deze sectie stelt onder andere dat een gebruiker
-het kortste pad moet volgen binnenin de \ac{EPZ}. Echter hoe groter de \ac{EPZ}
-van omvang is, hoe groter de kans dat hieraan niet voldaan wordt, en wat zal
-resulteren in een hogere correctness.
+Over het algemeen is een gelijklopende trend merkbaar over de modellen heen bij
+het veranderen van de \acp{EPZ}. Bij een toenemende radius zakt de success rate
+doordat een grotere radius meer nodes met zich meebrengt. Meer nodes zorgt voor
+meer mogelijke verwarring in de \ac{LAD} regressie~\cite{Verdonck_2022}. Dit
+brengt ook een grotere degree of anonymity en uncertainty region met zich mee.
+Het aantal voorspellingen neemt niet evenredig toe met het aantal nodes in de
+graaf naarmate de omvang toeneemt, wat resulteert in een verhoogde reduction.
+Als laatste valt ook op dat de correctness ook stijgt bij een grotere radius.
+Dit komt door een grotere kans op schending van één van de gestelde assumpties
+uit Sectie~\ref{sec:assumpties}. Deze sectie stelt onder andere dat een
+gebruiker het kortste pad moet volgen binnenin de \ac{EPZ}. Echter hoe groter
+de \ac{EPZ} van omvang is, hoe groter de kans dat hieraan niet voldaan wordt,
+en wat zal resulteren in een hogere correctness.
 
 \subsection{Model volgens Dhondt et al.}
 Het eerste model dat we testen is het model van
@@ -286,13 +284,13 @@ cumulatieve afstanden ter beschikking zijn. Het voordeel dat dit model heeft is
 dat er geen \ac{gps}-data nodig is.
 
 Hierbij zien we gelijkaardige trend als bij het model van~\citeauthor{Dhondt},
-met op de meeste scores een kleine achteruitgang ten opzichte ervan. Er is
-slechts één tussenstap is ten opzichte van het model van~\citeauthor{Dhondt},
-namelijk het omreken van snelheid en de tijd tot de totale afstand. Dit
-verklaart dan ook meteen de kleine afnames en toenames in de resultaten. Deze
-omrekening zal een kleine afwijking met zich meebrengen, waarschijnlijk door
-afrondingen en mogelijke additionele berekeningen van Strava bij het berekenen
-van de snelheid.
+wel met bij zo goed als alle metrieken een kleine achteruitgang. Er is slechts
+één tussenstap nodig ten opzichte van het model van~\citeauthor{Dhondt}, namelijk
+het omreken van snelheid en de tijd tot de totale afstand. Dit verklaart dan
+ook meteen de kleine afnames en toenames in de resultaten. Deze omrekening zal
+een kleine afwijking met zich meebrengen, waarschijnlijk door afrondingen en
+mogelijke additionele berekeningen van Strava bij het berekenen van de
+snelheid.
 
 \begin{table}[h]
     \centering

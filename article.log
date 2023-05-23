@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.4)  22 MAY 2023 20:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.4)  23 MAY 2023 08:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -495,42 +495,36 @@ Package pdftex.def Info: fig/Logo_Strava.png  used on input line 147.
 <fig/Afwijkingen&Analyses/Crooked Routes/Crooked GPS Route_Cart.png, id=148, 622.325pt x 470.75874pt>
 File: fig/Afwijkingen&Analyses/Crooked Routes/Crooked GPS Route_Cart.png Graphic file (type png)
 <use fig/Afwijkingen&Analyses/Crooked Routes/Crooked GPS Route_Cart.png>
-Package pdftex.def Info: fig/Afwijkingen&Analyses/Crooked Routes/Crooked GPS Route_Cart.png  used on input line 180.
+Package pdftex.def Info: fig/Afwijkingen&Analyses/Crooked Routes/Crooked GPS Route_Cart.png  used on input line 179.
 (pdftex.def)             Requested size: 120.95892pt x 91.49948pt.
 <fig/Afwijkingen&Analyses/Crooked Routes/1_Full_withArrow.png, id=149, 432.46921pt x 384.59608pt>
 File: fig/Afwijkingen&Analyses/Crooked Routes/1_Full_withArrow.png Graphic file (type png)
 <use fig/Afwijkingen&Analyses/Crooked Routes/1_Full_withArrow.png>
-Package pdftex.def Info: fig/Afwijkingen&Analyses/Crooked Routes/1_Full_withArrow.png  used on input line 185.
+Package pdftex.def Info: fig/Afwijkingen&Analyses/Crooked Routes/1_Full_withArrow.png  used on input line 184.
 (pdftex.def)             Requested size: 95.76123pt x 85.15715pt.
 <fig/Afwijkingen&Analyses/Crooked Routes/GPS-Drift.png, id=150, 1606.0pt x 924.45375pt>
 File: fig/Afwijkingen&Analyses/Crooked Routes/GPS-Drift.png Graphic file (type png)
 <use fig/Afwijkingen&Analyses/Crooked Routes/GPS-Drift.png>
-Package pdftex.def Info: fig/Afwijkingen&Analyses/Crooked Routes/GPS-Drift.png  used on input line 190.
+Package pdftex.def Info: fig/Afwijkingen&Analyses/Crooked Routes/GPS-Drift.png  used on input line 189.
 (pdftex.def)             Requested size: 189.0pt x 108.78554pt.
  [2 <./fig/Logo_Strava.png> <./fig/Afwijkingen&Analyses/Crooked Routes/Crooked GPS Route_Cart.png> <./fig/Afwijkingen&Analyses/Crooked Routes/1_Full_withArrow.png> <./fig/Afwijkingen&Analyses/Crooked Routes/GPS-Drift.png>]
 <fig/EPZ-mechanisme/DropEPZPoints.png, id=164, 992.95969pt x 474.27188pt>
 File: fig/EPZ-mechanisme/DropEPZPoints.png Graphic file (type png)
 <use fig/EPZ-mechanisme/DropEPZPoints.png>
-Package pdftex.def Info: fig/EPZ-mechanisme/DropEPZPoints.png  used on input line 223.
+Package pdftex.def Info: fig/EPZ-mechanisme/DropEPZPoints.png  used on input line 222.
 (pdftex.def)             Requested size: 252.0pt x 120.3624pt.
  [3 <./fig/EPZ-mechanisme/DropEPZPoints.png (PNG copy)>]
-
-Package caption Warning: \label without proper reference on input line 361.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:heatmap' on page 4 undefined on input line 351.
-
 <fig/Afwijkingen&Analyses/Heatmap.png, id=182, 2034.60126pt x 1253.68375pt>
 File: fig/Afwijkingen&Analyses/Heatmap.png Graphic file (type png)
 <use fig/Afwijkingen&Analyses/Heatmap.png>
-Package pdftex.def Info: fig/Afwijkingen&Analyses/Heatmap.png  used on input line 361.
-(pdftex.def)             Requested size: 189.0pt x 116.44217pt.
+Package pdftex.def Info: fig/Afwijkingen&Analyses/Heatmap.png  used on input line 360.
+(pdftex.def)             Requested size: 214.20154pt x 131.97545pt.
 <fig/Afwijkingen&Analyses/CDF_amountActivities.jpg, id=185, 462.528pt x 346.896pt>
 File: fig/Afwijkingen&Analyses/CDF_amountActivities.jpg Graphic file (type jpg)
 <use fig/Afwijkingen&Analyses/CDF_amountActivities.jpg>
-Package pdftex.def Info: fig/Afwijkingen&Analyses/CDF_amountActivities.jpg  used on input line 398.
+Package pdftex.def Info: fig/Afwijkingen&Analyses/CDF_amountActivities.jpg  used on input line 397.
 (pdftex.def)             Requested size: 201.60077pt x 151.20024pt.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -540,7 +534,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <fig/Afwijkingen&Analyses/Graphs/Afstand tussen 2 gps-punten.png, id=187, 642.4pt x 481.8pt>
 File: fig/Afwijkingen&Analyses/Graphs/Afstand tussen 2 gps-punten.png Graphic file (type png)
 <use fig/Afwijkingen&Analyses/Graphs/Afstand tussen 2 gps-punten.png>
-Package pdftex.def Info: fig/Afwijkingen&Analyses/Graphs/Afstand tussen 2 gps-punten.png  used on input line 419.
+Package pdftex.def Info: fig/Afwijkingen&Analyses/Graphs/Afstand tussen 2 gps-punten.png  used on input line 418.
 (pdftex.def)             Requested size: 252.0pt x 188.99663pt.
 [4 <./fig/Afwijkingen&Analyses/Heatmap.png>]
 
@@ -549,12 +543,12 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <fig/Afwijkingen&Analyses/Graphs/Verschil_Theoretische_innerDistance.png, id=209, 618.31pt x 465.74pt>
 File: fig/Afwijkingen&Analyses/Graphs/Verschil_Theoretische_innerDistance.png Graphic file (type png)
 <use fig/Afwijkingen&Analyses/Graphs/Verschil_Theoretische_innerDistance.png>
-Package pdftex.def Info: fig/Afwijkingen&Analyses/Graphs/Verschil_Theoretische_innerDistance.png  used on input line 438.
+Package pdftex.def Info: fig/Afwijkingen&Analyses/Graphs/Verschil_Theoretische_innerDistance.png  used on input line 437.
 (pdftex.def)             Requested size: 252.0pt x 189.81757pt.
 <fig/Afwijkingen&Analyses/Graphs/100_Differences_tov_theoretische_BefSmoothening.png, id=210, 1927.2pt x 1041.8925pt>
 File: fig/Afwijkingen&Analyses/Graphs/100_Differences_tov_theoretische_BefSmoothening.png Graphic file (type png)
 <use fig/Afwijkingen&Analyses/Graphs/100_Differences_tov_theoretische_BefSmoothening.png>
-Package pdftex.def Info: fig/Afwijkingen&Analyses/Graphs/100_Differences_tov_theoretische_BefSmoothening.png  used on input line 443.
+Package pdftex.def Info: fig/Afwijkingen&Analyses/Graphs/100_Differences_tov_theoretische_BefSmoothening.png  used on input line 442.
 (pdftex.def)             Requested size: 252.0pt x 136.22978pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -563,7 +557,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <fig/result_graphs/all_results.png, id=231, 388.0899pt x 360.6273pt>
 File: fig/result_graphs/all_results.png Graphic file (type png)
 <use fig/result_graphs/all_results.png>
-Package pdftex.def Info: fig/result_graphs/all_results.png  used on input line 577.
+Package pdftex.def Info: fig/result_graphs/all_results.png  used on input line 576.
 (pdftex.def)             Requested size: 252.0pt x 234.17384pt.
  [7 <./fig/result_graphs/all_results.png>] (./article.bbl
 Underfull \hbox (badness 1558) in paragraph at lines 30--31
@@ -617,9 +611,6 @@ Before submitting the final camera ready copy, remember to:
 
 ] (./article.aux)
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `article.out' has not changed.
@@ -634,7 +625,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  108i,10n,106p,522b,542s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on article.pdf (9 pages, 7815285 bytes).
+Output written on article.pdf (9 pages, 7815021 bytes).
 PDF statistics:
  335 PDF objects out of 1000 (max. 8388607)
  275 compressed objects within 3 object streams

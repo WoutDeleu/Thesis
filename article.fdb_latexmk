@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex article"] 1684780618 "article.aux" "article.bbl" "article" 1684780821 0
+["bibtex article"] 1684824658 "article.aux" "article.bbl" "article" 1684824960 0
   "./bibliografie_eng.bib" 1684698137 18664 8b6fedd195b5eee3be26ad04c05f36b2 ""
   "/usr/share/texmf-dist/bibtex/bst/ieeetran/IEEEtran.bst" 1678901238 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "article.aux" 1684780821 9853 f82a44ce113e39000de6fb47522437fd "pdflatex"
+  "article.aux" 1684824960 9828 84502eb1da27d0231d21fdcc85d1b4c1 "pdflatex"
   (generated)
   "article.bbl"
   "article.blg"
   (rewritten before read)
-["pdflatex"] 1684780817 "/home/woutd/Documents/School/Industriele Ingenieurswetenschappen/Thesis/Workspace/Thesis/article.tex" "article.pdf" "article" 1684780821 0
-  "/home/woutd/Documents/School/Industriele Ingenieurswetenschappen/Thesis/Workspace/Thesis/article.tex" 1684780817 50025 93474147844f0dd56b81159a9e450b67 ""
+["pdflatex"] 1684824956 "/home/woutd/Documents/School/Industriele Ingenieurswetenschappen/Thesis/Workspace/Thesis/article.tex" "article.pdf" "article" 1684824960 0
+  "/home/woutd/Documents/School/Industriele Ingenieurswetenschappen/Thesis/Workspace/Thesis/article.tex" 1684824957 49918 62f4a4f3efc0ca97665bb8b5d6c33f9e ""
   "/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc" 1680514707 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1680514707 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm" 1680514707 2172 fd0c924230362ff848a33632ed45dc23 ""
@@ -124,10 +124,10 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1680592190 4491781 539e3b5e308794ddb50e5f94f0e971f4 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1680592144 8204071 263b607c80875fb47d4853e21e23206a ""
   "IEEEtran.cls" 1684768125 281920 b5cb24a039b394688372e8e682d08857 ""
-  "article.aux" 1684780821 9853 f82a44ce113e39000de6fb47522437fd "pdflatex"
-  "article.bbl" 1684780618 3301 fd47822052cb5a2cacc7904b7a41f56e "bibtex article"
-  "article.out" 1684780821 3711 63d4fbd966661aeece7e44384f6213f4 "pdflatex"
-  "article.tex" 1684780817 50025 93474147844f0dd56b81159a9e450b67 ""
+  "article.aux" 1684824960 9828 84502eb1da27d0231d21fdcc85d1b4c1 "pdflatex"
+  "article.bbl" 1684824658 3301 fd47822052cb5a2cacc7904b7a41f56e "bibtex article"
+  "article.out" 1684824960 3711 63d4fbd966661aeece7e44384f6213f4 "pdflatex"
+  "article.tex" 1684824957 49918 62f4a4f3efc0ca97665bb8b5d6c33f9e ""
   "fig/Afwijkingen&Analyses/CDF_amountActivities.jpg" 1684059004 27461 9b64a45af19f9ec48f0054ac4303aea7 ""
   "fig/Afwijkingen&Analyses/Crooked Routes/1_Full_withArrow.png" 1684087086 4709457 15f2209be7560b1a2b167953a1b712fa ""
   "fig/Afwijkingen&Analyses/Crooked Routes/Crooked GPS Route_Cart.png" 1678106476 37445 79e8d807c7abfb698d9fad4537f1ef62 ""

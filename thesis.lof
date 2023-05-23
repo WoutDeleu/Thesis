@@ -10,7 +10,7 @@
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Voorbeeld Data smoothing met een moving average~\cite {SmoothingandInterpolatingNoisyGPSDatawithSmoothingSplines}\relax }}{9}{figure.caption.16}%
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Voorbeelden van gps-drift\relax }}{10}{figure.caption.17}%
 \contentsline {figure}{\numberline {2.6}{\ignorespaces Voorbeelden van \ac {gps}-bounce~\cite {BadGPSDa19:online}\relax }}{11}{figure.caption.18}%
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Voorbeeld van zowel gps-drift en gps-bounce uit de gebruikte dataset\relax }}{11}{figure.caption.19}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Voorbeeld van zowel gps-drift en gps-bounce uit de gebruikte dataset\relax }}{12}{figure.caption.19}%
 \contentsline {figure}{\numberline {2.8}{\ignorespaces Voorbeeld van signal loss uit de gebruikte dataset\relax }}{12}{figure.caption.20}%
 \contentsline {figure}{\numberline {2.9}{\ignorespaces Voorbeeld van de werking van een \ac {EPZ}\relax }}{13}{figure.caption.21}%
 \contentsline {figure}{\numberline {2.10}{\ignorespaces Voorbeeld translatie EPZ\relax }}{14}{figure.caption.22}%
@@ -21,8 +21,8 @@
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Voorbeeld van een inner distance attack situatie\relax }}{19}{figure.caption.26}%
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Voorbeeld werking k-means clustering~\cite {InDepthk59:online}\relax }}{20}{figure.caption.27}%
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Voorbeeld van entry gates gevonden door k-means clustering en de identificatie van een \ac {EPZ}\relax }}{21}{figure.caption.30}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Voorbeeld van het genereren van een roadgraph\relax }}{23}{figure.caption.31}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Haversine illustratie voor het berekenen van de afstand~\cite {Distance97:online}\relax }}{25}{figure.caption.32}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Voorbeeld van het genereren van een roadgraph\begingroup \let \@unexpandable@protect \xdef 1{\ref {fn:roadgraph}}\endgroup \unhbox \voidb@x \hbox {{\mathsurround \z@ \ensuremath {^{\mbox {\fontsize 88\normalfont 1}}}}}\relax \relax }}{23}{figure.caption.31}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Haversine illustratie voor het berekenen van de afstand~\cite {Distance97:online}\relax }}{26}{figure.caption.32}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Geografische spreiding van de activiteiten in de dataset\relax }}{31}{figure.caption.37}%
 \contentsline {figure}{\numberline {4.2}{\ignorespaces \ac {CDF} plot van het aantal activiteiten per gebruiker\relax }}{32}{figure.caption.39}%

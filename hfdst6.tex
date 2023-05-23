@@ -11,14 +11,15 @@ onzekerheid. Indien de cumulatieve afstand ter beschikking is, kan via een
 eenvoudige omrekening ($inner\ distance = total\ time \times average\ pace -
       outer\ distance$) de aanval nog steeds worden uitgevoerd met een success rate
 van 81.43\%, 79.71\%, 70.77\%, 65.83\%, 62.39\%, 57.98\%, 49.15\% voor de
-desbetreffende radii, wat absoluut aanvaardbaar is. Indien de cumulatieve
-afstandsdata op zijn beurt niet voor handen is, kan via \ac{gps}-locaties een
-additionele omrekening gebeuren om de aanval alsnog te doen slagen. Door het
-gebruik van smoothing algoritmes kan de aanval ook in precisie winnen, en komen
-we tot een success rate van 75.0\%, 58.97\%, 56.34\%, 41.27\%, 44.12\%, 32.81\%
-voor de desbetreffende radii en een smoothing window van 100. Dit is op zijn
-beurt een acceptabele success rate, maar is wel een stuk lager dan de success
-rate bekomen door~\citeauthor{Dhondt}~\cite{Dhondt}.
+desbetreffende radii: $200m$, $400m$, $600m$, $800m$, $1000m$, $1200m $ en
+$1400m$, wat absoluut aanvaardbaar is. Indien de cumulatieve afstandsdata op
+zijn beurt niet voor handen is, kan via \ac{gps}-locaties een additionele
+omrekening gebeuren om de aanval alsnog te doen slagen. Door het gebruik van
+smoothing algoritmes kan de aanval ook in precisie winnen, en komen we tot een
+success rate van 75.0\%, 58.97\%, 56.34\%, 41.27\%, 44.12\%, 32.81\% voor de
+desbetreffende radii en een smoothing window van 100. Dit is op zijn beurt een
+acceptabele success rate, maar is wel een stuk lager dan de success rate
+bekomen door~\citeauthor{Dhondt}~\cite{Dhondt}.
 
 Bepaalde afstandsdata, meer bepaald de cumulatieve afstand en de totale afstand
 zijn dus niet van cruciaal belang voor het succesvol uitvoeren van dit
@@ -87,14 +88,14 @@ Naast de volledige uiteenzetting van dit onderzoek, zijn er nog enkele zaken
 die misschien niet in detail genoeg werden onderzocht, en die ook interessante
 resultaten zouden kunnen naar voor brengen. Ook zijn er bepaalde onderwerpen
 die hierop verder bouwen en ook het onderzoeken waard kunnen zijn. Daaronder
-valt het implementeren van het beschreven roadsnapping, wat eventueel zou
+valt het implementeren van het beschreven map matching, wat eventueel zou
 kunnen leiden tot een hogere success rate bij het uitvoeren van de aanval.
-Zeker de combinatie en afhankelijkheid met het smoothing mechanisme kan een
-interessant onderwerp zijn. Hierbij zou ook nog kunnen worden geëxperimenteerd
-met een dynamisch smoothing window~\cite{shmoothing}. Dit is een smoothing
-window dat zich aanpast aan de eigenschappen van het signaal, zoals de ruis of
-veranderingssnelheid van de grafiek. Bijvoorbeeld dat de breedte van het
-venster verhoogt bij grote hoeveelheden ruis is een mogelijke implementatie.
+Zeker de combinatie met het smoothing mechanisme kan een interessant onderwerp
+zijn. Hierbij zou ook nog kunnen geëxperimenteerd met een dynamisch smoothing
+window~\cite{shmoothing}. Dit is een smoothing window dat zich aanpast aan de
+eigenschappen van het signaal, zoals de ruis of veranderingssnelheid van de
+grafiek. Bijvoorbeeld dat de breedte van het venster verhoogt bij grote
+hoeveelheden ruis is een mogelijke implementatie.
 
 Ook zou er een additionele analyse kunnen plaatsvinden om te zien onder welke
 externe omstandigheden de aanval het meest succesvol is. Er zou bijvoorbeeld
@@ -104,12 +105,12 @@ komen is de hoeveelheid activiteiten die zorgen voor een succesvolle aanval.
 
 Daarnaast zou in een bijkomstig onderzoek dat een wat bredere invloed heeft op
 het onderzoeksdomein kunnen worden onderzocht in hoeverre omgevingsfactoren
-zoals bebouwingsdichtheid een invloed hebben op de success rate en dergelijke.
-En of de success rate niet dynamisch kan worden gesteld op basis van deze
+zoals bebouwingsdichtheid een invloed hebben op de success rate en dergelijke
+en of de success rate niet dynamisch kan worden gesteld op basis van deze
 dichtheid. Een straat die slechts één huis bevat is immers al te onderscheiden
-met een veel lagere precisie dan een met meer inwoners in een stad. De 22.5
-meter die nu empirisch werd bepaald zou dus kunnen worden aangepast op basis
-van de bebouwingsdichtheid.
+met een veel lagere precisie dan een met meer inwoners in een stad. De $22.5$
+meter die nu empirisch werd bepaald zou kunnen aangepast worden op basis van de
+bebouwingsdichtheid.
 
 Als laatste is er een idee om een ander implementatie van de \ac{LAD}-regressie
 te gebruiken. Nu wordt voor elke activiteit de afwijking berekend ten opzichte

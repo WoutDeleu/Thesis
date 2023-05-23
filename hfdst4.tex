@@ -5,17 +5,17 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 \chapter{Analyse van de gebruikte data}
 We testen de aanval beschreven in Hoofdstuk~\ref{chap:inferentieaanval} op een
-dataset met activiteiten van een aantal gebruikers, om zo de vatbaarheid van
+dataset met activiteiten van een aantal gebruikers, om zo de kwetsbaarheid van
 gebruikers van fitnessplatformen te evalueren. Maar het is dan ook essentieel
 dat een representatieve dataset wordt gebruikt. We onderzoeken eigenschappen en
-mogelijke afwijkingen of onregelmatigheden opdat een gefundeerde conclusie kan
-worden gevormd, die eventueel bepaalde eigenschappen van de aard van de data
-mee in rekening brengt.
+mogelijke afwijkingen of onregelmatigheden opdat we een gefundeerde conclusie
+kunnen vormen, die eventueel bepaalde eigenschappen van de aard van de data mee
+in rekening brengt.
 
 Aangezien deze thesis voor een stuk verder bouwt op het onderzoek
 van~\citeauthor{Dhondt}, is het handig om verder te werken op deze
-dataset~\cite{Dhondt}. Dit maakt een meer directe vergelijking mogelijk.
-Deze dataset werd volledig zelf gescraped door~\citeauthor{Dhondt} vanaf de
+dataset~\cite{Dhondt}. Dit maakt een meer directe vergelijking mogelijk. Deze
+dataset werd volledig zelf gescraped door~\citeauthor{Dhondt} vanaf de
 officiële \ac{API} van het platform
 `Strava'\footnote{\url{https://www.strava.com/}}. De scope van deze dataset is
 een periode van één week, startend op 11 juli 2021 00:00 \ac{UTC}. De site werd
@@ -23,17 +23,17 @@ chronologisch afgelopen voor alle activiteiten beschikbaar op het platform, met
 sprongen van 9000 activiteiten. Let wel dat door mogelijke vertragingen door
 bijvoorbeeld het uploaden van een activiteit, de activiteiten niet exact
 chronologisch kunnen worden opgehaald. Indien een activiteit privaat is of
-gecloaked\footnote{Een gecloakede activiteit is een activiteit waar al een EPZ
-    op is aangebracht. Aangezien deze thesis uncloaked activities nodig
-    heeft~\ref{sec:zelf_cloaking} zijn ze dus niet bruikbaar. Men kan zien of een
-    activiteit gecloaked is indien er een verschil is tussen de zichtbare afstand
-    en de totale afstand.} is, of reeds verwijderd is, dan zal deze worden
-overgeslagen en de volgende worden genomen. Voor elke gevonden activiteit
-beschouwen we daarna de gebruiker. Van alle bekomen gebruikers worden dan de
-rest van de activiteiten afgehaald en bijgehouden in één grote dataset. De
-gegevens werden ook geanonimiseerd opgeslagen, zodat de gebruikers niet meer
-kunnen worden geïdentificeerd. De dataset bevat dus geen namen of andere
-persoonlijke gegevens, enkel willekeurig toegekende ID's.
+\textit{gecloaked}\footnote{Een gecloakede activiteit is een activiteit waar al
+    een EPZ op is aangebracht. Aangezien deze thesis uncloaked activities nodig
+    heeft zijn ze dus niet bruikbaar. Men kan zien of een activiteit gecloaked is
+    indien er een verschil is tussen de zichtbare afstand en de totale afstand.}
+is, of reeds verwijderd is, dan zal deze worden overgeslagen en de volgende
+worden genomen. Voor elke gevonden activiteit beschouwen we daarna de
+gebruiker. Van alle bekomen gebruikers worden dan de rest van de activiteiten
+afgehaald en bijgehouden in één grote dataset. De gegevens werden ook
+geanonimiseerd opgeslagen, zodat de gebruikers niet meer kunnen worden
+geïdentificeerd. De dataset bevat dus geen namen of andere persoonlijke
+gegevens, enkel willekeurig toegekende ID's.
 
 In totaal werd een dataset van 4000 gebruikers verzameld. Deze thesis
 experimenteert echter slechts met een subset van 131 users, waarvan er 101
@@ -126,6 +126,12 @@ worden naar de volledige gebruikersbasis van Strava.
     \caption{Post op sociale media van Strava die de evolutie van het totaal aantal activiteiten weergeeft~\cite{StravaMi72:online}}\label{fig:3billionUsers}
 \end{figure}
 
+De oorzaak hiervan is mogelijks de manier waarop activiteiten worden afgehaald.
+Aangezien \citeauthor{Dhondt} met sprongen van 9000 een activiteit nemen, is de
+kans op terechtkomen bij een gebruiker die veel activiteiten heeft een stuk
+groter dan de kans dat terechtgekomen wordt op een gebruiker met een grote
+aantal activiteiten dan een gebruiker met wat minder activiteiten.
+
 \section{Mogelijke afwijkingen binnenin de dataset}
 Doordat de dataset niet expliciet werd gecheckt op onnauwkeurigheden en een
 willekeurige sample is, is er een grote kans op activiteiten die afwijkingen of
@@ -156,10 +162,11 @@ liggen, wat opnieuw een indicatie kan zijn van een degelijke precisie. Er is
 echter wel een klein deel van de \ac{gps}-punten die een grote onderlinge
 afstanden vertoond. Door de omvang van het aantal \ac{gps}-punten, en een
 gemiddeld aantal punten per activiteit van $2574.90$, valt dit zeker niet te
-verwaarlozen. Als we empirisch stellen dat een significant verschil $50$ meter
-bedraagt, dan ligt 0.9\% van de data boven deze drempel. Per activiteit zou dit
-dan resulteren op gemiddeld $23$ afwijkende punten, wat zeker kan zorgen voor
-een significante afwijking op de resulterende afstand.
+verwaarlozen. Als we empirisch stellen dat een significant verschil $150$ meter
+bedraagt, wat ongeveer drie maal de standaardafwijking voorsteld, dan ligt
+0.2\% van de data boven deze drempel. Per activiteit zou dit dan resulteren op
+gemiddeld $5.1$ afwijkende punten, wat zeker al kan zorgen voor een
+significante afwijking op de resulterende afstand.
 \begin{table}[h]
     \centering
     \begin{tabular}{lr}
@@ -197,23 +204,21 @@ de cumulatieve afstand\footnote{Er wordt gesproken van een theoretische waarde,
     deze dus als referentie.}. Een eerste visualisatie is te zien op
 Figuur~\ref{fig:difference_noCDF}. De figuur illustreert de schommelingen
 tussen de handmatig berekende afstand en de theoretische afstand van één
-gebruiker. De pieken duiden op duidelijk sterk afwijkende berekende afstanden,
-en dus ook op grote \ac{gps}-fouten. Maar ook de schommelingen die iets minder
-opvallend zijn duiden op grote inaccuraatheden tussen de berekende en
-theoretische afstanden. De verschillen in de berekeningen voor de volledige
-dataset worden weergegeven op Figuur 4.10. De resultaten worden weergegeven op
-Figuur~\ref{fig:differences_theoretical}. Figuur~\ref{fig:differences_log}
-bevat de verdeling voor alle activiteiten, gebruik makend van een logaritmische
-schaal. Figuur~\ref{fig:differences_nolog} toont 95\% van de activiteiten met
-de kleinste verschillen, om een beter beeld te krijgen van de grootte van de
-meeste verschillen. Op de grafieken valt op dat heel wat significante
-verschillen aanwezig zijn. Dit duidt op het relatief zwaar doorwegen van de
-\ac{gps}-fouten in de dataset. Aangezien het gaat over bepalen van woonplaatsen
-of andere gevoelige locaties, kunnen afwijkingen vanaf 50 à 100 meter al
-relevant zijn. Daarnaast gaat het vaak over kleine afwijkingen op een heel wat
-punten, wat kan resulteren in een grote afwijking. De grafieken tonen aan dat
-er bij de ruwe ontvangen data heel wat \ac{gps}-fouten aanwezig zijn. Smoothing
-zal dus zeker nodig zijn om deze te beperken.
+gebruiker. De pieken duiden op sterk afwijkende berekende afstanden, en dus ook
+op grote \ac{gps}-fouten. Maar ook de schommelingen die iets minder opvallend
+zijn duiden op grote inaccuraatheden tussen de berekende en theoretische
+afstanden. De verschillen in de berekeningen voor de volledige dataset worden
+weergegeven op Figuur 4.10. De resultaten worden weergegeven op
+Figuur~\ref{fig:differences_theoretical}. De figuur bevat de verdeling voor
+alle activiteiten, gebruik makend van een logaritmische schaal. Op de grafiek
+valt op dat heel wat significante verschillen aanwezig zijn. Dit duidt op het
+relatief zwaar doorwegen van de \ac{gps}-fouten in de dataset. Aangezien het
+gaat over bepalen van woonplaatsen of andere gevoelige locaties, kunnen
+afwijkingen vanaf 50 à 100 meter al relevant zijn. Daarnaast gaat het vaak over
+kleine afwijkingen op een heel wat punten, wat kan resulteren in een grote
+afwijking. De grafieken tonen aan dat er bij de ruwe ontvangen data heel wat
+\ac{gps}-fouten aanwezig zijn. Smoothing zal dus zeker nodig zijn om deze te
+beperken.
 
 \begin{figure}[h]
     \centering
@@ -222,14 +227,7 @@ zal dus zeker nodig zijn om deze te beperken.
 \end{figure}
 \begin{figure}[h]
     \centering
-    \begin{subfigure}{\textwidth}
-        \includegraphics[width=\textwidth]{fig/Afwijkingen&Analyses/Graphs/100_Differences_tov_theoretische_BefSmoothening.png}
-        \caption{100\% van de activiteiten (logaritmische schaal)}\label{fig:differences_log}
-    \end{subfigure}
-    \begin{subfigure}[b]{\textwidth}
-        \includegraphics[width=\textwidth]{fig/Afwijkingen&Analyses/Graphs/95_Differences_tov_theoretische_BefSmoothening.png}
-        \caption{95\% van de activiteiten}\label{fig:differences_nolog}
-    \end{subfigure}
+    \includegraphics[width=0.7\textwidth]{fig/Afwijkingen&Analyses/Graphs/100_Differences_tov_theoretische_BefSmoothening.png}
     \caption{Verdeling van het verschil tussen de berekende afstand en de theoretische afstand buiten de \ac{EPZ} }\label{fig:differences_theoretical}
 \end{figure}
 
@@ -248,9 +246,9 @@ Daarnaast passen we ook een filtering toe die rekening houdt met
 \ac{gps}-sprongen. Het idee is te stellen dat wanneer \ac{gps}-sprongen
 gebeuren, en er dus een te grote afstand tussen twee opeenvolgende punten is,
 deze afstand niet te laten meetellen. Dit is echter niet vanzelfsprekend,
-aangezien dit wel worden meegenomen door de berekeningen van de platformen.
-Stel dat wij een sprong van 50 meter laten vallen, maar de platformen laten
-deze wel meetellen, dan zullen we de afwijking op het eindresultaat enkel maar
-verhogen. De drempel voor de filtering moet dus hoog genoeg zijn om deze
-voorvallen te vermijden. In dit onderzoek kozen we voor een drempelwaarde van
-200 meter.
+aangezien dit waarschijnlijk wel op een andere manier in rekening gebracht
+wordt door de platformen, bijvoorbeeld door map matching. Stel dat wij een
+sprong van 150 meter laten vallen, maar de platformen laten deze wel meetellen,
+dan zullen we de afwijking op het eindresultaat enkel maar verhogen. De drempel
+voor de filtering moet dus hoog genoeg zijn om deze voorvallen te vermijden. In
+dit onderzoek kozen we voor een drempelwaarde van 200 meter.
