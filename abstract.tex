@@ -1,16 +1,16 @@
 In a society where social media is so ubiquitous, the privacy concerns around
 them are more relevant than ever. While developing applications, privacy laws
 and concerns must be taken into account. But this does not mean all these
-platforms that where built whit those in mind are bulletproof. In a lot of
+platforms that where built with those in mind are bulletproof. In a lot of
 applications it is still possible to find vulnerabilities in the system, with
 the possibility of rather unpleasant consequences. During this thesis, the main
 focus will be on the privacy policies of fitness trackers. Fitness trackers are
 platforms which store and display data related to sport activities. These can
 be shared with other users, to show your achievements, and possibly motivating
-others to exercise as well. This data may include heart rate, GPS-locations,
+others to exercise as well. This data may include heart rate, GPS locations,
 etc. Some pieces could potentially be more privacy-sensitive than others. The
-relevant data to study in this thesis are GPS-locNations and GPS-related data
-(like speed, distance, \ldots). A great concern about sharing GPS-data, is
+relevant data to study in this thesis are GPS locations and GPS related data
+(like speed, distance, \ldots). A great concern about sharing GPS data, is
 potentially sharing locations you would rather keep private, for example your
 home location. Sharing full GPS data of your activities could leak this
 location.
@@ -20,7 +20,7 @@ of countermeasures to prevent leaking this sensitive information.
 Countermeasures are coming however with a cost, namely a (slightly) worse user
 experience. From the perspective of the developers of the fitness trackers, a
 trade-off is consistently being made between privacy and user experience. On
-most platforms like Strava, Garmin, similar basic privacy features are
+most platforms like Strava and Garmin, similar basic privacy features are
 implemented. These are features like hiding activities, or only sharing
 activities with your followers. Another commonly used countermeasure is a
 mechanism known as an \textit{EPZ} (Endpoint Privacy Zone).
@@ -44,30 +44,30 @@ the EPZ can be inferred using the total distance given by the API, and the
 distance travelled outside of the EPZ (this is the visible distance on the
 map). Using the distance travelled inside of the EPZ, a route can be
 constructed and mapped onto the street plan. If all the possible routes are
-considered, multiple possible locations are found. If this is repeated for
-different activities, with different points where the EPZ is being entered,
-only one point will remain (in the best case). This would then be the sensitive
+considered, a set of locations will be found. If this is repeated for different
+activities, with different points where the EPZ is being entered, only one
+point will remain (in the best case). This would then be the sensitive
 location.
 
 This thesis investigates the possibilities of such inference attacks using data
-other than the distance as a base. In our implementation, the speed and tempo
-of the activities will be used, in combination with the GPS-locations. This
-method will consist of three parts. First, the average speed and the total
-duration will be used to calculate the total distance. Second, the GPS-points
-will be used to calculate the distance travelled outside of the Endpoint
-Privacy Zone (EPZ). In order to do this effectively, smoothing and map snapping
-strategies need to be tested out to get the best possible results. These two
-values can be used in the third step to execute the interference attack. The
-results of this attack will be compared with the results of the previous
-implementations of this sort of attack.
+other than distance as a base. In our implementation, the speed and tempo of
+the activities will be used, in combination with the GPS locations. This method
+will consist of three parts. First, the average speed and the total duration
+will be used to calculate the total distance. Second, the GPS points will be
+used to calculate the distance travelled outside of the Endpoint Privacy Zone
+(EPZ). In order to do this effectively, smoothing and map snapping strategies
+need to be tested out to get the best possible results. These two values can be
+used in the third step to execute the interference attack. The results of this
+attack will be compared with the results of the previous implementations of
+this sort of attack.
 
-This attack is successful in some cases. With the correct tuning of the
+This attack is successful in most cases. With the correct tuning of the
 parameters of the smoothing algorithm, a succes rate of 75\% can be achieved.
 This is lower than previous implementations of this attack, which was as
 expected considering the type of data that is being used. The GPS locations in
-particular are not always accurate. And because there are so many GPS-points
+particular are not always accurate. And because there are so many GPS points
 needed for these calculations, small deviations on every point result in a
 large deviation on the calculated distance. But the main conclusion is that
 this attack is possible, with a reasonable succes rate.
 
-\textbf{Keywords}: fitness-trackers, privacy, gps-locations, endpoint privacy zone, inference attack
+\textbf{Keywords}: fitness-trackers, privacy, GPS locations, endpoint privacy zone, inference attack

@@ -7,24 +7,24 @@
 \chapter{Achtergrond}
 
 \section{Fitnesstrackers}
-De focus van deze scriptie ligt op mogelijke tekortkomingen/vulnerabilities
-betreffende privacybeleid in fitnesstrackers. Maar vooraleer we een aanval op
-basis van deze kwetsbaarheden kunnen opzetten, is het noodzakelijk om een vat
-te krijgen op welke manier een fitnesstracker info verzamelt en weergeeft, en
-meer precies, hoe de mechanismen die de privacy voorzien voor de gebruikers in
-detail werken.
+De focus van deze scriptie ligt op mogelijke tekortkomingen of vulnerabilities
+betreffende het privacybeleid in fitnesstrackers. Maar vooraleer we een aanval
+op basis van deze kwetsbaarheden kunnen opzetten, is het noodzakelijk om een
+vat te krijgen op welke manier een fitnesstracker info verzamelt en weergeeft,
+en meer precies, hoe de mechanismen die de privacy voorzien voor de gebruikers
+in detail werken.
 
 De data waarmee de aanval wordt opgezet en waarmee wordt geëxperimenteerd, is
 afkomstig van de populaire fitnesstracker
 \textit{Strava\footnote{\url{https://www.strava.com/}}}. Dit is een sociaal
 netwerk waarbij alle soorten sporters hun activiteiten kunnen delen. Dit gaat
-over lopen, wandelen, fietsen, zwemmen, \ldots, maar ook sporten als fitnessen,
-voetballen, \ldots De verzamelde data wordt volgens het perspectief van een
+over lopen, wandelen, fietsen, zwemmen, maar ook sporten als fitnessen,
+voetballen, etc. De verzamelde data wordt volgens het perspectief van een
 mogelijke aanval gefilterd, niet alle data blijkt nuttig te zijn. Enkel data
 die gevoelige informatie met betrekking tot de woonplaats zou kunnen vrijgeven
 wordt behouden. Dit zal er dus op neerkomen dat enkel activiteiten die
-relevante \ac{gps}-informatie bevatten in beschouwing worden genomen. Dit gaat
-dan meer specifiek over \textit{runs, hikes, walks, and rides}.
+relevante \ac{gps}-informatie bevatten in beschouwing worden genomen, meer
+specifiek zal dit gaan over \textit{runs, hikes, walks, and rides}.
 
 \subsection{Activiteiten}\label{data}
 Een Strava-activiteit bevat erg veel informatie. Echter is niet alles even
@@ -35,7 +35,7 @@ en er een korte beschrijving aan toe te voegen. Ook een foto kan optioneel
 toegevoegd worden. De exacte datum en tijd van de start van de activiteit wordt
 hierbij ook weergegeven.
 
-Rechts bovenaan zijn de algemene basisstatistieken te zien. Deze zijn de totale
+Rechts bovenaan zijn de algemene basisstatistieken te zien. Dit zijn de totale
 afgelegde afstand, de totale bewegingstijd, de gemiddelde snelheid of het
 gemiddelde tempo, het totale hoogteverschil, de totale verstreken tijden, en
 het aantal calorieën verbrand. Als extra kunnen hier enkele statistieken
@@ -56,13 +56,13 @@ In het geval van een fietsactiviteit wordt \textit{snelheid} weergegeven, en in
 het geval van een wandel- of loopactiviteit wordt \textit{tempo} weergegeven,
 zoals te zien is op Figuur~\ref{fig:speedvspace}. Deze worden beide berekend
 aan de hand van de bewegingstijd. Een kanttekening hierbij is dat dit enkel
-geldt voor activiteiten die niet gelabeld zijn als \textit{race}, in dat geval
-wordt de snelheid berekend in functie van de totaal verstreken
-tijd~\cite{MovingTi80:online}. Het verschil tussen deze twee is dat de snelheid
-wordt berekend volgens de formule $ \quad v = \frac{d}{t}$. De eenheid van
-snelheid is dan ook $\frac{m}{s}$ of, in het geval van fitnesstrackers,
-$\frac{km}{h}$. Het tempo wordt berekend volgens de formule $ \quad
-    tempo(\frac{\min}{km}) = \frac{t(\min)}{d(km)}$. De eenheid van tempo is
+geldt voor activiteiten die niet gelabeld zijn als \textit{race}, indien dit
+toch het geval is, wordt de snelheid berekend in functie van de totaal
+verstreken tijd~\cite{MovingTi80:online}. Het verschil tussen deze twee is dat
+de snelheid wordt berekend volgens de formule $ \quad v = \frac{d}{t}$. De
+eenheid van snelheid is dan ook $\frac{m}{s}$ of, in het geval van
+fitnesstrackers, $\frac{km}{h}$. Het tempo wordt berekend volgens de formule $
+    \quad tempo(\frac{\min}{km}) = \frac{t(\min)}{d(km)}$. De eenheid van tempo is
 $\frac{\min}{km}$. Om deze berekeningen wat te standaardiseren, werd gedurende
 deze thesis gekozen om altijd de omrekening te maken naar snelheid
 $\frac{km}{h}$, om zo over de volledige lijn met dezelfde standaard te werken.
@@ -94,31 +94,31 @@ snelste tijden worden bijgehouden en vergeleken met andere gebruikers.
 Segmenten worden vaak gebruikt om prestaties te meten en te vergelijken.
 
 Centraal op de figuur is ook de kaart duidelijk zichtbaar. Daarbij horen ook de
-tussentijden en de grafiek van snelheid. Optioneel kan hierbij ook nog een
-visualisatie van de afgelegde hoogte en de hartslag worden weergegeven, indien
-de gebruiker hiervoor met de juiste meetinstrumenten zijn sportactiviteit
-opneemt. De tussentijden en de grafiek van snelheid zijn qua inhoud
-gelijkaardig, met als verschil dat de waarden op de grafiek erg precies kunnen
-worden bestudeerd. Op de grafiek is voor elk afstandspunt de ogenblikkelijke
-snelheid zichtbaar. Bij de tussentijden wordt de gemiddelde snelheid over een
-kilometer weergegeven. De kaart die de route weergeeft is zeker ook belangrijk
-om even te bestuderen. Deze bevat namelijk alle \ac{gps}-geregistreerde punten,
-en verbindt deze ook om zo één aaneensluitende route te vormen. Wanneer deze
-echter in detail bestudeerd wordt, samen met de legende die aanwezig is, is te
-zien dat de route uit twee delen bestaat, een zichtbaar deel en een onzichtbaar
-deel. Een andere gebruiker zal enkel zicht hebben op de het zichtbare deel, het
-onzichtbare deel zal dus voor een andere gebruiker niet zichtbaar zijn. Anders
-geformuleerd, de activiteit zal voor deze persoon dus als het ware afgekapt
-zijn, en zal in zijn zichtbare versie op een andere plek starten en eindigen.
-In de volgende Secties~\ref{sec:Algemene Privacy} \&~\ref{sec:EPZ} wordt meer
-in detail ingegaan op de werking van deze methodiek.
+tussentijden en de grafiek van de snelheidsevolutie. Optioneel kan hierbij ook
+nog een visualisatie van de afgelegde hoogte en de hartslag worden weergegeven,
+indien de gebruiker hiervoor met de juiste meetinstrumenten zijn
+sportactiviteit opneemt. De tussentijden en de grafiek van snelheid zijn qua
+inhoud gelijkaardig, met als verschil dat de waarden op de grafiek erg precies
+kunnen worden bestudeerd. Op de grafiek is voor elk afstandspunt de
+ogenblikkelijke snelheid zichtbaar. Bij de tussentijden wordt de gemiddelde
+snelheid over een kilometer weergegeven. De kaart die de route weergeeft is
+zeker ook belangrijk om even te bestuderen. Deze bevat namelijk alle
+\ac{gps}-geregistreerde punten, en verbindt deze ook om zo één aaneensluitende
+route te vormen. Wanneer deze echter in detail bestudeerd wordt, samen met de
+legende die aanwezig is, is te zien dat de route uit twee delen bestaat, een
+zichtbaar deel en een onzichtbaar deel. Een andere gebruiker zal enkel zicht
+hebben op het zichtbare deel, het onzichtbare deel zal dus voor een andere
+gebruiker niet zichtbaar zijn. Anders geformuleerd, de activiteit zal voor deze
+persoon dus als het ware afgekapt zijn, en zal in de voor hem of haar zichtbare
+versie op een andere plek starten en eindigen. In de volgende
+Secties~\ref{sec:Algemene Privacy} \&~\ref{sec:EPZ} wordt meer in detail
+ingegaan op de werking van deze methodiek.
 
-Een laatste kanttekening die hierbij gemaakt moet worden, is dat voor een
-gebruiker verschillende eenheden mogelijk zijn om uit te kiezen. Er is keuze
-mogelijk tussen de mijl en pond, en kilometer en kilogram. Gebruikers kiezen in
-welke eenheid ze de applicatie wensen te gebruiken. Voor de gebruiker in
-kwestie zal dus de volledige applicatie worden weergegeven in de gekozen
-eenheden.
+Een laatste kanttekening die we hierbij maken, is dat een gebruiker keuze heeft
+tussen verschillende eenheden. Er is keuze mogelijk tussen de mijl en pond, en
+kilometer en kilogram. Gebruikers kiezen in welke eenheid ze de applicatie
+wensen te gebruiken. Voor de gebruiker in kwestie zal dan ook de volledige
+applicatie worden weergegeven in de gekozen eenheden.
 \begin{figure}
     \centering
     \includegraphics[width=0.8\textwidth]{fig/VoorbeeldActiviteiten/VoorbeeldActiviteit_Personal.png}
@@ -133,14 +133,14 @@ snelheid. Echter is het ook interessant om de berekening van Strava eens onder
 de loep te nemen voor de afgelegde afstand. Strava maakt gebruik van twee
 verschillende methodieken voor het berekenen van deze afstand. De eerste is de
 \textit{GPS-calculated Distance}. Dit bestaat eruit om de afstand tussen
-opeenvolgende \ac{gps}-punten te berekenen, en deze op te tellen. Precisie is
-hier afhankelijk van de precisie van de \ac{gps}-punten, aangezien de afstand
-wordt berekend door de punten met rechte lijnen te verbinden. Dit kan gebeuren
-in real time, via de gsm, smartwatch of ander toestel die gebruikt wordt om de
-activiteit op te nemen. Er zal dan ook mogelijkheid zijn om real time info te
-zien. Op elk punt zal de afstand vanaf het startpunt gekend zijn, en het is
-deze afstand die gedeeld zal worden op het platform. Het grote nadeel hierbij
-is het real-time aspect. Fouten kunnen moeilijker on the fly worden
+opeenvolgende ontvangen \ac{gps}-punten te berekenen, en deze op te tellen.
+Precisie is hier afhankelijk van de precisie van de \ac{gps}-punten, aangezien
+de afstand wordt berekend door de punten met rechte lijnen te verbinden. Dit
+kan gebeuren in real time, via de gsm, smartwatch of ander toestel die gebruikt
+wordt om de activiteit op te nemen. Er zal dan ook mogelijkheid zijn om real
+time info te zien. Op elk punt zal de afstand vanaf het startpunt gekend zijn,
+en het is deze afstand die gedeeld zal worden op het platform. Het grote nadeel
+hierbij is het real-time aspect. Fouten kunnen moeilijker on the fly worden
 gecorrigeerd. Een tweede aanpak voor GPS-calculated distance is om
 \ac{gps}-data pas bij het uploaden te verwerken. De \ac{gps}-data wordt dan
 geanalyseerd, en de nodige berekeningen worden uitgevoerd.
@@ -154,25 +154,24 @@ fietswiel~\cite{HowDista47:online}.
 
 De bovenstaande afstandsberekeningen zijn de twee technieken die de officiële
 supportdocumentatie van Strava beschrijft~\cite{HowDista47:online}. Echter
-blijkt wanneer we de afstand op deze manier manueel berekenen, afwijkende
+blijkt wanneer we de afstand op deze manier manueel berekenen, we afwijkende
 resultaten bekomen worden. Dit is zeer waarschijnlijk te wijten aan de
 preprocessing van de data die gebeurt bij het uploaden van een activiteit.
 Alhoewel dit niet expliciet gedocumenteerd staat doen de resultaten dit wel
 sterk vermoeden. De hypothese is dat tijdens het uploaden, de afstand
 herberekend wordt. De \ac{gps}-punten zullen worden geanalyseerd, en dat het
 platform hierbij technieken gebruikt om de resultaten hiervan te verbeteren. De
-twee meest waarschijnlijke technieken zijn \textit{Map Snapping} (ook wel
-\textit{Map Matching} genoemd) en \textit{Smoothing}.
+twee meest waarschijnlijke technieken zijn \textit{Map Snapping} en
+\textit{Smoothing}.
 
-Map Snapping of Snap to Roads is een techniek waarbij \ac{gps}-punten worden
-verschoven naar de dichtstbijzijnde weg. Per \ac{gps}-punt wordt dan gezocht
-naar de dichtste node op de desbetreffende \textit{roadgraph}\footnote{De
-    roadgraph is afhankelijk van welke implementatie gebruikt wordt voor het
-    snappen. Het is een wegennetwerk, omgezet in een graaf, bestaande uit edges en
-    nodes. Elke weg of pad, bevat één of meerdere nodes, zodat een skeletstructuur
-    ontstaat, die een abstractie van het wegennetwerk
-    voorstelt~\cite{seiler2022haul}}, op Figuur~\ref{fig:MapSnapping} is de werking
-ervan te zien~\cite{Snapping96:online}.
+Map Snapping (ook wel \textit{Map Matching} genoemd) is een techniek waarbij
+\ac{gps}-punten worden verschoven naar de dichtstbijzijnde weg. Per
+\ac{gps}-punt wordt gezocht naar de dichtste node op de desbetreffende
+\textit{roadgraph}\footnote{De roadgraph is een wegennetwerk, omgezet in een
+    graaf, bestaande uit edges en nodes. Elke weg of pad, bevat één of meerdere
+    nodes, zodat een skeletstructuur ontstaat, die een abstractie van het
+    wegennetwerk voorstelt~\cite{seiler2022haul}}, op Figuur~\ref{fig:MapSnapping}
+is de werking ervan te zien~\cite{Snapping96:online}.
 \begin{figure}[h]
     \centering
     \begin{subfigure}[b]{.5\textwidth}
@@ -208,10 +207,10 @@ worden, en krijgt de grafiek een meer vloeiende vorm. Merk wel op dat de
 precisie van de route afneemt op deze manier. Bij het smoothen van een traject
 wordt het aantal gebruikte punten namelijk verminderd volgens de grootte van de
 window. Afhankelijk van de grootte, worden meer (resp.\ minder) punten
-samengenomen, en zo minder/meer punten weergegeven op de grafiek. Een voorbeeld
-is terug te vinden op Figuur~\ref{fig:SmoothingExample}, waarbij de blauwe
-curve de ruwe data voorstelt, dus voorafgaand op het `smoothen', en de rode de
-`gesmoothe' curve.
+samengenomen, en zo minder of meer punten weergegeven op de grafiek. Een
+voorbeeld is terug te vinden op Figuur~\ref{fig:SmoothingExample}, waarbij de
+blauwe curve de ruwe data voorstelt, dus voorafgaand op het `smoothen', en de
+rode de `gesmoothe' curve.
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.6\linewidth]{fig/SmoothingExample.png}
@@ -228,8 +227,8 @@ vergelijkbare, zo niet dezelfde methodieken gebruiken. Een eerste algemeen
 mechanisme bestaat eruit om de gebruiker de keuze te geven om alle activiteiten
 en alle gegevens over het profiel heen te laten voldoen aan bepaalde privacy
 regels. Deze regels kunnen ook per activiteit worden ingesteld. Onder de keuzes
-staan meestal drie opties, \textit{zichtbaar voor iedereen}, \textit{zichtbaar
-    voor volgers} en \textit{zichtbaar voor niemand}. Er kan ook zelf een keuze
+staan meestal drie opties: \textit{zichtbaar voor iedereen}, \textit{zichtbaar
+    voor volgers} en \textit{zichtbaar voor niemand}. Er kan ook zelfs een keuze
 gemaakt worden om specifieke elementen van een activiteit niet te delen met de
 buitenwereld, zoals bijvoorbeeld de zichtbaarheid van de route op de
 kaart~\cite{Activity24:online}.
@@ -314,7 +313,7 @@ wordt de activiteit gepauzeerd voor een bepaald tijdsframe, en wordt er geen
 data meer verzameld. Wanneer de activiteit terug wordt hervat, zal er een
 sprong zijn in de \ac{gps}-locaties, wat kan leiden tot een verkeerde
 berekening van de afstand. In het geval van een pauze zal map matching geen
-oplossing zijn, maar zou deze `sprongafstand' best weggelaten worden in de
+oplossing zijn, maar zullen we deze `sprongafstand' best weglaten in de
 berekeningen. Een voorbeeld hiervan is terug te vinden op
 Figuur~\ref{fig:gps_signal_loss}.
 \begin{figure}
@@ -342,13 +341,13 @@ Strava hebben gebruikers keuze uit waarden van 0 tot 1600m, in stappen van
 begint, dan zal dat deel van de route binnen de \ac{EPZ} niet zichtbaar zijn
 voor anderen. Vanuit het perspectief van een andere gebruiker zal de activiteit
 dus starten en/of eindigen op de rand van deze cirkel (die natuurlijk niet
-zichtbaar is). Merk op dat een sporter ook andere gevoelige locaties kan
+zichtbaar is). Merk op dat een sporter meerdere gevoelige locaties kan
 verbergen op de kaart. Bijvoorbeeld een frequent bezocht café, of een huis van
 een partner waar regelmatig een tussenstop plaatsvindt. Een tweede opmerking is
 dat wanneer een gebruiker de \ac{EPZ} doorkruist, maar er niet in stopt, dat
 deel van de route onaangepast blijft. Op Figuur~\ref{fig:EPZ_Voorbeeld} zijn de
-verschillende perspectieven te zien, hoe het er als uploader uitziet, en hoe
-het eruit ziet voor een andere gebruiker. Het traject dat de buitenstaander te
+verschillende perspectieven te zien, hoe de eigenaar de activiteit ziet, en hoe
+het eruit ziet voor een externe gebruiker. Het traject dat de buitenstaander te
 zien krijgt, bestaat uit alle punten die zich buiten de \ac{EPZ} bevinden. Merk
 ook op dat de eigenaar van de activiteit zicht heeft op de invloed van de
 \ac{EPZ}, dus wat zal verborgen worden erdoor, en wat zichtbaar blijft. Dit
@@ -371,9 +370,9 @@ zichtbare punten en grijs voor de onzichtbare.
 
 De methodiek die fitnesstrackers toepassen bij het opzetten van een \ac{EPZ}
 werkt als volgt, de gevoelige locatie wordt genomen als beginlocatie. Hieruit
-zal a.d.h.v.\ de op voorhand vastgelegde \ac{EPZ}-straal een cirkel worden
-opgesteld. Het centrum van deze cirkel zal hierna een translatie ondervinden in
-een willekeurige richting. Dit kan een verschuiving zijn met een afstand die
+zetten ze a.d.h.v.\ de op voorhand vastgelegde \ac{EPZ}-straal een cirkel op.
+Het centrum van deze cirkel zal hierna een translatie ondervinden in een
+willekeurige richting. Dit kan een verschuiving zijn met een afstand die
 maximaal 70\% van de straal van de \ac{EPZ} bedraagt. Dit mechanisme is te zien
 op Figuur~\ref{fig:translation}. Het transleren van deze cirkel wordt ook
 \textit{spatial cloaking} genoemd.
@@ -397,27 +396,27 @@ gevoelige locatie niet worden gefilterd.
 
 \section{Literatuur}
 In het verleden is al wat onderzoek verricht in de richting van de
-doeltreffendheid van \acp{EPZ} bij fitnesstrackers. Hassan et al.\ beschreven
-in 2018 een implementatie van EPZ waarbij het centrum van de zone de gevoelige
-locatie is~\cite{sec18has3:online}. M.a.w.\ het identificeren van deze zone is
-dus voldoende om de gevoelige locatie te achterhalen. In tegenstelling tot deze
-thesis, wordt ervan uitgegaan dat het centrum geen translatie ondervindt, en er
-dus geen spatial cloaking wordt toegepast. In deze paper
-van~\citeauthor{sec18has3:online} wordt gefocust op de reconstructie van de
-cirkel op basis van 3 punten op de rand, wat te zien is op
-Figuur~\ref{fig:Hassan_EPZ}. Deze 3 randpunten worden dus bekomen door
-begin/eindpunten te nemen van activiteiten, volgens het perspectief van
-gebruiker die geen eigenaar is. Deze begin/eindpunten zullen zich altijd op de
-rand van de cirkel begeven. Door het toepassen bekwam Hassan et al.\ een succes
-rate tot 95.1\%. Spatial cloaking werd er aangehaald als mogelijke verdediging
-tegen dit soort aanvallen.
+doeltreffendheid van \acp{EPZ} bij fitnesstrackers. Hassan et al. (2018)
+beschreven een implementatie van EPZ waarbij het centrum van de zone de
+gevoelige locatie is~\cite{sec18has3:online}. Met andere woorden om deze
+gevoelige locatie te achterhalen is het dus voldoende deze zone te
+identificeren. In tegenstelling tot deze thesis, wordt ervan uitgegaan dat het
+centrum geen translatie ondervindt, en er dus geen spatial cloaking wordt
+toegepast. In deze paper van~\citeauthor{sec18has3:online} wordt gefocust op de
+reconstructie van de cirkel op basis van 3 punten op de rand, wat te zien is op
+Figuur~\ref{fig:Hassan_EPZ}. Deze 3 randpunten worden dus bekomen door begin-
+of eindpunten te nemen van activiteiten, volgens het perspectief van gebruiker
+die geen eigenaar is. Deze begin- of eindpunten zullen zich altijd op de rand
+van de cirkel bevinden. Door dit aanvalsmodel toe te passen bekwamen Hassan et
+al.\ een succes rate tot 95.1\%. Spatial cloaking werd er aangehaald als
+mogelijke verdediging tegen dit soort aanvallen.
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.6\textwidth]{fig/EPZ-mechanisme/Hassan.png}
     \caption{Mechanisme \ac{EPZ} beschreven door Hassan et al.~\cite{sec18has3:online}}\label{fig:Hassan_EPZ}
 \end{figure}
 
-Een onderzoek door~\citeauthor{10.1145/3491102.3502136} in 2022 toonde ook aan
+Een onderzoek door~\citeauthor{10.1145/3491102.3502136} (2022) toonde ook aan
 dat heel wat mensen in staat zijn om de gevoelige locatie te achterhalen op
 basis van hun intuïtie~\cite{10.1145/3491102.3502136}. Dit gebeurde op basis
 van enquêtes die werden afgenomen bij gebruikers van het platform. Deelnemers
@@ -431,33 +430,33 @@ deelnemers de locatie konden schatten. Deze resultaten op zich zijn alarmerend,
 en tonen aan dat \acp{EPZ} verre van perfect zijn, en ook te omzeilen zijn door
 een persoon die geen technische achtergrond heeft.
 
-Dhondt et al.\ voerde tevens ook een studie in 2022 naar de mogelijke lekken
+Dhondt et al. (2022) voerden tevens ook een studie naar de mogelijke lekken
 aanwezig in het principe van \acp{EPZ}~\cite{Dhondt}. Er wordt in deze paper
 een nadruk gelegd op de translatie van de \ac{EPZ}, en hoe deze de privacy van
-een gebruiker verhoogt. Ze beschrijven een inferentie aanval die gebruikmaakt
+een gebruiker verhoogt. Ze beschrijven een inferentieaanval die gebruikmaakt
 van de totale afstand die terug te vinden bij de activiteit. Het principe van
-deze inferentie aanval wordt uitvoerig beschreven in
-Sectie~\ref{chap:inferentieaanval}. In het kort werkt de aanval als volgt: aan
-de hand van de totale afgelegde afstand in combinatie met het wegennetwerk in
-die omgeving, wordt een poging gedaan om alle mogelijke routes die de sporter
-binnenin de \ac{EPZ} zou kunnen afgelegd hebben te reconstrueren. Dit gebeurt
-voor elke activiteit. Wanneer dit gedaan wordt voor verschillende trajecten,
-kan een locatie voorspeld worden die het meest waarschijnlijk wordt geacht om
-de gevoelige locatie te zijn.
+deze inferentieaanval wordt uitvoerig beschreven in
+Hoofdstuk~\ref{chap:inferentieaanval}. In het kort werkt de aanval als volgt:
+aan de hand van de totale afgelegde afstand in combinatie met het wegennetwerk
+in die omgeving, wordt een poging gedaan om alle mogelijke routes die de
+sporter binnenin de \ac{EPZ} zou kunnen afgelegd hebben te reconstrueren. Dit
+gebeurt voor elke activiteit. Wanneer dit gedaan wordt voor verschillende
+trajecten, kan een locatie voorspeld worden die het meest waarschijnlijk wordt
+geacht om de gevoelige locatie te zijn.
 
 Dhondt et al.\ toonden aan dat de beschreven countermeasures door Hassan et
-al.\ niet feilloos zijn, en dat ze deze kunnen omzeilen met een successrate van
+al.\ niet feilloos zijn, en dat deze te omzeilen valt met een successrate van
 85\%. Aangezien activiteiten nog steeds totale afstanden van een volledige
 route vrijgeven, kunnen ze de afstand afgelegd binnenin de EPZ infereren. Deze
-data ligt dan ook aan de grond van de inferentie aanval volgens Dhondt et al.
+data ligt dan ook aan de grond van de inferentieaanval volgens Dhondt et al.
 
 Het meest recente werk in dit domein is de thesis van
-\citeauthor{Verdonck_2022}~\cite{Verdonck_2022}. Deze thesis bouwt in grote
-mate verder op de paper van \citeauthor{Dhondt}, maar maakt gebruik van
+\citeauthor{Verdonck_2022} (2022)~\cite{Verdonck_2022}. Deze thesis bouwt in
+grote mate verder op de paper van \citeauthor{Dhondt}, maar maakt gebruik van
 alternatieve data.\ \citeauthor{Verdonck_2022} onderzoekt in hoeverre hij
 gelijkaardige resultaten kan bekomen door het gebruik van hoogtedata om
 beschermde locaties te achterhalen. Via de kennis van hoogtedata van het
-stratenplan kan hij via de gekende hoogteverschillen een inferentie aanval
+stratenplan kan hij via de gekende hoogteverschillen een inferentieaanval
 opzetten, die nu geen afstanden maar hoogteverschillen infereerd. Op deze
 manier bekomt~\citeauthor{Verdonck_2022} een succes rate van 36\%. Dit lagere
 succesratio is terug te brengen naar het feit dat hoogtedata een stuk minder

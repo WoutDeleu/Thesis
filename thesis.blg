@@ -3,47 +3,46 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: thesis.aux
 The style file: apalike.bst
 Database file #1: bibliografie_nl.bib
-Warning--I didn't find a database entry for "sec18has3"
 Warning--empty journal in sec18has3:online
-You've used 38 entries,
+You've used 39 entries,
             1935 wiz_defined-function locations,
-            687 strings with 11470 characters,
-and the built_in function-call counts, 10906 in all, are:
-= -- 1135
-> -- 380
-< -- 34
-+ -- 125
-- -- 118
-* -- 747
-:= -- 2114
-add.period$ -- 137
-call.type$ -- 38
-change.case$ -- 248
-chr.to.int$ -- 33
-cite$ -- 39
-duplicate$ -- 421
-empty$ -- 673
-format.name$ -- 166
-if$ -- 2039
+            693 strings with 11833 characters,
+and the built_in function-call counts, 11435 in all, are:
+= -- 1198
+> -- 387
+< -- 36
++ -- 127
+- -- 120
+* -- 771
+:= -- 2185
+add.period$ -- 142
+call.type$ -- 39
+change.case$ -- 254
+chr.to.int$ -- 34
+cite$ -- 40
+duplicate$ -- 458
+empty$ -- 712
+format.name$ -- 169
+if$ -- 2168
 int.to.chr$ -- 6
 int.to.str$ -- 0
-missing$ -- 11
-newline$ -- 215
-num.names$ -- 114
-pop$ -- 132
+missing$ -- 12
+newline$ -- 221
+num.names$ -- 117
+pop$ -- 137
 preamble$ -- 1
-purify$ -- 249
+purify$ -- 255
 quote$ -- 0
-skip$ -- 356
+skip$ -- 393
 stack$ -- 0
-substring$ -- 546
-swap$ -- 9
-text.length$ -- 0
+substring$ -- 576
+swap$ -- 29
+text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 226
+type$ -- 232
 warning$ -- 1
-while$ -- 81
+while$ -- 84
 width$ -- 0
-write$ -- 512
-(There were 2 warnings)
+write$ -- 530
+(There was 1 warning)

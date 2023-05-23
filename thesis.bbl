@@ -31,8 +31,8 @@ Cui, M. (2020).
 
 \bibitem[Dhondt et~al., 2022]{Dhondt}
 Dhondt, K., Le~Pochat, V., Voulimeneas, A., Joosen, W., and Volckaert, S. (2022).
-\newblock A run a day won’t keep the hacker away: Inference attacks on endpoint privacy zones in fitness tracking social networks.
-\newblock osf.io/3m5ut.
+\newblock A run a day won't keep the hacker away: Inference attacks on endpoint privacy zones in fitness tracking social networks.
+\newblock In {\em Proceedings of the 2022 ACM SIGSAC Conference on Computer and Communications Security}, CCS '22, page 801–814, New York, NY, USA. Association for Computing Machinery.
 
 \bibitem[Driesen-Joanknecht, 2020]{Tempomin61:online}
 Driesen-Joanknecht, H. (2020).
@@ -183,6 +183,12 @@ Strava, I. (2023d).
 \newblock Strava global heatmap.
 \newblock \url{https://www.strava.com/heatmap#7.00/-120.90000/38.36000/hot/all}.
 \newblock (Geraadpleegd op 05/17/2023).
+
+\bibitem[Sumudrala, 2019]{DensityE3:online}
+Sumudrala, A. (2019).
+\newblock Density estimation: Mle, map, mom, kde, ecdf, q-q plot, gan | by ajit samudrala | analytics vidhya | medium.
+\newblock \url{https://medium.com/analytics-vidhya/density-estimation-mle-map-mom-kde-ecdf-q-q-plot-gan-5161f84d28d7}.
+\newblock (Geraadpleegd op 05/23/2023).
 
 \bibitem[TechTarget, 2011]{Whatishe21:online}
 TechTarget (2011).

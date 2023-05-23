@@ -1329,12 +1329,25 @@ INPUT /usr/share/texmf-dist/fonts/vf/adobe/helvetic/phvb7t.vf
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/helvetic/phvb8r.tfm
 INPUT /usr/share/texmf-dist/fonts/vf/adobe/helvetic/phvb7t.vf
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/helvetic/phvb8r.tfm
+INPUT ./fig/EPZ-mechanisme/Hassan_examle_before.png
+INPUT ./fig/EPZ-mechanisme/Hassan_examle_before.png
+INPUT fig/EPZ-mechanisme/Hassan_examle_before.png
+INPUT ./fig/EPZ-mechanisme/Hassan_examle_before.png
+INPUT ./fig/EPZ-mechanisme/Hassan_examle_before.png
+INPUT /usr/share/texmf-dist/fonts/tfm/adobe/helvetic/phvb7t.tfm
+INPUT ./fig/EPZ-mechanisme/Hassan_examle_after.png
+INPUT ./fig/EPZ-mechanisme/Hassan_examle_after.png
+INPUT fig/EPZ-mechanisme/Hassan_examle_after.png
+INPUT ./fig/EPZ-mechanisme/Hassan_examle_after.png
+INPUT ./fig/EPZ-mechanisme/Hassan_examle_after.png
 INPUT /usr/share/texmf-dist/fonts/vf/adobe/helvetic/phvb7t.vf
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/helvetic/phvb8r.tfm
 INPUT /usr/share/texmf-dist/fonts/vf/adobe/helvetic/phvr7t.vf
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/helvetic/phvr8r.tfm
 INPUT /usr/share/texmf-dist/fonts/vf/adobe/helvetic/phvr7t.vf
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/helvetic/phvr8r.tfm
+INPUT /usr/share/texmf-dist/fonts/vf/adobe/helvetic/phvb7t.vf
+INPUT /usr/share/texmf-dist/fonts/tfm/adobe/helvetic/phvb8r.tfm
 INPUT ./hfdst2.tex
 INPUT ./hfdst2.tex
 INPUT ./hfdst2.tex
@@ -1345,7 +1358,6 @@ INPUT hfdst2.tex
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/helvetic/phvb7t.tfm
 INPUT /usr/share/texmf-dist/fonts/vf/adobe/helvetic/phvb7t.vf
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/helvetic/phvb8r.tfm
-INPUT /usr/share/texmf-dist/fonts/tfm/adobe/helvetic/phvb7t.tfm
 INPUT ./fig/SpeedVSPace/Pace.png
 INPUT ./fig/SpeedVSPace/Pace.png
 INPUT fig/SpeedVSPace/Pace.png
@@ -1368,8 +1380,6 @@ INPUT ./fig/VoorbeeldActiviteiten/VoorbeeldActiviteit_Personal.png
 INPUT fig/VoorbeeldActiviteiten/VoorbeeldActiviteit_Personal.png
 INPUT ./fig/VoorbeeldActiviteiten/VoorbeeldActiviteit_Personal.png
 INPUT ./fig/VoorbeeldActiviteiten/VoorbeeldActiviteit_Personal.png
-INPUT /usr/share/texmf-dist/fonts/vf/adobe/helvetic/phvb7t.vf
-INPUT /usr/share/texmf-dist/fonts/tfm/adobe/helvetic/phvb8r.tfm
 INPUT ./fig/Map Snapping/before.png
 INPUT ./fig/Map Snapping/before.png
 INPUT fig/Map Snapping/before.png
@@ -1492,6 +1502,16 @@ INPUT ./fig/kmeans/3.png
 INPUT fig/kmeans/3.png
 INPUT ./fig/kmeans/3.png
 INPUT ./fig/kmeans/3.png
+INPUT ./fig/kmeans/kmeans_circle.png
+INPUT ./fig/kmeans/kmeans_circle.png
+INPUT fig/kmeans/kmeans_circle.png
+INPUT ./fig/kmeans/kmeans_circle.png
+INPUT ./fig/kmeans/kmeans_circle.png
+INPUT ./fig/kmeans/kmeans_circle copy.png
+INPUT ./fig/kmeans/kmeans_circle copy.png
+INPUT fig/kmeans/kmeans_circle copy.png
+INPUT ./fig/kmeans/kmeans_circle copy.png
+INPUT ./fig/kmeans/kmeans_circle copy.png
 INPUT ./fig/EPZ-mechanisme/Entry_Gate.png
 INPUT ./fig/EPZ-mechanisme/Entry_Gate.png
 INPUT fig/EPZ-mechanisme/Entry_Gate.png
@@ -1527,14 +1547,14 @@ INPUT ./fig/RoadGraph/Graph.png
 INPUT ./fig/RoadGraph/Graph.png
 INPUT /usr/share/texmf-dist/fonts/vf/adobe/helvetic/phvr7t.vf
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/helvetic/phvr8r.tfm
-INPUT /usr/share/texmf-dist/fonts/vf/adobe/times/zpzccmry.vf
-INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
-INPUT /usr/share/texmf-dist/fonts/tfm/adobe/zapfchan/pzcmi8r.tfm
 INPUT ./fig/haversine.png
 INPUT ./fig/haversine.png
 INPUT fig/haversine.png
 INPUT ./fig/haversine.png
 INPUT ./fig/haversine.png
+INPUT /usr/share/texmf-dist/fonts/vf/adobe/times/zpzccmry.vf
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/adobe/zapfchan/pzcmi8r.tfm
 INPUT /usr/share/texmf-dist/fonts/vf/adobe/times/zpsycmrv.vf
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex9.tfm
