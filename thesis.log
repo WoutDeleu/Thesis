@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.4)  23 MAY 2023 23:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.4)  24 MAY 2023 15:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1180,9 +1180,9 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [26] [27 <./fig/haversine.png>] [28]
 Package acronym Info: Label `acro:LAD' newly defined as it shall be overridden
-although it is yet undefined on input line 462.
+although it is yet undefined on input line 464.
 Package acronym Info: Label `acro:OLS' newly defined as it shall be overridden
-although it is yet undefined on input line 472.
+although it is yet undefined on input line 474.
 ) (./hfdst4.tex [29]
 Hoofdstuk 4.
 Package acronym Info: Label `acro:API' newly defined as it shall be overridden
@@ -1195,7 +1195,7 @@ although it is yet undefined on input line 21.
 <fig/Afwijkingen&Analyses/Heatmap.png, id=1008, 2034.60126pt x 1253.68375pt>
 File: fig/Afwijkingen&Analyses/Heatmap.png Graphic file (type png)
 <use fig/Afwijkingen&Analyses/Heatmap.png>
-Package pdftex.def Info: fig/Afwijkingen&Analyses/Heatmap.png  used on input line 76.
+Package pdftex.def Info: fig/Afwijkingen&Analyses/Heatmap.png  used on input line 75.
 (pdftex.def)             Requested size: 426.79135pt x 262.97528pt.
 
 
@@ -1204,7 +1204,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <fig/Afwijkingen&Analyses/CDF_amountActivities.jpg, id=1009, 462.528pt x 346.896pt>
 File: fig/Afwijkingen&Analyses/CDF_amountActivities.jpg Graphic file (type jpg)
 <use fig/Afwijkingen&Analyses/CDF_amountActivities.jpg>
-Package pdftex.def Info: fig/Afwijkingen&Analyses/CDF_amountActivities.jpg  used on input line 103.
+Package pdftex.def Info: fig/Afwijkingen&Analyses/CDF_amountActivities.jpg  used on input line 102.
 (pdftex.def)             Requested size: 384.1096pt x 288.09827pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1212,7 +1212,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <fig/Strava_3billion.png, id=1014, 770.88pt x 513.92pt>
 File: fig/Strava_3billion.png Graphic file (type png)
 <use fig/Strava_3billion.png>
-Package pdftex.def Info: fig/Strava_3billion.png  used on input line 125.
+Package pdftex.def Info: fig/Strava_3billion.png  used on input line 124.
 (pdftex.def)             Requested size: 298.75264pt x 199.16545pt.
 [31]
 
@@ -1222,27 +1222,27 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <fig/Afwijkingen&Analyses/Graphs/Afstand tussen 2 gps-punten.png, id=1039, 642.4pt x 481.8pt>
 File: fig/Afwijkingen&Analyses/Graphs/Afstand tussen 2 gps-punten.png Graphic file (type png)
 <use fig/Afwijkingen&Analyses/Graphs/Afstand tussen 2 gps-punten.png>
-Package pdftex.def Info: fig/Afwijkingen&Analyses/Graphs/Afstand tussen 2 gps-punten.png  used on input line 194.
+Package pdftex.def Info: fig/Afwijkingen&Analyses/Graphs/Afstand tussen 2 gps-punten.png  used on input line 193.
 (pdftex.def)             Requested size: 426.79135pt x 320.0989pt.
  [33 <./fig/Afwijkingen&Analyses/CDF_amountActivities.jpg>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [34 <./fig/Strava_3billion.png>]
-<fig/Afwijkingen&Analyses/Graphs/Verschil_Theoretische_innerDistance.png, id=1060, 618.31pt x 465.74pt>
+<fig/Afwijkingen&Analyses/Graphs/Verschil_Theoretische_innerDistance.png, id=1061, 618.31pt x 465.74pt>
 File: fig/Afwijkingen&Analyses/Graphs/Verschil_Theoretische_innerDistance.png Graphic file (type png)
 <use fig/Afwijkingen&Analyses/Graphs/Verschil_Theoretische_innerDistance.png>
-Package pdftex.def Info: fig/Afwijkingen&Analyses/Graphs/Verschil_Theoretische_innerDistance.png  used on input line 225.
+Package pdftex.def Info: fig/Afwijkingen&Analyses/Graphs/Verschil_Theoretische_innerDistance.png  used on input line 223.
 (pdftex.def)             Requested size: 298.75264pt x 225.03793pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<fig/Afwijkingen&Analyses/Graphs/100_Differences_tov_theoretische_BefSmoothening.png, id=1061, 642.4pt x 431.6125pt>
+<fig/Afwijkingen&Analyses/Graphs/100_Differences_tov_theoretische_BefSmoothening.png, id=1062, 642.4pt x 431.6125pt>
 File: fig/Afwijkingen&Analyses/Graphs/100_Differences_tov_theoretische_BefSmoothening.png Graphic file (type png)
 <use fig/Afwijkingen&Analyses/Graphs/100_Differences_tov_theoretische_BefSmoothening.png>
-Package pdftex.def Info: fig/Afwijkingen&Analyses/Graphs/100_Differences_tov_theoretische_BefSmoothening.png  used on input line 230.
-(pdftex.def)             Requested size: 298.75264pt x 200.73065pt.
+Package pdftex.def Info: fig/Afwijkingen&Analyses/Graphs/100_Differences_tov_theoretische_BefSmoothening.png  used on input line 228.
+(pdftex.def)             Requested size: 426.79135pt x 286.75526pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -1253,43 +1253,37 @@ although it is yet undefined on input line 21.
 [38
 
 ]
-<fig/Afwijkingen&Analyses/OvershootMappingDistance.png, id=1103, 582.67688pt x 409.53pt>
+<fig/Afwijkingen&Analyses/OvershootMappingDistance.png, id=1104, 582.67688pt x 409.53pt>
 File: fig/Afwijkingen&Analyses/OvershootMappingDistance.png Graphic file (type png)
 <use fig/Afwijkingen&Analyses/OvershootMappingDistance.png>
 Package pdftex.def Info: fig/Afwijkingen&Analyses/OvershootMappingDistance.png  used on input line 53.
 (pdftex.def)             Requested size: 341.43437pt x 239.97713pt.
  [39 <./fig/Afwijkingen&Analyses/OvershootMappingDistance.png (PNG copy)>]
-<fig/bootstrapping.png, id=1129, 974.13937pt x 951.555pt>
+<fig/bootstrapping.png, id=1130, 974.13937pt x 951.555pt>
 File: fig/bootstrapping.png Graphic file (type png)
 <use fig/bootstrapping.png>
 Package pdftex.def Info: fig/bootstrapping.png  used on input line 113.
 (pdftex.def)             Requested size: 256.07741pt x 250.14265pt.
  [40] [41 <./fig/bootstrapping.png (PNG copy)>]
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
-(Font)              scaled to size 5.39996pt on input line 164.
- [42]
-<fig/result_graphs/all_results.png, id=1174, 388.0899pt x 360.6273pt>
+(Font)              scaled to size 5.39996pt on input line 163.
+ [42] [43] [44] [45]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<fig/result_graphs/all_results.png, id=1226, 388.0899pt x 360.6273pt>
 File: fig/result_graphs/all_results.png Graphic file (type png)
 <use fig/result_graphs/all_results.png>
-Package pdftex.def Info: fig/result_graphs/all_results.png  used on input line 224.
+Package pdftex.def Info: fig/result_graphs/all_results.png  used on input line 440.
 (pdftex.def)             Requested size: 426.79135pt x 396.61421pt.
 
-
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[43]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[44 <./fig/result_graphs/all_results.png>]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[45]) (./hfdst6.tex [46]
+) (./hfdst6.tex [46] [47 <./fig/result_graphs/all_results.png>]
 Hoofdstuk 6.
-[47
+[48
 
-] [48] [49]) (./thesis.bbl [50]
+] [49] [50]) (./thesis.bbl [51]
 Underfull \hbox (badness 1603) in paragraph at lines 15--19
 []\OT1/phv/m/n/10.95 Clement, L. (2019).  Cur-sus sta-tis-tiek 2019-2020.  []$\OT1/pcr/m/n/10.95 https : / / statomics\OML/ptmcm/m/it/10.95 :\OT1/pcr/m/n/10.95 github\OML/ptmcm/m/it/10.95 :\OT1/pcr/m/n/10.95 io /
  []
@@ -1304,14 +1298,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 55--59
 \OT1/pcr/m/n/10.95 / / www\OML/ptmcm/m/it/10.95 :\OT1/pcr/m/n/10.95 edupristine\OML/ptmcm/m/it/10.95 :\OT1/pcr/m/n/10.95 com / blog / what -[] is -[] standard -[] deviation$[]\OT1/phv/m/n/10.95 .  (Ge-raad-pleegd op
  []
 
-[51
+[52
 
 ]
 Underfull \hbox (badness 6364) in paragraph at lines 108--112
 []\OT1/phv/m/n/10.95 of Dal-las, F. R. B. (n.d.).  Smoothing data with mo-ving aver-ages - dal-las-
  []
 
-[52]
+[53]
 Underfull \hbox (badness 3769) in paragraph at lines 134--138
 \OT1/phv/m/n/10.95 ads.  []$\OT1/pcr/m/n/10.95 https : / / blog\OML/ptmcm/m/it/10.95 :\OT1/pcr/m/n/10.95 strava\OML/ptmcm/m/it/10.95 :\OT1/pcr/m/n/10.95 com / press / strava -[] milestones -[] 50 -[] million -[] athletes -[]
  []
@@ -1346,7 +1340,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 176--180
 \OT1/pcr/m/n/10.95 support\OML/ptmcm/m/it/10.95 :\OT1/pcr/m/n/10.95 strava\OML/ptmcm/m/it/10.95 :\OT1/pcr/m/n/10.95 com / hc / en -[] us / articles / 216919487 -[] How -[] Distance -[] is -[] Calculated$[]\OT1/phv/m/n/10.95 .
  []
 
-[53]) (./bijlage1.tex [54]
+[54]) (./bijlage1.tex [55]
 B\ij lage A.
 
 LaTeX Warning: Float too large for page by 19.7267pt on input line 56.
@@ -1354,11 +1348,11 @@ LaTeX Warning: Float too large for page by 19.7267pt on input line 56.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) (./bijlage2.tex [55
+) (./bijlage2.tex [56
 
-] [56]
+] [57]
 B\ij lage B.
-<article.pdf, id=1350, 614.295pt x 794.97pt>
+<article.pdf, id=1371, 614.295pt x 794.97pt>
 File: article.pdf Graphic file (type pdf)
 <use article.pdf>
 Package pdftex.def Info: article.pdf  used on input line 3.
@@ -1367,7 +1361,7 @@ File: article.pdf Graphic file (type pdf)
 <use article.pdf>
 Package pdftex.def Info: article.pdf  used on input line 3.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
-<article.pdf, id=1353, page=1, 614.295pt x 794.97pt>
+<article.pdf, id=1374, page=1, 614.295pt x 794.97pt>
 File: article.pdf Graphic file (type pdf)
 <use article.pdf, page 1>
 Package pdftex.def Info: article.pdf , page1 used on input line 3.
@@ -1376,7 +1370,7 @@ File: article.pdf Graphic file (type pdf)
 <use article.pdf, page 1>
 Package pdftex.def Info: article.pdf , page1 used on input line 3.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-[57
+[58
 
 ]
 File: article.pdf Graphic file (type pdf)
@@ -1391,106 +1385,106 @@ File: article.pdf Graphic file (type pdf)
 <use article.pdf, page 1>
 Package pdftex.def Info: article.pdf , page1 used on input line 3.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [58 <./article.pdf>]
-<article.pdf, id=1396, page=2, 614.295pt x 794.97pt>
-File: article.pdf Graphic file (type pdf)
-<use article.pdf, page 2>
-Package pdftex.def Info: article.pdf , page2 used on input line 3.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: article.pdf Graphic file (type pdf)
-<use article.pdf, page 2>
-Package pdftex.def Info: article.pdf , page2 used on input line 3.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: article.pdf Graphic file (type pdf)
-<use article.pdf, page 2>
-Package pdftex.def Info: article.pdf , page2 used on input line 3.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
  [59 <./article.pdf>]
-<article.pdf, id=1410, page=3, 614.295pt x 794.97pt>
+<article.pdf, id=1415, page=2, 614.295pt x 794.97pt>
 File: article.pdf Graphic file (type pdf)
-<use article.pdf, page 3>
-Package pdftex.def Info: article.pdf , page3 used on input line 3.
+<use article.pdf, page 2>
+Package pdftex.def Info: article.pdf , page2 used on input line 3.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: article.pdf Graphic file (type pdf)
-<use article.pdf, page 3>
-Package pdftex.def Info: article.pdf , page3 used on input line 3.
+<use article.pdf, page 2>
+Package pdftex.def Info: article.pdf , page2 used on input line 3.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: article.pdf Graphic file (type pdf)
-<use article.pdf, page 3>
-Package pdftex.def Info: article.pdf , page3 used on input line 3.
+<use article.pdf, page 2>
+Package pdftex.def Info: article.pdf , page2 used on input line 3.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
  [60 <./article.pdf>]
-<article.pdf, id=1416, page=4, 614.295pt x 794.97pt>
+<article.pdf, id=1429, page=3, 614.295pt x 794.97pt>
 File: article.pdf Graphic file (type pdf)
-<use article.pdf, page 4>
-Package pdftex.def Info: article.pdf , page4 used on input line 3.
+<use article.pdf, page 3>
+Package pdftex.def Info: article.pdf , page3 used on input line 3.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: article.pdf Graphic file (type pdf)
-<use article.pdf, page 4>
-Package pdftex.def Info: article.pdf , page4 used on input line 3.
+<use article.pdf, page 3>
+Package pdftex.def Info: article.pdf , page3 used on input line 3.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: article.pdf Graphic file (type pdf)
-<use article.pdf, page 4>
-Package pdftex.def Info: article.pdf , page4 used on input line 3.
+<use article.pdf, page 3>
+Package pdftex.def Info: article.pdf , page3 used on input line 3.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
  [61 <./article.pdf>]
-<article.pdf, id=1442, page=5, 614.295pt x 794.97pt>
+<article.pdf, id=1435, page=4, 614.295pt x 794.97pt>
 File: article.pdf Graphic file (type pdf)
-<use article.pdf, page 5>
-Package pdftex.def Info: article.pdf , page5 used on input line 3.
+<use article.pdf, page 4>
+Package pdftex.def Info: article.pdf , page4 used on input line 3.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: article.pdf Graphic file (type pdf)
-<use article.pdf, page 5>
-Package pdftex.def Info: article.pdf , page5 used on input line 3.
+<use article.pdf, page 4>
+Package pdftex.def Info: article.pdf , page4 used on input line 3.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: article.pdf Graphic file (type pdf)
-<use article.pdf, page 5>
-Package pdftex.def Info: article.pdf , page5 used on input line 3.
+<use article.pdf, page 4>
+Package pdftex.def Info: article.pdf , page4 used on input line 3.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
  [62 <./article.pdf>]
-<article.pdf, id=1453, page=6, 614.295pt x 794.97pt>
+<article.pdf, id=1461, page=5, 614.295pt x 794.97pt>
 File: article.pdf Graphic file (type pdf)
-<use article.pdf, page 6>
-Package pdftex.def Info: article.pdf , page6 used on input line 3.
+<use article.pdf, page 5>
+Package pdftex.def Info: article.pdf , page5 used on input line 3.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: article.pdf Graphic file (type pdf)
-<use article.pdf, page 6>
-Package pdftex.def Info: article.pdf , page6 used on input line 3.
+<use article.pdf, page 5>
+Package pdftex.def Info: article.pdf , page5 used on input line 3.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: article.pdf Graphic file (type pdf)
-<use article.pdf, page 6>
-Package pdftex.def Info: article.pdf , page6 used on input line 3.
+<use article.pdf, page 5>
+Package pdftex.def Info: article.pdf , page5 used on input line 3.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
  [63 <./article.pdf>]
-<article.pdf, id=1468, page=7, 614.295pt x 794.97pt>
+<article.pdf, id=1473, page=6, 614.295pt x 794.97pt>
 File: article.pdf Graphic file (type pdf)
-<use article.pdf, page 7>
-Package pdftex.def Info: article.pdf , page7 used on input line 3.
+<use article.pdf, page 6>
+Package pdftex.def Info: article.pdf , page6 used on input line 3.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: article.pdf Graphic file (type pdf)
-<use article.pdf, page 7>
-Package pdftex.def Info: article.pdf , page7 used on input line 3.
+<use article.pdf, page 6>
+Package pdftex.def Info: article.pdf , page6 used on input line 3.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: article.pdf Graphic file (type pdf)
-<use article.pdf, page 7>
-Package pdftex.def Info: article.pdf , page7 used on input line 3.
+<use article.pdf, page 6>
+Package pdftex.def Info: article.pdf , page6 used on input line 3.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
  [64 <./article.pdf>]
-<article.pdf, id=1476, page=8, 614.295pt x 794.97pt>
+<article.pdf, id=1487, page=7, 614.295pt x 794.97pt>
 File: article.pdf Graphic file (type pdf)
-<use article.pdf, page 8>
-Package pdftex.def Info: article.pdf , page8 used on input line 3.
+<use article.pdf, page 7>
+Package pdftex.def Info: article.pdf , page7 used on input line 3.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: article.pdf Graphic file (type pdf)
-<use article.pdf, page 8>
-Package pdftex.def Info: article.pdf , page8 used on input line 3.
+<use article.pdf, page 7>
+Package pdftex.def Info: article.pdf , page7 used on input line 3.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: article.pdf Graphic file (type pdf)
-<use article.pdf, page 8>
-Package pdftex.def Info: article.pdf , page8 used on input line 3.
+<use article.pdf, page 7>
+Package pdftex.def Info: article.pdf , page7 used on input line 3.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
  [65 <./article.pdf>]
-<article.pdf, id=1487, page=9, 614.295pt x 794.97pt>
+<article.pdf, id=1495, page=8, 614.295pt x 794.97pt>
+File: article.pdf Graphic file (type pdf)
+<use article.pdf, page 8>
+Package pdftex.def Info: article.pdf , page8 used on input line 3.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: article.pdf Graphic file (type pdf)
+<use article.pdf, page 8>
+Package pdftex.def Info: article.pdf , page8 used on input line 3.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: article.pdf Graphic file (type pdf)
+<use article.pdf, page 8>
+Package pdftex.def Info: article.pdf , page8 used on input line 3.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+ [66 <./article.pdf>]
+<article.pdf, id=1506, page=9, 614.295pt x 794.97pt>
 File: article.pdf Graphic file (type pdf)
 <use article.pdf, page 9>
 Package pdftex.def Info: article.pdf , page9 used on input line 3.
@@ -1503,12 +1497,12 @@ File: article.pdf Graphic file (type pdf)
 <use article.pdf, page 9>
 Package pdftex.def Info: article.pdf , page9 used on input line 3.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [66 <./article.pdf>]) (./bijlage3.tex
+ [67 <./article.pdf>]) (./bijlage3.tex
 B\ij lage C.
 
 
 pdfTeX warning: pdflatex (file ./Poster.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<Poster.pdf, id=1498, 844.79077pt x 1195.32878pt>
+<Poster.pdf, id=1517, 844.79077pt x 1195.32878pt>
 File: Poster.pdf Graphic file (type pdf)
 <use Poster.pdf>
 Package pdftex.def Info: Poster.pdf  used on input line 3.
@@ -1526,7 +1520,7 @@ pdfTeX warning: pdflatex (file ./Poster.pdf): PDF inclusion: found PDF version <
 
 
 pdfTeX warning: pdflatex (file ./Poster.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<Poster.pdf, id=1501, page=1, 844.79077pt x 1195.32878pt>
+<Poster.pdf, id=1520, page=1, 844.79077pt x 1195.32878pt>
 File: Poster.pdf Graphic file (type pdf)
 <use Poster.pdf, page 1>
 Package pdftex.def Info: Poster.pdf , page1 used on input line 3.
@@ -1535,7 +1529,7 @@ File: Poster.pdf Graphic file (type pdf)
 <use Poster.pdf, page 1>
 Package pdftex.def Info: Poster.pdf , page1 used on input line 3.
 (pdftex.def)             Requested size: 597.38225pt x 845.2604pt.
-[67
+[68
 
 ]
 File: Poster.pdf Graphic file (type pdf)
@@ -1550,10 +1544,10 @@ File: Poster.pdf Graphic file (type pdf)
 <use Poster.pdf, page 1>
 Package pdftex.def Info: Poster.pdf , page1 used on input line 3.
 (pdftex.def)             Requested size: 597.38225pt x 845.2604pt.
- [68 <./Poster.pdf>])
+ [69 <./Poster.pdf>])
 
 pdfTeX warning: pdflatex (file ./private/back_fiiw_gent.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<private/back_fiiw_gent.pdf, id=1548, 597.55246pt x 845.07718pt>
+<private/back_fiiw_gent.pdf, id=1568, 597.55246pt x 845.07718pt>
 File: private/back_fiiw_gent.pdf Graphic file (type pdf)
 <use private/back_fiiw_gent.pdf>
 Package pdftex.def Info: private/back_fiiw_gent.pdf  used on input line 128.
@@ -1571,7 +1565,7 @@ pdfTeX warning: pdflatex (file ./private/back_fiiw_gent.pdf): PDF inclusion: fou
 
 
 pdfTeX warning: pdflatex (file ./private/back_fiiw_gent.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<private/back_fiiw_gent.pdf, id=1551, page=1, 597.55246pt x 845.07718pt>
+<private/back_fiiw_gent.pdf, id=1571, page=1, 597.55246pt x 845.07718pt>
 File: private/back_fiiw_gent.pdf Graphic file (type pdf)
 <use private/back_fiiw_gent.pdf, page 1>
 Package pdftex.def Info: private/back_fiiw_gent.pdf , page1 used on input line 128.
@@ -1592,25 +1586,25 @@ File: private/back_fiiw_gent.pdf Graphic file (type pdf)
 <use private/back_fiiw_gent.pdf, page 1>
 Package pdftex.def Info: private/back_fiiw_gent.pdf , page1 used on input line 128.
 (pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
-[69
+[70
 
  <./private/back_fiiw_gent.pdf>] (./thesis.aux)
 Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 15873A14E57717B31A649A632578298B;8412.
  ) 
 Here is how much of TeX's memory you used:
- 28449 strings out of 476025
- 525894 string characters out of 5796533
+ 28450 strings out of 476025
+ 525901 string characters out of 5796533
  1885388 words of memory out of 5000000
  47988 multiletter control sequences out of 15000+600000
  591569 words of font info for 160 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,17n,104p,652b,697s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/share/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (85 pages, 28397256 bytes).
+Output written on thesis.pdf (86 pages, 28403007 bytes).
 PDF statistics:
- 1681 PDF objects out of 1728 (max. 8388607)
- 1374 compressed objects within 14 object streams
- 265 named destinations out of 1000 (max. 500000)
+ 1700 PDF objects out of 1728 (max. 8388607)
+ 1392 compressed objects within 14 object streams
+ 266 named destinations out of 1000 (max. 500000)
  754 words of extra memory for PDF output out of 10000 (max. 10000000)
 

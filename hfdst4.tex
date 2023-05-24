@@ -13,32 +13,33 @@ kunnen vormen, die eventueel bepaalde eigenschappen van de aard van de data mee
 in rekening brengt.
 
 Aangezien deze thesis voor een stuk verder bouwt op het onderzoek
-van~\citeauthor{Dhondt}, is het handig om verder te werken op deze
-dataset~\cite{Dhondt}. Dit maakt een meer directe vergelijking mogelijk. Deze
-dataset werd volledig zelf gescraped door~\citeauthor{Dhondt} vanaf de
-officiële \ac{API} van het platform
-`Strava'\footnote{\url{https://www.strava.com/}}. De scope van deze dataset is
-een periode van één week, startend op 11 juli 2021 00:00 \ac{UTC}. De site werd
-chronologisch afgelopen voor alle activiteiten beschikbaar op het platform, met
-sprongen van 9000 activiteiten. Let wel dat door mogelijke vertragingen door
-bijvoorbeeld het uploaden van een activiteit, de activiteiten niet exact
-chronologisch kunnen worden opgehaald. Indien een activiteit privaat is of
-\textit{gecloaked}\footnote{Een gecloakede activiteit is een activiteit waar al
-    een EPZ op is aangebracht. Aangezien deze thesis uncloaked activities nodig
-    heeft zijn ze dus niet bruikbaar. Men kan zien of een activiteit gecloaked is
-    indien er een verschil is tussen de zichtbare afstand en de totale afstand.}
-is, of reeds verwijderd is, dan zal deze worden overgeslagen en de volgende
-worden genomen. Voor elke gevonden activiteit beschouwen we daarna de
-gebruiker. Van alle bekomen gebruikers worden dan de rest van de activiteiten
-afgehaald en bijgehouden in één grote dataset. De gegevens werden ook
-geanonimiseerd opgeslagen, zodat de gebruikers niet meer kunnen worden
-geïdentificeerd. De dataset bevat dus geen namen of andere persoonlijke
-gegevens, enkel willekeurig toegekende ID's.
+van~\citeauthor{Dhondt}, is het handig om verder te werken met deze
+dataset~\cite{Dhondt}. Dit maakt een directe vergelijking mogelijk. Deze
+dataset werd volledig gescraped door~\citeauthor{Dhondt} vanaf de officiële
+\ac{API} van het platform Strava\footnote{\url{https://www.strava.com/}}. De
+scope van deze dataset is een periode van één week, startend op 11 juli 2021
+00:00 \ac{UTC}. De site werd chronologisch afgelopen voor alle activiteiten
+beschikbaar op het platform, met sprongen van 9000 activiteiten. Let wel dat
+door mogelijke vertragingen door bijvoorbeeld het uploaden van een activiteit,
+de activiteiten niet exact chronologisch kunnen worden opgehaald. Indien een
+activiteit privaat is of \textit{gecloaked}\footnote{Een gecloakede activiteit
+    is een activiteit waar al een EPZ op is aangebracht. Aangezien deze thesis
+    uncloaked activities nodig heeft zijn ze dus niet bruikbaar. Men kan zien of
+    een activiteit gecloaked is indien er een verschil is tussen de zichtbare
+    afstand en de totale afstand.} is, of reeds verwijderd is, dan zal deze worden
+overgeslagen en de volgende worden genomen. Voor elke gevonden activiteit
+beschouwen we daarna de gebruiker. Van alle bekomen gebruikers worden dan de
+rest van de activiteiten afgehaald en bijgehouden in één grote dataset. De
+gegevens werden ook geanonimiseerd opgeslagen, zodat de gebruikers niet meer
+kunnen worden geïdentificeerd. De dataset bevat dus geen namen of andere
+persoonlijke gegevens, enkel willekeurig toegekende ID's.
 
 In totaal werd een dataset van 4000 gebruikers verzameld. Deze thesis
 experimenteert echter slechts met een subset van 131 users, waarvan er 101
 gebruikt worden voor analyses en conclusies, en 30 voor het testen van de
-aanval.
+aanval. Let wel, de fractie van de dataset die wij ter beschikking kregen is
+met 101 gebruikers wel relatief klein, wat een vertekend beeld kan geven over
+de werkelijkheid.
 
 \section{Karakteristieken van de gebruikte dataset}
 Op Figuur~\ref{fig:geographic_spread} is de geografische spreiding van de
@@ -47,9 +48,7 @@ zien dat de meeste activiteiten zich in Centraal-Europa bevinden. Daarnaast is
 ook een duidelijke concentratie te zien in de Verenigde Staten. In mindere mate
 zijn ook activiteiten in Australië en Zuid-Amerika. De dataset bevat dus een
 relatief grote spreiding van activiteiten over de hele wereld, wat een goede
-basis is voor het testen van de aanval. Let wel, de fractie van de dataset die
-wij ter beschikking kregen is met 101 gebruikers wel relatief klein, wat een
-vertekend beeld kan geven over de werkelijkheid.
+basis is voor het testen van de aanval.
 
 Op Tabel~\ref{tab:stats_dataset} zijn enkele globale statistieken met
 betrekking tot gebruikers en de bijhorende activiteiten van de dataset
@@ -57,7 +56,7 @@ weergegeven. Er valt op dat de dataset per gebruiker toch meestal een groot
 aantal activiteiten ter beschikking zijn. De gemiddelde gebruiker bevat 411
 activiteiten, de mediaan is 296. Volgens de inferentieaanval beschreven in
 Hoofdstuk~\ref{chap:inferentieaanval} resulteert een gebruiker met meer
-activiteiten over het algemeen in een accuratere aanval. Op
+activiteiten over het algemeen in een aanval met een hogere kans op slagen. Op
 Figuur~\ref{fig:cdf_amount_activities} is de \ac{CDF} plot\footnote{Een
     Cumulative Distribution Function (CDF) plot is een grafiek die de cumulatieve
     verdeling van de waarden van een continue variabele
@@ -130,23 +129,23 @@ De oorzaak hiervan is mogelijks de manier waarop activiteiten worden afgehaald.
 Aangezien \citeauthor{Dhondt} met sprongen van 9000 een activiteit nemen, is de
 kans op terechtkomen bij een gebruiker die veel activiteiten heeft een stuk
 groter dan de kans dat terechtgekomen wordt op een gebruiker met een grote
-aantal activiteiten dan een gebruiker met wat minder activiteiten.
+aantal activiteiten dan een gebruiker die wat minder actief is op het platform.
 
 \section{Mogelijke afwijkingen binnenin de dataset}
 Doordat de dataset niet expliciet werd gecheckt op onnauwkeurigheden en een
 willekeurige sample is, is er een grote kans op activiteiten die afwijkingen of
 fouten vertonen. Zeker door het belang van \ac{gps}-data in deze studie, die
 een grote kans heeft op fouten, is het belangrijk om de dataset te analyseren
-op deze mogelijke afwijkingen. Gps-data is een signaal die a.d.h.v.\ gekende
+op mogelijke afwijkingen. Gps-data is een signaal die a.d.h.v.\ gekende
 locaties van satellieten, gecombineerd met de tijd die het signaal nodig heeft
-om deze satellieten te bereiken, de locatie van een gebruiker kan
-bepalen~\cite{BadGPSDa19:online}. Door de snelheid van het signaal, kunnen
+om vanaf de satelliet het toestel te bereiken, de locatie van een gebruiker kan
+bepalen~\cite{BadGPSDa19:online}. Door de hoge snelheid van het signaal, kunnen
 kleine vertragingen in het signaal al een grote invloed hebben op de
 accuraatheid van de data. Andere factoren zoals hoge bomen of gebouwen, maar
 ook de aanwezigheid van wolken kunnen een impact hebben op het signaal. Ook de
-frequentie waarmee locatie wordt bepaald, wat afhankelijk is van het gebruikte
-toestel, kan meespellen. De soorten \ac{gps}-fouten die kunnen optreden zijn
-reeds besproken in Sectie~\ref{sec:gps-fouten}.
+het interval waartussen opeenvolgende locaties worden bepaald, wat afhankelijk
+is van het gebruikte toestel, kan meespellen. De soorten \ac{gps}-fouten die
+kunnen optreden zijn reeds besproken in Sectie~\ref{sec:gps-fouten}.
 
 Allereerst bestuderen we de aanwezigheid van \ac{gps}-fouten in de vorm van
 signal losses of pauzes. Dit gebeurt door de afstand tussen twee opeenvolgende
@@ -197,7 +196,7 @@ significante afwijking op de resulterende afstand.
 
 Om het aantal \ac{gps}-afwijkingen in de dataset te bepalen, wordt ook het
 verschil onderzocht tussen de berekende afstand afgelegd binnen de \ac{EPZ}
-(het zichtbare traject afgetrokken door de totale afstand) en de theoretisch
+(het zichtbare traject afgetrokken van de totale afstand) en de theoretisch
 afgelegde afstand binnen de \ac{EPZ}, die af te lezen valt uit de dataset via
 de cumulatieve afstand\footnote{Er wordt gesproken van een theoretische waarde,
     maar deze is eigenlijk de berekende waarde volgens het platform. We beschouwen
@@ -208,17 +207,16 @@ gebruiker. De pieken duiden op sterk afwijkende berekende afstanden, en dus ook
 op grote \ac{gps}-fouten. Maar ook de schommelingen die iets minder opvallend
 zijn duiden op grote inaccuraatheden tussen de berekende en theoretische
 afstanden. De verschillen in de berekeningen voor de volledige dataset worden
-weergegeven op Figuur 4.10. De resultaten worden weergegeven op
-Figuur~\ref{fig:differences_theoretical}. De figuur bevat de verdeling voor
-alle activiteiten, gebruik makend van een logaritmische schaal. Op de grafiek
-valt op dat heel wat significante verschillen aanwezig zijn. Dit duidt op het
-relatief zwaar doorwegen van de \ac{gps}-fouten in de dataset. Aangezien het
-gaat over bepalen van woonplaatsen of andere gevoelige locaties, kunnen
-afwijkingen vanaf 50 à 100 meter al relevant zijn. Daarnaast gaat het vaak over
-kleine afwijkingen op een heel wat punten, wat kan resulteren in een grote
-afwijking. De grafieken tonen aan dat er bij de ruwe ontvangen data heel wat
-\ac{gps}-fouten aanwezig zijn. Smoothing zal dus zeker nodig zijn om deze te
-beperken.
+weergegeven op Figuur~\ref{fig:differences_theoretical}. De figuur bevat de
+\ac{CDF}-verdeling van de verschillen voor alle activiteiten, gebruik makend
+van een logaritmische schaal. Op de grafiek valt op dat heel wat significante
+verschillen aanwezig zijn. Dit duidt op het relatief zwaar doorwegen van de
+\ac{gps}-fouten in de dataset. Aangezien het gaat over bepalen van woonplaatsen
+of andere gevoelige locaties, kunnen afwijkingen vanaf 50 à 100 meter al sterk
+doorwegen zijn. Daarnaast gaat het vaak over kleine afwijkingen op een heel wat
+punten, wat kan resulteren in een grote afwijking. De grafieken tonen aan dat
+er bij de ruwe ontvangen data heel wat \ac{gps}-fouten aanwezig zijn. Smoothing
+zal dus zeker nodig zijn om deze te beperken.
 
 \begin{figure}[h]
     \centering
@@ -227,7 +225,7 @@ beperken.
 \end{figure}
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.7\textwidth]{fig/Afwijkingen&Analyses/Graphs/100_Differences_tov_theoretische_BefSmoothening.png}
+    \includegraphics[width=\textwidth]{fig/Afwijkingen&Analyses/Graphs/100_Differences_tov_theoretische_BefSmoothening.png}
     \caption{Verdeling van het verschil tussen de berekende afstand en de theoretische afstand buiten de \ac{EPZ} }\label{fig:differences_theoretical}
 \end{figure}
 
@@ -236,13 +234,13 @@ Om de accuraatheid van de \ac{gps}-data te verbeteren, en zo een betere
 \textit{outer distance} te kunnen berekenen en uiteindelijk een accuratere
 aanval te bekomen, worden enkele technieken toegepast. Zoals besproken in
 Sectie~\ref{sec:afstandsberekeningen_strava} is de hypothese dat de
-fitness-platformen gebruik maken van technieken om de \ac{gps}-data te
-verbeteren. De besproken technieken waren \textit{map matching} en
-\textit{\ac{gps}-smoothing}. Bij de uitvoering van de aanvallen wordt smoothing
-toegepast. Er wordt dan ook geëxperimenteerd met verschillende smoothing
-windows, op zoek naar het window met het beste effect op de aanval.
+fitnessplatformen ook gebruik maken van gelijkaardige technieken om de
+\ac{gps}-data te verbeteren. De besproken technieken zijn \textit{map matching}
+en \textit{\ac{gps}-smoothing}. Bij de uitvoering van de aanvallen wordt
+smoothing toegepast. Er wordt dan ook geëxperimenteerd met verschillende
+smoothing windows, op zoek naar het window met het beste effect op de aanval.
 
-Daarnaast passen we ook een filtering toe die rekening houdt met
+Daarnaast passen we ook een extra filtering toe die rekening houdt met
 \ac{gps}-sprongen. Het idee is te stellen dat wanneer \ac{gps}-sprongen
 gebeuren, en er dus een te grote afstand tussen twee opeenvolgende punten is,
 deze afstand niet te laten meetellen. Dit is echter niet vanzelfsprekend,

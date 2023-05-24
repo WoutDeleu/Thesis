@@ -400,23 +400,24 @@ alle activiteiten.
 Voorafgaand aan het voorspellen is het van essentieel belang om uitsluitend
 voorspellingen te maken op basis van activiteiten die een waardevolle
 voorspelling kunnen genereren. Andere activiteiten zouden enkel de accuraatheid
-van de voorspelling naar beneden halen. Dit gaat dan over activiteiten waarbij
-niet de kortste route binnenin de \ac{EPZ} wordt gevolgd. Al deze activiteiten
-proberen we dus in de mate van het mogelijke eruit te filteren.
+van de voorspelling naar beneden halen. Dit gaat dan bijvoorbeeld over
+activiteiten waarbij niet de kortste route binnenin de \ac{EPZ} wordt gevolgd.
+Al deze activiteiten proberen we dus in de mate van het mogelijke eruit te
+filteren.
 
 Het geval waarbij een gebruiker niet de kortste route volgt vanaf de rand van
-de \ac{EPZ} tot de gevoelige locatie kan in zekere mate worden opgevangen door
-te stellen dat we een activiteit enkel nog gebruiken wanneer de nog af te
-leggen afstand binnenin de \ac{EPZ} kleiner is dan de maximaal mogelijk af te
-leggen weg. In de andere gevallen zullen we de activiteit weggooien. De
-maximale afstand die hiervoor nodig is wordt bepaald gebruik makend van de
+de \ac{EPZ} tot de gevoelige locatie kunnen we in zekere mate opvangen door te
+stellen dat we een activiteit enkel nog gebruiken wanneer de nog af te leggen
+afstand binnenin de \ac{EPZ} kleiner is dan de maximaal mogelijk af te leggen
+weg. In de andere gevallen zullen we de activiteit weggooien. De maximale
+afstand die hiervoor nodig is wordt bepaald gebruik makend van de
 \textit{Distance Matrix}, die beschreven staat in Sectie~\ref{sec:roadgraph}.
 De maximale afstand is gelijk aan de maximale afstand terug te vinden in de
 matrix, voor de bijhorende startnode. Dit is de afstand die een gebruiker
 maximaal kan afleggen naar eender welke node op de graaf, vertrekkend van de
 startnode, door het volgen van de theoretisch kortste route. Dit zal ook
-gevallen in rekening brengen waarbij de activiteit voor een stuk verborgen
-wordt, maar niet zal eindigen op de gevoelige locatie.
+gevallen in rekening brengen waarbij het traject voor een stuk verborgen wordt,
+maar niet zal eindigen op de gevoelige locatie.
 
 Op een gelijkaardige manier kan een filtering gebeuren voor afgelegde afstanden
 die lager zijn dan de minimale mogelijke afstand. Dit zou opnieuw activiteiten
@@ -425,16 +426,17 @@ is dan ook degene tot de node met de laagste minimale afstand tot deze node
 vanaf het zichtbare startpunt of eindpunt van de activiteit, gelegen op de rand
 van de \ac{EPZ}.
 
-Ook worden de zichtbare eind- en beginpunten van de activiteiten gecontroleerd
-naar compatibiliteit met de road graph. Alle eind- en beginpunten worden
-gesnapt op de roadgraph. Ze worden dus vervangen door de dichtstbijzijnde node
-op de graaf. Indien het verschil in afstand tussen de originele locatie en de
-gesnapte locatie te groot is, wordt de activiteit gefilterd. Dit wijst dan op
-een te grote afwijking tussen de gevolgde route en de road graph, of op
-inaccurate gps-data.
+Om de zichtbare eind- en beginpunten van de activiteiten te controleren op
+compatibiliteit met de road graph, voeren we een actieve verificatie uit.
+Hierbij worden alle eind- en beginpunten op de graaf `gesnapt', ofwel vervangen
+door de dichtstbijzijnde knooppunt op de graaf. We berekenen de afstand tussen
+de oorspronkelijke locatie en de gesnapte locatie. Indien het verschil in
+afstand te groot is, filteren we de betreffende activiteit. Een aanzienlijk
+verschil in afstand kan duiden op een afwijking tussen de gevolgde route en de
+road graph, of op onnauwkeurige gps-gegevens.
 
 Als laatste wordt nog gekeken naar afwijkingen bij de \acp{E.G.}. Indien bij
-activiteit een afwijking wordt vastgesteld tussen de zichtbare begin- en
+een activiteit een afwijking wordt vastgesteld tussen de zichtbare begin- en
 eindpunten en de \ac{E.G.} die groter is dan drie maal de standaardafwijking,
 wordt de activiteit gefilterd. Dit wijst dan op een te grote spreiding bij ten
 opzichte van de \ac{E.G.}, en dus op een grote kans op inaccurate
@@ -444,21 +446,21 @@ voorspellingen.
 Om een predictie te maken per activiteit wordt de inner distance die berekend
 werd in Sectie~\ref{sec:berekeningen} gebruikt. Deze wordt dan gematched met
 het stratennetwerk. Het idee hierachter is om alle mogelijke routes (die de
-kortste route vormt naar de nodes op het pad) binnenin de \ac{EPZ} af te
+kortste route vormt naar alle nodes op zijn pad) binnenin de \ac{EPZ} af te
 leggen, en te stoppen wanneer de afgelegde afstand gelijk is aan de berekende
 inner distance. Het resultaat van deze gevolgde route is dan een node, die
-mogelijks de gevoelige locatie kan voorstellen. In de praktijk kan dit
-mechanisme op een simpele manier worden toegepast door het gebruik van de
-vooraf berekende distance matrix. De berekende inner distance zal worden
-vergeleken met de afstanden in de distance matrix.
+mogelijks de gevoelige locatie kan voorstellen. In de praktijk kunnen we dit
+mechanisme op een simpele manier toepassen door gebruik te maken van de vooraf
+berekende distance matrix. De berekende inner distance zal worden vergeleken
+met de afstanden in de distance matrix.
 
-Deze methodiek zal worden herhaald voor elke activiteit die niet werd
-gefilterd. Al deze voorspellingen zullen worden gebundeld tot één voorspelling
-in de volgende stap.
+Deze methodiek herhalen we voor elke activiteit die niet werd gefilterd. Al
+deze voorspellingen worden uiteindelijk gebundeld tot één voorspelling in de
+volgende stap.
 
 \subsection{Regressie om te komen tot een eindvoorspelling}
 Om de routes die we in vorige sectie bepaalden om te vormen tot één
-eindvoorspelling, wordt regressie-analyse toegepast, aan de hand van de
+eindvoorspelling, voeren we een regressie-analyse uit, aan de hand van de
 \ac{LAD} methode. Het resultaat van deze regressie-analyse zal een
 \ac{gps}-locatie zijn, die onze \textit{eindvoorspelling} zal vormen.
 
@@ -487,17 +489,18 @@ voorspellingen, meer bepaald door de grote kans op uitschieters. Gps-data kan
 erg onnauwkeurig zijn, en grote of kleine afwijkingen kunnen dus voorkomen. Ook
 is het mogelijk dat door acties van een sporter zoals bijvoorbeeld eenmalig de
 kortste route niet volgen, uitschieters voorvallen. Rekentijd is in deze thesis
-geen probleem, aangezien de dataset beperkt is tot 100 activiteiten.
+geen probleem, aangezien de dataset beperkt blijft tot 100 activiteiten.
 
 In de context van deze thesis kan Vergelijking~\ref{eq:LAD} worden toegepast
 voor elke node in de graaf. Elke node in graaf zullen we individueel beschouwen
 als een mogelijke eindvoorspelling. Het verschil tussen de nog af te leggen
-afstand voor deze activiteit en de afstand tot de node van het zichtbare begin-
-of eindpunt van de activiteit stelt dan de afwijking voor van deze activiteit.
+afstand voor deze activiteit, of dus de inner distance en de theoretische
+afstand tot de node vanaf het zichtbare begin- of eindpunt, wat af te lezen
+valt uit de distance matrix, stelt dan de afwijking voor van deze activiteit.
 Indien we dit sommeren over alle activiteiten voor dezelfde node, bekomen we
-een waarde die de totale afwijking voorsteld indien we voor deze node als
-eindpredictie zouden kiezen. We overlopen alle nodes in de graaf, en selecteren
-deze met de laagste totale afwijking. Deze node zal dan de
+een waarde die de totale afwijking voorstelt indien we voor deze node als
+eindvoorspelling zouden kiezen. We overlopen alle nodes in de graaf, en
+selecteren deze met de laagste totale afwijking. Deze node zal dan de
 \textbf{eindvoorspelling} voor deze activiteit voorstellen.
 
 % Alle voorspelde locaties zullen worden beschouwd als mogelijke

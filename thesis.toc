@@ -42,13 +42,13 @@
 \contentsline {subsection}{\numberline {5.1.3}Bootstrapping}{40}{subsection.5.1.3}%
 \contentsline {subsection}{\numberline {5.1.4}Evaluatie metrieken}{41}{subsection.5.1.4}%
 \contentsline {section}{\numberline {5.2}Resultaten}{43}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Model volgens Dhondt et al.}{43}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.1}Model volgens Dhondt et al.}{44}{subsection.5.2.1}%
 \contentsline {subsection}{\numberline {5.2.2}Gegeven outer distance}{44}{subsection.5.2.2}%
 \contentsline {subsection}{\numberline {5.2.3}Ruwe gps-data}{45}{subsection.5.2.3}%
 \contentsline {subsection}{\numberline {5.2.4}Smoothing}{46}{subsection.5.2.4}%
-\contentsline {chapter}{\numberline {6}Conclusies en toekomstig werk}{47}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Conclusies}{47}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Toekomstig werk}{49}{section.6.2}%
-\contentsline {chapter}{\numberline {A}Resultaten van de uitgevoerde aanvallen met verschillende smoothing windows}{55}{appendix.A}%
-\contentsline {chapter}{\numberline {B}Scientific Article}{57}{appendix.B}%
-\contentsline {chapter}{\numberline {C}Poster}{67}{appendix.C}%
+\contentsline {chapter}{\numberline {6}Conclusies en toekomstig werk}{48}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Conclusies}{48}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Toekomstig werk}{50}{section.6.2}%
+\contentsline {chapter}{\numberline {A}Resultaten van de uitgevoerde aanvallen met verschillende smoothing windows}{56}{appendix.A}%
+\contentsline {chapter}{\numberline {B}Scientific Article}{58}{appendix.B}%
+\contentsline {chapter}{\numberline {C}Poster}{68}{appendix.C}%

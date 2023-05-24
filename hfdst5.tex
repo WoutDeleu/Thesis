@@ -117,8 +117,8 @@ locatie van de grondwaarheid is aangeduid door de groene marker.
 \subsection{Evaluatie metrieken}
 Om iets zinnigs te kunnen vertellen over de effectiviteit van de aanval
 definiëren we enkele metrieken die we kunnen gebruiken om de aanval te
-evalueren. We gebruiken hiervoor de metrieken die ook gebruikt werden in de
-studies van~\citeauthor{Dhondt} en~\citeauthor{Verdonck_2022}, om zo onze
+evalueren. We gebruiken hiervoor dezelfde metrieken die de studies
+van~\citeauthor{Dhondt} en~\citeauthor{Verdonck_2022} beschrijven, om zo onze
 resultaten er eenduidig mee te kunnen vergelijken. In totaal gebruiken we acht
 verschillende evaluatiemetrieken.
 
@@ -134,12 +134,11 @@ tussen de \ac{GT} en de voorspelde locatie gedeeld door het aantal keer deze
 locatie werd voorspeld~\cite{Dhondt, Verdonck_2022}. Dit geeft een indicatie
 van de gemiddelde afwijking in afstand van de voorspelde locaties ten opzichte
 van de \ac{GT}. Hoe lager deze waarde, hoe preciezer de aanval. Let wel, een
-success rate kan hoog zijn, maar de correctheid kan nog steeds hoog zijn. Dit
-duidt op een aanval die veel overshoots heeft, maar waar de correcte locatie
-zich wel binnen de straal van 22.95 meter bevindt. De probabiliteitsdistributie
-wordt gegeven door $\widehat{\operatorname{Pr}}(v \mid a)$, waarbij $v$ de
-beschermde locaties voor activiteit $a$ zijn in
-Vergelijking~\ref{eq:correctness}.
+success rate kan hoog zijn, met een correctheid die ook hoog is. Dit duidt op
+een aanval die veel overshoots heeft, maar waar de correcte locatie zich wel
+binnen de straal van 22.95 meter bevindt. De probabiliteitsdistributie wordt
+gegeven door $\widehat{\operatorname{Pr}}(v \mid a)$, waarbij $v$ de beschermde
+locaties voor activiteit $a$ zijn in Vergelijking~\ref{eq:correctness}.
 \begin{equation}
     \sum_{v \in V} \widehat{\operatorname{Pr}}(v \mid a) \operatorname{dist}\left(v, v_{G T}\right)\label{eq:correctness}
 \end{equation}
@@ -172,7 +171,8 @@ in ons geval drie meter aanneemt, veroorzaakt deze onzekerheidsregio's.
 Aangezien pas om de drie meter een node bestaat, zal voor elke voorspelde node
 een kans bestaan dat deze eigenlijk een punt representeert die ergens in de
 zone van drie meter rond deze node ligt. Hoe groter deze waarde, hoe groter de
-onzekerheid van de aanval, aangezien dit wijst op weinig overlap. $C_{v_p}$
+onzekerheid van de aanval, aangezien dit wijst op weinig overlap. Een grotere
+waarde wijst dus ook op predicties die verder uit elkaar liggen. $C_{v_p}$
 stelt de cirkel rond een node voor, met straal $d_{\text{chain}}$.
 \begin{equation}
     \operatorname{Area}\left(\bigcup_{v_p \in V_{\text {pred }}} C_{v_p}, d_{\text {chain }}\right)\label{eq:uncertainty}
@@ -219,25 +219,20 @@ alle modellen ten opzichte van elkaar, en maakt de onderlinge verschillen
 zichtbaar. Bij de bespreking van de resultaten zullen we dan ook zowel
 refereren naar de tabellen als naar de grafieken.
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=\textwidth]{fig/result_graphs/all_results.png}
-    \caption{Vergelijking van de verschillende aanvallen}\label{fig:attack_comparison}
-\end{figure}
-
 Over het algemeen is een gelijklopende trend merkbaar over de modellen heen bij
-het veranderen van de \acp{EPZ}. Bij een toenemende radius zakt de success rate
-doordat een grotere radius meer nodes met zich meebrengt. Meer nodes zorgt voor
-meer mogelijke verwarring in de \ac{LAD} regressie~\cite{Verdonck_2022}. Dit
-brengt ook een grotere degree of anonymity en uncertainty region met zich mee.
-Het aantal voorspellingen neemt niet evenredig toe met het aantal nodes in de
-graaf naarmate de omvang toeneemt, wat resulteert in een verhoogde reduction.
-Als laatste valt ook op dat de correctness ook stijgt bij een grotere radius.
-Dit komt door een grotere kans op schending van één van de gestelde assumpties
-uit Sectie~\ref{sec:assumpties}. Deze sectie stelt onder andere dat een
-gebruiker het kortste pad moet volgen binnenin de \ac{EPZ}. Echter hoe groter
-de \ac{EPZ} van omvang is, hoe groter de kans dat hieraan niet voldaan wordt,
-en wat zal resulteren in een hogere correctness.
+het veranderen van de \acp{EPZ}-radius. Bij een toenemende radius zakt de
+success rate doordat een grotere radius meer nodes met zich meebrengt. Meer
+nodes zorgt voor meer mogelijke verwarring in de \ac{LAD}
+regressie~\cite{Verdonck_2022}. Dit brengt ook een grotere degree of anonymity
+en uncertainty region met zich mee. Het aantal voorspellingen neemt niet
+evenredig toe met het aantal nodes in de graaf naarmate de omvang toeneemt, wat
+resulteert in een verhoogde reduction. Als laatste valt ook op dat de
+correctness ook stijgt bij een grotere radius. Dit komt door een grotere kans
+op schending van één van de gestelde assumpties uit
+Sectie~\ref{sec:assumpties}. Deze sectie stelt onder andere dat een gebruiker
+het kortste pad moet volgen binnenin de \ac{EPZ}. Echter hoe groter de \ac{EPZ}
+van omvang is, hoe groter de kans dat hieraan niet voldaan wordt, wat zal
+resulteren in een hogere correctness.
 
 \subsection{Model volgens Dhondt et al.}
 Het eerste model dat we testen is het model van
@@ -247,12 +242,12 @@ rest van de resultaten. Het model van~\citeauthor{Dhondt} heeft geen
 restricties betreffende de beschikbare data, het kan dus alle data gebruiken.
 Het is dan ook logisch dat dit resulteert in goeie scores. We zien hier dan ook
 een hoge succes rate, die relatief weinig afneemt bij hogere radiussen. De rest
-van de statistieken wijzen ook op een goeie aanval, wat naar de verwachtingen
-is. Het doel van de andere aanvallen was dan ook deze waardes te benaderen,
-maar met alternatieve data. Het aanvalsmodel is geïmplementeerd en uitgevoerd
-op ons eigen systeem op de beschikbare fractie van de dataset, wat de lichte
-verschillen ten opzichte van de resultaten beschreven in de desbetreffende
-paper verklaart.
+van de statistieken wijzen ook op een goeie aanval, wat in lijn met de
+verwachtingen ligt. Het doel van de andere aanvallen was dan ook deze waardes
+te benaderen, maar met alternatieve data. Het aanvalsmodel is geïmplementeerd
+en uitgevoerd op ons eigen systeem op de beschikbare fractie van de dataset,
+wat de lichte verschillen ten opzichte van de resultaten beschreven in de
+desbetreffende paper verklaart.
 
 \begin{table}[h]
     \centering
@@ -280,17 +275,25 @@ paper verklaart.
 Het eerste scenario dat we testen is het model waarbij de outer distance
 rechtstreeks af te lezen valt uit de data. We bespraken dit geval al
 kortstondig in Sectie~\ref{sec:berekeningen}. Dit model komt voor wanneer de
-cumulatieve afstanden ter beschikking zijn. Het voordeel dat dit model heeft is
-dat er geen \ac{gps}-data nodig is.
+cumulatieve afstanden ter beschikking zijn. Het voordeel dat dit model heeft
+ten opzichte van de volgende modellen is dat er geen \ac{gps}-data nodig is.
 
 Hierbij zien we gelijkaardige trend als bij het model van~\citeauthor{Dhondt},
 wel met bij zo goed als alle metrieken een kleine achteruitgang. Er is slechts
-één tussenstap nodig ten opzichte van het model van~\citeauthor{Dhondt}, namelijk
-het omreken van snelheid en de tijd tot de totale afstand. Dit verklaart dan
-ook meteen de kleine afnames en toenames in de resultaten. Deze omrekening zal
-een kleine afwijking met zich meebrengen, waarschijnlijk door afrondingen en
-mogelijke additionele berekeningen van Strava bij het berekenen van de
-snelheid.
+één tussenstap nodig ten opzichte van het model van~\citeauthor{Dhondt},
+namelijk het omreken van snelheid en de tijd tot de totale afstand. Dit
+verklaart dan ook meteen de kleine afnames en toenames in de resultaten. Deze
+omrekening zal een kleine afwijking met zich meebrengen, waarschijnlijk door
+afrondingen en mogelijke additionele berekeningen van Strava bij het berekenen
+van de snelheid.
+
+Over het algemeen zijn de verschillen met het model van~\citeauthor{Dhondt}
+klein. De success rate zakt met ongeveer 5 à 10\%, wat een logisch gevolg is
+van de extra stap die nodig is. De andere statistieken zoals de accuracy,
+reduction en uncertainty region liggen erg dicht bij de voorgaande resultaten.
+Al deze factoren wijzen op een goeie aanval, die slechts een kleine afwijking
+vertoond ten opzichte van het optimale scenario, hoogstwaarschijnlijk
+veroorzaakt door kleine omrekeningsfouten.
 
 \begin{table}[h]
     \centering
@@ -330,6 +333,31 @@ zien we dat de score een sterke achteruitgang vertoond bij een hogere
 in zijn geheel met zich mee brengt, zeker bij grotere radiussen weegt dit sterk
 door. Hoe groter de af te leggen afstand, in dit geval de inner distance, hoe
 groter de fout.
+
+Een bijkomende hypothese is dat in het eerste geval, bij een radius van 200
+meter, de filtering op een manier gebeurd waardoor de afwijkingen van de
+\ac{gps}-data erg goed opgevangen worden. Wat leidt tot hoge success rates. Bij
+grotere \acp{EPZ} is de filtering echter wat moeilijker uit te voeren en kunnen
+afwijkende activiteiten moeilijker gefilterd worden, wat ervoor kan zorgen dat
+grote afwijkingen toch nog de resultaten beïnvloeden. Als voorbeeld nemen we de
+filtering die de maximaal af te leggen afstand binnenin de \ac{EPZ} in rekening
+brengt. Bij een grotere radius, is deze hoger dan bij lagere radiussen. Dit wil
+zeggen dat veel meer marge is waarop niet gefilterd zal worden.
+
+Bijkomend zien we bij de slechte success rate ook een erg hoge correctness. Dit
+is te wijten aan de inaccuraatheid van de voorspellingen. De reduction is dan
+samen met de uncertainty region relatief gelijklopend met de waarden uit vorige
+modellen. Dit wijst op voorspellingen die goed bij elkaar liggen, maar de lage
+success rate en hoge correctness duiden erop dat deze op de verkeerde plek
+liggen. Als laatste merken we ook een zekere onvoorspelbaarheid op in de
+resultaten. Bijvoorbeeld op Figuur~\ref{fig:attack_comparison} zien we de
+accuracy serieuze sprongen maken. Dit is te wijten aan de onvoorspelbaarheid
+van de grote van de mogelijke fouten, en het effect ervan. Bij bepaalde
+activiteiten of gebruikers kunnen deze fouten een grotere waarde aannemen, en
+bij andere zal deze dan weer minder zijn. En afhankelijk van de orde kan dit
+ook meespelen in de filtering, bij bepaalde radiussen kan het zijn dat deze
+afwijkingen zich zodanig manifesteren dat ze de filtering niet overleven, maar
+bij andere radiussen dan weer wel.
 \begin{table}[h]
     \centering
     \scalebox{0.55}{
@@ -354,17 +382,21 @@ groter de fout.
 
 \subsection{Smoothing}
 Het laatste model is gelijkaardig aan het voorgaande, met als verschil dat nu
-wel smoothing wordt toegepast op de routes in een poging om de afwijkingen van
-de \ac{gps}-data te verminderen. In Sectie~\ref{sec:berekeningen} beschreven we
-het mechanisme. Zeker de extremen zullen worden afgevlakt, wat de fouten tot
-een lagere orde zou moeten reduceren. Dit toont zich ook in de resultaten. Het
-gebruikte smoothing-algoritme heeft één parameter die wij kunnen aanpassen,
-namelijk de smoothing window. Deze parameter bepaalt hoeveel punten er per
-window worden gecombineerd. Het optimale smoothing window wordt hier bepaald
-door het uitvoeren van een aantal experimenten, en hiervan de resultaten met
-elkaar vergelijken. Deze resultaten zijn terug te vinden in
-Bijlage~\ref{ch:smoothing_results} op Tabel~\ref{tab:full_smoothing}. Deze zijn
-ietwat wisselvallig, en er is geen duidelijke trend in terug te vinden.
+wel smoothing wordt toegepast op de trajecten in een poging om de afwijkingen
+van de \ac{gps}-data te verminderen. In Sectie~\ref{sec:berekeningen}
+beschreven we al het smoothing mechanisme. Zeker de extremen zullen worden
+afgevlakt, wat de fouten tot een lagere orde zou moeten reduceren. Dit toont
+zich ook in de resultaten. Het gebruikte smoothing-algoritme heeft één
+parameter die wij kunnen aanpassen, namelijk de smoothing window. Deze
+parameter bepaalt hoeveel punten er per window worden gecombineerd. Het
+optimale smoothing window wordt hier bepaald door het uitvoeren van een aantal
+experimenten, en hiervan de resultaten met elkaar vergelijken. Deze resultaten
+zijn terug te vinden in Bijlage~\ref{ch:smoothing_results} op
+Tabel~\ref{tab:full_smoothing}. Deze zijn ietwat wisselvallig, en er is geen
+duidelijke trend in terug te vinden. Let wel dit smoothing window werd
+empirisch bepaald en optimaal gekozen voor deze dataset. Voor een andere
+dataset kan het optimale window een verschillende waarde aannemen dan voor
+degene die we in deze thesis gebruiken.
 % De hypothese is dat dit komt door de
 % factor van willekeur die meespeelt bij het manueel opzetten van de \ac{EPZ}.
 % Wanneer afwijkende punten net wel of net niet afgesneden worden door de
@@ -375,13 +407,13 @@ op de vele fouten die de \ac{gps}-data bevat.
 
 De success rate toont een relatief kleine verbetering ten opzichte van het
 model met de ruwe \ac{gps}-data bij kleine \acp{EPZ}, maar bij grotere
-\acp{EPZ} tonen de metrieken veel minder verval. Ook de andere metrieken
-vertonen een gelijkaardig patroon, waarbij de afzwakking veel minder sterk is
-dan bij het gebruik van ruwe \ac{gps}-punten. Dit toont dat het gebruik van
-smoothing zeker een significante toegevoegde waarde heeft. Let wel dit
-smoothing window werd empirisch bepaald en optimaal gekozen voor deze dataset.
-Voor een andere dataset kan het optimale window een verschillende waarde
-aannemen.
+\acp{EPZ} tonen de metrieken veel minder verval. Ook andere metrieken dan
+success rate vertonen een gelijkaardig patroon, waarbij de afzwakking veel
+minder sterk is dan bij het gebruik van ruwe \ac{gps}-punten. Dit toont dat het
+gebruik van smoothing zeker een significante toegevoegde waarde heeft. We zien
+echter wel dat over het algemeen de accuracy iets hoger ligt, wat wel nog duidt
+op onzekere voorspellingen. De fouten in de \ac{gps}-locaties spelen dus wel
+nog zeker een rol in de voorspelling.
 \begin{table}[h]
     \centering
     \scalebox{0.5}{
@@ -403,4 +435,8 @@ aannemen.
     \caption{Aanval op basis van gesmoothe \ac{gps}-data en snelheid, met een empirisch bepaald optimaal smoothing window $n=100$}\label{tab:optimal_smoothing}
 \end{table}
 
-% Figuur: 3 stappen hoe een EPZ wordt opgezet
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{fig/result_graphs/all_results.png}
+    \caption{Vergelijking van de verschillende aanvallen}\label{fig:attack_comparison}
+\end{figure}
