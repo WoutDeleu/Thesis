@@ -6,7 +6,7 @@
 \contentsline {chapter}{Inhoud}{xi}{chapter*.4}%
 \contentsline {chapter}{Figurenlijst}{xiii}{chapter*.5}%
 \contentsline {chapter}{Tabellenlijst}{xiv}{chapter*.6}%
-\contentsline {chapter}{Lijst met afkortingen}{xv}{chapter*.8}%
+\contentsline {chapter}{Lijst met afkortingen}{xv}{chapter*.7}%
 \contentsline {chapter}{\numberline {1}Inleiding}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Situering}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Doelstelling}{3}{section.1.2}%
