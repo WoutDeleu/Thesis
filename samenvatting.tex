@@ -57,25 +57,7 @@ zo accuraat mogelijk uit te kunnen voeren, bestuderen we smoothing- en
 map-matchingstrategieën om de best mogelijke resultaten te verkrijgen. Deze
 twee berekende waarden gebruiken we in de derde stap worden gebruikt om de
 interferentieaanval uit te voeren. De resultaten van deze aanval zullen worden
-vergeleken met de resultaten van eerdere implementaties van dit soort
-aanval.the average or total travel distance gotten from running the simulation.
-When the sample variance based on the k values is within an acceptable range,
-the calculation is stopped and the value of k is chosen for the amount of
-simulations that needs to be run. The acceptable deviation differs for the
-average and total travel distance. For the average travel distance the
-deviation chosen is 0.1. This is a low value, but given the speed of execution
-and the and magnitude of this value, it was a achievable. For the total
-distance the accepted deviation is 1000. If we look at the magnitude of the
-total travel distance, we see it surpasses a million. A deviation of a
-thousands seems in that case reasonable. The total distance travelled is a much
-larger value than the average distance, because of this the accepted deviation
-is larger. The deviation of the average distance travelled is 0.082 after 100
-runs. The deviation of the total distance travelled is 997.08 after 120 runs.
-The evolution of the deviation for both features is shown in figure ??. In the
-graph of the average distance, the beginning has more fluctuations than the
-graph of the total travel distance. This is because the deviation is far
-smaller than the total distance deviation. From this information we can
-conclude that at least 120 simulations must be done to get consistent results.
+vergeleken met de resultaten van eerdere implementaties van dit soort aanval.
 
 Met de juiste afstemming van de parameters van het smoothing-algoritme kan een
 succespercentage tot 75\% worden bereikt. Dit is lager dan eerdere
