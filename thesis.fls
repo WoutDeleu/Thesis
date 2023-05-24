@@ -1576,14 +1576,6 @@ INPUT ./fig/Afwijkingen&Analyses/CDF_amountActivities.jpg
 INPUT fig/Afwijkingen&Analyses/CDF_amountActivities.jpg
 INPUT ./fig/Afwijkingen&Analyses/CDF_amountActivities.jpg
 INPUT ./fig/Afwijkingen&Analyses/CDF_amountActivities.jpg
-INPUT ./fig/Strava_3billion.png
-INPUT ./fig/Strava_3billion.png
-INPUT fig/Strava_3billion.png
-INPUT ./fig/Strava_3billion.png
-INPUT ./fig/Strava_3billion.png
-INPUT /usr/share/texmf-dist/fonts/vf/adobe/times/zpzccmry.vf
-INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
-INPUT /usr/share/texmf-dist/fonts/tfm/adobe/zapfchan/pzcmi8r.tfm
 INPUT ./fig/Afwijkingen&Analyses/Graphs/Afstand tussen 2 gps-punten.png
 INPUT ./fig/Afwijkingen&Analyses/Graphs/Afstand tussen 2 gps-punten.png
 INPUT fig/Afwijkingen&Analyses/Graphs/Afstand tussen 2 gps-punten.png
@@ -1606,6 +1598,9 @@ INPUT hfdst5.tex
 INPUT ./hfdst5.tex
 INPUT ./hfdst5.tex
 INPUT hfdst5.tex
+INPUT /usr/share/texmf-dist/fonts/vf/adobe/times/zpzccmry.vf
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/adobe/zapfchan/pzcmi8r.tfm
 INPUT ./fig/Afwijkingen&Analyses/OvershootMappingDistance.png
 INPUT ./fig/Afwijkingen&Analyses/OvershootMappingDistance.png
 INPUT fig/Afwijkingen&Analyses/OvershootMappingDistance.png

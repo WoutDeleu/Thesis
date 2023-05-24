@@ -16,28 +16,24 @@ Aangezien deze thesis voor een stuk verder bouwt op het onderzoek
 van~\citeauthor{Dhondt}, is het handig om verder te werken met deze
 dataset~\cite{Dhondt}. Dit maakt een directe vergelijking mogelijk. Deze
 dataset werd volledig gescraped door~\citeauthor{Dhondt} vanaf de officiële
-\ac{API} van het platform Strava\footnote{\url{https://www.strava.com/}}. De
-scope van deze dataset is een periode van één week, startend op 11 juli 2021
-00:00 \ac{UTC}. De site werd chronologisch afgelopen voor alle activiteiten
-beschikbaar op het platform, met sprongen van 9000 activiteiten. Let wel dat
-door mogelijke vertragingen door bijvoorbeeld het uploaden van een activiteit,
-de activiteiten niet exact chronologisch kunnen worden opgehaald. Indien een
-activiteit privaat is of \textit{gecloaked}\footnote{Een gecloakede activiteit
-    is een activiteit waar al een EPZ op is aangebracht. Aangezien deze thesis
-    uncloaked activities nodig heeft zijn ze dus niet bruikbaar. Men kan zien of
-    een activiteit gecloaked is indien er een verschil is tussen de zichtbare
-    afstand en de totale afstand.} is, of reeds verwijderd is, dan zal deze worden
-overgeslagen en de volgende worden genomen. Voor elke gevonden activiteit
-beschouwen we daarna de gebruiker. Van alle bekomen gebruikers worden dan de
-rest van de activiteiten afgehaald en bijgehouden in één grote dataset. De
-gegevens werden ook geanonimiseerd opgeslagen, zodat de gebruikers niet meer
-kunnen worden geïdentificeerd. De dataset bevat dus geen namen of andere
-persoonlijke gegevens, enkel willekeurig toegekende ID's.
+\ac{API} (\textit{strava.com/stream/ID}) van het platform
+Strava\footnote{\url{https://www.strava.com/}}. De scope van deze dataset is
+een periode van één week, startend op 11 juli 2021 00:00 \ac{UTC}. De site werd
+chronologisch afgelopen voor alle activiteiten beschikbaar op het platform, met
+sprongen van 9000 activiteiten. Let wel dat door mogelijke vertragingen door
+bijvoorbeeld het uploaden van een activiteit, de activiteiten niet exact
+chronologisch kunnen worden opgehaald. Indien een activiteit privaat is, of
+reeds verwijderd is, dan zal deze worden overgeslagen en de volgende worden
+genomen. Voor elke gevonden activiteit beschouwen we daarna de gebruiker. Van
+alle bekomen gebruikers worden dan de rest van de activiteiten afgehaald en
+bijgehouden in één grote dataset. De gegevens werden ook geanonimiseerd
+opgeslagen, zodat de gebruikers niet meer kunnen worden geïdentificeerd. De
+dataset bevat dus geen namen of andere persoonlijke gegevens, enkel willekeurig
+toegekende ID's.
 
-In totaal werd een dataset van 4000 gebruikers verzameld. Deze thesis
-experimenteert echter slechts met een subset van 131 users, waarvan er 101
-gebruikt worden voor analyses en conclusies, en 30 voor het testen van de
-aanval. Let wel, de fractie van de dataset die wij ter beschikking kregen is
+Deze thesis experimenteert echter slechts met een subset van 131 users, waarvan
+er 101 gebruikt worden voor analyses en conclusies, en 30 voor het testen van
+de aanval. Let wel, de fractie van de dataset die wij ter beschikking kregen is
 met 101 gebruikers wel relatief klein, wat een vertekend beeld kan geven over
 de werkelijkheid.
 
@@ -107,29 +103,30 @@ dan 100.
 % vermoeden dat er bewust gezocht werd naar gebruikers met een zo groot mogelijk
 % aantal activiteiten per gebruiker. Dit is een logische keuze, aangezien de
 % aanval een hogere kans op slagen heeft bij users die meer activiteiten hebben.
-Let wel, de dataset is net een gemiddelde van 411 activiteiten per gebruiker
-niet volledig representatief voor de werkelijkheid. Wanneer we dit vergelijken
-met cijfers uit een studie die Strava zelf voerde in 2020, is er toch een
-mismatch terug te vinden~\cite{StravaMi72:online}. Het persbericht, waarvan
-Figuur~\ref{fig:3billionUsers} is overgenomen, stelt dat Strava in 2020 iets
-meer dan 50 miljoen gebruikers had, die samen in totaal drie miljard
-activiteiten op het platform hebben geplaatst. Indien we deze waarden omrekenen
-naar een gemiddelde, komen we uit op een ruwe geschatte 60 activiteiten per
-gebruiker ($\frac{3 \cdot 10^9}{5 \cdot 10^7} = 60 $). Dit is een stuk lager
-dan de gemiddelde 411 activiteiten per gebruiker in de dataset. De conclusies
-die dus getrokken worden uit deze steekproef mogen niet zomaar veralgemeend
-worden naar de volledige gebruikersbasis van Strava.
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.7\textwidth]{fig/Strava_3billion.png}
-    \caption{Post op sociale media van Strava die de evolutie van het totaal aantal activiteiten weergeeft~\cite{StravaMi72:online}}\label{fig:3billionUsers}
-\end{figure}
 
-De oorzaak hiervan is mogelijks de manier waarop activiteiten worden afgehaald.
-Aangezien \citeauthor{Dhondt} met sprongen van 9000 een activiteit nemen, is de
-kans op terechtkomen bij een gebruiker die veel activiteiten heeft een stuk
-groter dan de kans dat terechtgekomen wordt op een gebruiker met een grote
-aantal activiteiten dan een gebruiker die wat minder actief is op het platform.
+% Let wel, de dataset is net een gemiddelde van 411 activiteiten per gebruiker
+% niet volledig representatief voor de werkelijkheid. Wanneer we dit vergelijken
+% met cijfers uit een studie die Strava zelf voerde in 2020, is er toch een
+% mismatch terug te vinden~\cite{StravaMi72:online}. Het persbericht, waarvan
+% Figuur~\ref{fig:3billionUsers} is overgenomen, stelt dat Strava in 2020 iets
+% meer dan 50 miljoen gebruikers had, die samen in totaal drie miljard
+% activiteiten op het platform hebben geplaatst. Indien we deze waarden omrekenen
+% naar een gemiddelde, komen we uit op een ruwe geschatte 60 activiteiten per
+% gebruiker ($\frac{3 \cdot 10^9}{5 \cdot 10^7} = 60 $). Dit is een stuk lager
+% dan de gemiddelde 411 activiteiten per gebruiker in de dataset. De conclusies
+% die dus getrokken worden uit deze steekproef mogen niet zomaar veralgemeend
+% worden naar de volledige gebruikersbasis van Strava.
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=0.7\textwidth]{fig/Strava_3billion.png}
+%     \caption{Post op sociale media van Strava die de evolutie van het totaal aantal activiteiten weergeeft~\cite{StravaMi72:online}}\label{fig:3billionUsers}
+% \end{figure}
+
+% De oorzaak hiervan is mogelijks de manier waarop activiteiten worden afgehaald.
+% Aangezien \citeauthor{Dhondt} met sprongen van 9000 een activiteit nemen, is de
+% kans op terechtkomen bij een gebruiker die veel activiteiten heeft een stuk
+% groter dan de kans dat terechtgekomen wordt op een gebruiker met een grote
+% aantal activiteiten dan een gebruiker die wat minder actief is op het platform.
 
 \section{Mogelijke afwijkingen binnenin de dataset}
 Doordat de dataset niet expliciet werd gecheckt op onnauwkeurigheden en een

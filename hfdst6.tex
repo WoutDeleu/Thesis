@@ -35,10 +35,10 @@ deze data om deze zo onbruikbaar te maken~\cite{Dhondt}. Dit is dus niet meer
 van toepassing, bijna alle \textit{`Distance-Focused Countermeasures'}
 beschreven door~\citeauthor{Dhondt} kunnen worden omzeild door ons
 aanvalsmodel. De aanvaller kan de afstandsdata in theorie herberekenen, en
-ultiem nog steeds de aanval tot een goed einde brengen. Alle distance based
+ultiem nog steeds de aanval tot een goed einde brengen. Alle distance-based
 maatregelen die \citeauthor{Dhondt} beschreven zijn dus in principe niet meer
 bruikbaar. We zouden deze countermeasures wel kunnen uitbreiden door hierbij de
-snelheid en/of tijd in rekening te brengen. Bijvoorbeeld bij generalisation,
+snelheid en/of tijd in rekening te brengen. Bijvoorbeeld bij generalization,
 wat neerkomt op afronding van een afstand die zichtbaar is naar de
 buitenwereld, kan de snelheid op dezelfde manier een manipulatie ondergaan.
 Voor alle countermeasures in deze categorie, behalve \textit{Shifting
@@ -49,7 +49,7 @@ expliciet getest, is de hypothese dat alle countermeasures, indien uitgebreid
 naar de snelheid en/of tijd, een gelijkaardig effect zullen hebben.De besproken
 countermeasures zijn:
 \begin{itemize}
-      \item \textit{Generalisation} houdt in dat de afstand wordt afgerond tot een bepaalde
+      \item \textit{Generalization} houdt in dat de afstand wordt afgerond tot een bepaalde
             precisie.~\citeauthor{Dhondt} stelt een precisie van 500 meter
             voor~\cite{Dhondt}.
       \item \textit{Noisy Distances} is een techniek waarbij een willekeurige waarde wordt
@@ -109,7 +109,8 @@ volgens ons model. Dit is een beperking van ons model, maar resulteert wel in
 een mogelijke countermeasure. Indien de snelheid en tijd van een activiteit
 onaangetast blijven, maar een \textit{Distance-Focused Countermeasure} wordt
 toegepast zoals beschreven door \citeauthor{Dhondt}, zou het volstaan om beide
-punten te cloaken om de aanval die we beschrijven te voorkomen.
+punten te cloaken om de aanval die we beschrijven te voorkomen, zoals de dag
+van vandaag gebeurt.
 
 \section{Toekomstig werk}
 Naast de volledige uiteenzetting van dit onderzoek, zijn er nog enkele zaken
@@ -150,21 +151,24 @@ kunnen worden, indien de verschillen we nu via euclidische afstanden zouden
 berekenen.
 
 Als laatste is er een idee om een alternatieve implementatie van de
-\ac{LAD}-regressie te gebruiken. Nu wordt voor elke activiteit de afwijking
-berekend ten opzichte van alle nodes in de graaf, en wordt de node gekozen die
-over de volledige lijn de laagste afwijking bevat. Een alternatief zou kunnen
-zijn om voor elke activiteit één of meerdere nodes te voorspellen die de
-laagste afwijkingen hebben ten opzichte van die activiteit. En uiteindelijk de
-node te verkiezen die in totaal de laagste totale som van alle onderlinge
-afstanden heeft. Met andere woorden, degene die het meest gecentreerd ligt. De
-\ac{LAD}-methode die beschreven werd in deze thesis gaat op zoek naar een zo
-laag mogelijke afwijking voor elke activiteit, uitgaande van het ideale
-scenario waarbij elke activiteit stopt of begint op dezelfde locatie. In de
-hier alternatief beschreven \ac{LAD}-methode vertrekken we eerder vanuit het
-feit dat activiteiten alternatieve locaties aanwijzen volgens hun afstand, door
-het feit dat ze effectief niet op dezelfde locatie eindigen. Gebruikers stoppen
-eens wat verder, eens wat vroeger, enzovoort. De alternatieve implementatie van
-de \ac{LAD}-methode zou dit dus voor een stuk kunnen opvangen.
+\ac{LAD}-regressie te gebruiken. In de huidige implementatie wordt voor elke
+activiteit de afwijking berekend ten opzichte van alle nodes in de graaf, en
+wordt de node gekozen die over de volledige lijn de laagste afwijking bevat,
+wat beschreven staat in Sectie~\ref{sec:lad}.
+
+Het alternatief dat wij voorstellen is om voor elke activiteit één of meerdere
+nodes te voorspellen die de laagste afwijkingen hebben ten opzichte van die
+activiteit. En uiteindelijk de node te verkiezen die in totaal de laagste
+totale som van alle onderlinge afstanden heeft. Met andere woorden, degene die
+het meest gecentreerd ligt. De \ac{LAD}-methode die beschreven werd in deze
+thesis gaat op zoek naar een zo laag mogelijke afwijking voor elke activiteit,
+uitgaande van het ideale scenario waarbij elke activiteit stopt of begint op
+dezelfde locatie. In de hier alternatief beschreven \ac{LAD}-methode vertrekken
+we eerder vanuit het feit dat activiteiten alternatieve locaties aanwijzen
+volgens hun afstand, door het feit dat ze effectief niet op dezelfde locatie
+eindigen. Gebruikers stoppen eens wat verder, eens wat vroeger, enzovoort. De
+alternatieve implementatie van de \ac{LAD}-methode zou dit dus voor een stuk
+kunnen opvangen.
 
 % Een laatste idee is een nieuw soort \ac{EPZ}-mechanisme uit te werken. We
 % hebben het idee om een \ac{EPZ}-mechanisme te ontwerpen die werkt met een

@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex thesis"] 1684933845 "thesis.aux" "thesis.bbl" "thesis" 1684933975 0
+["bibtex thesis"] 1684945473 "thesis.aux" "thesis.bbl" "thesis" 1684945512 0
   "./bibliografie_nl.bib" 1684866317 20989 9506c3525c91c8c6e0a9a94f177c91bd ""
   "/usr/share/texmf-dist/bibtex/bst/base/apalike.bst" 1680514707 24635 604dafcc79f521a11ea73e506e1fbd98 ""
-  "thesis.aux" 1684933975 35003 753f237e9954166a1063db8b69a9edb2 "pdflatex"
+  "thesis.aux" 1684945511 34530 5487466e0ae7ccb049914e2c5ccae7a1 "pdflatex"
   (generated)
   "thesis.bbl"
   "thesis.blg"
   (rewritten before read)
-["pdflatex"] 1684933966 "/home/woutd/Documents/School/Industriele Ingenieurswetenschappen/Thesis/Workspace/Thesis/thesis.tex" "thesis.pdf" "thesis" 1684933975 0
+["pdflatex"] 1684945501 "/home/woutd/Documents/School/Industriele Ingenieurswetenschappen/Thesis/Workspace/Thesis/thesis.tex" "thesis.pdf" "thesis" 1684945512 0
   "/home/woutd/Documents/School/Industriele Ingenieurswetenschappen/Thesis/Workspace/Thesis/thesis.tex" 1684773310 4969 1d9b26d4706851abd951e594b3fbd959 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc" 1680514707 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1680514707 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -266,7 +266,6 @@
   "fig/SmoothingExample.png" 1681371756 18882 bcc340e3639196e3b50b95979f213613 ""
   "fig/SpeedVSPace/Pace.png" 1684870536 406313 9f50759bbb6b680bfc287215a58c51d8 ""
   "fig/SpeedVSPace/Speed.png" 1681829739 405818 db0758fb745171e570f3fcddac5aae98 ""
-  "fig/Strava_3billion.png" 1684073052 45008 2a3d81bcec38291df64584089d9f6854 ""
   "fig/TotalDistanceAttacks/InnerDistanceAttack.png" 1683482105 1229021 86895c58c0a19340f5c63bd2ba3a28b2 ""
   "fig/TotalDistanceAttacks/end.png" 1683466466 1259841 fe52a8e3c5f4b5a9e347d3a0d28f9a11 ""
   "fig/TotalDistanceAttacks/start.png" 1683466300 597398 df54eddf128cbe99e30449eaedf555e2 ""
@@ -283,20 +282,20 @@
   "fiiw.sty" 1677078672 16911 da2c6dccf5c72170bdb59276ef62cce4 ""
   "hfdst1.tex" 1684874582 7330 2f3b38c2d9f724ac6ffec14e2b9bba3c ""
   "hfdst2.tex" 1684874594 28431 999b0d64a1f8810f584307a966435750 ""
-  "hfdst3.tex" 1684914328 31353 213b3c089f0cfc7b84517971c9067711 ""
-  "hfdst4.tex" 1684920934 15787 f3e2d0235757e44ff33c300ea5ca3ffb ""
+  "hfdst3.tex" 1684945469 31368 2362ad20a9abb31dfa33189d2e35c7ec ""
+  "hfdst4.tex" 1684944977 15473 51193e12d51b8dbb9654eda6885617cc ""
   "hfdst5.tex" 1684931194 30369 a6c4ffdc96059ca116898640525ba4d3 ""
-  "hfdst6.tex" 1684933966 13178 abd11f7ffef1d07cc6fae1fc7b6cde50 ""
+  "hfdst6.tex" 1684945497 13291 d4155b53c26fe46909455c3dc196cf07 ""
   "private/back_fiiw_gent.pdf" 1677078672 25221 eb4a4b3bbd5f2448e5f372106824b40a ""
   "private/cover_fiiw_gent.pdf" 1677078672 106699 2eb7a5ee64b6d81148af63e102ca8970 ""
   "samenvatting.tex" 1684874568 6574 1d087f4a506bc5798c4747ae6e4a6305 ""
-  "thesis.aux" 1684933975 35003 753f237e9954166a1063db8b69a9edb2 "pdflatex"
-  "thesis.bbl" 1684933845 10544 5c7eb0d91ff59445a6522d8346df7469 "bibtex thesis"
-  "thesis.lof" 1684933975 5206 89009aa73c7319c13762349d6413fe06 "pdflatex"
-  "thesis.lot" 1684933975 1315 7ee38ec03902b9cccd068981d343d68b "pdflatex"
-  "thesis.out" 1684933975 8412 15873a14e57717b31a649a632578298b "pdflatex"
+  "thesis.aux" 1684945511 34530 5487466e0ae7ccb049914e2c5ccae7a1 "pdflatex"
+  "thesis.bbl" 1684945473 10544 5c7eb0d91ff59445a6522d8346df7469 "bibtex thesis"
+  "thesis.lof" 1684945511 4998 c5ca14c15dd9f0c0ad2207294b5ad143 "pdflatex"
+  "thesis.lot" 1684945511 1315 db793d6af74e417d99ee2faac1d22fb1 "pdflatex"
+  "thesis.out" 1684945511 8412 15873a14e57717b31a649a632578298b "pdflatex"
   "thesis.tex" 1684773310 4969 1d9b26d4706851abd951e594b3fbd959 ""
-  "thesis.toc" 1684933975 4318 0f80f95218613f27bb45432af9abbb80 "pdflatex"
+  "thesis.toc" 1684945511 4318 425733ec3f60ecc4e1aee1eacf2ae117 "pdflatex"
   "voorwoord.tex" 1684845886 877 50d8029274c1f98294b2bde26f5ff38f ""
   (generated)
   "thesis.aux"

@@ -26,16 +26,15 @@
 \contentsline {figure}{\numberline {3.6}{\ignorespaces Voorbeeld van het genereren van een roadgraph\begingroup \let \@unexpandable@protect \xdef 1{\ref {fn:roadgraph}}\endgroup \unhbox \voidb@x \hbox {{\mathsurround \z@ \ensuremath {^{\mbox {\fontsize 88\normalfont 1}}}}}\relax \relax }}{24}{figure.caption.33}%
 \contentsline {figure}{\numberline {3.7}{\ignorespaces Haversine illustratie voor het berekenen van de afstand~\cite {Distance97:online}\relax }}{27}{figure.caption.34}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Geografische spreiding van de activiteiten in de dataset\relax }}{32}{figure.caption.39}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Geografische spreiding van de activiteiten in de dataset\relax }}{31}{figure.caption.39}%
 \contentsline {figure}{\numberline {4.2}{\ignorespaces \ac {CDF} plot van het aantal activiteiten per gebruiker\relax }}{33}{figure.caption.41}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Post op sociale media van Strava die de evolutie van het totaal aantal activiteiten weergeeft~\cite {StravaMi72:online}\relax }}{34}{figure.caption.42}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Verdeling van de afstanden tussen twee opeenvolgende gps-punten\relax }}{35}{figure.caption.44}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Verschil tussen de berekende afstand en de theoretische afstand voor één gebruiker\relax }}{36}{figure.caption.45}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Verdeling van het verschil tussen de berekende afstand en de theoretische afstand buiten de \ac {EPZ} \relax }}{37}{figure.caption.46}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Verdeling van de afstanden tussen twee opeenvolgende gps-punten\relax }}{35}{figure.caption.43}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Verschil tussen de berekende afstand en de theoretische afstand voor één gebruiker\relax }}{35}{figure.caption.44}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Verdeling van het verschil tussen de berekende afstand en de theoretische afstand buiten de \ac {EPZ} \relax }}{36}{figure.caption.45}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Dhondt et al.\ bepaalt grafisch de trend van de afwijkingen bij het snappen van locaties op het wegennetwerk~\cite {Dhondt}\relax }}{39}{figure.caption.48}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Voorbeeld van een distributie van voorspellingen bepaald door het bootstrapalgoritme~\cite {Verdonck_2022}\relax }}{41}{figure.caption.49}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Vergelijking van de verschillende aanvallen\relax }}{47}{figure.caption.54}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Dhondt et al.\ bepaalt grafisch de trend van de afwijkingen bij het snappen van locaties op het wegennetwerk~\cite {Dhondt}\relax }}{38}{figure.caption.47}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Voorbeeld van een distributie van voorspellingen bepaald door het bootstrapalgoritme~\cite {Verdonck_2022}\relax }}{40}{figure.caption.48}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Vergelijking van de verschillende aanvallen\relax }}{46}{figure.caption.53}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
