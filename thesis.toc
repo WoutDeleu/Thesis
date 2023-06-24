@@ -15,9 +15,9 @@
 \contentsline {subsection}{\numberline {2.1.1}Activiteiten}{5}{subsection.2.1.1}%
 \contentsline {subsection}{\numberline {2.1.2}Berekening Afstanden}{7}{subsection.2.1.2}%
 \contentsline {subsection}{\numberline {2.1.3}Algemeen Privacybeleid}{10}{subsection.2.1.3}%
-\contentsline {section}{\numberline {2.2}Mogelijke gps-fouten}{11}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Endpoint Privacy Zones}{14}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Literatuur}{15}{section.2.4}%
+\contentsline {section}{\numberline {2.2}Endpoint Privacy Zones}{11}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Mogelijke gps-fouten}{12}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Literatuur}{14}{section.2.4}%
 \contentsline {chapter}{\numberline {3}Setting aanval}{18}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Definitie aanvaller}{18}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}Assumpties}{19}{subsection.3.1.1}%
