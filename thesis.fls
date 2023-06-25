@@ -1407,26 +1407,6 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/times/zptmcmr.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
-INPUT ./fig/EPZ-mechanisme/Example_EPZ_InternalView.png
-INPUT ./fig/EPZ-mechanisme/Example_EPZ_InternalView.png
-INPUT fig/EPZ-mechanisme/Example_EPZ_InternalView.png
-INPUT ./fig/EPZ-mechanisme/Example_EPZ_InternalView.png
-INPUT ./fig/EPZ-mechanisme/Example_EPZ_InternalView.png
-INPUT ./fig/EPZ-mechanisme/Example_EPZ_ExternalView.png
-INPUT ./fig/EPZ-mechanisme/Example_EPZ_ExternalView.png
-INPUT fig/EPZ-mechanisme/Example_EPZ_ExternalView.png
-INPUT ./fig/EPZ-mechanisme/Example_EPZ_ExternalView.png
-INPUT ./fig/EPZ-mechanisme/Example_EPZ_ExternalView.png
-INPUT ./fig/EPZ-mechanisme/Translation_Center.png
-INPUT ./fig/EPZ-mechanisme/Translation_Center.png
-INPUT fig/EPZ-mechanisme/Translation_Center.png
-INPUT ./fig/EPZ-mechanisme/Translation_Center.png
-INPUT ./fig/EPZ-mechanisme/Translation_Center.png
-INPUT ./fig/EPZ-mechanisme/DropEPZPoints.png
-INPUT ./fig/EPZ-mechanisme/DropEPZPoints.png
-INPUT fig/EPZ-mechanisme/DropEPZPoints.png
-INPUT ./fig/EPZ-mechanisme/DropEPZPoints.png
-INPUT ./fig/EPZ-mechanisme/DropEPZPoints.png
 INPUT ./fig/Afwijkingen&Analyses/Crooked Routes/GPS-Drift.png
 INPUT ./fig/Afwijkingen&Analyses/Crooked Routes/GPS-Drift.png
 INPUT fig/Afwijkingen&Analyses/Crooked Routes/GPS-Drift.png
@@ -1462,6 +1442,26 @@ INPUT ./fig/Afwijkingen&Analyses/Crooked Routes/1_Full_original.png
 INPUT fig/Afwijkingen&Analyses/Crooked Routes/1_Full_original.png
 INPUT ./fig/Afwijkingen&Analyses/Crooked Routes/1_Full_original.png
 INPUT ./fig/Afwijkingen&Analyses/Crooked Routes/1_Full_original.png
+INPUT ./fig/EPZ-mechanisme/Example_EPZ_InternalView.png
+INPUT ./fig/EPZ-mechanisme/Example_EPZ_InternalView.png
+INPUT fig/EPZ-mechanisme/Example_EPZ_InternalView.png
+INPUT ./fig/EPZ-mechanisme/Example_EPZ_InternalView.png
+INPUT ./fig/EPZ-mechanisme/Example_EPZ_InternalView.png
+INPUT ./fig/EPZ-mechanisme/Example_EPZ_ExternalView.png
+INPUT ./fig/EPZ-mechanisme/Example_EPZ_ExternalView.png
+INPUT fig/EPZ-mechanisme/Example_EPZ_ExternalView.png
+INPUT ./fig/EPZ-mechanisme/Example_EPZ_ExternalView.png
+INPUT ./fig/EPZ-mechanisme/Example_EPZ_ExternalView.png
+INPUT ./fig/EPZ-mechanisme/Translation_Center.png
+INPUT ./fig/EPZ-mechanisme/Translation_Center.png
+INPUT fig/EPZ-mechanisme/Translation_Center.png
+INPUT ./fig/EPZ-mechanisme/Translation_Center.png
+INPUT ./fig/EPZ-mechanisme/Translation_Center.png
+INPUT ./fig/EPZ-mechanisme/DropEPZPoints.png
+INPUT ./fig/EPZ-mechanisme/DropEPZPoints.png
+INPUT fig/EPZ-mechanisme/DropEPZPoints.png
+INPUT ./fig/EPZ-mechanisme/DropEPZPoints.png
+INPUT ./fig/EPZ-mechanisme/DropEPZPoints.png
 INPUT ./fig/EPZ-mechanisme/Hassan.png
 INPUT ./fig/EPZ-mechanisme/Hassan.png
 INPUT fig/EPZ-mechanisme/Hassan.png

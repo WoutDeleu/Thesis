@@ -9,13 +9,13 @@
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Data van een activiteit\relax }}{8}{figure.caption.14}%
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Voorbeeld van de werking van \textit {Map Snapping}~\cite {Snapping96:online}\relax }}{10}{figure.caption.15}%
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Voorbeeld Data smoothing met een moving average~\cite {SmoothingandInterpolatingNoisyGPSDatawithSmoothingSplines}\relax }}{10}{figure.caption.16}%
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Voorbeeld van de werking van een EPZ\relax }}{12}{figure.caption.17}%
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Voorbeeld translatie EPZ\relax }}{12}{figure.caption.18}%
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Voorbeeld filtering van punten binnen EPZ~\cite {Dhondt}\relax }}{13}{figure.caption.19}%
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Voorbeelden van gps-drift\relax }}{13}{figure.caption.20}%
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Voorbeelden van gps-bounce~\cite {BadGPSDa19:online}\relax }}{14}{figure.caption.21}%
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Voorbeeld van zowel gps-drift en gps-bounce uit de gebruikte dataset\relax }}{15}{figure.caption.22}%
-\contentsline {figure}{\numberline {2.11}{\ignorespaces Voorbeeld van signal loss uit de gebruikte dataset\relax }}{15}{figure.caption.23}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Voorbeelden van gps-drift\relax }}{11}{figure.caption.17}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Voorbeelden van gps-bounce~\cite {BadGPSDa19:online}\relax }}{12}{figure.caption.18}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Voorbeeld van zowel gps-drift en gps-bounce uit de gebruikte dataset\relax }}{13}{figure.caption.19}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Voorbeeld van signal loss uit de gebruikte dataset\relax }}{13}{figure.caption.20}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Voorbeeld van de werking van een EPZ\relax }}{14}{figure.caption.21}%
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Voorbeeld translatie EPZ\relax }}{15}{figure.caption.22}%
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Voorbeeld filtering van punten binnen EPZ~\cite {Dhondt}\relax }}{15}{figure.caption.23}%
 \contentsline {figure}{\numberline {2.12}{\ignorespaces Mechanisme EPZ beschreven door Hassan et al.~\cite {sec18has3:online}\relax }}{16}{figure.caption.24}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Voorbeeld van de mogelijke scenarios bij een total distance attack scenario\relax }}{20}{figure.caption.25}%

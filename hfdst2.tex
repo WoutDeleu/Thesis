@@ -217,86 +217,6 @@ rode de `gesmoothe' curve.
     \caption{Voorbeeld Data smoothing met een moving average~\cite{SmoothingandInterpolatingNoisyGPSDatawithSmoothingSplines}}\label{fig:SmoothingExample}
 \end{figure}
 
-\subsection{Algemeen Privacybeleid}\label{sec:Algemene Privacy}
-Het is zeker niet altijd wenselijk om alle data die vervat zit in zo'n
-activiteit met alle andere gebruikers op het platform te delen. De
-ontwikkelaars kiezen er dan ook voor om gebruikers de mogelijkheid te geven om
-hun privacy te bewaren. In deze sectie wordt de focus gelegd op de mechanismen
-gebruikt door \textit{Strava}. Er valt op dat heel wat andere sport-applicaties
-vergelijkbare, zo niet dezelfde methodieken gebruiken. Een eerste algemeen
-mechanisme bestaat eruit om de gebruiker de keuze te geven om alle activiteiten
-en alle gegevens over het profiel heen te laten voldoen aan bepaalde privacy
-regels. Deze regels kunnen ook per activiteit worden ingesteld. Onder de keuzes
-staan meestal drie opties: \textit{zichtbaar voor iedereen}, \textit{zichtbaar
-    voor volgers} en \textit{zichtbaar voor niemand}. Er kan ook zelfs een keuze
-gemaakt worden om specifieke elementen van een activiteit niet te delen met de
-buitenwereld, zoals bijvoorbeeld de zichtbaarheid van de route op de
-kaart~\cite{Activity24:online}.
-
-\section{Endpoint Privacy Zones}\label{sec:EPZ}
-Een \ac{EPZ} is een cirkelvormige zone met een bepaalde straal rond een
-\ac{gps}-punt. Het punt in kwestie zal dus de betreffende \textit{gevoelige
-    locatie} zijn. De gebruiker kan de straal van deze cirkel\footnote{Op Strava
-    heeft de \ac{EPZ} de vorm van een cirkel, maar op andere platformen kunnen
-    andere vormen de norm zijn, bv.\ polygonen.} zelf kiezen, en in het geval van
-Strava hebben gebruikers keuze uit waarden van 0 tot 1600m, in stappen van
-200m. Wanneer een gebruiker binnen deze zone zijn activiteit beëindigt of
-begint, dan zal dat deel van de route binnen de \ac{EPZ} niet zichtbaar zijn
-voor anderen. Vanuit het perspectief van een andere gebruiker zal de activiteit
-dus starten en/of eindigen op de rand van deze cirkel (die natuurlijk niet
-zichtbaar is). Merk op dat een sporter meerdere gevoelige locaties kan
-verbergen op de kaart. Bijvoorbeeld een frequent bezocht café, of een huis van
-een partner waar regelmatig een tussenstop plaatsvindt. Een tweede opmerking is
-dat wanneer een gebruiker de \ac{EPZ} doorkruist, maar er niet in stopt, dat
-deel van de route onaangepast blijft. Op Figuur~\ref{fig:EPZ_Voorbeeld} zijn de
-verschillende perspectieven te zien, hoe de eigenaar de activiteit ziet, en hoe
-het eruit ziet voor een externe gebruiker. Het traject dat de buitenstaander te
-zien krijgt, bestaat uit alle punten die zich buiten de \ac{EPZ} bevinden. Merk
-ook op dat de eigenaar van de activiteit zicht heeft op de invloed van de
-\ac{EPZ}, dus wat zal verborgen worden erdoor, en wat zichtbaar blijft. Dit
-onderscheid wordt gemaakt door het verschil in kleur, oranje voor de publiek
-zichtbare punten en grijs voor de onzichtbare.
-\begin{figure}[h]
-    \centering
-    \begin{subfigure}[b]{.49\textwidth}
-        \centering
-        \caption{Perspectief eigenaar}
-        \includegraphics[width=1\textwidth]{fig/EPZ-mechanisme/Example_EPZ_InternalView.png}\label{fig:EPZ_internal}
-    \end{subfigure}\hfill
-    \begin{subfigure}[b]{.49\textwidth}
-        \centering
-        \caption{Perspectief externe gebruiker}
-        \includegraphics[width=1\textwidth]{fig/EPZ-mechanisme/Example_EPZ_ExternalView.png}\label{fig:EPZ_external}
-    \end{subfigure}
-    \caption{Voorbeeld van de werking van een EPZ}\label{fig:EPZ_Voorbeeld}
-\end{figure}
-
-De methodiek die fitnesstrackers toepassen bij het opzetten van een \ac{EPZ}
-werkt als volgt, de gevoelige locatie wordt genomen als beginlocatie. Hieruit
-zetten ze a.d.h.v.\ de op voorhand vastgelegde \ac{EPZ}-straal een cirkel op.
-Het centrum van deze cirkel zal hierna een translatie ondervinden in een
-willekeurige richting. Dit kan een verschuiving zijn met een afstand die
-maximaal 70\% van de straal van de \ac{EPZ} bedraagt. Dit mechanisme is te zien
-op Figuur~\ref{fig:translation}. Het transleren van deze cirkel wordt ook
-\textit{spatial cloaking} genoemd.
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.4\linewidth]{fig/EPZ-mechanisme/Translation_Center.png}
-    \caption{Voorbeeld translatie EPZ}\label{fig:translation}
-\end{figure}
-
-Daarna worden alle punten vertrekkende vanaf de gevoelige locatie tot aan de
-rand van de \ac{EPZ}, en vanaf de rand van de \ac{EPZ} tot aan de gevoelige
-locatie verwijderd van het zichtbare traject. Een voorbeeld van deze filtering
-is te zien op Figuur~\ref{fig:drop points}, waarbij duidelijk zichtbaar is dat
-punten die de \ac{EPZ} doorkruisen, maar niet vertrekken of aankomen bij de
-gevoelige locatie niet worden gefilterd.
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.7\linewidth]{fig/EPZ-mechanisme/DropEPZPoints.png}
-    \caption{Voorbeeld filtering van punten binnen EPZ~\cite{Dhondt}}\label{fig:drop points}
-\end{figure}
-
 \section{Mogelijke gps-fouten}\label{sec:gps-fouten}
 Zoals reeds aangehaald kunnen er bij het verzamelen van \ac{gps}-data
 significante fouten optreden. Met \ac{gps}-fouten wordt gedoeld op data die de
@@ -392,7 +312,88 @@ Figuur~\ref{fig:gps_signal_loss}.
     \caption{Voorbeeld van signal loss uit de gebruikte dataset}\label{fig:gps_signal_loss}
 \end{figure}
 
+\section{Privacybeleid}\label{sec:Algemene Privacy}
+Het is zeker niet altijd wenselijk om alle data die vervat zit in zo'n
+activiteit met alle andere gebruikers op het platform te delen. De
+ontwikkelaars kiezen er dan ook voor om gebruikers de mogelijkheid te geven om
+hun privacy te bewaren. In deze sectie wordt de focus gelegd op de mechanismen
+gebruikt door \textit{Strava}. Er valt op dat heel wat andere sport-applicaties
+vergelijkbare, zo niet dezelfde methodieken gebruiken. Een eerste algemeen
+mechanisme bestaat eruit om de gebruiker de keuze te geven om alle activiteiten
+en alle gegevens over het profiel heen te laten voldoen aan bepaalde privacy
+regels. Deze regels kunnen ook per activiteit worden ingesteld. Onder de keuzes
+regels. Deze regels kunnen ook per activiteit worden ingesteld. Onder de keuzes
+staan meestal drie opties: \textit{zichtbaar voor iedereen}, \textit{zichtbaar
+    voor volgers} en \textit{zichtbaar voor niemand}. Er kan ook zelfs een keuze
+gemaakt worden om specifieke elementen van een activiteit niet te delen met de
+buitenwereld, zoals bijvoorbeeld de zichtbaarheid van de route op de
+kaart~\cite{Activity24:online}.
+
 Een tweede belangrijke maatregel is het gebruik van de de \acp{EPZ}.
+
+\subsection{Endpoint Privacy Zones}\label{sec:EPZ}
+Een \ac{EPZ} is een cirkelvormige zone met een bepaalde straal rond een
+\ac{gps}-punt. Het punt in kwestie zal dus de betreffende \textit{gevoelige
+    locatie} zijn. De gebruiker kan de straal van deze cirkel\footnote{Op Strava
+    heeft de \ac{EPZ} de vorm van een cirkel, maar op andere platformen kunnen
+    andere vormen de norm zijn, bv.\ polygonen.} zelf kiezen, en in het geval van
+Strava hebben gebruikers keuze uit waarden van 0 tot 1600m, in stappen van
+200m. Wanneer een gebruiker binnen deze zone zijn activiteit beëindigt of
+begint, dan zal dat deel van de route binnen de \ac{EPZ} niet zichtbaar zijn
+voor anderen. Vanuit het perspectief van een andere gebruiker zal de activiteit
+dus starten en/of eindigen op de rand van deze cirkel (die natuurlijk niet
+zichtbaar is). Merk op dat een sporter meerdere gevoelige locaties kan
+verbergen op de kaart. Bijvoorbeeld een frequent bezocht café, of een huis van
+een partner waar regelmatig een tussenstop plaatsvindt. Een tweede opmerking is
+dat wanneer een gebruiker de \ac{EPZ} doorkruist, maar er niet in stopt, dat
+deel van de route onaangepast blijft. Op Figuur~\ref{fig:EPZ_Voorbeeld} zijn de
+verschillende perspectieven te zien, hoe de eigenaar de activiteit ziet, en hoe
+het eruit ziet voor een externe gebruiker. Het traject dat de buitenstaander te
+zien krijgt, bestaat uit alle punten die zich buiten de \ac{EPZ} bevinden. Merk
+ook op dat de eigenaar van de activiteit zicht heeft op de invloed van de
+\ac{EPZ}, dus wat zal verborgen worden erdoor, en wat zichtbaar blijft. Dit
+onderscheid wordt gemaakt door het verschil in kleur, oranje voor de publiek
+zichtbare punten en grijs voor de onzichtbare.
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}[b]{.49\textwidth}
+        \centering
+        \caption{Perspectief eigenaar}
+        \includegraphics[width=1\textwidth]{fig/EPZ-mechanisme/Example_EPZ_InternalView.png}\label{fig:EPZ_internal}
+    \end{subfigure}\hfill
+    \begin{subfigure}[b]{.49\textwidth}
+        \centering
+        \caption{Perspectief externe gebruiker}
+        \includegraphics[width=1\textwidth]{fig/EPZ-mechanisme/Example_EPZ_ExternalView.png}\label{fig:EPZ_external}
+    \end{subfigure}
+    \caption{Voorbeeld van de werking van een EPZ}\label{fig:EPZ_Voorbeeld}
+\end{figure}
+
+De methodiek die fitnesstrackers toepassen bij het opzetten van een \ac{EPZ}
+werkt als volgt, de gevoelige locatie wordt genomen als beginlocatie. Hieruit
+zetten ze a.d.h.v.\ de op voorhand vastgelegde \ac{EPZ}-straal een cirkel op.
+Het centrum van deze cirkel zal hierna een translatie ondervinden in een
+willekeurige richting. Dit kan een verschuiving zijn met een afstand die
+maximaal 70\% van de straal van de \ac{EPZ} bedraagt. Dit mechanisme is te zien
+op Figuur~\ref{fig:translation}. Het transleren van deze cirkel wordt ook
+\textit{spatial cloaking} genoemd.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.4\linewidth]{fig/EPZ-mechanisme/Translation_Center.png}
+    \caption{Voorbeeld translatie EPZ}\label{fig:translation}
+\end{figure}
+
+Daarna worden alle punten vertrekkende vanaf de gevoelige locatie tot aan de
+rand van de \ac{EPZ}, en vanaf de rand van de \ac{EPZ} tot aan de gevoelige
+locatie verwijderd van het zichtbare traject. Een voorbeeld van deze filtering
+is te zien op Figuur~\ref{fig:drop points}, waarbij duidelijk zichtbaar is dat
+punten die de \ac{EPZ} doorkruisen, maar niet vertrekken of aankomen bij de
+gevoelige locatie niet worden gefilterd.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\linewidth]{fig/EPZ-mechanisme/DropEPZPoints.png}
+    \caption{Voorbeeld filtering van punten binnen EPZ~\cite{Dhondt}}\label{fig:drop points}
+\end{figure}
 
 \section{Literatuur}
 In het verleden is al wat onderzoek verricht in de richting van de
@@ -462,4 +463,3 @@ manier bekomt~\citeauthor{Verdonck_2022} een succes rate van 36\%. Dit lagere
 succesratio is terug te brengen naar het feit dat hoogtedata een stuk minder
 precies zijn. Ook is hoogtetoename in heel wat regios niet zo significant, wat
 de succesrate niet ten goeie komt.
-

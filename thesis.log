@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/CVE-2023-32700 patched) (preloaded format=pdflatex 2023.5.26)  24 JUN 2023 08:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/CVE-2023-32700 patched) (preloaded format=pdflatex 2023.5.26)  25 JUN 2023 17:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1018,80 +1018,70 @@ File: fig/SmoothingExample.png Graphic file (type png)
 Package pdftex.def Info: fig/SmoothingExample.png  used on input line 216.
 (pdftex.def)             Requested size: 256.07741pt x 138.32887pt.
 [9] [10 <./fig/Map Snapping/before.png> <./fig/Map Snapping/after.png> <./fig/SmoothingExample.png>]
-<fig/EPZ-mechanisme/Example_EPZ_InternalView.png, id=641, 1151.30125pt x 910.40125pt>
-File: fig/EPZ-mechanisme/Example_EPZ_InternalView.png Graphic file (type png)
-<use fig/EPZ-mechanisme/Example_EPZ_InternalView.png>
-Package pdftex.def Info: fig/EPZ-mechanisme/Example_EPZ_InternalView.png  used on input line 264.
-(pdftex.def)             Requested size: 209.1301pt x 165.36543pt.
-<fig/EPZ-mechanisme/Example_EPZ_ExternalView.png, id=642, 689.57625pt x 569.12625pt>
-File: fig/EPZ-mechanisme/Example_EPZ_ExternalView.png Graphic file (type png)
-<use fig/EPZ-mechanisme/Example_EPZ_ExternalView.png>
-Package pdftex.def Info: fig/EPZ-mechanisme/Example_EPZ_ExternalView.png  used on input line 269.
-(pdftex.def)             Requested size: 209.1301pt x 172.5976pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<fig/EPZ-mechanisme/Translation_Center.png, id=647, 347.79938pt x 272.51813pt>
-File: fig/EPZ-mechanisme/Translation_Center.png Graphic file (type png)
-<use fig/EPZ-mechanisme/Translation_Center.png>
-Package pdftex.def Info: fig/EPZ-mechanisme/Translation_Center.png  used on input line 284.
-(pdftex.def)             Requested size: 170.71393pt x 133.7596pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<fig/EPZ-mechanisme/DropEPZPoints.png, id=652, 992.95969pt x 474.27188pt>
-File: fig/EPZ-mechanisme/DropEPZPoints.png Graphic file (type png)
-<use fig/EPZ-mechanisme/DropEPZPoints.png>
-Package pdftex.def Info: fig/EPZ-mechanisme/DropEPZPoints.png  used on input line 296.
-(pdftex.def)             Requested size: 298.75264pt x 142.69516pt.
-[11]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<fig/Afwijkingen&Analyses/Crooked Routes/GPS-drift.png, id=671, 1606.0pt x 924.45375pt>
+<fig/Afwijkingen&Analyses/Crooked Routes/GPS-drift.png, id=641, 1606.0pt x 924.45375pt>
 File: fig/Afwijkingen&Analyses/Crooked Routes/GPS-drift.png Graphic file (type png)
 <use fig/Afwijkingen&Analyses/Crooked Routes/GPS-drift.png>
-Package pdftex.def Info: fig/Afwijkingen&Analyses/Crooked Routes/GPS-drift.png  used on input line 325.
+Package pdftex.def Info: fig/Afwijkingen&Analyses/Crooked Routes/GPS-drift.png  used on input line 245.
 (pdftex.def)             Requested size: 192.0548pt x 110.5488pt.
-<fig/Afwijkingen&Analyses/Crooked Routes/GPS-Drift_onlnie.jpg, id=672, 971.63pt x 472.76625pt>
+<fig/Afwijkingen&Analyses/Crooked Routes/GPS-Drift_onlnie.jpg, id=642, 971.63pt x 472.76625pt>
 File: fig/Afwijkingen&Analyses/Crooked Routes/GPS-Drift_onlnie.jpg Graphic file (type jpg)
 <use fig/Afwijkingen&Analyses/Crooked Routes/GPS-Drift_onlnie.jpg>
-Package pdftex.def Info: fig/Afwijkingen&Analyses/Crooked Routes/GPS-Drift_onlnie.jpg  used on input line 330.
+Package pdftex.def Info: fig/Afwijkingen&Analyses/Crooked Routes/GPS-Drift_onlnie.jpg  used on input line 250.
 (pdftex.def)             Requested size: 209.1301pt x 101.75096pt.
-[12 <./fig/EPZ-mechanisme/Example_EPZ_InternalView.png> <./fig/EPZ-mechanisme/Example_EPZ_ExternalView.png> <./fig/EPZ-mechanisme/Translation_Center.png (PNG copy)>]
-<fig/Afwijkingen&Analyses/Crooked Routes/Crooked GPS Route_Cart.png, id=684, 622.325pt x 470.75874pt>
+<fig/Afwijkingen&Analyses/Crooked Routes/Crooked GPS Route_Cart.png, id=648, 622.325pt x 470.75874pt>
 File: fig/Afwijkingen&Analyses/Crooked Routes/Crooked GPS Route_Cart.png Graphic file (type png)
 <use fig/Afwijkingen&Analyses/Crooked Routes/Crooked GPS Route_Cart.png>
-Package pdftex.def Info: fig/Afwijkingen&Analyses/Crooked Routes/Crooked GPS Route_Cart.png  used on input line 349.
+Package pdftex.def Info: fig/Afwijkingen&Analyses/Crooked Routes/Crooked GPS Route_Cart.png  used on input line 269.
 (pdftex.def)             Requested size: 209.1301pt x 158.1954pt.
-<fig/Afwijkingen&Analyses/Crooked Routes/GPS_bounce_map.jpg, id=685, 971.63pt x 545.03625pt>
+<fig/Afwijkingen&Analyses/Crooked Routes/GPS_bounce_map.jpg, id=649, 971.63pt x 545.03625pt>
 File: fig/Afwijkingen&Analyses/Crooked Routes/GPS_bounce_map.jpg Graphic file (type jpg)
 <use fig/Afwijkingen&Analyses/Crooked Routes/GPS_bounce_map.jpg>
-Package pdftex.def Info: fig/Afwijkingen&Analyses/Crooked Routes/GPS_bounce_map.jpg  used on input line 353.
+Package pdftex.def Info: fig/Afwijkingen&Analyses/Crooked Routes/GPS_bounce_map.jpg  used on input line 273.
 (pdftex.def)             Requested size: 209.1301pt x 117.30525pt.
-<fig/Afwijkingen&Analyses/Crooked Routes/1_notSnapped.png, id=689, 872.25874pt x 1163.34625pt>
+<fig/Afwijkingen&Analyses/Crooked Routes/1_notSnapped.png, id=653, 872.25874pt x 1163.34625pt>
 File: fig/Afwijkingen&Analyses/Crooked Routes/1_notSnapped.png Graphic file (type png)
 <use fig/Afwijkingen&Analyses/Crooked Routes/1_notSnapped.png>
-Package pdftex.def Info: fig/Afwijkingen&Analyses/Crooked Routes/1_notSnapped.png  used on input line 366.
+Package pdftex.def Info: fig/Afwijkingen&Analyses/Crooked Routes/1_notSnapped.png  used on input line 286.
 (pdftex.def)             Requested size: 298.75264pt x 398.4437pt.
- [13 <./fig/EPZ-mechanisme/DropEPZPoints.png (PNG copy)> <./fig/Afwijkingen&Analyses/Crooked Routes/GPS-Drift.png> <./fig/Afwijkingen&Analyses/Crooked Routes/GPS-Drift_onlnie.jpg>]
-<fig/Afwijkingen&Analyses/Crooked Routes/1_Full_withArrow.png, id=698, 432.46921pt x 384.59608pt>
+ [11 <./fig/Afwijkingen&Analyses/Crooked Routes/GPS-Drift.png> <./fig/Afwijkingen&Analyses/Crooked Routes/GPS-Drift_onlnie.jpg>]
+<fig/Afwijkingen&Analyses/Crooked Routes/1_Full_withArrow.png, id=662, 432.46921pt x 384.59608pt>
 File: fig/Afwijkingen&Analyses/Crooked Routes/1_Full_withArrow.png Graphic file (type png)
 <use fig/Afwijkingen&Analyses/Crooked Routes/1_Full_withArrow.png>
-Package pdftex.def Info: fig/Afwijkingen&Analyses/Crooked Routes/1_Full_withArrow.png  used on input line 386.
+Package pdftex.def Info: fig/Afwijkingen&Analyses/Crooked Routes/1_Full_withArrow.png  used on input line 306.
 (pdftex.def)             Requested size: 209.1301pt x 185.9831pt.
-<fig/Afwijkingen&Analyses/Crooked Routes/1_Full_original.png, id=699, 570.63188pt x 507.39563pt>
+<fig/Afwijkingen&Analyses/Crooked Routes/1_Full_original.png, id=663, 570.63188pt x 507.39563pt>
 File: fig/Afwijkingen&Analyses/Crooked Routes/1_Full_original.png Graphic file (type png)
 <use fig/Afwijkingen&Analyses/Crooked Routes/1_Full_original.png>
-Package pdftex.def Info: fig/Afwijkingen&Analyses/Crooked Routes/1_Full_original.png  used on input line 390.
+Package pdftex.def Info: fig/Afwijkingen&Analyses/Crooked Routes/1_Full_original.png  used on input line 310.
 (pdftex.def)             Requested size: 209.1301pt x 185.95273pt.
-<fig/EPZ-mechanisme/Hassan.png, id=705, 1322.9425pt x 811.03pt>
+ [12 <./fig/Afwijkingen&Analyses/Crooked Routes/Crooked GPS Route_Cart.png> <./fig/Afwijkingen&Analyses/Crooked Routes/GPS_bounce_map.jpg>] [13 <./fig/Afwijkingen&Analyses/Crooked Routes/1_notSnapped.png> <./fig/Afwijkingen&Analyses/Crooked Routes/1_Full_withArrow.png> <./fig/Afwijkingen&Analyses/Crooked Routes/1_Full_original.png (PNG copy)>]
+<fig/EPZ-mechanisme/Example_EPZ_InternalView.png, id=686, 1151.30125pt x 910.40125pt>
+File: fig/EPZ-mechanisme/Example_EPZ_InternalView.png Graphic file (type png)
+<use fig/EPZ-mechanisme/Example_EPZ_InternalView.png>
+Package pdftex.def Info: fig/EPZ-mechanisme/Example_EPZ_InternalView.png  used on input line 362.
+(pdftex.def)             Requested size: 209.1301pt x 165.36543pt.
+<fig/EPZ-mechanisme/Example_EPZ_ExternalView.png, id=687, 689.57625pt x 569.12625pt>
+File: fig/EPZ-mechanisme/Example_EPZ_ExternalView.png Graphic file (type png)
+<use fig/EPZ-mechanisme/Example_EPZ_ExternalView.png>
+Package pdftex.def Info: fig/EPZ-mechanisme/Example_EPZ_ExternalView.png  used on input line 367.
+(pdftex.def)             Requested size: 209.1301pt x 172.5976pt.
+<fig/EPZ-mechanisme/Translation_Center.png, id=692, 347.79938pt x 272.51813pt>
+File: fig/EPZ-mechanisme/Translation_Center.png Graphic file (type png)
+<use fig/EPZ-mechanisme/Translation_Center.png>
+Package pdftex.def Info: fig/EPZ-mechanisme/Translation_Center.png  used on input line 382.
+(pdftex.def)             Requested size: 170.71393pt x 133.7596pt.
+ [14 <./fig/EPZ-mechanisme/Example_EPZ_InternalView.png> <./fig/EPZ-mechanisme/Example_EPZ_ExternalView.png>]
+<fig/EPZ-mechanisme/DropEPZPoints.png, id=705, 992.95969pt x 474.27188pt>
+File: fig/EPZ-mechanisme/DropEPZPoints.png Graphic file (type png)
+<use fig/EPZ-mechanisme/DropEPZPoints.png>
+Package pdftex.def Info: fig/EPZ-mechanisme/DropEPZPoints.png  used on input line 394.
+(pdftex.def)             Requested size: 298.75264pt x 142.69516pt.
+<fig/EPZ-mechanisme/Hassan.png, id=712, 1322.9425pt x 811.03pt>
 File: fig/EPZ-mechanisme/Hassan.png Graphic file (type png)
 <use fig/EPZ-mechanisme/Hassan.png>
-Package pdftex.def Info: fig/EPZ-mechanisme/Hassan.png  used on input line 415.
+Package pdftex.def Info: fig/EPZ-mechanisme/Hassan.png  used on input line 416.
 (pdftex.def)             Requested size: 256.07741pt x 156.98074pt.
- [14 <./fig/Afwijkingen&Analyses/Crooked Routes/Crooked GPS Route_Cart.png> <./fig/Afwijkingen&Analyses/Crooked Routes/GPS_bounce_map.jpg>] [15 <./fig/Afwijkingen&Analyses/Crooked Routes/1_notSnapped.png> <./fig/Afwijkingen&Analyses/Crooked Routes/1_Full_withArrow.png> <./fig/Afwijkingen&Analyses/Crooked Routes/1_Full_original.png (PNG copy)>] [16 <./fig/EPZ-mechanisme/Hassan.png>]) (./hfdst3.tex [17]
+ [15 <./fig/EPZ-mechanisme/Translation_Center.png (PNG copy)> <./fig/EPZ-mechanisme/DropEPZPoints.png (PNG copy)>] [16 <./fig/EPZ-mechanisme/Hassan.png>]) (./hfdst3.tex [17]
 Hoofdstuk 3.
 [18
 
@@ -1591,7 +1581,7 @@ Package pdftex.def Info: private/back_fiiw_gent.pdf , page1 used on input line 1
 
  <./private/back_fiiw_gent.pdf>] (./thesis.aux)
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 94BE60F47D65F174A8CBF03A0F43F2F7;8411.
+(rerunfilecheck)             Checksum: 0D0F2B1C2A8BB042F3A5EBECBA3F54AE;8363.
  ) 
 Here is how much of TeX's memory you used:
  28407 strings out of 476175
@@ -1602,7 +1592,7 @@ Here is how much of TeX's memory you used:
  1137 hyphenation exceptions out of 8191
  100i,17n,104p,652b,695s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (84 pages, 28363060 bytes).
+Output written on thesis.pdf (84 pages, 28362990 bytes).
 PDF statistics:
  1653 PDF objects out of 1728 (max. 8388607)
  1356 compressed objects within 14 object streams
