@@ -1,5 +1,9 @@
 # Thesis - KU Leuven, Wout Deleu, 2023
 
+Welcome to my Thesis Text repository! Here, you'll find the complete text of my thesis work, available for reference and exploration. 🎓✍️
+
+Feel free to dive in and explore the contents. If you have any questions or comments, don't hesitate to reach out. Happy reading and researching! 🤓📖💡
+
 ## Time Is Running Out
 
 ### Assessing Temporal Privacy of Privacy Zones in Fitness Tracking Social Networks
